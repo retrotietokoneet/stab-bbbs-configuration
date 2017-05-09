@@ -1,0 +1,11 @@
+int main(char file) {
+  // file is the filename to be edited
+
+  // next while is for dos/nt/os2 only!
+  // while (pos("/",file)) file=sprintf("%s\\%s",copy(file,1,pos("/",file)-1),copy(file,pos("/",file)+1,120));
+
+  if (bv_com) return(1);        // remote caller editor...
+  else
+    system(sprintf("emacs %s",file),0,0);         // local user editor
+  return(0); // 0=ask, 1=cancel, 2=save
+}

@@ -1,0 +1,9 @@
+
+[1;31mRead commands:  [33mM[0;37mark menu       [1;33m+[0;37m next msg      [1;33mI[0;37m author info   [1;33mSE[0;37mnd scratchpad
+[1m<CR>[0;37m next msg   [1;33mS[0;37mearch menu     [1;33m-[0;37m previous      [1;33mV[0;37miew headers    [1;33mMODE[0;37m readmode
+[1;33m#[0;37m msg number #  [1;33m<[0;37m reference     [1;33m.[0;37m same again    [1;33mK[0;37mill msg        [1;33mSH[0;37m conf. status
+[1;33mO[0;37mriginal msg    [1;33m>[0;37m show reply    [1;33mRE[0;37mply to msg    [1;33mREC[0;37mover killed  [1;33mRES[0;37mign conf.
+[1;33mP[0;37m recently read [1;33m=[0;37m next reply    [1;33mPRE[0;37mply private  [1;33mD[0;37mump to scratch [1;33mNEXT[0;37m conference
+[1;33mAI[0;37m areainfo     [1;33mDUP[0;37mlicate msg   [1;33mCRE[0;37mply conf.    [1;33mMOVE[0;37m message    [1;33mMC[0;37mopy message
+[1;33mSAVE[0;37m to /tmp    [1;33mGNUS[0;37m reader
+[0m

@@ -1,0 +1,9 @@
+
+[1;31mViestit:        [33mM[0;37merkitseminen   [1;33m+[0;37m seur. viesti  [1;33mI[0;37mnfoa kirjoitt. [1;33mSE[0;37m imuroi pak.
+[1m<CR>[0;37m seuraava   [1;33mS[0;37m etsint„       [1;33m-[0;37m edellinen     [1;33mV[0;37milkaise otsik. [1;33mMODE[0;37m lukutapa
+[1;33m#[0;37m viesti nro #  [1;33m<[0;37m mihin vast.   [1;33m.[0;37m sama uudell.  [1;33mK[0;37m tuhoa viesti  [1;33mSH[0;37m alueid. tila
+[1;33mO[0;37mriginaali      [1;33m>[0;37m n„yt„ vastaus [1;33mRE[0;37m vastaaminen  [1;33mREC[0;37m palauta v.  [1;33mRES[0;37m eroaminen
+[1;33mP[0;37m taaksep„in    [1;33m=[0;37m seur. vastaus [1;33mPRE[0;37m yksit.vast. [1;33mD[0;37m lis„„ pakett. [1;33mNEXT[0;37m seur. alue
+[1;33mAI[0;37m aluetietoa   [1;33mDUP[0;37m muokkaa     [1;33mCRE[0;37m alue vast.  [1;33mMOVE[0;37m siirr„     [1;33mMC[0;37m kopioi
+[1;33mSAVE[0;37m -> /tmp    [1;33mGNUS[0;37m lukija
+[0m

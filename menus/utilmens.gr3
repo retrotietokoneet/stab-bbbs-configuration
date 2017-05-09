@@ -1,0 +1,9 @@
+<[1;35mFINN[0;37m> bruker el. gruppe  <[1;35mTBE[0;37m> tids begrensning     <[1;35mSYS[0;37m>op niv†
+<[1;35m+[0;37m> finn neste bruker     <[1;35mBA[0;37m> tid i tidsbanken      <[1;35mSTA[0;37m> endre status
+<[1;35m-[0;37m> finn forrige bruker   <[1;35mFAKS[0;37m> fil aksess          <[1;35mINV[0;37m>iter til konferanse
+<[1;35mSLETT[0;37m> denne brukeren    <[1;35mBEG[0;37m> endre begrensninger  <[1;35mUINV[0;37m>iter fra konferense
+<[1;35mAAS[0;37m>sign to account      <[1;35mAAD[0;37m>d money               <[1;35mAC[0;37m>hange flags
+<[1;35mAV[0;37m>iew account           <[1;35mAM[0;37m>embers of account      <[1;35mWOTU[0;37m> WandOfTurnUndead
+<[1;35mFUP[0;37m> files up            <[1;35mBUP[0;37m> bytes up             <[1;35mCALL[0;37m> times on
+<[1;35mFD[0;37m> files down           <[1;35mBD[0;37m> bytes down
+[0m

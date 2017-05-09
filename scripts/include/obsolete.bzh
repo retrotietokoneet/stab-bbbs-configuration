@@ -1,0 +1,20 @@
+/******************************************************************************
+
+               Obsolete Library routines for BZ language
+
+           Copyright 1990-1999, Kim Heino and Tapani T. Salmi
+
+******************************************************************************/
+
+/* You should NOT use these anymore... */
+
+#define function      char
+#define var           char
+#define bv_loginhour  copy(localtime(bv_logintime),9,2)
+#define bv_loginmin   copy(localtime(bv_logintime),11,2)
+#define bf_year       copy(localtime(time()),1,4)
+#define bf_month      copy(localtime(time()),5,2)
+#define bf_day        copy(localtime(time()),7,2)
+#define bf_hour       copy(localtime(time()),9,2)
+#define bf_min        copy(localtime(time()),11,2)
+#define bf_sec        copy(localtime(time()),13,2)

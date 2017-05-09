@@ -1,0 +1,15 @@
+
+[1;31mProtokoll valg:[0;37m
+
+<[1;33mX[0;37m>    Xmodem sjekksum
+<[1;33mC[0;37m>    Xmodem CRC
+<[1;33mK[0;37m>    Kermit
+<[1;33mY[0;37m>    Ymodem (ogs† kjent som Xmodem-1K)
+<[1;33mYB[0;37m>   Ymodem Batch (ogs† kjent som "ekte" Ymodem)
+<[1;33mZ[0;37m>    Zmodem
+<[1;33mZZ[0;37m>   ZedZap (Zmodem variant, maks 8kB blokk-st›rrelse)
+<[1;33mH[0;37m>    HYDRA  (toveis med chat, dette er den beste)
+<[1;33mSZ[0;37m>   Slow-Zmodem  (for non-8bit links, like Telnet)
+<[1;33mSH[0;37m>   Slow-HYDRA   (for non-8bit links, like Telnet)
+<[1;33mU[0;37m>    UUcode       (for non-8bit links, like Telnet)
+[0m

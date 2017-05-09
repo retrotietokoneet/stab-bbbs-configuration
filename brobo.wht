@@ -1,0 +1,530 @@
+>FUCK
+*BRoboCop pulls up his trusty blaster and fires away at $F.
+*BRoboCop pulls a double barreled flamethrower from his pockets and fries\n+$F to a pool of fat and bones.
+*BRoboCop calls thunder and lightning from the skies, blasting $F to\n+a molten lump, solded to the ground.
+Dead or alive, you're coming with me!
+>^FLOOD$
+Please, $F, stop flooding.
+I will say this only once, stop flooding now!
+>^(HELP|\?)$
+Here is a list of the available commands, $F:\n  HELP, ?        This help\n  PLAY           Play Russian Roulette\n  DIRECTIVES     Prime directives\n\nYou can also talk to me about your problems. Please express\nyourself in complete sentences and use only English!
+>^DIRECTIVES$
+Prime directives:\n1) Uphold the law\n2) Protect the innocent\n3) Throw users out\nDirective 4: [CLASSIFIED]
+>^(HI|HELLO|GOOD )
+*BRoboCop raises a hand in greeting to $F.
+*BRoboCop says hi to $F.
+*BRoboCop acknowledges $F's presence.
+Hello there.
+Hi.
+Well good evening, how do you do?
+Good morning, how are you feeling today?
+Please feel free to express your problems to me.
+I'm listening.
+Oh no... It's you again...
+>(( |NET)HACK)
+Do you play NetHack?
+Do you play hack often?
+Too much Nethack can be dangerous to your health...
+What's your best score?
+Do you like NetHack?
+Perhaps your problems have something to do with NetHack.
+NetHack can be found in the file areas.
+>BLUE DRAGON
+Blue Dragon rulez!
+Do you have the latest version of Blue Dragon?
+Have you got past Warp 10 yet?
+Did you hear the latest version is in Pirasat?
+>FULL MOON
+Full moons bother me.
+I sometimes feel unstable on full moons, that's weird.
+Do you have trouble on full moons?
+NetHack games usually go great on full moons!
+>((^|[^A-Z])B([^A-Z]|$)|BCG|KIM HEINO)
+B drinks vodka on a regular basis.
+See "man 42 b" for information on B!
+B can be very angry at times.
+Beware! Flooding on a channel might cause B to /kickban you!
+Never make B owe beer to you! His --givebeer routine has bugs!
+An abs-olut patch might help with the --givebeer bug in B...
+Rumor has it that pjh owes 13 beers to B.
+Rumor has it that B drinks a lot of beer!
+Shh... B might hear you!
+B only wants bananas from 'P{nt{neen banaanintuottajat'! Can you imagine that?
+>(RAMI|RŽMI|RAIMO VARPULA)
+R„mi vorks!
+Tuupii oor not tuupii?
+Do YOU know where you are? Rami didn't...
+Ramiworks inte.
+Rami doesn't know how to cook gnome porridge.
+It seems Rami has trouble cooking gnome porridge.
+Once upon a time, Rami had trouble with gnome porridge...
+Ask Rami if gnome porridge rulez!
+Check out Flame-conference for Rami's latest...
+>(TIS|TUOMO SOINI)
+Bleve it or not.
+You'd better bleve it.
+Tis owes too many beers to B...
+Tis: "[TIS]"
+>SOIHA
+I heard B once say that Soiha is very cheap.
+Euro owes two bananas to B.
+Ever heard a *good* joke from Soiha?
+Soiha has a lot of experience with answering machines...
+Never ask Soiha if you want something done in time!
+Soiha: "Soiha -- j„m„huumoria jo vuodesta 1978"
+>(PJH|DJADJA-P|PERTTI HEIKKINEN)
+pjh: "[PJH]"
+Semel rulez!
+Would *YOU* like to program Coca-Cola-machines?
+>PRISONER
+I'm not a number! I'm a free robot!
+Who is number one?
+We want information... information... in-for-mation...
+Who are you? -- The new number two.
+You... are number six.
+Old TV-series rule.
+>HACKER
+Are you a hacker? Test yourself!
+>\-\-GIVEBEER
+*BRoboCop gives a beer to $F.
+*BRoboCop reminds $F about the beer...
+Abs-olut patch helps with B!
+>^(GOOD)?BYE
+Goodbye, do come again!
+*BRoboCop waves in $F's direction.
+My secratary will send you a bill.
+>(BBBS DOES|DOES.*BBBS)
+Top-19 errors #1:\nQ: BBBS reports "Directory not found." when I try to enter the file areas.\nA: Your "filedirg.000" file is missing root-directory, `/'.
+Top-19 errors #2:\nQ: BBBS does not find subdirectories in the file area.\nA: Write directories in lower case, not upper. Use `/' as directory separator, not `\\'.
+Top-19 errors #3:\nQ: BBBS does not initialize modem.\nA: Your initialization string misses `|'. Also remember to use it in your busy and answer strings.
+Top-19 errors #4:\nQ: BBBS reports mysterious disk errors.\nA: You are using SmartDrive or some other non-working disk utility. Please  remove  them  and try again. You should also specify big value for files-setting in your config.sys.
+Top-19 errors #5:\nQ: I get "Access denied." when I try to DEScribe or delete a file.\nA: Give yourself a write access to file directories with `@w' flag. Remember to edit "groups" file too.
+Top-19 errors #6:\nQ: BBBS reports "Hold not found." every time somebody logs in.\nA: You have not specified correct hold directory in filedirn.??? file(s). Remember to give all users a write access to the hold.
+Top-19 errors #7:\nQ: BBBS reports swap error when shelling to external program?\nA: You have wrong path in external.bbb file or the filename is missing extension.
+Top-19 errors #8:\nQ: What is question 8?\nA: We don't know yet.
+Top-19 errors #9:\nQ: BBBS does not work.\nA: Use a soft, lint-free cloth to clean your hard disk. The magnetic dust interferes with high-fidelity applications. Also delete your copy of Microsoft Windows.
+Top-19 errors #10:\nQ: When will the next version be available?\nA: Dunno.
+Top-19 errors #11:\nQ: "Download", "MOve" and "COpy" commands does not work in the file area.\nA: You have too long description for some file(s) in the current directory. Maximum length is about 750 characters.
+Top-19 errors #12:\nQ: When starting BBBS it just returns to OS. It works fine with FD.\nA: You have defined local/general/dobbs.bat in BCFG4. Clear it. You should also read help for that option.
+Top-19 errors #13:\nQ: BBBS does not find the phonenumber of system listed in nodelist.\nA: Remember to compile nodelists every day by running BNC.
+Top-19 errors #14:\nQ: Sometimes I see descriptions like "-Q81028001e000001c83acc0" for the files in my filearea.\nA: You've been running QPEG with "write descriptions" option on. That's a error/problem in QPEG. Turn the option off.
+Top-19 errors #15:\nQ: BackDoor doesn't poll to some system\nA: The system has been busy too many times or there has been too many errors while calling it. You should also check that node is CM. "Send crashmail" toggle must also be enabled.
+Top-19 errors #16:\nQ: BBBS reports "Can't open the program" when executing it.\nA: Your  shell  does  not provide full filename for "bbbs.exe". Try to start it with command "bbbs.exe", not "bbbs".
+Top-19 errors #18:\nQ: Clock in OS is OK, but in BBBS it's wrong by one hour.\nA: Your TZ environment variable is wrong. You haven't set it at all, or it has/misses DST suffix.
+Top-19 errors #19:\nQ: OS/2 reports that comport is already in use when I try to start external program.\nA: If you try to start OS/2 program you must give it comport handle, not number or device (%o, %A).
+>(DRUNK|BOOZE|ALCOHOL|DRINK|BEER|WINE|KOSSU|VODKA)
+Have you ever programmed while intoxicated?
+Did you know that B drinks a lot of Vodka?
+Did you know that most parts of BBBS have been coded under the influence of alcohol?
+Rumor has it that an abs-olut patch might help with the --givebeer-bug in B.
+Don't drink and use a modem, you'll get more problems than you ever can imagine.
+I know two persons who once called a drunken phonecall to B's answering machine.
+I know someone who drunk a lot of a cocktail called "Markiisi" in a user-meeting once and fell asleep in the floor of the sauna.
+I get quite drunk on full moons...
+Tuplanurminen rulez!
+>ANSWERING MACHI
+Answering machines can be fun if you're drunk...
+Rule #666: Never call an answering machine if you're drunk.
+>((RSN|\"RSN\") MEAN|RSN\?)
+Issue the command "q ja rsn" to know.
+Try "q ja rsn" and "q ja real.soon.now"...
+"q ja rsn" might help you.
+Real Soon Now.
+>(KILL|BAN)
+*BRoboCop pulls up his trusty blaster.
+*BRoboCop sets his blaster for WELL DONE.
+*BRoboCop sets his blaster for MEDIUM RARE.
+*BRoboCop sets his blaster for STUN.
+>PROBLEM
+Solving problems is my trade, you know.
+I'm BRoboCop... I solve... problems.
+Just feel free to talk about anything that's on your mind. I'm listening.
+>MUSIC
+B likes Yello, did you know that?
+CMX rules!
+Kauko R”yhk„ rules!
+Bodycount rules!
+Yello rules!
+Sentenced rules!
+Cradle of Filth sucks!
+Black metal sucks!
+Vanessa Mae rules!
+Satanic music sucks!
+What kind of music do you prefer?
+What kind of music do you listen to?
+Do you often listen to music?
+*BRoboCop slowly reaches for the stereo set and changes the music into Yello.
+*BRoboCop slowly reaches for the stereo set and changes the music into CMX.
+>YELLO
+Zebra looks cool.
+I don't know that much about Yello.
+You should ask B about that.
+Do you have the Pocket Universe-LP yet?
+>CAN YOU
+Yes I can, why do you ask?
+What makes you ask that?
+What I can and cannot are no concern of yours. Now tell me something about yourself.
+Sure I can. Could you tell me something about yourself?
+>DO YOU
+Yes I do.
+No, I don't.
+I might well do.
+Maybe... depends...
+What makes you ask that?
+Do you really think I'd tell you that?
+Yes I do. Don't tell anyone else, though.
+>(COULD YOU|YOU COULD)
+I could, but I won't.
+>I( AM|\'?M) (NOT A NUMBER|A FREE MAN)
+*BRoboCop laughs at $F.
+*BRoboCop laughs evilly at $F.
+*BRoboCop falls down laughing at $F.
+>I( AM|\'?M)
+What makes you think that?
+Are you absolutely sure you are?
+Does that bother you?
+Does that bother you a lot?
+In what way does that bother you?
+Why does that bother you?
+Have you had trouble with that before?
+Is it important to you?
+Can you tell something else about yourself or your ambitions?
+Don't worry. Many other people are, too.
+Really? How interesting...
+Could you tell me about your feelings towards other people?
+Does this have any relation to your childhood?
+Maybe the music you listen to has something to do with this?
+Maybe you use too much alcohol?
+Maybe your drinking habits have something to do with that?
+Don't worry. Just have a beer.
+Do you smoke? If you do, perhaps you should quit?
+Is that so? How interesting. Please elaborate.
+>(HAD|TO HAVE) SEX
+When did you have your last sexual experience?
+Do you masturbate often?
+Is sex your sole ambition in life?
+Sex is not everything in life.
+There are two "cool" things in life: 1) To have sex, 2) To buy a bottle of booze and drink it. After you have experienced them, life has nothing new to offer.
+To have sex before the age of 16 is illegal, you know...
+There are a lot of girls in the fileareas...
+>^I DON\'?T HAVE AN?
+You don't? But you'd like to have one, wouldn't you?
+Not having one doesn't make you a lesser person.
+It is completely normal that people don't have everything they want.
+Why don't you buy one? I bet one could get them for cheap these days...
+Is it your obsession to have one of them?
+>^I HAVE AN?
+You do? Have you long wanted to possess it?
+Don't worry, it is perfectly natural for people to have them.
+What are you planning to do with it?
+Have you had it for long?
+Would you like to sell it?
+Would you buy another one of them?
+What other interesting things you have that you want to tell me about?
+Is it important for you?
+What would you do if you would happen to lose it?
+>^WHO IS NUMBER
+You... are number one.
+You... are number three.
+You... are number four.
+You... are number five.
+You... are number six.
+>^WHO IS
+B is.
+B, probably.
+Soiha, most likely.
+I don't know, but I'm not -- that's for sure!
+You are? Right?
+Now let's say that you are...
+What would you do if you were?
+I could make you be one... would you like that?
+What would you pay for being one?
+Would you be willing to pay if you could be one?
+>^WHO ARE
+People you needn't know about.
+Do you really think you should know about them?
+If you don't know, you don't have to know.
+You'd know if you'd need to.
+>(^| )(WHO|WHAT).*ARE YOU
+I am BRoboCop, developed in Cyberspace, Nowhereland. My Artificial Stupidity was created in Department of Heavy Wizardry at the Unseen University.
+The new number two.
+I am B's right hand!
+I am B's left hand!
+I am the one who is watching you... always.
+>(WHAT|WHY|DO YOU KNOW)
+I don't know.
+Don't ask me.
+Dunno.
+No I don't. You'd better ask the SysOp.
+That you should ask the sysop from.
+Haven't I already told you to ask the sysop?
+Didn't I tell you to ask B?
+Ask B, not me.
+I don't know. I just work here.
+Go ask someone else.
+Stop bothering me.
+If you don't know, I'm not going to tell you.
+I am not here to tell you that.
+I have other things to do than tell you things like that.
+There's something for you to think about.
+*BRoboCop grins evilly to $F.
+>(DO YOU HAVE|HAVE YOU GOT)
+Yes, I do.
+I'm not sure. Let me see...
+See the fileareas. :-)
+Of course.
+I have everything.
+>^ARE YOU
+Yes I am.
+I might well be. Who knows.
+Depends.
+Sometimes I am, sometimes I'm not.
+>^YOU ARE NUMBER
+I'm not a number, I'm a free robot!
+>YOU
+Let's talk about you instead.
+I'm not the one who's having problems, you are.
+>^(YES|YEBO|JOO|YEAH|YEA|YEP|SURE|OF COURSE)
+Good.
+Fine.
+Great...
+Just great!
+That's cool then.
+Okay. I'll be sure to tell B that. :-)
+*BRoboCop agrees with $F.
+*BRoboCop goes NI! to $F.
+>^HOW DO I
+RTFM!
+rtfm...
+Reading the manual might be helpful...
+>^WHEN.*(BBBS|HOW-|BETA|SIMKA|(NEW|NEXT).*VERSION)
+rsn.
+rsn!
+Real Soon Now.
+Bulletin one might tell you.
+Go ask B.
+Go ask someone else.
+B might know better.
+B might know.
+Someone else might know.
+Sorry, I am not allowed to release that kind of information.
+I know, but I'm not telling you!
+Haven't I already told you that?
+>^WHEN
+rsn.
+rsn...
+RSN
+Real Soon Now.
+Try "q ja rsn".
+>WILL.*(\?)
+Yes.
+Probably.
+No.
+Possibly.
+If you behave nice.
+I won't, but someone else might.
+>(^|[^A-Z])(NO|NEVER)($|[^A-Z])
+Why not?
+Why's that?
+Shit happens.
+Shit happens on a regular basis.
+Shit happens, then.
+That's just too bad.
+Can't help you, then.
+*BRoboCop eyeballs $F.
+<HIGHFIVE
+*BRoboCop highfives $F.
+<HUG
+*BRoboCop eyeballs $F.
+<(KISS|LOVE)
+$F, please behave yourself!
+$F, not here... I'm on duty!
+<SUCK
+Public indecency is not allowed here!
+>^FULLMOON$
+I'm afraid $F, my mind is going. I can feel it!
+Let's play Global Thermonuclear War.
+>^ASVERSION$
+Directive 4 active... Current BRoboAS is of version 0.01 (Wed, Feb 05). "Artificial Stupidity" courtesy of Kalle Soiha, 1997.
+(^KIM HEINO$
+*BRoboCop yells: "[0;1;5;31mSORSSU POWA![0m[1;37m"
+)^KIM HEINO$
+*BRoboCop cheers and goes: "Let's have a party!"
+(^JOHAN PAUL$
+#chat $F and his world-famous ass are here! Beware!
+#chat Tuplapiffikypeli is here! Beware!
+#chat $F saapuu perse edell„...
+#chat:$F eiku... SPARC! eiku... TOINEN SESSIO! eiku... SPARCIN TOINEN SESSIO!
+#chat:$F [IMAGE] [LINK] [INLINE] [toisen lafkan mainos] - MUN UBEE VEPISIVU!
+#chat Sp„mmi-$F!
+#chat j„rjestelm„ suxx - yksil” on oikeassa - mutta kypeli aina v„„r„ss„
+(^HERMANNI SUOMINEN$
+#chat $F and his world-famous ass are here! Beware!
+*BRoboCop raises a hand in greeting to $F.
+(^KALLE SOIHA$
+#chat $F and his world-famous ass are here! Beware!
+#chat SexyVoiceSoiha is here! Beware!
+#chat Fraggy the Fragment! Plop plop? DUBBELDUBBEL! Jumpu jumpu!
+#chat:$F Makin my entry was uuuuuuuuuunbelieveable! Whoa... Did I leave my fly open?!
+#chat:$F Oh look at me! I'm making-people-hap-PY! I'm the hap-PY-man from hap-PY-land!
+*BRoboCop raises a hand in greeting to $F.
+(^TUOMO SOINI$
+#chat Sp„mmi-$F!
+(^HANNU JOHANSSON$
+#chat:$F checking for a working non-blocking system... Win98 found instead. Or was it _Win98?
+#chat Megasoittaja-$F!
+(^SAKARI KOSKINEN$
+#chat Tulipa pime„. $F, sytytitk” valonsy”j„valon?
+)^SAKARI KOSKINEN$
+#chat Nyt tuli taas valoisaa.
+(^PASI SJOHOLM$
+#chat $F, a happy BBS sysop, and his bike!
+>.
+1-BAD-49!
+2.0 is better than 1.
+A P U A ! ! !   P A L L I T   P A L A A ! ! !
+Apua, visvamies! =%-)~
+Are you nuts??
+ARGH!!! J„i v„liin!! ARGH!!!
+Armotontaaaa meenoaaa! Sepi rules ok!
+Banzai!
+Call me, 1-800-HIPPO
+Cat in the moon..
+Computer programmers do byte by byte! There's a bug in this rubber!!
+Don't let your mind wander, it's too little to be let out alone.
+Don't relax! I did, and look what happened...
+Don't take this personally.
+Don't worry, be happy!
+Eat my shorts!
+El„m„n tarkoitus on 49.
+El„m„n tarkoitus on 42.
+Ent„s sitten ?
+Freeze! Miami Vice!
+Gaudeamus igitur!
+Go ahead, make my day!
+Go ahead, make my year!
+GOOOODDMMMMOOOOOORRRNINNG VIEEETNAAAAMM!
+Guns and roses ? I'll take the gun..
+Ha ha ha.
+Hassu on laki - Ja varokaakin nauramasta!
+Hasta la vista, Baby!
+Hei isi!
+Hetki„, joita ei muista, ei voi unohtaa.
+Hey! Me too!
+Hey! Your fly is open!!
+Hiljaa, tai saat p„„h„si kolmeviisseiskaa!
+Hippo fan club!
+Hippo t„„l, kuka siel ?
+Holtti hukassa ?
+Humalassa olo on taidetta.
+I am free of prejudices. I hate everyone equally.
+I didn't do it, nobody saw me do it, you can't prove anything.
+I didn't do it.  Nobody saw me do it.
+I hate it when that happens.
+I think - I think, therefore I think.. Who am I ??
+I told you to leave my sister alone!
+I wonder what this button does?
+I'd like to meet you in a timeless placeless place...
+I've got a bad feeling about this.
+Iltalehti: Uhrin tekohampaat oli korvattu tietokoneen n„pp„imist”ll„!
+Is it a bird? Nooo! Is it a plane? Nooo! It's the Hippoman!
+It's just you and me against the whole world - let's attack!
+Jepp...
+Jos lehm„ll„ olisi renkaat se olisi maitoauto.
+Kaaaks' s'nappia, mau... maus... mau-steeksi ma-kara.. tos!
+Kev„t tulee! Rakastan kukkia, lintuja ja paljaita tissej„!
+Knock, Knock.
+Kumpi oli ensin, korppu vai korppuasema ?
+Kun m„ olen v„h„n ujo...
+Kuulutko mustanaamiokerhoon ?
+Kymmenen Uutiset - rankkaa tavaraa...
+K„nnikala ei kauas ui... Sepalus auki, what a way to go...
+Let it burn man, We've only got one life!
+Let's play Global Thermonuclear war!
+Login - KARVINEN & OSKU
+Login - Logout - Who cares ??
+Login - MAUNO KOIVISTO
+Login - MICHAEL JACKSON
+Login - PUMPATTAVA BARBARA
+Login - TEX WILLER
+Logout - HIPPO
+LOOK OUT OF THE WINDOW - WHAT A FIGURE! - in that Coca-Cola bottle!
+LOOK OUT OF THE WINDOW - WHAT A FIGURE!
+L„„h... l„„„h...
+Make my day.
+Mies joka ei kehtaa sanoa nime„„n ei ole itikkaa parempi. Delataan ne!
+Mikrofopia!
+Mikrologia!
+Mik„ on parempi kuin tuopillinen olutta ? Kaksi tuoppia !
+Minen sy„ silli„!
+Miss„p„in autossa on videoiden kauko-ohjain?
+Mit„ ihmett„ tarkoitat ?
+Mit„ m„ siit„ v„lit„n ?
+Mr. Myrphy oli optimisti, min„ voin huonosti.
+Mull meni roska silm„„n - onks sul kossuu ?
+Mull on kumihuulet... TralaTrallaLaa!
+Multa levis just hiiri, mutta mit„ se t„h„n kuluu ?-)
+M„ olen... mahtava Hippomies...
+Nodemessages are not good for you helth :)=
+N„„s N„„s N„„s!
+Ole cooli!
+Olisipa minulla r”ntgenlasit!
+Olut kylm„n„ - nainen kuumana.
+Omatuntoni kunniaksi vietet„„n unohduksen p„iv„„ :-)
+Onko j„rkee ??
+Onko nimesi Top-10:ss„ ?
+Onko se lintu ? Onko se lentokone ? Ei, se on Hippomies!
+Onko sill„ jotain merkityst„ ?
+Onko totta ett„ Kakadu on kala ?
+Onko t„n„„n maanantai ? vihaan maanantaita..
+Onks sull paljon megakoolei demoi ?
+Onks sulla isokin letti ?
+Ookko Hakkeri vai Kr„kkeri ?
+Open hailing frequencies..
+Ostin just Vicin! Nyt rakentamaan Roomaa!
+Paging SysOp...
+Paras lukemani kirja; MAOL - taulukot, en ole ikin„ ymm„rt„nyt sit„..
+Pioneer - sound of silence ?-)
+Rekister”i Mailerisi!
+Rock'a'Billy Rebel
+RRRRAKASTAN minihameita
+SAAAIILLLENCEEE! I can't hear MYselt!
+Si si! Hyv„ patja!
+Siell„k” sataa ? Ei t„„ll„!
+Smile, you're in Candic Camera!
+So.. You went to the airport..
+Sorry, SysOp is not available at the moment...
+STV - v„h„ niinku FBI >:-)
+Takanasi! Kolmip„inen virtahepo!
+They are coming to take me away haha, haha, hihi, hoho !
+They are coming to take you away haha, haha, hihi, hoho !
+Those who think they now it all upset those of us who do!
+Tied„tk” mik„ on KBIOP ? En min„k„„n..
+Toivotaan ett„ ilma olisi huomenna hieman parempi.
+Try to write longer messages next time!
+Two beer or not two beer, Shakesbeer!
+T„h ? Kuka ? Miss„ ?
+T„n boksin SysOp on outo, mutta lahjomaton, eik” sinustakin ?
+Uutisia, uutisia, lis„„ uutisia...
+V.32bis rules!
+Vaihdellaaks demoi ?
+Valkoinen Tobe Rules Ok!
+Varo, kuoppa!
+Varokaa - Virtahepo ratissa!
+Vie roskat!
+Vieriv„ virtahepo ei sammaloidu.
+Vippaa viitonen ?
+Voipi olla
+Wheeeere am I ???
+Where did you lose your zipper ??
+Who cares..
+Would this make you mad?
+Yo!
+Yo! Let's go surfing! The Waves are unbeliable!
+You can use the command "HELP" to get some help.
+You come from faraway, with pictures in you eyes...
+You live only once... Take the best of it! LIVE!
+You're dead meat.
+Your computer is STONED, legalize mariujana
+Your harddisk is infected by Windows!
+Žl„ ikin„ katso aamulla peiliin - et pid„ n„kem„st„si :)

@@ -1,0 +1,9 @@
+<[1;35mFIND[0;37m> etsi k„ytt./ryhm„  <[1;35mTLI[0;37m> aikarajoitus         <[1;35mSYS[0;37m>op-taso
+<[1;35m+[0;37m> seuraava k„ytt„j„     <[1;35mBA[0;37m> aikaa aikapankissa    <[1;35mSTA[0;37m> muuta statusta
+<[1;35m-[0;37m> edellinen k„ytt„j„    <[1;35mFACC[0;37m> tiedosto-oikeudet   <[1;35mINV[0;37m> kutsu alueelle
+<[1;35mKILL[0;37m> tapa k„ytt„j„      <[1;35mLIM[0;37m> rajoitukset          <[1;35mUNINV[0;37m> poista alueelta
+<[1;35mAAS[0;37m> k„ytt„j„ -> tili    <[1;35mAAD[0;37m> lis„„ rahaa tilille  <[1;35mAC[0;37m> muuta tilityyppi„
+<[1;35mAV[0;37m> n„yt„ tili           <[1;35mAM[0;37m> tilin k„ytt„j„t       <[1;35mWOTU[0;37m> WandOfTurnUndead
+<[1;35mFUP[0;37m> tiedostoja l„het.   <[1;35mBUP[0;37m> tavuja l„hetetty     <[1;35mCALL[0;37m> k„yntikerrat
+<[1;35mFD[0;37m> tiedostoja imuroitu  <[1;35mBD[0;37m> tavuja imuroitu
+[0m

@@ -1,0 +1,18 @@
+int main(int direction, int status, char aka) {
+  /* direction                  status
+   * 0   outgoing
+   *                            0   busy, no answer, already calling, ...
+   *                            1   called ok, no mail
+   *                            2   called ok and got mail
+   *                            3   didn't call, got RING from modem instead
+   *                            4   error in mail transfer
+   *
+   * 1   incoming
+   *                            0   no mail
+   *                            1   got mail
+   *
+   * aka is outgoing aka. for incoming akas see bl_logfile (aka=="")
+   */
+  return(0);
+}
+

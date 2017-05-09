@@ -1,0 +1,22 @@
+  caChat message #42 from cbBca to cbZca.[0;37m        !  cu<B> cqMy chat text[0;37m
+  ca...[0;37m                                  !  cu<Z> crOthers chat text[0;37m
+  ccSubject: Color editor[0;37m                !  cu<Z> cvB, this one is for you![0;37m
+  cc=====================[0;37m                !  cu*Z* csPrivate nodemessages[0;37m
+                                       !  ctLogout: Joe User (J)  <Info>[0;37m
+  cf>> Even-quoted text[0;37m                  !
+  ce> Odd-quoted text[0;37m                    +---------------------------------------
+  cdNormal text.[0;37m                         !
+                                       !   Move with cursor keys, [1;37mQ[0;37muit, [1;37mA[0;37mbort
+  cg * Origin: (2:22/222)[0;37m                !   Available colors: [30mX[31mX[32mX[33mX[34mX[35mX[36mX[37mX[1;30mX[1;31mX[1;32mX[1;33mX[1;34mX[1;35mX[1;36mX[1;37mX[0;37m
+                                       !
+---------------------------------------+
+                                       !
+chDirectory: /*[0;37m                          !
+                                       !
+ci File name  Date    kB  Dlds File desc[0;37m !
+ci ---------  ----    --  ---- ---------[0;37m !
+ cjdir       cp <directory>      cnDirectory[0;37m !
+ cknormal    cp970101   42k   42 cnNormal[0;37m    !
+                             cofile[0;37m      !
+cp+clfree      cp970101   42k   42 cnFree file[0;37m !
+ cmlink      cp970101   42k   42 cnLink file[0;37m !

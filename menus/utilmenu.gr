@@ -1,0 +1,13 @@
+[1;1H[2J[1;31mUtility Commands:[0;37m
+
+<[1;33mV[0;37m>iew current settings   <[1;33mED[0;37m>itor type              <[1;33mLA[0;37m>nguage used in menus
+<[1;33mS[0;37m> character set         <[1;33mQU[0;37m> automatic quoting     <[1;33mMF[0;37m> nodemessage filter
+<[1;33mTE[0;37m>rminal emulation type <[1;33mFL[0;37m>ash name in headers    <[1;33mAF[0;37m> archive format
+<[1;33mKEY[0;37m> VT100 keys on/off   <[1;33mREV[0;37m>iew own messages      <[1;33mGF[0;37m> offline format
+<[1;33mCOL[0;37m>ors on/off           <[1;33mC[0;37m>onf. status at login    <[1;33mALIAS[0;37m> set alias
+<[1;33mL[0;37m>ines in screen         <[1;33mI[0;37m> show your resume       <[1;33mUNALIAS[0;37m> unset alias
+<[1;33mA[0;37m>ddress data            <[1;33mRES[0;37m> edit resume message  <[1;33mSET[0;37m> set variable
+<[1;33mP[0;37m> change your password  <[1;33mT[0;37m>ransfer protocol type   <[1;33mUNSET[0;37m> unset variable
+<[1;33mNAME[0;37m> change your name   <[1;33mRET[0;37m>urn with enter-key    <[1;33mX[0;37m> expert/novice menus
+<[1;33mSI[0;37m>lent mode             <[1;33mPAL[0;37m>ette colors           <[1;33mWID[0;37m>th of screen
+[0m

@@ -1,0 +1,10 @@
+int main(char id, char name) {
+  printf("<html>\n");
+  printf("<head>\n");
+  printf("<title>%s</title>\n",name);
+  printf("</head>\n");
+  printf("<body>\n");
+  printf("<a href=\"bbbs?id=%s&do=\">back</a>\n",id);
+  printf("</body>\n");
+  printf("</html>\n");
+}

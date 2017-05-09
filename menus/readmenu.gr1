@@ -1,0 +1,15 @@
+[1;1H[2J[1;31mLukuvalikon komennot:[0;37m
+
+paina [1m<CR>[0;37m ja lue seuraava viesti   <[1;33m<[0;37m> n„yt„ viesti johon t„m„ on vastaus
+<[1;33mnum[0;37m> lue numeron osoittama viesti  <[1;33m>[0;37m> n„yt„ ensimm. vastaus t„h„n viestiin
+<[1;33m+[0;37m> lue seuraava viesti             <[1;33m=[0;37m> n„yt„ seur. vastaus, jos sellainen on
+<[1;33m-[0;37m> lue edellinen viesti            <[1;33mO[0;37m> lue t„m„n vastausketjun ensimm. viesti
+<[1;33m.[0;37m> lue sama viesti uudelleen       <[1;33mP[0;37m> lue viesti jonka luit ennen t„t„
+<[1;33mRE[0;37m> vastaa viestiin      <[1;33mK[0;37m> tuhoa oma viestisi     <[1;33mD[0;37m> lis„„ viestipakettiin
+<[1;33mPRE[0;37m> yksityinen vastaus  <[1;33mREC[0;37m> palauta tuhottu      <[1;33mSE[0;37m> imuroi viestipaketti
+<[1;33mCRE[0;37m> vastaa alueella     <[1;33mMOVE[0;37m> siirr„ toiselle al. <[1;33mMODE[0;37m> miten luet viestit
+<[1;33mI[0;37m> tietoa kirjoittajasta <[1;33mMC[0;37m> kopioi tois. alueelle <[1;33mSH[0;37m> n„yt„ alueiden tila
+<[1;33mV[0;37m>ilkaise otsikoita      <[1;33mDUP[0;37m> muokkaa viesti„      <[1;33mRES[0;37m> eroa viestialueista
+<[1;33mM[0;37m>erkitsemisvalikko      <[1;33mAI[0;37m> tietoa alueesta       <[1;33mNEXT[0;37m> seuraava viestialue
+<[1;33mS[0;37m> etsint„valikko        <[1;33mSAVE[0;37m> viesti -> /tmp      <[1;33mGNUS[0;37m> kokoruudun lukija
+[0m

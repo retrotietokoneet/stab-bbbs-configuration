@@ -1,0 +1,4 @@
+<[1;33mGETDEL[0;37m>          Get files and delete them from remote
+<[1;33mPUT nodenumber[0;37m>  Put nodenumber's outbound
+<[1;33mMIR[0;37m>ror          Receive new files
+[0m

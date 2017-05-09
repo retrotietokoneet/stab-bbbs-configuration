@@ -1,0 +1,24 @@
+Address the message to AreaFix or BRoboCop. Enter your areafix password into
+subject line.
+
+In subject line after your password...
+
+ -h                   Gives this help
+ -l                   Gives list of all areas available for you
+ -q                   Gives list of linked areas available for you
+ -u                   Gives list of unlinked areas available for you
+
+In message text...
+
+ %help                Gives this help
+ %list                Gives list of all areas available for you
+ %query               Gives list of linked areas available for you
+ %unlinked            Gives list of unlinked areas available for you
+ +arearegexp          Connect to file or echo area(s)
+ -arearegexp          Disconnect file or echo area(s)
+ file +arearegexp     Connect to file area(s)
+ file -arearegexp     Disconnect file area(s)
+ echo +arearegexp     Connect to echo area(s)
+ echo -arearegexp     Disconnect echo area(s)
+
+Write only one command per line. Arearegexp "%all" will be expanded to ".".

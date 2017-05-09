@@ -1,0 +1,7 @@
+[1;1H[2J[1;31mEditor choices:[0;37m
+
+<[1;33mL[0;37m>ine            Line editor, requires nothing from terminal
+<[1;33mF[0;37m>SE             Full Screen Editor, much better than line editor
+<[1;33mM[0;37m>G              MG, Gnu Emacs clone
+<[1;33mS[0;37m>cript          For local user only
+[0m

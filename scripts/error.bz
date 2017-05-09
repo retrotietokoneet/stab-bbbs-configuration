@@ -1,0 +1,185 @@
+/*
+ * Error.bz - Run when an unknown command occures
+ *
+ * See script.gui for more information about parsecom and other bz commands.
+ * Remember to recompile this script after you've done some changes.
+ *
+ * This script has some commands that are allready defined. These are:
+ *
+ *         User Commands:
+ *         glob: REGEXP          Gives help about Regular expressions
+ *         glob: CLS             Clears the screen
+ *         glob: ADDON           Shows the files USERMENU.GR and USERMENS.GR
+ *                               Theese files must reside in one of your
+ *                               menu directories.
+ *         util: FILT            MBBS Compability dummy-command.
+ *         util: GR              MBBS Compability dummy-command.
+ *
+ *         Sysop Commands:
+ *         glob: RUN             Runs an external script.
+ */
+
+#include <stdlib.bzh>
+
+int fexists(char s) {
+  int f;
+
+  if ((f=fopen(s,"rb"))==-1) return(0);
+  fclose(f);
+  return(1);
+}
+
+int usermenu() {
+  int f;
+
+  if (bu_language>0) {
+    if ((f=fopen(sprintf("%s%s%u",bl_menudir,"usermenu.gr",bu_language),"rt"))!=-1) {
+      fclose(f);
+      showfile(sprintf("%s%s%u",bl_menudir,"usermenu.gr",bu_language));
+    } else showfile(sprintf("%s%s%u",bg_menudir,"usermenu.gr",bu_language));
+    if (bu_access & 255) {
+      if ((f=fopen(sprintf("%s%s%u",bl_menudir,"usermens.gr",bu_language),"rt"))!=-1) {
+        fclose(f);
+        showfile(sprintf("%s%s%u",bl_menudir,"usermens.gr",bu_language));
+      } else showfile(sprintf("%s%s%u",bg_menudir,"usermens.gr",bu_language));
+    }
+  } else {
+    if ((f=fopen(strcat(bl_menudir,"usermenu.gr"),"rt"))!=-1) {
+      fclose(f);
+      showfile(strcat(bl_menudir,"usermenu.gr"));
+    } else showfile(strcat(bg_menudir,"usermenu.gr"));
+    if (bu_access & 255) {
+      if ((f=fopen(strcat(bl_menudir,"usermens.gr"),"rt"))!=-1) {
+        fclose(f);
+        showfile(strcat(bl_menudir,"usermens.gr"));
+      } else showfile(strcat(bg_menudir,"usermens.gr"));
+    }
+  }
+}
+
+int main(char com, int tomenu) {
+/*
+ * tomenu: 1=read, 2=main, 3=util, 4=file, 5=chat, 6=outb, 7=ftp
+ *         129=file_cd_no_access, 130=bz::file4()
+ *         131=feelings
+ */
+  char s, r;
+  int f, i;
+
+/*
+File format for commands.bbb is:
+
+--cut--
+;Command                Menu   Script, *bbbs_command or !os_command
+;==================================================================
+
+FOObar                  2      unpack
+TEST                    1      *!This is a test.
+ACCess       !,fsysop,  1      *>b You have access!
+--cut--
+
+Optional "!regexp_of_groups" can be added before menu parameter.
+Use lowercase characters!
+*/
+
+  if ((f=fopen("commands.bbb","rt"))!=-1) {
+    do {
+      s=fgets(f);
+      while (i=pos("\t",s)) s=sprintf("%s %s",copy(s,1,i-1),copy(s,i+1,768));
+      if (s!="" && copy(s,1,1)!=";" && pos(" ",s)) {
+        r=copy(s,1,pos(" ",s)-1);
+        if (parsecom(r,com)==1) {
+          s=delete(s,1,strlen(r));
+          while (copy(s,1,1)==" ") s=delete(s,1,1);
+          if (pos(" ",s)) {
+            r=copy(s,1,pos(" ",s)-1);
+            if (copy(r,1,1)=="!") {
+              if (!regexp(copy(r,2,255),bv_groups)) r="";
+              else {
+                s=delete(s,1,strlen(r));
+                while (copy(s,1,1)==" ") s=delete(s,1,1);
+                if (pos(" ",s)) r=copy(s,1,pos(" ",s)-1);
+              }
+            }
+            if ((r=="*" || r==tomenu) && pos(" ",s)) {
+              s=delete(s,1,strlen(r));
+              while (copy(s,1,1)==" ") s=delete(s,1,1);
+              fclose(f);
+              if (copy(s,1,1)=="*") bbbs(copy(s,2,256));
+              else
+                if (copy(s,1,1)=="!") system(copy(s,2,256),1,0);
+                else spawn(s);
+              exit(0);
+            }
+          }
+        }
+      }
+    } while (!feof(f));
+    fclose(f);
+  }
+
+  /* Local commands */
+
+  switch (parsecom("FILT/GR",com)) {
+    case 1:{                   /* FILT */
+            if (tomenu==3) {   /* utilmenu */
+              printf("Noise filter disabled.\n");
+              exit(0);
+            }
+            break;
+           }
+    case 2:{                   /* GR */
+            if (tomenu==3) {   /* utilmenu */
+              printf("G&R commands disabled.\n");
+              exit(0);
+            }
+            break;
+           }
+  }
+
+  /* Global commands */
+
+  if (tomenu!=131)
+    switch (parsecom("REGEXP/CLS/ADDON/RUN",com)) {
+      case 1:{                    /* REGEXP */
+              help("","regexp");
+              exit(0);
+             }
+      case 2:{                    /* CLS */
+              printf("\e[1;1H\e[2J");
+              exit(0);
+             }
+      case 3:{                    /* ADDON */
+              usermenu();
+              exit(0);
+             }
+      case 4:{                    /* RUN */
+              if (bu_access & 1) {
+                s=input("Script: ",69,1);
+                if (s!="") {
+                  if (fexists(sprintf("%s%s.bzb",bg_scriptdir,s)) ||
+                      fexists(sprintf("%s%s.cmd",bg_scriptdir,s)) ||
+                      fexists(sprintf("%s%s.class",bg_scriptdir,s)) ||
+                      fexists(sprintf("%s%s.pl",bg_scriptdir,s)))
+                    spawn(s);
+                  else
+                    printf("Script %s not found!\n",s);
+                }
+              }
+              exit(0);
+             }
+    }
+
+  /* Just print the error message */
+
+  if (bn_zstatus!=5 && bn_zstatus!=6 && bn_zstatus!=9) {
+    if (tomenu==129) printf(bv_txt[629]);           /* file_cd_no_access */
+    else
+      if (tomenu==131) printf(bv_txt[23],com);      /* chat */
+      else
+        printf(bv_txt[23],com);                     /* invalid command */
+  }
+  bv_comstring="";
+  exit(0);
+}
+

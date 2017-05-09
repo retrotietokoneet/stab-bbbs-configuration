@@ -1,0 +1,4468 @@
+@database "The Hitchhikers' Online Guide to BBBS (Norsk)"
+@author Kai Lunde, Stig Johansen
+@index Index
+@help HELP
+@toc Main
+
+@remark Translated from the original english file whitch is written by:
+@remark Kim Heino, Jari Turkia, Jari Saarenmaki, Kai Lunde, and many others
+
+@remark =================================================
+@remark The Hitchhikers' Online Guide to BBBS - Main Node
+@remark =================================================
+
+@remark =======================================================================
+@remark
+@remark  *** Retningslinjer for Ü oppdatere denne filen: ***
+@remark
+@remark  - Sett hõyre margin til 72 tegn og rett linjer. Splitt lengere linjer
+@remark  - Ikke skriv kommandoer imellom < og > tegnene, men bruk gjerne links.
+@remark  - Node beskrivelser bõr gjenspeile kommanden, ingen ekstra mellomrom.
+@remark  - Skriv ":" etter et del navn og bruk uthevet, slik: @{b}NOTE:@{ub}
+@remark  - Legg inn en tom linje mellom noder og delemner.
+@remark  - Ikke prõv Ü gjem navnet ditt i kommandoer, bruk "Joe Hacker" nÜr
+@remark    du mÜ.
+@remark  - NÜr du refererer til en kommando i en tekst, skriv kommandoen med
+@remark    smÜ bokstaver og bruk utheving eller en link.
+@remark  - Referer ikke til dit favoritt shell eller OS i teksten.
+@remark
+@remark =======================================================================
+
+@node Main "Innholdsfortegnelse"
+        @{b}HAIKERNES ONLINE GUIDE TIL BBBS@{ub}
+        ===============================
+
+@{b}INNHOLDSFORTEGNELSE:@{ub}
+        @{fg highlight}Bruk av BBBS:@{fg text}
+        @{" Hjelp for nye brukere " link GLOB_NYB           }  ...  Dette kan vëre et bra sted Ü begynne.
+        @{" Kommandolinje Editor  " link CLEDITOR            }  ...  Bruk og editering av kommandoer.
+        @{" Meldings Editorer     " link EDITOR              }  ...  Informasjon om de innebygde editorene.
+        @{" Globale Funksjoner    " link GLOB                }  ...  Disse kommandoene fungerer overalt.
+        @{" Hoved Kommandoer      " link MAIN_MENU           }  ...  Et par forskjellige kommandoer.
+        @{" Lese Kommandoer       " link READ                }  ...  Lese og skrive meldinger.
+        @{" Fil Kommandoer        " link FILE                }  ...  Blir brukt for Ü sende og motta filer.
+        @{" Utility Kommandoer    " link UTIL                }  ...  Hvordan du kan endre dine settinger.
+
+        @{fg highlight}Diverse informasjon:@{fg text}
+        @{" Kontaktmuligheter     " link INFO_Contact_B      }  ...  Hvordan du kan kontakte forfatterene.
+@endnode
+
+@node CLEDITOR "Kommandolinje Editor: Gi kommandoer til BBBS"
+@{b}EMNE:@{ub}
+        Kommandolinje editor: Gi kommandoer til BBBS
+
+@{b}BESKRIVELSE:@{ub}
+        Kommandolinje editoren tar hÜnd om det du skriver som til BBBS
+        som kommandoer. HovedformÜlet til kommandolinjen er Ü motta
+        en kommando og utfõre den. Som regel ser promptet slik ut:
+
+        (Konferanse) Navnet_pÜ_menyen (Ett_eller_annet): _
+
+        Navnet til venstre i parantesene er den innevërende konferansen.
+        Det neste navnet er den innevërende menyen. Det kan ogsÜ stÜ et
+        delprompt i parantes. Promptet ender med et kolon og etter det
+        stÜr markõren din.
+
+@{b}BRUK:@{ub}
+        Du skriver inn kommandoer ved Ü taste de inn og trykke pÜ
+        <enter> tasten. Bruk spõrsmÜlstegn (?) kommandoen for Ü se
+        hvilke kommandoer du kan bruke der du stÜr.
+
+@{b}EDITERING@{ub}
+        Du kan editere kommandoer i kommandolinjen med piltastene,
+        <@{fg highlight}backspace@{fg text}> og <@{fg highlight}del@{fg text}>. Kommando historien kan brukes med
+        <@{fg highlight}pil opp@{fg text}> og <@{fg highlight}pil ned@{fg text}> tastene, akkurat som i ditt favoritt
+        shell. For Ü slette kommandolinjen, trykk <CTRL-Z>.
+
+@{b}KOMMANDO BUFFER@{ub}
+        Du kan ha flere kommandoer og parametre pÜ en kommandolinje.
+        Bare husk pÜ Ü skill kommandoene med mellomrom.
+        Dette blir kalt kommando buffring.
+
+@{b}EKSEMPEL:@{ub}
+        (Post kontor) Lese Kommando (? for meny): hv
+        (Post kontor) Lese Kommando (? for meny): f se foo.bar
+        (Post kontor) Lese Kommando (? for meny): f se foo.bar "Beskrivelse" N
+@endnode
+
+@node EDITOR "Meldings Editor: Skrive meldinger i BBBS"
+@{b}EMNE:@{ub}
+        Meldings Editor: Skrive meldinger i BBBS
+
+@{b}BESKRIVELSE:@{ub}
+        Du kan bruke meldings editoren for Ü skrive, editere og
+        lagre meldingene dine. Det finnes tre forskjellige editorer:
+        @{"linje editor" link EDITOR_LINE}, full skjerm editor (@{"FSK" link EDITOR_FSE})
+        og @{"MG" link EDITOR_MG}.
+
+        Full skjerm editoren kan brukes til Ü editere meldinger i full
+        skjerm stõrrelse mens linje editoren kan editere meldingene
+        en linje av gangen. Full skjerm editoren er mye enklere Ü bruke
+        enn linje editoren, men den krever at ditt terminal program
+        kan ta imot ANSI eller AVATAR koder. Sjekk i manualene til
+        terminal programmet ditt om det stõtter en av de aktuelle
+        kode-settene.
+
+        Dersom terminal programmet ditt ikke stõtter ANSI eller AVATAR
+        koder, mÜ du enten fÜ deg et nytt program eller bruke linje
+        editoren.
+
+@{b}DELEMNER@{ub}
+
+        @{"MG" link EDITOR_MG}
+        @{"linje editor" link EDITOR_LINE}
+        @{"FSK (Full Skjerm Editor)" link EDITOR_FSE}
+@endnode
+@node EDITOR_MG "MG"
+
+Du kan sette denne editoren til ditt faste falg med kommandoen: U ED MG
+MG er en GNU Emacs klone og den er den beste BBBS editoren men litt
+vanskelig Ü bruke for nybegynnere.
+
+For Ü benytte deg av auto-quoting nÜr du svarer, bruk: U SI
+
+Her er et par eksempler pÜ hvordan du kan definere dine egne oppstarts
+kommandoer i MG:
+
+u set "mg_1" "end-of-buffer"
+u set "mg_2" "prefix-region"
+u set "mg_3" "beginning-of-buffer"
+u set "mg_4" "bsmap-mode"
+
+
+
+[LaTeX sequences stripped by Hannu Laurila (Well .. I tried)]
+
+
+
+The MG Reference Manual
+Release MG2A
+
+Copyright 1987, Sandra J. Loosemore
+
+This document, or sections of this document, may be freely
+redistributed provided that the copyright notice and the following disclaimer
+remain intact:  The author bears no responsibilities for errors in
+this document or the software it describes; and shall not be held liable
+for any indirect, incidental, or consequential damages.
+
+
+Introduction
+============
+
+MG is a small, fast, and portable Emacs-style text editor intended to
+be used by people who can't run a real Emacs for one reason or another
+--- as their main editor on smaller machines with limited memory or
+file space, or as a `quick-start' editor on larger systems, useful
+for composing short mail messages and the like.
+
+We've made MG compatible with GNU Emacs because that is the `big',
+full-featured editor that many of us use regularly and are most
+familiar with.  GNU Emacs is the creation of Richard M. Stallman, who
+was also the author of the original Emacs editor.  However, MG is not
+associated in any way with the GNU project, and the MG authors
+individually may or may not agree with the opinions expressed by
+Richard Stallman and the GNU project.
+
+MG is largely public domain.  You can use, modify, and redistribute MG
+as you like.  A few modules, however, are copyrighted; specifically,
+the regular expression code, the VMS termcap routines, and the Amiga
+support code.  Look at the source code for the exact copyright
+restrictions.
+
+There are several other editors in existence which call themselves
+MicroEmacs.  The original public domain version was written by Dave
+Conroy and circulated as version 1.6.  Derived from this, there is
+another PD version by Dave Conroy numbered v30; a significantly larger
+PD version by Daniel Lawrence which is now up to version 3.9; at least
+one proprietary implementation; an implementation for the Atari ST
+with an integrated command shell, by Prabhaker Mateti; and probably
+others that we don't know about.
+
+MG is derived from the v30 MicroEmacs, with key bindings, command
+names, and general functionality made more compatible with GNU Emacs.
+Like v30, MG is fairly small and quite robust.  We have generally
+resisted the temptation to overfeaturize.  Some features which are
+large and complex are flagged for conditional compilation.
+
+Many people have contributed their time to developing, improving, and
+porting MG.  Mike Meyer, Mic Kaczmarczik, and Bob Larson deserve
+particular mention for their efforts.
+
+Questions, suggestions, and offers of help should be addressed to:
+
+        mg-developers\@ucbvax.berkeley.edu   (ARPA)
+        ucbvax!mg-developers                (UUCP)
+
+Implementations of MG
+~~~~~~~~~~~~~~~~~~~~~
+
+MG runs on many different kinds of hardware under many different
+operating systems.  Currently, these include:
+
+ - 4.2 and 4.3 BSD Unix (including Ultrix-32)
+ - System V Unix
+ - VAX/VMS
+ - Primos
+ - OS9/68k
+ - Amiga
+ - Atari ST
+ - MS-DOS
+
+This document describes release MG2A.  When we talk of different
+versions of MG in this manual, the term "version" is used to
+refer to the different support MG provides for the various machines
+and operating systems it runs under, not to different releases of MG
+itself.  For example, we might speak of how the VMS version of MG
+differs from the Unix version.
+
+As mentioned above, some MG commands may not be implemented in all
+versions; these are noted in the documentation.  Some versions of MG
+also support features (such as mouse handling) that are not described
+here.
+
+A Note on Character Sets
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+MG uses the 128-character ASCII character set, and provides support for
+8-bit characters.  Whether the particular version of MG that you are running
+knows about extended character sets depends on whether your terminal and
+the host operating system know about them.  Moreover, since there is no
+standard 8-bit character set, the same character codes will probably
+give different glyphs on different systems.  Most versions of MG use
+the DEC multinational character set.
+
+Notation and Conventions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this manual, commands and other things that must be typed in
+literally are indicated in a typewriter font, like "next-line".
+Placeholders such as command argument names use an italic font.
+
+The terms "command" and "function" are synonymous.  We often
+speak of a command being bound to a particular "key", although you
+may actually have to type more than one character to form a single key.
+Most commands are bound to keys with "control" and "meta" modifiers.
+
+To type a control character, use the control key on your
+keyboard like a shift key:  hold down the control key while typing the
+character.  In this manual, we will indicate control characters like
+"C-x" --- here, typing the character `x' while holding down
+the control key.
+
+Some keyboards also have a meta key that works like the control
+key.  (It may be labelled something else;  on the Atari ST, for example,
+the key marked  `Alternate' is the meta key.)  If your keyboard doesn't
+have a meta key, don't panic.  You can also use the escape key as a meta
+prefix; first type the escape, and "then" the character.  Meta
+characters will be indicated as "M-x".
+
+Besides the meta prefix, two other characters are used as prefixes:
+"C-x" and "C-h".  A few keys have special notation:  "SPC" is
+the space character, "DEL" is the delete or rubout character, "RET"
+is carriage return, and "ESC" is the escape character.  "NUL" is
+the null character (ASCII 0), which is usually equivalent to either
+"C-SPC" or "C-\@".
+
+Uppercase and lowercase characters are generally equivalent in command
+keystrokes.
+
+When you run MG from a shell, command line arguments are interpreted as the
+names of files you want to "visit", or edit.  Each file is
+read into a "buffer" in memory.  No changes are actually made to
+the file until you ask it to be written out to disk.
+
+Within MG, the large top part of the screen serves as a "window" into
+the buffer being edited.  Below this is the "mode line", which
+displays the name of the buffer.  Finally, at the very bottom of the screen,
+there is a one-line "minibuffer" which is used for displaying
+messages and answering questions.
+
+MG keeps track of two pointers into each window, the "point" and the
+"mark".  The "cursor" appears at the point in the current
+window, and we often speak of moving the cursor rather than of moving the
+point.  The text between the point and the mark is referred to as the
+"region".
+
+Some commands deal with "words" and "paragraphs".
+Generally, whitespace and punctuation separate words.  Lines that are
+empty or that contain only spaces or tabs separate paragraphs without
+being part of a paragraph.  A non-empty line that starts with a space
+or tab also begins a new paragraph.
+
+A number of commands are defined as "toggles".  If no prefix argument
+is supplied, these commands toggle an action.  The action is turned on if a
+negative or zero argument is supplied, and turned on if a positive argument
+is supplied.
+
+Getting Started
+~~~~~~~~~~~~~~~
+
+This document is intended primarily as a reference manual.  If you
+have never used any Emacs-like text editor before, it is strongly
+suggested that you run the on-line tutorial supplied with the MG
+distribution, instead of reading this manual.
+
+Do not be put off by the large number of commands described in this
+manual!  It is possible to get by with only a handful of basic commands.
+Here are the ones that are probably used most frequently:
+
+C-p     Move the cursor to the previous line
+C-n     Move the cursor to the next line
+C-b     Move the cursor backwards
+C-f     Move the cursor forwards
+C-v     Scroll forwards one screenful
+M-v     Scroll backwards one screenful
+M-<     Go to the beginning of the buffer
+M->     Go to the end of the buffer
+C-a     Go to the beginning of the line
+C-e     Go to the end of the line
+DEL     Delete the previous character
+C-k     Kill (delete) to the end of line
+C-y     Reinsert killed text.
+C-x C-c Exit MG
+C-x C-s Save the current buffer
+
+Using Commands
+==============
+
+Command Arguments
+~~~~~~~~~~~~~~~~~
+
+Some commands require arguments.  For example, if you want to read a
+file into a buffer, you must type in the name of the file.  In the
+descriptions of commands in this manual, if arguments are required,
+they are listed following the command name.
+
+MG prompts for command arguments in the minibuffer.  Within the minibuffer,
+the following characters can be used for editing:
+
+DEL, C-h        Erase the last character.
+C-x, C-u        Erase the entire input line.
+C-w             Erase to the beginning of the previous word.
+C-q, backslash  Quote the next character typed.
+RET             Signifies that you have completed typing in the argument.
+C-g             Abort the command in progress.
+
+Prefix Arguments
+~~~~~~~~~~~~~~~~
+
+All commands accept an optional numeric prefix argument.  This is
+often interpreted as a repetition count.  For example, the function
+"next-line", if given a prefix argument, will move the cursor
+forward that many lines; without an argument, it will move the cursor
+forward one line.  A few commands behave differently if given a prefix
+argument than they do without one, and others ignore the prefix
+argument entirely.
+
+
+digit-argument              M-0, M-1, M-2, M-3, M-4, M-5, M-6, M-7, M-8, M-9
+negative-argument                                                        M--
+
+One way to specify a command argument is to use the escape key
+as a meta prefix, and then type one or more digits.  A dash may be
+used for a negative argument.
+
+
+universal-argument                                                      C-u
+
+Another way to specify a command prefix is to type "C-u".
+Typing one "C-u" is equivalent to a prefix argument of 4, typing
+two gives a value of 16, and so on.  In addition, you can type digits
+following "C-u" to form a numeric prefix argument.
+
+Aborting
+~~~~~~~~
+
+keyboard-quit                                                           C-g
+
+Typing "C-g" cancels any command.  It is particularly useful
+for cancelling a command when MG is prompting for input in the minibuffer.
+
+Extended Commands
+~~~~~~~~~~~~~~~~~
+
+execute-extended-command command                                        M-x
+
+Commands that are not bound to keys can be executed through
+"execute extended-command".  If a prefix argument is supplied, it
+is passed to the command being executed.
+
+
+Moving the Cursor
+=================
+
+The commands described in this chapter move the cursor (sometimes
+called the point or dot) within the current window.  Commands which
+set the mark are included here as well.
+
+backward-char                                                           C-b
+
+Moves the cursor backward (left) one character.  If the cursor
+is at the left margin, it will be moved to the end of the previous line.
+
+backward-paragraph                                                      M-[
+
+Moves the cursor backwards to the beginning of the current
+paragraph, or to the beginning of the previous paragraph if the cursor
+is already at the beginning of a paragraph.
+
+backward-word                                                           M-b
+
+Moves the cursor backwards to the beginning of the current word,
+or to the beginning of the previous word if the cursor is already at
+the beginning of a word.
+
+beginning-of-buffer                                                     M-<
+
+Moves the cursor backwards to the beginning of the buffer.
+
+beginning-of-line                                                       C-a
+
+Moves the cursor backwards to the beginning of the current
+line.  This command has no effect if the cursor is already at the beginning
+of the line.
+
+end-of-buffer                                                           M->
+
+Moves the cursor forwards to the end of the buffer.
+
+end-of-line                                                             C-e
+
+Moves the cursor forwards to the end of the current line.  This
+command has no effect if the cursor is already at the end of the line.
+
+exchange-point-and-mark                                             C-x C-x
+
+Set the mark at the current cursor position, and move the cursor
+to the old location of the mark.
+
+forward-char                                                            C-f
+
+Moves the cursor forwards one character.  If the cursor is at the
+end of a line, it will be moved to the first character on the next line.
+
+forward-paragraph                                                       M-]
+
+Moves the cursor forwards to the next paragraph delimiter.
+
+forward-word                                                            M-f
+
+Moves the cursor forwards to the end of the current word, or to
+the end of the next word if the cursor is already at the end of a word.
+
+goto-line line-number
+
+Moves the cursor to the beginning of line "line-number" in
+the buffer.
+
+next-line                                                               C-n
+
+Moves the cursor down one line.  The cursor remains in the same
+column unless it would be past the end of the line, in which case it is
+moved to the end of the line.  At the end of the buffer, "C-n" will
+create new lines.
+
+previous-line                                                           C-p
+
+Moves the cursor up one line.    The cursor remains in the same
+column unless it would be past the end of the line, in which case it is
+moved to the end of the line.
+
+recenter                                                                C-l
+
+Redraws the entire screen, scrolling the current window if necessary
+so that the cursor is near the center.  With a positive prefix argument
+"n", the window is scrolled so that the cursor is "n" lines
+from the top.  A negative prefix argument puts the cursor that many lines
+from the bottom of the window.
+
+redraw-display
+
+Redraws the entire screen, but never scrolls.
+
+scroll-down                                                             M-v
+
+Scrolls the display down (moving backward through the buffer).  Without
+an argument, it scrolls slightly less than one windowful.  A prefix argument
+scrolls that many lines.
+
+scroll-one-line-down
+scroll-one-line-up
+
+These functions are similar to "scroll-down" and "scroll-up"
+(respectively), but when invoked without an argument, cause the display
+to scroll by one line only.  These functions are enabled by defining the
+compile-time option GOSMACS.
+
+scroll-other-window                                                   M-C-v
+
+Scrolls the `other' window forward as for "scroll-up".
+
+scroll-up                                                               C-v
+
+Scrolls the display up (moving forward through the buffer).  Without an
+an argument, it scrolls slightly less than one windowful.  A prefix argument
+scrolls that many lines.
+
+set-mark-command                                                        NUL
+
+Set the mark at the current cursor position.
+
+what-cursor-position                                                  C-x =
+
+Prints some information in the minibuffer about where the cursor is.
+
+
+Text Insertion Commands
+=======================
+
+The usual way to insert text into a buffer is simply to type the
+characters.  The default binding for all of the printing characters
+("self-insert-command") causes them to be inserted literally at
+the cursor position.
+
+insert  string
+
+Insert "string" into the current buffer at the cursor position.
+
+newline                                                                 RET
+
+Insert a line break into the current buffer at the cursor position,
+moving the cursor forward to the beginning of the new line.
+
+newline-and-indent                                                      C-j
+
+Insert a line break into the current buffer at the cursor position,
+then add extra whitespace so that the cursor is aligned in the same
+column as the first non-whitespace character in the previous line.
+
+open-line                                                               C-o
+
+Inserts a line break into the current buffer at the current position,
+but does not move the cursor forward.
+
+quoted-insert                                                           C-q
+
+This command acts as a prefix to
+cancel the normal interpretation of the next keystroke.  If "C-q"
+is followed by one to three octal digits, it is interpreted as the
+code of the character to insert.  Otherwise a single key is read and
+the character typed is inserted into the buffer instead of interpreted
+as a command.  This is used for inserting literal control characters
+into a buffer.
+
+self-insert-command
+
+This is the default binding for keys representing printable
+characters.  The character is inserted into the buffer at the cursor
+position, and the cursor moved forward.
+
+Killing, Deleting, and Moving Text
+==================================
+
+When text is deleted, it is erased completely.  Killing text, on the
+other hand, moves it into a temporary storage area called the kill
+buffer.  The saved text in the kill buffer is erased when another
+block of text is killed.  Until then, however, you can retrieve text
+from the kill buffer.  This can be used to move or copy blocks of
+text, as well as to restore accidentally killed text.
+
+backward-kill-word                                                    M-DEL
+
+Kill the text backwards from the cursor position to the beginning
+of the current word.  Typing "M-DEL" several times in succession
+prepends each killed word to the kill buffer.
+
+copy-region-as-kill                                                     M-w
+
+Copies the text in the region into the kill buffer, without removing
+it from the current buffer.
+
+delete-backward-char                                                    DEL
+
+Deletes the character to the left of the cursor.
+
+delete-blank-lines                                                  C-x C-o
+
+Deletes all blank lines after the current line, and if the current
+line is blank, deletes it and all blank lines preceeding it as well.
+
+delete-char                                                             C-d
+
+Deletes the character underneath the cursor.
+
+delete-horizontal-space                                         M-backslash
+
+Deletes all spaces and tabs on either side of the cursor.
+
+just-one-space                                                        M-SPC
+
+This is like "delete-horizontal-space", except it leaves a single
+space at the cursor position.
+
+kill-line                                                               C-k
+
+If no prefix argument is specified, this function kills text up
+to the next newline; or if the cursor is at the end of a line, the newline
+is killed.  A prefix argument specifies how many lines to kill.  Typing
+"C-k" several times in succession appends each line to the kill buffer.
+
+kill-paragraph
+
+This command kills the entire paragraph containing the cursor.
+If the cursor is positioned between paragraphs, the next paragraph is killed.
+
+kill-region                                                             C-w
+
+The region (all text between point and mark) is killed.
+
+kill-word                                                               M-d
+
+Text is killed forward from the cursor position to the next
+end of word.  If the cursor is at the end of the word, then the next
+word is killed.  Typing "M-d" several times appends the killed
+text to the kill buffer.
+
+yank                                                                    C-y
+
+Text is copied from the kill buffer into the current buffer at
+the cursor position.  The cursor is moved to the end of the inserted
+text.
+
+Searching and Replacing
+=======================
+
+Searching
+~~~~~~~~~
+
+The ordinary search command in MG differs from that in many other editors
+in that it is incremental:  it begins searching as soon as you begin
+typing the search string, instead of waiting for you to type the entire
+string.
+
+All of the search commands described in this section are case-insensitive.
+
+
+isearch-backward pattern                                                C-r
+isearch-forward  pattern                                                C-s
+
+These commands perform an incremental search backward and
+forward (respectively) for "pattern".  MG will move the cursor
+to the place in the buffer that matches as much of the pattern as you
+have typed so far, as each character is entered.
+
+Within the incremental search, the following characters are interpreted
+specially:
+
+DEL     Erase the last character in the search string.
+
+ESC     Stop searching; exit from incremental search
+        mode, leaving the cursor where the search brought it.
+
+C-g     If a match has been found, exits from
+        incremental search but leaves the cursor in its original position.  If
+        the search has failed, this will just erase the characters which have
+        not been found from the end of the search pattern.  In this case, you
+        must type "C-g" again to abort the search.
+
+C-s     Search forward for the next occurrence of the
+        same pattern.
+
+C-r     Search backward for the previous occurrence of
+        the same pattern.
+
+C-q     `Quotes' the next character typed, forcing it
+        to be interpreted as a literal character in the search pattern.
+
+In addition, normal commands such as "C-a" that do not have special
+meanings within incremental search cause the search to be terminated, and
+then are executed in the ordinary way.
+
+search-again
+search-backward pattern                                                 M-r
+search-forward  pattern                                                 M-s
+These commands perform ordinary, non-incremental searches.
+"Search-again" uses the same pattern and direction as the previous
+search.
+
+Replacing
+~~~~~~~~~
+
+query-replace pattern replacement                                       M-%
+
+The primary replace command in MG is an interactive query replace.
+MG searches forward for occurrences of "pattern", and asks you what
+to do about each one.  The choices are:
+
+
+SPC     Replace this match with "replacement",
+        and go on to the next.
+
+DEL     Skip to the next match without replacing this one.
+
+.       Replace this match, and then quit.
+
+!       Replace all remaining occurrences without asking again.
+
+ESC     Quit.
+
+By default, "query-replace" adjusts the case of lower-case letters
+in the replacement string to match that of the
+particular occurrence of the pattern; for example, replacing `Foo'
+with `bar' results in `Bar'.  Upper case letters in the replacement
+string are always left uppercase.   In addition, supplying a prefix argument
+will also tell "query-replace" to leave the case of the replacement
+string as-is.
+
+Note that "query-replace" always performs a case-insensitive search.
+
+Regular Expressions
+~~~~~~~~~~~~~~~~~~~
+
+Regular expressions provide a means for specifying complex search
+patterns, instead of just a literal string.  The commands in this
+section are available only if MG is compiled with the REGEX option
+defined.
+
+Regular expression syntax uses the following rules.  Most characters
+in a regular expression are considered to be "ordinary" characters,
+and will match themselves and nothing else.  The exceptions are the
+special characters listed below.
+
+.       Matches any single character except a newline.
+
+*       A suffix operator that matches zero or more
+        repetitions of the (smallest) preceding regular expression.
+
++       A suffix operator that matches one or more
+        repetitions of the (smallest) preceding regular expression.
+
+?       A suffix operator that matches either zero or one
+        occurence of the (smallest) preceding regular expression.
+
+[...]   Matches any one character listed in the character
+        set between the square brackets.  See examples below.
+
+^       Matches at the beginning of a line.
+
+$       Matches at the end of a line.
+
+\\       Except for the situations listed below, acts as a
+        prefix operator which causes the character following
+        to be treated as an ordinary character.
+
+|       An infix binary "or" operator.
+        It applies to the two largest surrounding expressions.
+
+(...)   A grouping construct, usually used to specify a larger
+        expression for postfix operators such as "*" or to limit
+        the scope of operands to "|".
+
+\\digit  Matches the same text matched by the "digit"th "\\(...\\)"
+        construct.  These are numbered from 1 to 9 in the order
+        that the open-parentheses appear.
+
+\\`      Matches at the beginning of the buffer.
+
+\\'      Matches at the end of the buffer.
+
+\\b      Matches at the beginning or end of a word.
+
+\\B      Matches anyplace "except" at the beginning or end of a word.
+
+\\<      Matches at the beginning of a word.
+
+\\>      Matches at the end of a word.
+
+\\w      Matches any word-constituent character.
+
+\\W      Matches any character which is "not" a word-constituent.
+
+
+Some examples may help clarify the rules.
+
+foo             Matches the literal string "foo".
+
+;.*             Matches all strings which begin with a semicolon and
+                continue to the end of a line.
+
+c[ad]+r         Matches strings of the form "car", "cdr", "caar", "cadr",
+                and so on.
+
+[a-z]           Matches any lowercase letter.
+
+[^a-z]          Matches any character "except" lowercase letters.
+
+[0-9+---]       Matches a digit or sign.
+
+(foo|bar)       Matches either the string "foo" or the string "bar".
+
+
+count-matches     pattern
+count-non-matches pattern
+
+These commands count the number of lines which do or do not
+(respectively) match the specified pattern.
+
+delete-matching-lines     pattern
+delete-non-matching-lines pattern
+
+These commands delete all lines which do or do not (respectively)
+match the specified pattern.
+
+
+query-replace-regexp pattern replacement
+
+This is the regular expression version of "query-replace".
+
+The "replacement" string may be a constant, or it can refer to
+all or part of the string matched by the "pattern". "\\&" in
+the replacement string expands into the entire text being replaced,
+while "\\n" (where n is a number) replaces the
+"n"th parenthesized expression in "pattern".
+
+re-search-again
+re-search-backward pattern
+re-search-forward  pattern
+
+These are the regular expression equivalents of the ordinary
+non-incremental search commands.
+
+set-case-fold-search
+
+This command toggles an internal variable that controls whether
+the regular expression search and replace commands pay attention to
+case.  By default, regular expression searches are case-insensitive.
+Ordinary searches are always case-insensitive and are not affected by
+the setting of this variable.
+
+
+Windows
+=======
+
+MG initially has only one text window displayed.  However, you can have
+as many windows as will fit on the screen.  Each window has its own mode
+line and must display at least two lines of text.  (Note that a MG's
+`windows' are distinct from the `windows' handled by screen managers
+such as the X Window System.)
+
+Multiple windows may be used to display different buffers.  You can also
+have the same buffer displayed in more than one window, which is useful
+if you want to see one part of a file at the same time as you are editing
+another part.
+
+Although many windows can be displayed at once, only one window is active
+at any given time.  This is the window where the cursor appears.
+
+Some commands refer to the `other' window.  This is the window directly
+below the current window, or the top window if you are in the bottom window.
+
+delete-other-windows                                                  C-x 1
+
+Makes the current window the only window.
+
+delete-window                                                         C-x 0
+
+Deletes the current window, making the `other' window the
+current window.  This command doesn't do anything useful if there is only
+one window being displayed.
+
+enlarge-window                                                          C-^
+
+Makes the current window larger.  Without a prefix argument, the
+window grows one line; otherwise, the prefix argument specifies how many
+lines to grow.
+
+other-window                                                          C-x o
+
+Makes the `other' window the current window.
+
+previous-window
+
+This is like "other-window", except that it cycles through
+the windows in reverse order.  This command is available only if MG was
+compiled with the GOSMACS option defined.
+
+shrink-window
+
+Makes the current window smaller.  Without a prefix argument, the
+window loses one line; otherwise, the prefix argument specifies how many
+lines go away.
+
+split-window-vertically                                               C-x 2
+
+Split the current window into two windows, both using the same buffer.
+
+
+Files and Buffers
+=================
+
+Most buffers are used to contain a file being edited.  It is
+also possible to have buffers that are not associated with any file;
+MG uses these for purposes such as displaying help text, for example.
+However, since most commands for dealing with files also deal with
+buffers, we have grouped all of these commands together into one chapter.
+
+Buffer Manipulation
+~~~~~~~~~~~~~~~~~~~
+
+insert-buffer buffer-name
+
+Inserts the contents of the named buffer into the current buffer
+at the cursor location.  The cursor moves to the end of the inserted
+text.
+
+kill-buffer buffer-name                                               C-x k
+
+The named buffer and its contents are deleted.  If the buffer has
+been marked as modified, MG will ask you if you really want to delete it.
+Note that, contrary to its name, this command "does not" save the
+buffer contents in the kill buffer.
+
+If a buffer is being displayed in a window when it is deleted, MG will
+find some other buffer to display in the same window.
+
+list-buffers                                                        C-x C-b
+
+This command writes information about the buffers currently in
+use to a buffer named "*Buffer List*".  This buffer is then displayed
+in the `other' window; if there is only one window, this command will
+split the screen into two windows.
+
+not-modified                                                            M-~
+
+This command makes MG think that the current buffer has not been
+modified, even if it really has been changed.  This affects the behavior
+of the "kill-buffer" and the buffer-saving commands described below.
+
+MG indicates modified buffers with two stars at the left end of the mode
+line.
+
+switch-to-buffer buffer-name                                          C-x b
+
+The current window is mapped onto the named buffer.  If there
+isn't already a buffer with that name around, MG will create one.
+
+switch-to-buffer-other-window buffer-name                           C-x 4 b
+
+This command works like "switch-to-buffer", except that the
+`other' window is used.  If there is only one window, this command
+splits the screen into two windows and maps the named buffer onto one
+of them.
+
+Reading and Writing Files
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+find-file file-name                                                   C-x f
+find-file-other-window file-name                                  C-x 4 C-f
+
+These commands are analagous to "switch-to-buffer" and
+"switch-to-buffer-other-window", respectively.  The difference is that
+these commands look for a buffer associated with the named file.  If no
+matching buffer is found, MG will create a new buffer with a name
+derived from the filename, and attempt to read the file into the buffer.
+If the named file cannot be opened, the buffer remains empty.
+
+insert-file file-name                                                  C-x i
+
+This command reads in the contents of the named file into the
+current buffer at the cursor position.  The cursor remains in the same
+place.
+
+save-buffer                                                         C-x C-s
+
+If the current buffer has been modified, it is saved.  Buffers
+that are not associated with files cannot be written out with this
+command.
+
+save-buffers-kill-emacs                                             C-x C-c
+
+This command is used to leave MG and return control to the shell
+or other program that was used to start MG.  If there are modified buffers,
+MG will ask you if you want to save them before exiting.
+
+save-some-buffers                                                     C-x s
+
+MG will ask you if you want to save modified buffers that are
+associated with files.
+
+write-file file-name                                                C-x C-w
+
+The current buffer is written out using the file name supplied.
+This is useful for saving buffers that are not associated with files, or
+for writing out a file with a different name than what was used to read
+it in.
+
+Backup Files
+~~~~~~~~~~~~
+
+MG provides a way to save a copy of the original version of files which
+have been modified and then written out again.  The backup copy reflects
+the state of the file as it existed the first time it was read into MG.
+The name used for the backup file varies, depending on the operating
+system.
+
+This feature is disabled if MG is compiled with NO_BACKUP defined.
+
+make-backup-files
+
+This command is a toggle which controls the state of an internal
+variable that determines whether MG creates backup files.
+
+Changing the Directory
+~~~~~~~~~~~~~~~~~~~~~~
+
+The commands in this section are disabled by defining NO_DIR.
+
+cd directory-name
+
+This command changes MG's notion of the `current' directory
+or pathname.  This is used to supply defaults for functions that read
+or write files.
+
+The syntax for "directory-name" is obviously specific to the
+particular operating system MG is running on.
+
+pwd
+
+Display what MG thinks is the current directory.
+
+
+Modes
+=====
+
+Modes are used to locally alter the bindings of keys on a
+buffer-by-buffer basis.  MG is normally in fundamental mode, and these
+are the bindings that are listed with the command descriptions in
+this manual.  Modes define additional keymaps that are searched for
+bindings before the fundamental mode bindings are examined; see the
+section on key binding below for more details on how this works.
+
+set-default-mode mode-name
+
+Normally, when MG visits a file, it puts the associated buffer
+into fundamental mode.  Using the "set-default-mode" command, you
+can specify that MG should default to use some other mode on all subsequent
+buffers that are created.  This command is a toggle.  With no prefix
+argument, if the named mode is not already on the list of
+default modes, then it will be added to the list; otherwise, it is removed
+from the list.
+
+No Tab Mode
+~~~~~~~~~~~
+
+In notab mode, tabs are expanded into spaces instead of inserted
+literally into the buffer.  Literal tab characters are displayed as
+"^I" (much like other control characters).  These commands are
+available if MG is compiled with the symbol NOTAB defined.  (This mode
+is mainly for use on systems such as PRIMOS that do not treat tab as a
+series of spaces.)
+
+no-tab-mode
+
+This command is a toggle to control whether notab mode is in effect.
+
+space-to-tabstop
+Insert enough spaces to move the cursor to the next tab stop.  In
+notab mode, this function is bound to "C-i".
+
+
+Overwrite Mode
+~~~~~~~~~~~~~~
+
+Normally, when characters are inserted into the buffer, they are spliced
+into the existing text.  In overwrite mode, inserting a character causes
+the character already at the cursor position to be replaced.  This is
+useful for editing pictures, tables, and the like.
+
+overwrite-mode
+
+This command is a toggle which controls whether overwrite mode is
+in effect.
+
+Auto Fill
+
+Fill mode causes newlines to be added automatically at word
+breaks when text is added at the end of a line, extending past the
+right margin.  Auto fill is useful for editing text and documentation
+files.
+
+auto-fill-mode
+
+This command is a toggle which controls whether fill mode is in effect.
+
+insert-with-wrap
+
+This command works like "self-insert", except that it checks
+to see if the cursor has passed the right margin.  If so, it fills
+the line by inserting a line break between words.  This command is bound to
+"SPC" in fill mode.
+
+fill-paragraph                                                          M-q
+
+Fill the paragraph containing the cursor.
+
+set-fill-column                                                       C-x f
+
+Without a prefix argument, this command sets the right margin
+at the current cursor column.  If a prefix argument is supplied, it is used
+instead as the line width.
+
+Auto Indent
+~~~~~~~~~~~
+
+Indent mode binds "RET" to "newline-and-indent", so
+that each new line is indented to the same level as the preceeding
+line.  This mode is useful for editing code.
+
+auto-indent-mode
+
+This command is a toggle which controls whether auto-indent mode
+is in effect.
+
+Blink
+~~~~~
+
+Blink mode makes it easier to match parentheses, brackets, and other
+paired delimiters.  When the closing delimiter is typed, the cursor
+moves momentarily to the matching opening delimiter (if it is on the
+screen), or displays the line containing the matching delimiter on the
+echo line.  This is useful for editing Lisp or C code, or for
+preparing input files for text processors such as LaTeX that use
+paired delimiters.
+
+blink-matching-paren
+
+This command is a toggle which controls whether blink mode is
+in effect.
+
+blink-matching-paren-hack
+
+This function behaves like "self-insert", except that it
+finds the matching delimiter as described above.  In blink mode, this
+function is bound to ")", which flashes the matching "(".  This
+function also knows about the pairs "{}", "[]", and "<>".
+All other characters match with themselves.
+
+Dired Mode
+~~~~~~~~~~
+
+`Dired' is an abbreviation for `directory editor', and it provides a way
+to browse through the contents of a directory from with MG.  Dired puts
+a directory listing into a buffer; you can use normal editing commands to
+move around the buffer, and a special group of commands to manipulate
+the files.  For example, there are commands to delete and rename files,
+and to read a file into an MG buffer.
+
+Since dired mode rebinds many keys, a table may be helpful:
+
+    C-d      dired-flag-file-deleted
+    SPC      next-line
+    c        dired-copy-file
+    d        dired-flag-file-deleted
+    e        dired-find-file
+    f        dired-find-file
+    n        next-line
+    o        dired-find-file-other-window
+    p        previous-line
+    r        dired-renamefile
+    u        dired-unflag
+    x        dired-do-deletions
+    DEL      dired-backup-unflag
+
+The commands in this section are disabled by defining NO_DIRED.
+
+dired directory-name                                                  C-x d
+
+Creates a dired buffer for the given directory name, and displays
+it in the current window.  The files
+in the directory are listed, usually along with information about the
+file such as its size and timestamp.  The exact format of the information
+is system-specific.
+
+dired-backup-unflag
+
+This function removes the deletion flag from the file listed on
+the previous line of the dired buffer.
+
+dired-copy-file new-name
+
+Copy the file listed on the current line of the dired buffer.
+
+dired-do-deletions
+
+Deletes the files that have been flagged for deletion.
+
+dired-find-file
+dired-find-file-other-window
+
+These function works like "find-file" and "find-file-other-window",
+except that the filename is taken from the current line in the dired buffer.
+
+dired-flag-file-deleted
+
+Flag the file listed on the current line for deletion.  This is
+indicated in the buffer by putting a `D' at the left margin.  No
+files are not actually deleted until the function "dired-do-deletions"
+is executed.
+
+dired-other-window directory-name
+
+This function works just like "dired", except that it puts the
+dired buffer in the `other' window.
+
+dired-rename-file new-name
+
+Renames the file listed on the current line of the dired buffer.
+Note that the dired buffer is not updated to reflect the change.
+
+dired-unflag
+
+Remove the deletion flag for the file on the current line.
+
+Miscellaneous
+=============
+
+Help
+~~~~
+
+Most of the commands in this section write useful information to the
+"*help*" buffer, which is then displayed in the `other' window.
+
+These commands can be disabled at compile-time by defining NO_HELP.
+
+apropos topic                                                         C-h a
+
+This command lists all functions whose names contain a string
+matching "topic" in the "*help*" buffer.
+
+describe-bindings                                                     C-h b
+
+Information about the key bindings in effect in the current buffer
+is listed in the "*help*" buffer.
+
+describe-key-briefly key                                              C-h c
+
+Information about the binding of "key" is printed in the
+minibuffer.
+
+help-help option                                                    C-h C-h
+
+This command lists all of the help options available and
+prompts for which one to run.  Currently, these include only "a
+to run "apropos", "b" to run "describe-bindings", and "c"
+to run "describe-key-briefly".
+
+
+Keyboard Macros
+~~~~~~~~~~~~~~~
+
+A keyboard macro is a saved set of commands from the keyboard that can be
+reexecuted later on.  There can only be one keyboard macro defined at
+any one time.
+
+The commands in this section are available unless they have been disabled
+by defining NO_MACRO.
+
+call-last-kbd-macro                                                   C-x e
+
+Execute the saved keyboard macro.  A prefix argument can be used
+to specify a repetition count.
+
+end-kbd-macro                                                         C-x )
+start-kbd-macro                                                       C-x (
+
+These functions are used to define a keyboard macro.  All keys
+entered after "start-kbd-macro" is executed, up to a "end-kbd-macro",
+are remembered as they are executed.  You can then reexecute the same
+sequence of operations using "call-last-kbd-macro".
+
+
+Changing Case
+~~~~~~~~~~~~~
+
+MG provides a number of functions for changing the case of text.
+
+capitalize-word                                                         M-c
+downcase-region                                                     C-x C-l
+downcase-word                                                           M-l
+upcase-region                                                       C-x C-u
+upcase-word                                                             M-u
+
+All of these commands do the obvious.
+
+Odds and Ends
+~~~~~~~~~~~~~
+
+This section describes miscellaneous commands that don't fit into any
+particular category.
+
+emacs-version
+
+Prints information about the version of MG you are running in
+the minibuffer.
+
+meta-key-mode
+
+If the particular version of MG you are running supports a meta key,
+this function can be used to determine whether MG actually pays attention
+to it or not.  If no prefix argument is supplied, the internal variable
+that controls the use of the meta key is toggled; a positive value enables
+the meta key, while a negative value disables it.
+
+prefix-region
+
+set-prefix-string string
+"Prefix-region" is used to prefix each line of the region
+with a string.  This is useful for indenting quoted text, making block
+comments, and the like.  The function "set-prefix-string" can be
+used to set the string used as the prefix.
+
+suspend-emacs                                                           C-z
+
+This command temporarily suspends
+MG so that you can run other programs, and later resume editing.  The
+exact behavior depends on which operating system you are running MG
+under.  Typically, MG will either spawn a new shell as a subprocess, or
+return you to the parent process.
+
+transpose-chars                                                         C-t
+
+This command transposes the previous two characters.
+
+
+Customization
+=============
+
+MG provides a limited support for customization.  However, unlike `real'
+Emacs, there is no extension language for interpretively defining new
+functions.
+
+Key Bindings
+~~~~~~~~~~~~
+
+MG allows keys to be rebound locally or globally.  To understand the
+difference between the two, some discussion on how modes are implemented
+is necessary.
+
+An internal data structure called a keymap is used to look up the
+function that is bound to a particular key.  The keymap for
+fundamental mode contains all of the default bindings which are listed
+with the command descriptions in this manual.  Modes define additional
+keymaps that are searched for a binding before the fundamental mode
+keymap is examined.  Keymaps have the same name as the mode they are
+associated with.
+
+MG does not provide commands for defining new modes, but you can alter
+the keymaps for existing modes.
+
+define-key keymap-name key command
+
+This command can be used to modify the keymap for the named mode.
+
+global-set-key key command
+global-unset-key key
+
+These commands modify the keymap for fundamental mode.  Bindings
+established by "global-set-key" will be inherited by all other modes,
+as long as they do not establish local rebindings of the same key.
+
+local-set-key key command
+local-unset-key key
+
+These commands modify the keymap currently in effect.
+
+
+Startup Files
+~~~~~~~~~~~~~
+
+Although MG does not include a general-purpose extension language, it
+does provide a way to read and evaluate commands using a somewhat
+different syntax than that used for executing extended commands.  This
+is typically used in a startup file to modify key bindings.
+
+A startup file consists of one or more expressions.  Each expression must
+appear on a separate line in the file; there may not be more than one
+expression per line, nor may expressions span across line breaks.
+Whitespace (spaces and tabs) separate the tokens in an expression.  For
+historical reasons, parentheses are also considered to be whitespace in
+this context.  A semicolon acts as a comment character, causing the rest
+of the line to be discarded.
+
+An expression consists of a function name, an optional prefix argument
+(given as an integer constant), and arguments to be passed to the
+function.  If an argument includes literal whitespace or nonprintable
+characters (for example, as in a keystroke argument to one of the key
+binding functions described in the previous section), it must be
+supplied as a string constant enclosed in double quotes.
+
+Within string constants, the following backslash escapes are available
+to specify nonprintable characters:
+
+
+\\t, \\T          Tab
+\\n, \\N          Newline
+\\r, \\R          Carriarge return
+\\e, \\E          Escape (Meta prefix)
+\\^              Control Prefix
+
+\\n              Specifies a character by its ASCII code, where
+                "n" may consist of from one to three octal
+                digits.
+
+\\fn, \\Fn        Specifies the keycode for the "n"th function key.
+                "N" may consist of one or two decimal digits.
+
+
+The following commands which deal with evaluation of expressions are
+disabled by defining the compile-time option NO_STARTUP.  See the
+implementation notes for your particular version of MG for information
+on how it handles startup files.
+
+eval-current-buffer
+
+Evaluate the expressions in the current buffer.
+
+eval-expression expression
+
+Evaluate the expression supplied.
+
+load file-name
+
+Read in the specified file and evaluate its contents.
+
+
+Fundamental Mode Key Bindings
+=============================
+
+NUL       set-mark-command
+C-a       beginning-of-line
+C-b       backward-char
+C-d       delete-char
+C-e       end-of-line
+C-f       forward-char
+C-g       keyboard-quit
+C-h       help
+TAB       self-insert-command
+C-j       newline-and-indent
+C-k       kill-line
+C-l       recenter
+RET       newline
+C-n       next-line
+C-o       open-line
+C-p       previous-line
+C-q       quoted-insert
+C-r       isearch-backward
+C-s       isearch-forward
+C-t       transpose-chars
+C-u       universal-argument
+C-v       scroll-up
+C-w       kill-region
+C-x       c-x prefix
+C-y       yank
+C-z       suspend-emacs
+ESC       meta prefix
+SPC .. ~  self-insert-command
+DEL       delete-backward-char
+
+C-h C-g   keyboard-quit
+C-h C-h   help-help
+C-h a     apropos
+C-h b     describe-bindings
+C-h c     describe-key-briefly
+
+C-x C-b   list-buffers
+C-x C-c   save-buffers-kill-emacs
+C-x C-f   find-file
+C-x C-g   keyboard-quit
+C-x C-l   downcase-region
+C-x C-o   delete-blank-lines
+C-x C-s   save-buffer
+C-x C-u   upcase-region
+C-x C-w   write-file
+C-x C-x   exchange-point-and-mark
+C-x (     start-kbd-macro
+C-x )     end-kbd-macro
+C-x 0     delete-window
+C-x 1     delete-other-windows
+C-x 2     split-window-vertically
+C-x 4     c-x 4 prefix
+C-x =     what-cursor-position
+C-x ^     enlarge-window
+C-x b     switch-to-buffer
+C-x d     dired
+C-x e     call-last-kbd-macro
+C-x f     set-fill-column
+C-x i     insert-file
+C-x k     kill-buffer
+C-x o     other-window
+C-x s     save-some-buffers
+C-x 4 C-f find-file-other-window
+C-x 4 C-g keyboard-quit
+C-x 4 b   switch-to-buffer-other-window
+C-x 4 f   find-file-other-window
+
+M-C-g     keyboard-quit
+M-C-v     scroll-other-window
+M-SPC     just-one-space
+M-%       query-replace
+M--       negative-argument
+M-0       digit-argument
+M-1       digit-argument
+M-2       digit-argument
+M-3       digit-argument
+M-4       digit-argument
+M-5       digit-argument
+M-6       digit-argument
+M-7       digit-argument
+M-8       digit-argument
+M-9       digit-argument
+M-<       beginning-of-buffer
+M->       end-of-buffer
+M-[       backward-paragraph
+M-\\       delete-horizontal-space
+M-]       forward-paragraph
+M-b       backward-word
+M-c       capitalize-word
+M-d       kill-word
+M-f       forward-word
+M-l       downcase-word
+M-q       fill-paragraph
+M-r       search-backward
+M-s       search-forward
+M-u       upcase-word
+M-v       scroll-down
+M-w       copy-region-as-kill
+M-x       execute-extended-command
+M-~       not-modified
+M-DEL     backward-kill-word
+
+
+                               -- END OF FILE --
+@endnode
+
+@node EDITOR_FSE "Fullskjerms Editor: FSK (Full Skjerm Editor)"
+@{b}EMNE:@{ub}
+        FullSkjerms Editor: FSK (Full Skjerm Editor)
+        Skrive og editere meldinger med fullskjerms editoren. Dette er
+        den enkle editoren, ikke noe ekstra mikk makk men lettere Ü
+        bruke for nybegynner enn MG.
+
+@{b}SETTE OPP FULL SKJERM EDITOREN@{ub}
+        Sjekk om terminal programmet ditt kan oversetter ANSI, AVATAR
+        eller VT320 koder. Bruk utility meny kommandoen U ED FSK for
+        Ü velge fullskjerms editoren. Velg terminal emulering med U TE.
+
+@{b}BESKRIVELSE:@{ub}
+        Fullskjerms editoren fungerer pÜ lik linje med vanlig tekst
+        editor eller tekstbehandlings programmer. Ved oppstart er
+        skjermen blank. Editoren bruker de fõrste fire linjene til
+        status linjer og advarsler fra editoren. Rommet under status
+        linjene er reservert til Ü legge inn meldingen.
+
+        Status linjene ser slik ut:
+
+Spill #49 (PRIVAT) til Joe Hacker om: Skrive meldinger
+Sett inn   Innrykk
+Ctrl/Z=Lagre, Ctrl/Q=Avbryt, Ctrl/U=Hjelp, Ctrl/W=AutositÇr, Flytt m/piltaster
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+
+       Informasjon om status linjene:
+
+       Linje 1: Navn pÜ konferansen
+                Nummeret til meldingen i konferansen
+                (PRIVAT) hvis melding er privat, hvis ikke - ingenting
+                Navn pÜ mottaker
+                Subjekt pÜ meldingen
+
+       Linje 2: Sett inn/overskriv
+                Innrykk/Ikke innrykk
+                mulige spõrsmÜl
+
+        Line 3: Forklaring for de mest brukte tastatur kommandoene
+
+@{b}BRUK:@{ub}
+        Med fullskjerms editoren kan du skrive tekst pÜ samme mÜte
+        som med hvilken som editor. Dersom Insert er pÜ, vil teksten
+        foran markõren flytte seg til venstre med markõren. Dersom
+        overwrite er pÜ, vil teksten foran markõren pÜ overskriv.
+
+        Tatstur kommandoer:
+
+<enter> (Linjeskift)
+        Dersom 'Sett inn' modusen er aktiv blir det laget en ny linje og
+        markõren blir flyttet til denne linjen. Dersom 'Overskriv'
+        modusen er aktiv vil du bare bli flyttet til begynnelsen av
+        neste linje. Dersom 'Sett inn' modusen er aktiv, vil markõren
+        flytte seg til neste linje og til den posisjonen hvor den
+        forrige linjen startet.
+
+<home>
+        Dersom du trykker en gang, vil markõren flytte seg til starten
+        av linjen, trykker du to ganger vil den flytte seg til toppen
+        av skjermen og den tredje gangen du trykker, vil den flytte
+        seg til starten av meldingen.
+
+<end>
+        Gjõr det motsatte av <home>. Trykk <end> en gang og markõren
+        flytter seg til slutten av linjen. To ganger for Ü flytte til
+        slutten av skjermen, og tre ganger for Ü flytte markõren til
+        slutten av meldingen.
+
+<backspace>
+        Sletter tegnet til venstre for markõren.
+
+<del>
+        Sletter tegnet som markõren stÜr pÜ.
+
+<tab>
+        Flytter markõren Ütte tegn til hõyre. (Den indenterer ikke
+        tekst som allerede er skrevet.
+
+Control-kommandoer
+        ^ tegnet foran bokstaver betyr at du mÜ trykke ned Ctrl-tasten
+        og samtidig taste bokstaven.
+
+        ^A    Flytt ett ord bakover.
+        ^F    Flytt ett ord forover.
+        ^R    Side opp. (Page up)
+        ^C    Side ned. (Page down)
+        ^D    Flytt ett tegn til hõyre.
+        ^S    Flytt ett tegn til venstre.
+        ^E    Flytt en linje opp.
+        ^X    Flytt en linje ned.
+        ^Y    Slett linje. Hent tilbake med Ctrl-B.
+        ^G    Slett tegn, samme som <del>.
+        ^B    Hent tilbake slettet linje.
+        ^L    Vis koordinater for markõren.
+        ^N    Frisk opp skjerm.
+        ^O    èpne ny linje etter markõren.
+        ^Q    Avslutt uten Ü lagre. Samme som Ctrl-K Q.
+        ^T    Slett et ord til hõyre for markõren.
+        ^V    Bytter pÜ 'Insert' og 'Indent' modi.
+        ^W    Lager sitat av linjen. Eksempel:
+              1. GÜ til linja du vil sitere,
+              2. trykk Ctrl-W og linja vil starte med et merke som
+                 SysOp'en har valgt som sitat-merke. Alle ekstra
+                 mellomrom vil bli fjernet fra begynnelsen av linja.
+        ^Z    Lagre melding og avslutt. Samme som Ctrl-K Z.
+        ^K C  Slett til slutten av meldingen.
+        ^K Q  Avslutt uten Ü lagre. Samme som Ctrl-Q
+        ^K R  Les melding fra disk. Fungerer bare hvis man har skrive
+              tilgang til OS.
+        ^K S  Endre subjektet til meldingen.
+        ^K W  Skriv melding til disk. Fungerer bare hvis man har skrive
+              tilgang til OS. Hvis filen finnes fra fõr, legges teksten
+              til pÜ slutten av filen.
+        ^K O  Som ^K W, men overskriver filen hvis den finnes fra fõr.
+        ^K Z  Avslutt og lagre melding, send det til mottagere.
+              Samme som Ctrl-Z.
+
+@{b}SE OGSè:@{ub}
+        @{"linje editor" link EDITOR_LINE}
+@endnode
+
+@node EDITOR_LINE "Linje Editor"
+@{b}SETTE OPP LINJE EDITOREN@{ub}
+        Linje editoren blir valgt som standard for nye brukere. Dersom
+        du har behov for Ü bytte til linje editoren, bruk 'Utility'
+        kommandoen U ED L.
+
+@{b}BESKRIVELSE:@{ub}
+        Dersom terminal programmet ditt ikke kan kommunisere med
+        fullskjerms editoren, mÜ du bruke linje editoren. Linje editoren
+        er en lite innviklet editor for Ü skrive meldinger. Det er
+        anbefalt Ü bruke et terminal progarm som kan ta imot ANSI
+        og/eller AVATAR koder.
+
+        Som navnet sier, blir meldinger editert en linje av gangen.
+        Dette betyr at det ikke er sërlig hendig.
+
+@{b}BRUK:@{ub}
+        Du starter Ü skrive fra den fõrste linjen i meldingen. NÜr du
+        har skrevet ferdig trykker du <enter> pÜ en tom linje. Du kan
+        nÜ velge blant de fõlgende kommandoene:
+
+        Kommando:       Forklaring:
+        -------------   ----------------------
+        @{i}F@{ui}ortsett      fortsett Ü skrive melding.
+        @{i}I@{ui}nsett        Sett inn en linje.
+        @{i}S@{ui}lett         en linje.
+        @{i}E@{ui}diter        en linje.
+        @{i}V@{ui}is           meldingen.
+        @{i}A@{ui}vbryt        meldingen. Avslutt. Ikke lagre, ikke sende.
+        @{i}L@{ui}agre         meldingen. Avslutt, lagre, sende.
+
+@{b}SE OGSè:@{ub}
+        @{"fsk" link EDITOR}
+@endnode
+
+@node GLOB "Globale kommanoder (fungerer i nesten alle menyer)"
+@{b}EMNE:@{ub}
+        Globale kommandoer (fungerer i nesten alle menyer)
+
+@{b}BESKRIVELSE:@{ub}
+        Globale kommandoer er tilgjengelige i alle hoved menyene i BBBS.
+        Kommandoene for Ü bytte fra en meny til en annen er globale
+        kommandoer.
+
+        Kommando  Navn pÜ menyen  Se ogsÜ
+        --------  --------------  --------
+        @{fg highlight}G@{fg text}         Hoved Meny      @{"hoved" link MAIN_MENU}
+        @{fg highlight}L@{fg text}         Lese Meny       @{"lese" link READ}
+        @{fg highlight}F@{fg text}         Fil Meny        @{"fil" link FILE}
+        @{fg highlight}U@{fg text}         'Utility' Meny  @{"'utility'" link UTIL}
+
+        Globale kommandoer er tilgjengelige i alle menyene som er
+        nevnt ovenfor.
+
+@{b}DELEMNER@{ub}
+        @{i}menyer@{ui}
+        @{"f     " link GLOB_F        } Fil kommandoer
+        @{"g     " link GLOB_HA       } GÜ til Hoved meny
+        @{"l     " link GLOB_L        } Lese kommadoer
+        @{"u     " link GLOB_U        } Utility kommandoer
+        @{i}annet@{ui}
+        @{"?     " link GLOB_?        } Vise meny
+        @{"b     " link GLOB_B        } Bulletiner
+        @{"chat  " link GLOB_CHAT     } Chat kommandoer
+        @{"fin   " link GLOB_FIN      } Hvem er logget pÜ
+        @{"ha    " link GLOB_HA       } Hadet: Logge ut av BBS
+        @{"hj    " link GLOB_H        } Hjelp
+        @{"hv    " link GLOB_HV       } Hvem er logget pÜ
+        @{"j     " link GLOB_J        } Innmelding i konferanse
+        @{"kom   " link GLOB_KOM      } Legge igjen kommentar til SysOp
+        @{"mh    " link GLOB_MH       } Hente meldinger
+        @{"ms    " link GLOB_MS       } Sende meldinger
+        @{"no    " link GLOB_NO       } Sende node melding
+        @{"nyb   " link GLOB_NYB      } Nybruker informasjon
+        @{"sk    " link GLOB_SK       } Skrive en melding
+        @{"tid   " link GLOB_TID      } Tid igjen & tids bank balanse
+@endnode
+
+@node GLOB_HA "GÜ til Hoved Meny"
+@{b}KOMMANDO:@{ub}
+        @{i}g@{ui}Ü
+
+@{b}BESKRIVELSE:@{ub}
+        Ved Ü skrive G vil du returnere til Hoved Meny promptet. I Hoved
+        Menyen er alle globale kommandoer tilgjengelige.
+
+@{b}SE OGSè:@{ub}
+        @{"hoved" link MAIN_MENU}
+@endnode
+
+@node GLOB_L "Lese Kommandoer"
+@{b}KOMMANDO:@{ub}
+        @{i}l@{ui}
+        <enter> (kun dersom du er i Hoved, 'Utility' eller Fil meny)
+
+@{b}BESKRIVELSE:@{ub}
+        L-kommandoen fõrer deg til Lese Menyen. Alle globale kommandoer
+        er tilgjengelige.
+
+@{b}SE OGSè:@{ub}
+        @{"lese" link READ}
+@endnode
+
+@node GLOB_F "Fil Kommandoer"
+@{b}KOMMANDO:@{ub}
+        @{i}f@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        F-kommandoen fõrer deg til Fil Menyen. Alle globale kommandoer
+        er tilgjengelige.
+
+@{b}SE OGSè:@{ub}
+        @{"fil" link FILE}
+@endnode
+
+@node GLOB_U "Utility Kommandoer"
+@{b}KOMMANDO:@{ub}
+        @{i}u@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        U-kommandoen fõrer deg til 'Utility' Menyen. Alle globale
+        kommandoer er tilgjengelige
+
+@{b}SE OGSè:@{ub}
+        @{"util" link UTIL}
+@endnode
+
+@node GLOB_CHAT "Chat Kommandoer"
+@{b}KOMMANDO:@{ub}
+        @{i}chat@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        CHAT-kommandoen fõrer deg til chat menyen. Ingen av de
+        globale kommandoene er tilgjengelige.
+
+@{b}SE OGSè:@{ub}
+        @{"chat" link CHAT}
+        @{"glob/no" link GLOB_NO}
+@endnode
+
+@node GLOB_KOM "Kommentar til SysOp"
+@{b}KOMMANDO:@{ub}
+        @{i}kom@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Du kan sende en melding til SysOp'en med KOM-kommandoen.
+        Meldingen vil bli lagret i den konferansen som er satt opp til
+        Ü lagre privat post. Mottaker og emne blir satt opp automatisk
+        sÜ det eneste du mÜ gjõre, er Ü skrive meldingen.
+
+        Sysop kan ogsÜ ha definert mer enn en mottaker av kommentarer.
+        Dersom han har gjort det, vil du fÜ en liste over mulige
+        mottakere og sÜ er det bare Ü skrive bokstaven som stÜr foran
+        navnet for Ü velge õnkset person man vil sende kommentaren til.
+
+@{b}SE OGSè:@{ub}
+        @{"editor" link EDITOR}
+@endnode
+
+@node GLOB_SK "Skrive en melding"
+@{b}KOMMANDO:@{ub}
+        @{i}sk@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        SK-kommandoen lar deg skrive en melding i den konferansen du
+        stÜr i (se Kommando Prompt for konferanse). Meldingen kan vëre
+        private eller offetlig. Det er ikke tillatt Ü skrive private
+        meldinger i alle omrÜder (du kan spõrre din SysOp om dette).
+
+        Unntak: Du kan ikke skrive offentlige meldinger i private
+        konferanser. SysOp kan definere ethvert omrÜde til Ü bare
+        kunne leses. Det betyr at vanlige brukere ikke er tillatt Ü
+        skrive meldinger i de. Informasjons konferanser blir gjerne
+        satt opp slik.
+
+        NÜr du skriver en ny melding vil det starte en ny meldings trÜd.
+        Fõr du kan skrive meldingen, vil du bli spurt om hvem som skal
+        motta meldingen og hvilket emne meldingen skal omhandle. Se
+        hjelp for editor for Ü endre emne inne i editoren.
+
+        Mottakeren av meldingen kan vëre hvem som helst i bruker-
+        databasen, eller ALLE. Dersom mottakeren er ALLE, mÜ meldingen
+        vëre postet i en offentlig konferanse. Du mÜ ikke skrive ALLE,
+        bare trykk <enter>.
+
+        En melding bõr ha et emne som beskriver innholdet pÜ en eller
+        anne mÜte. Dersom meldingen er om mat, kan f.eks. et emne se
+        slik ut: "Hamburgere som eneste fõde".
+
+@{b}SE OGSè:@{ub}
+        @{"sv" link READ_SV}
+        @{"editor" link EDITOR}
+@endnode
+
+@node GLOB_MH "Hente Meldinger"
+@{b}KOMMANDO:@{ub}
+        @{i}mh@{ui} [-antall_meldinger_du_vil_hente]
+
+@{b}BESKRIVELSE:@{ub}
+        MH vil samle alle uleste meldinger fra alle konferanser du er
+        medlem i, pakke dem i en pakket fil og sende dem til deg.
+        Pakkingen vil skje dersom du har valgt et pakke format med U AF
+        kommandoen, ellers vil du motta en upakket ASCII-fil. Du kan
+        sette hvilken protokoll du vil bruke for filoverfõringer som
+        standard med U O kommandoen. NÜr du har mottatt meldingspakken
+        blir alle meldingene merket som leste. Den filen du fÜr med MH
+        er mulig Ü editere med sÜ og si hvilken som helst editor og ogsÜ
+        offline lesere som f.eks. BMLR, HipHop, NMail, SLMR osv.
+
+        Meldingspakken blir laget med det tegnsettet som er definert
+        med U T kommandoen (IBM tegnsett blir brukt som startverdi).
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-#@{fg text}  vil begrense antall meldinger som GRAB vil samle for deg.
+        For eksempel: MH -50 vil gjõre at du kun fÜr 50 meldinger.
+        @{fg highlight}-m@{fg text}  Utelukk liste over nye filer fra pakken.
+        @{fg highlight}-c@{fg text}  lager kontroll-filer for Hippo grab.
+        @{fg highlight}-b@{fg text}  Legger med nye bulletiner.
+
+@{b}SE OGSè:@{ub}
+            @{"ms  " link GLOB_MS}
+        [u] @{"set " link UTIL_SET}
+        [r] @{"send" link READ_SE}
+            @{"dump" link READ_D}
+@endnode
+
+@node GLOB_MS "Sende Meldinger"
+@{b}KOMMANDO:@{ub}
+        @{i}ms@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        MS vil ta imot en fil fra deg som inneholder meldinger og andre
+        kommandoer. (ref. [mh])
+
+@{b}SE OGSè:@{ub}
+            @{"mh  " link GLOB_MH}
+        [u] @{"set " link UTIL_SET}
+        [r] @{"send" link READ_SE}
+            @{"dump" link READ_D}
+@endnode
+
+@node GLOB_H "Hjelp"
+@{b}KOMMANDO:@{ub}
+        @{i}h@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        H-kommandoen viser deg hjelpe skjermer i BBBS. Hjelpe
+        teksten er delt inn i emner og delemner.
+
+        (Det er den teksten du leser nÜ...)
+@endnode
+
+@node GLOB_J "Melde deg inn i en konferanse/bytte konferanse"
+@{b}KOMMANDO:@{ub}
+        j [navnet_pÜ_konferansen_du_vil_til]
+
+@{b}BESKRIVELSE:@{ub}
+        Join kommandoen bytter til en annen konferanse, eller melder deg
+        inn i en ny. Du kan gi et konferanse navn skilt med et mellomrom
+        som en parameter. Dersom ingen parametre bli gitt, vil en
+        oversikt over alle konferanser bli vist.
+
+@{i}Piltaster:   flytt     @{ui}@{b}F@{ub}@{i}inn     @{ui}@{b}J@{ub}@{i}oin gruppe      s@{ui}@{b}O@{ub}@{i}rter:  ingen  alfabetisk@{ui}
+@{i}Space: join/resign     @{ui}@{b}Q@{ub}@{i}uit     @{ui}@{b}R@{ub}@{i}esigner gruppe  @{ui}@{b}H@{ub}@{i} vise:  alle  medlem  ikkemedlem@{ui}
+
+u @{fg highlight}INT.C++@{fg text}
+  @{fg highlight}INT.DESQVIEW@{fg text}
+u @{fg highlight}INT.GAMING@{fg text}
+u @{fg highlight}INT.GREEN.029@{fg text}
+  @{fg highlight}INT.HS_MODEMS@{fg text}
+
+        Du kan gÜ igjennom liste med piltastene. <Ctrl-R> og <Ctrl-C>
+        vil bla en side opp eller ned.
+
+        Dersom BBS'en har mange konferanser med samme begynnelse f.eks.
+        INT.Info, INT.Market,... kan du fÜ opp en liste over INT
+        konferansene med kommandoen J INT.
+
+@{b}EKSEMPEL:@{ub}
+        j
+        j post
+        j int
+
+@{b}SE OGSè:@{ub}
+        @{"glob/nedste" link GLOB_NEXT}
+        @{"glob/res " link GLOG/RES}
+        @{"regexp" link REGEXP}
+@endnode
+
+@node GLOB_NYB "Hjelp for nye brukere"
+
+                      Du har kommet hit! Gratulerer!
+                          Velkommen til systemet.
+
+        Det er et par kommandoer og ting som er fint Ü vite til Ü
+        begynne med:
+
+        Prõv Ü vëre sÜ lite oppkoplet mot basen som mulig, nÜr du er
+        oppkoplet kan ikke andre brukere kople seg opp. Det kan ogsÜ
+        hende at du fÜr deg et sjokk nÜr telefonregningen kommer!
+
+        Meny systemet i BBBS (ganske logisk):
+        @{fg highlight}G@{fg text} Hoved Meny
+        @{fg highlight}U@{fg text} 'Utility' Meny
+        @{fg highlight}F@{fg text} Fil Menu
+        @{fg highlight}L@{fg text} Lese Meny (meldinger)
+
+        I menyen finnes det kommandoer og ogsÜ undermenyer.
+
+        Du har kanskje lagt merke til at det finnes mange forskjellige
+        konferanser her. Du har blitt invitert til noen og du stÜr fritt
+        til Ü melde deg inn i alle offentlige omrÜder hvor du har lese
+        og skrive rettigheter. Dette kan du gjõre vha. @{"j" link GLOB_J} kommandoen.
+        Det fõrste vil melde deg inn i et spesifikt omrÜde mens det
+        andre det andre spõr deg om omrÜde til du har valgt et.
+
+        Meldingene vil bli vist automatisk, bare trykk <@{fg highlight}enter@{fg text}>.
+        Ved Ü skrive @{"sv" link READ_SV} kan du skrive et svar pÜ en melding.
+
+        Det er tilrÜdelig Ü hente alle meldingene slik at du kan de pÜ
+        dem hjemme, off-line. Dette kan gjõres med @{"mh" link GLOB_MH} kommandoen
+        men husk pÜ Ü fõrst sette alle settingene i 'Utility' menyen
+        riktig fõrst. Du kan velge overfõrings protokoll med @{"u o" link UTIL_O}.
+        Du bõr ogsÜ velge en pakkemetode for Ü gjõre meldingspakkene
+        mindre slik at du kan spare overfõringstid med @{"u af" link UTIL_AF}.
+
+        Etter en stund er det smart Ü gÜ over til Ü bruke en off-line
+        meldingsleser. Ved Ü bruke en slik fÜr du muligheten til Ü
+        lese meldingene etter at du har hentet dem, hjemme. Du vil
+        ogsÜ vëre istand til Ü svare pÜ meldinger med en off-line
+        leser nesten som om du skulle vërt oppkoplet mot BBBS. Slike
+        programmer for PC er: BMLR, NMail, ASO, POST, BlueWave, OLX,
+        PowerQWK osv. Mange av disse er Ü finne i filomrÜdene til BBS'en
+        Dersom de ikke er det, be SysOp om Ü fÜ tak i den av dem.
+
+        Du har antakeligvis merket at det er mulig Ü legge flere kommandoer
+        pÜ en linje for Ü kunne bruke BBS'en fortere. Se @{"kle" link CLEDITOR}
+        for mere detaljer om bruk av kommando linje editoren.
+
+        NÜr du har lest noen meldinger (on-line ved Ü trykke enter), og
+        funnet noe du vil kommentere eller svare pÜ, kan du gjõre det ved
+        Ü trykke @{"sv" link READ_SV} (svare). Du vil bli spurt noen spõrsmÜl, og dersom
+        du velger Ü kopiere inn den gamle meldingen, vil den bli vist pÜ
+        skjermen. Dersom du nÜ benytter deg av fullskjerms editoren, kan
+        du kommentere meldingen med sitater fra senderen av meldingen.
+        Det er vanlig Ü bruke et spesiellt tegn foran alle siterte linjer,
+        som kan gjõres automatisk ved Ü trykke Ctrl+W. Tegnet er som regel
+        '>'. For Ü gjõre det automatisk, mÜ du flytte markõren til den
+        linja du vil sitere. Husk Ü bare sitere de delene av meldingen som
+        er nõdvendig, og slett resten med Ctrl+Y kommandoen.
+
+        Se hjelp for editoren med Ctrl+U kommandoen.
+
+        I BBS'en er det nesten alltid en konferanse hvor meldinger fra
+        SysOp'en til brukerne blir lagt. Slike omrÜder blir gjerne kalt
+        News, Info, SysOp News eller hva enn SysOp'en har valgt Ü kalle
+        konferansen. Dette omrÜdet kan du ikke melde deg ut av, dvs. at
+        du mÜ lese meldingene og hvorfor ikke, de kan inneholde viktig
+        informasjon.
+
+        Jeg hÜper du klarer deg nÜ. Dersom du har problemer, kan du legge
+        igjen en melding til SysOp ved Ü bruke @{"kom" link GLOB_KOM}mentar
+        kommandoen. Han har en del erfaring pÜ nakken, og kan antakeligvis
+        svare pÜ dine spõrsmÜl.
+
+        Kvinnelige brukere:
+        Ved referanser til han/ham i hjelpen... kan det ogsÜ vëre en henne.
+@endnode
+
+@node GLOB_NO "Node melding"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}no@{fg text} <node_nummer> <melding>
+
+@{b}BESKRIVELSE:@{ub}
+        NO kommandoen sender meldinger til andre noder pÜ en fler-linje
+        BBS. Du kan skrive nodenummeret og meldingen som parametere.
+        Hvis du ikke gjõr det vil BBBS be deg om de etterhvert. Ved Ü
+        sende nodemelding til node 0 vil meldingen bli sent til alle
+        aktive noder.
+
+        Du mÜ bruke denne kommandoen hvis du vil spõrre om filhentings-
+        tilbang fra BRoboCop, som er 'vakt katten' for BBBS.
+        Dette blir gjort ved Ü skrive fõlgende: NO 4 DOWNLOAD, hvor 4
+        er nodenummeret til BRoboCop. Sjekk nodenummeret med @{"hvem" link GLOB_HV}.
+
+@{b}EKSEMPEL:@{ub}
+        no 3 Hei! Hva skjer?
+        no 4 play
+
+@{b}SE OGSè:@{ub}
+        @{"glob/chat" link GLOB_CHAT}
+        @{"glob/hv  " link GLOB_HV}
+@endnode
+
+@node GLOB_B "Bulletiner"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}b@{fg text} [<bulletin_nummer> | L | V ]
+
+@{b}BESKRIVELSE:@{ub}
+        B kommandoen fulgt av et bulletin nummer viser deg en bulletin.
+        Bulletiner er mer eller mindre viktige ting som SysOp har valgt
+        Ü inkludere i bullettinen i bulletin menyen. For Ü fÜ en liste
+        over alle tilgjengelige bullettiner i BBS'en skriv B fulgt av
+        <enter>. For Ü liste bulletin listen igjen skriv L pÜ bulletin-
+        prompten. V gir deg velkomst skjerment til BBS'en.
+        Bruk D etter Ü ha listet en bulletin vil overfõre bulletinfilen
+        som du nettopp har lest.
+
+
+@{b}EKSEMPLERr:@{ub}
+        b 2    Viser bulletin nummer 2
+        b 2 D  Som over, men vil overfõre bulletinfilen til deg etter at
+               du har lest den.
+        b l    Viser en oversikt over tilgjengelige bulletiner
+        b v    Viser velkomstbulletinen pÜ BBS'en
+@endnode
+
+@node GLOB_TID "Tid igjen"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}tid@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        TID kommandoen viser det hvor mye klokken er, klokkeslett for
+        login, hvor lang tid du har igjen pÜ basen i dag og status pÜ
+        tidsbanken.
+
+@endnode
+
+@node GLOB_HV "Hvem er pÜlogget systemet"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}hv@{fg text}em
+
+@{b}BESKRIVELSE:@{ub}
+        HV kommandoen gir deg en liste over hvem som er logget inn pÜ
+        system og en status for de andre nodene, hvis det er noen. PÜ
+        noen systemer har SysOp valg Ü ikke vise 'tomme' noder, dette
+        kan vëre fordi det er sÜ mange noder at det vil ta lang tid Ü
+        liste alle sammen. Hvis noen henter filer, vil BBBS vise
+        estimert tid for nÜr nedlastingen er ferdig.
+
+@{b}SE OGSè:@{ub}
+        @{"glob/chat" link GLOB_CHAT}
+        @{"glob/no  " link GLOB_NO}
+@endnode
+
+@node GLOB_HA "Hadet: Logge ut av BBS"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}ha@{fg text} [J | N | O]
+        @{fg highlight}exit@{fg text} [J | N | O]
+        @{fg highlight}logout@{fg text} [J | N | O]
+
+@{b}BESKRIVELSE:@{ub}
+        HA kommanden er den eneste riktige mÜte Ü legge pÜ rõret etter
+        Ü ha besõkt en BBBS Hvis ingen parametere blir gitt, vil du bli
+        spurt om du er sikker pÜ om du vil logge av. <enter> er det
+        samme som @{i}J@{ui}.
+
+        J - Ja, jeg vil logge ut.
+
+        N - Nei, jeg vil tilbake til BBBS.
+
+        O - Omigjen gir deg muligheten til Ü logge inn pÜ nytt, hvis for
+        eksempel en venn av deg õnsker Ü logge inn fra din maskin etter
+        at du har vërt logget inn.
+
+        Det er ikke anbefalt Ü legge pÜ rõret uten Ü logge ut. Din SysOp
+        ser nÜr du klusser med utloggingen og liker det ikke. Det kan
+        ogsÜ hende at du vil miste meldinger og/eller linker pÜ grunn av
+        feil utlogging.
+
+@endnode
+
+@node GLOB_? "Vis meny"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}?@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        ? viser en meny i nesten alle situasjoner. Menyen vil liste
+        omtrent alle tilgjengelige kommandoer med en kort beskrivelse
+        av kommandoene.
+@endnode
+
+@node GLOB_FIN "Hvem er pÜlogget systemet"
+@{b}KOMMANDO:@{ub}
+       @{fg highlight}fin@{fg text}ger [<brukernavn> | <node_nummer>]
+
+@{b}BESKRIVELSE:@{ub}
+       FINGER uten parameter viser hvem som er logget inn pÜ systemet
+       akkurat nÜ. Ved Ü legge til nodenummer vil FINGER vise deg
+       bruker resymÇet for brukeren pÜ den noden hvis han/hun har
+       skrevet et. Du kan ogsÜ fÜ frem resymÇet til en bestemt bruker
+       ved Ü skrive FINGER <brukernavn>.
+
+@endnode
+
+@node MAIN_MENU "Hoved meny kommandoer"
+@{b}BESKRIVELSE:@{ub}
+        I hovedmenyen kan du bruke alle hovedmeny-kommandoer, de globale
+        kommandoene eller du kan gÜ til en annen meny.
+
+@{b}DELEMNER:@{ub}
+        @{fg highlight}Bruker kommandoer:@{fg text}
+        @{"a    " link MAIN_SV    } Svare pÜ spõrreskjemaer
+        @{"ba   " link MAIN_BA    } Tids Bank
+        @{"i    " link MAIN_I     } Info om andre brukere
+        @{"ja   " link MAIN_JA    } Jargon sõking
+        @{"kal  " link MAIN_KAL   } Kalender
+        @{"ki   " link MAIN_KI    } Kikke i nodelister
+        @{"op   " link MAIN_OP    } èpne dõrer
+        @{"s    " link MAIN_VIS   } Vise brukere
+        @{"stat " link MAIN_STAT  } Statistikk
+        @{"ver  " link MAIN_VER   } Vise BBBS Versjon
+
+        @{fg highlight}SysOp kommandoer:@{fg text}
+        @{"blogg " link MAIN_BLOGG  } Vise logfiler bakleng
+        @{"bstat " link MAIN_BSTAT } Vise B statistikk
+        @{"compu " link MAIN_COMPU } Vise ledig RAM og DISK kapasitet
+        @{"slettl" link MAIN_SLETT  } Slette loggfiler
+        @{"dos   " link MAIN_DOS   } Kommando til OS
+        @{"ka    " link MAIN_KA    } Kaste ut andre noder
+        @{"gjem  " link MAIN_GJEM  } Gjemme deg selv
+        @{"hippo " link MAIN_HIPPO } Sende Hippo melding
+        @{"logg  " link MAIN_LOGG   } Vise logfiler
+        @{"reset " link MAIN_RESET } Resette den periodiske statistikken
+        @{"shell " link MAIN_SHELL } Hoppe til OS
+        @{"spi   " link MAIN_SPI   } Spionere pÜ en node
+        @{"brl   " link MAIN_BRL    } Bruker Login
+@endnode
+
+@node MAIN_SV "Svare pÜ spõrreskjemaer"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}sv@{fg text}ar
+
+@{b}BESKRIVELSE:@{ub}
+        SV fulgt av nummeret pÜ spõrreskjemaet vil gi deg lov til Ü
+        svare pÜ et av de spõrreskjemaer som SysOp har innkludert i BBS
+        systemet. Spõrreskjemaer inkluderer vanlgivis spõrsmÜl om
+        brukerne, deres utstyr, programmer og deres meninger for
+        statistikker, men det kan vëre alt som SysOp õnsker Ü spõrre om.
+@endnode
+
+@node MAIN_BA "Tids Bank"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}ba@{fg text}nk
+
+@{b}BESKRIVELSE:@{ub}
+        BA lar deg lagre tid i banken. Rentesatsen er ikke hva du er
+        vant til i en normal bank men det motsatte. Hvis du setter inn
+        fem minutter vil du kunne ta ut ett minutt. (Dette kan variere
+        fra BBS til BBS da sysop kan regulere denne rentesatsen, men
+        standard er 5:1). Resten av tiden vil SysOp bruke for sin egen
+        vinning. SysOp setter ogsÜ opp hva som er maksimum beholdning i
+        banken, standard er 60 minutter.
+
+        Banken aksepterer fõlgende kommandoer:
+
+          @{fg highlight}i@{fg text} Innskudd - Sett inn tid i banken.
+          @{fg highlight}u@{fg text} Uttak    - Ta ut tid fra banken og legg det til din tid i
+                       õyeblikket.
+          @{fg highlight}<enter>@{fg text}      Forlater banken.
+@endnode
+
+@node MAIN_KAL "Kalender"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}kal@{fg text}ender
+
+@{b}BESKRIVELSE:@{ub}
+        KALender kommandoen kalkulerer og viser en mÜnedskalender for et
+        gitt Ür, mÜned og dag. Dagen dato er uthevet.
+@endnode
+
+@node MAIN_I "Info om andre brukere"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}i@{fg text}nfo
+
+@{b}BESKRIVELSE:@{ub}
+        I fõlge av et brukernavn vil vise brukerinfo for denne brukeren
+        som han/hun har skrevet om seg selv med kommandoen 'U RES'.
+        G I SYSOP vil vise litt informasjon om SysOp og den informasjonen
+        han har skrevet om seg selv. Hvis du ikke har skrevet noen info
+        om deg selv, sÜ bõr du bruke kommandoen U RES og gjõre det. Du
+        har kanskje allerede noe skrevet om deg selv i en ASCII fil som
+        du õnsker Ü legge inn i stedet. Da bõr du ta en ASCII opplastning
+        i editoren. For mer informasjon om hvordan du skal gjõre en ASCII
+        opplastning, les manualen til ditt terminal program.
+@endnode
+
+@node MAIN_JA "Jargon sõking"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}ja@{fg text}rgon
+
+@{b}BESKRIVELSE:@{ub}
+        Sõker i jargon filen for et gitt ord. filen er over 1 Mb stor
+        upakket og BBBS sõker gjennom hele. Prosessen kan ta noe tid,
+        men du kan avbryte sõket ved Ü trykke <Ctrl-K>.
+
+        Jargon filen er et fyldig kompendium over engelske edb uttrykk,
+        'hacker's slang' folklore og humor og kan vëre nyttig for mange
+        som lurer pÜ hva forskjellige ord og uttrykk betyr eller hvor
+        de opprinnelig kommer fra etc.
+
+@{b}EKSEMPLER:@{ub}
+        ja bit             Vil gi deg en god del informasjon om
+                           dataordet BIT (som i Bits'n Bytes).
+@endnode
+
+@node MAIN_KI "Kikke i nodelister"
+@{b}KOMMANDO:@{ub}
+        [q] @{fg highlight}ki@{fg text}kke
+
+@{b}BESKRIVELSE:@{ub}
+        Med denne kan du sõke i nodelistene for fritekst eller nummer
+        med bruk av regulëre uttrykk.
+
+        Resultatet av sõket ditt vil bli skrevet til skjermen slik:
+
+Nodenummer    Navn                   SysOp                  Lokasjon
+===============================================================================
+47:1000/101   BarCode BBS            Rune Johansen          Nittedal
+
+@{b}SE OGSè:@{ub}
+        @{"RegExp" link REGEXP}
+@endnode
+
+@node MAIN_OP "èpne en dõr til eksterne programmer"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}op@{fg text}en [<dõr_nummer> | <?>]
+
+@{b}BESKRIVELSE:@{ub}
+        OPEN  vil Üpne en dõr, eksternt program som er spesifisert i
+        BBS'ens liste over tilgjengelige dõrer.
+        Kommandoene her kan variere, men som oftest vil du kunne
+        bruke '?' (uten anfõrselstegn) for Ü fÜ frem en liste over de
+        tilgjengelige dõrene/eksterne programmene.
+
+@{b}EKSEMPLER:@{ub}
+        open 5
+@endnode
+
+@node MAIN_VIS "Vis brukere"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}vis@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg hvem som er registert bruker av BBS'en VIS etterfulgt
+        av <enter> <enter> viser deg en liste over alle brukere i
+        systemet. med V HACKER fÜr du en liste over alle brukere med
+        teksten 'HACKER' i navnet eller adressen.
+        BBBS bruker regulëre uttrykk @{"RegExp" link REGEXP} for Ü finne
+        frem i bruker databasen.
+@endnode
+
+@node MAIN_STAT "Statistikk"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}stat@{fg text}istikk
+
+@{b}BESKRIVELSE:@{ub}
+        STAT  viser din personlige statistikke i systemet. F.eks. hvilket
+        bruker nummer du har, hvor mange ganger du har logget inn, nÜr du
+        sist logget inn, antall opplastinger/nedlastinger etc.
+
+        Du kan ogsÜ liste den periodiske statistikken, ved Ü gi et nummer
+        for hvor mange posisjoner du vil viser. Standard er de ti fõrste
+        men du kan liste opp til 60 plasser i listen. Listen inneholder
+        fõlgende statistikker:
+         - Antall innlogginger
+         - Antall meldinger lest
+         - Antall meldinger skrevet
+         - Antall meldinger dumpet
+         - Antall filer opplastet
+         - Antall filer nedlastet
+
+         med mere.
+@endnode
+
+@node MAIN_VER "Versjon"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}ver@{fg text}sjon
+
+@{b}BESKRIVELSE:@{ub}
+        VER viser deg hvilken versjon av BBBS systemet kjõrer pÜ i
+        õyeblikket, den viser ogsÜ kopieringsrettighetene for BBBS.
+@endnode
+
+@node MAIN_BLOGG "Baklengs Logg"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}blogg@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg logfilen til en gitt node fra sortert fra slutten av
+        filen. Hvis BBS'en har flere noder mÜ du oppgi et node nummer
+        etter BLOGG. Konfigureringen kan gjõres slik at alle noder
+        bruker samme loggfil, i sÜ tilfelle vil nodenummeret
+        sannsynligvis vëre 1.
+
+@{b}SE OGSè:@{ub}
+        @{"logg  " link MAIN_LOGG}
+        @{"slettl" link MAIN_SLETT}
+@endnode
+
+@node MAIN_BSTAT "B Statistikk"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}bstat@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil vise deg en statistisk skjerm over tidsbruk, antall innlogginger
+        og antall skrevne meldinger.
+@endnode
+
+@node MAIN_COMPU "Vis ledig minne & diskplass"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}compu@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser ledig minne og tilgjengelig diskplass.
+@endnode
+
+@node MAIN_SLETT "Slett logg"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}slettl@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Sletter loggfil. Hvis BBS'en har flere noder mÜ du oppgi et node
+        nummer etter SLETTL. Konfigureringen kan gjõres slik at alle
+        noder bruker samme loggfil, i sÜ tilfelle vil nodenummeret
+        sannsynligvis vëre 1.
+
+@{b}SE OGSè:@{ub}
+        @{"logg " link MAIN_LOGG}
+        @{"blogg" link MAIN_BLOGG}
+@endnode
+
+@node MAIN_DOS "Kommando til OS"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}dos@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg utfõre en OS kommando inne fra BBBS. Hvis bruker BBBS
+        via modem kan du styre skjermutskrif fra kommandoen til seriell
+        porten slik:
+          DOS DIR >COMx
+        hvor x er nummeret pÜ kommunikasjonsporten modemet ditt bruker.
+@endnode
+
+@node MAIN_KA "Kast ut andre noder"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}ka@{fg text}st
+
+@{b}BESKRIVELSE:@{ub}
+        KAst tillater deg Ü kaste ut en annen node. Etter KA mÜ du
+        skrive nodenummeret du õnsker Ü kaste ut.
+@endnode
+
+@node MAIN_GJEM "Gjem deg selv"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}gjem@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        GJEM vil gjõre at HV listen viser brukerne at du er logget ut.
+        Du kan gjenopprette din tilstedevërelse med @{"chat t" link CHAT_T} kommandoen.
+@endnode
+
+@node MAIN_HIPPO "Hippo kommando"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}hippo@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Send hippo melding. Med denne funksjonen kan du sende en node
+        melding til en spesifisert bruker/gruppe X antall ganger. NÜr
+        denne brukeren/gruppen logger inn, vil de motta node meldingen.
+@endnode
+
+@node MAIN_LOGG "Vis loggfiler"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}logg@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil liste loggfilen i kronologisk rekkefõlge, eldste fõrst,
+        nyeste sist. Hvis BBS'en har flere noder mÜ du oppgi et node-
+        nummer etter LOGG. Konfigureringen kan gjõres slik at alle noder
+        bruker samme loggfil, i sÜ tilfelle vil nodenummeret
+        sannsynligvis vëre 1. Dette anbelfales ikke da det vil vëre
+        veldig vanskelig Ü lese loggfilen(e).
+
+@{b}SE OGSè:@{ub}
+        @{"blogg " link MAIN_BLOGG}
+        @{"slettl" link MAIN_SLETT}
+@endnode
+
+@node MAIN_RESET "Nullstille den periodiske statistikken"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}reset@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil nullstille statistikken for en ny periode. Denne kommandoen
+        reflekterer statistikk vist i G STAT kommandoen.
+
+@{b}SE OGSè:@{ub}
+        @{"stat" link MAIN_STAT}
+@endnode
+
+@node MAIN_SHELL "Shell til OS"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}shell@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        SHELL vil ta deg til et OS shell ved Ü kjõre SHELLx -skript
+        (etternavn for skriptet vil variere fra OS til OS).
+@endnode
+
+@node MAIN_SPI "Spionere pÜ en node"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}spi@{fg text}oner
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg se hvilke kommander en bruker utfõrer pÜ en annen node.
+        Disse kommandoene vil bli sent til deg som node meldinger.
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-d@{fg text}  Avslutt spioner-modus
+@endnode
+
+@node MAIN_BRL "Bruker Login"
+@{b}KOMMANDO:@{ub}
+        [g] @{fg highlight}brl@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg logge inn pÜ systemet uten passord. Bruk denne kommandoen
+        for Ü logge inn pÜ systemet med andre brukere's navn.
+@endnode
+
+@node READ "Lese Meny"
+@{b}BESKRIVELSE:@{ub}
+        I lese menyen kan du bruke alle globale kommandoer eller lese
+        kommandoene. Lese kommandoene er til lesing, skriving og svar
+        av meldinger.
+
+@{b}DELEMNER:@{ub}
+        @{fg highlight}lesing:@{fg text}
+        @{"-     " link READ_-      } Forrige melding
+        @{"+     " link READ_+      } Neste melding
+        @{".     " link READ_.      } Vis samme melding igjen
+        @{"<     " link READ_<      } Vis referanse melding
+        @{">     " link READ_>      } Vis svar
+        @{"=     " link READ_=      } Neste svar
+        @{"nummer" link READ_NUMBER } Les melding med det nummeret
+        @{"neste " link READ_NE     } Flytter til neste konferanse
+        @{"o     " link READ_O      } Vis original
+        @{"t     " link READ_T      } Tilbake (forrige)
+
+        @{fg highlight}skriving:@{fg text}
+        @{"dup   " link READ_DUP    } DuplisÇr (omskrive) melding
+        @{"enter " link READ_ENTER  } Trykk <@{i}enter@{ui}> for Ü lese uleste meldinger
+        @{"psv   " link READ_PSV    } Privat svar
+        @{"sv    " link READ_SV     } Svar pÜ melding
+
+        @{fg highlight}offline commands:@{fg text}
+        @{"d     " link READ_D      } Dump meldinger til meldingspakke
+        @{"mh    " link GLOB_MH     } Meldings henting (hent pakke)
+        @{"ms    " link GLOB_MS     } Meldings sending (send pakke)
+        @{"se    " link READ_SE     } Send meldingspakke (til deg)
+
+        @{fg highlight}informasjon@{fg text}
+        @{"i     " link READ_I      } Info om forfatter
+        @{"oi    " link READ_OI     } OmrÜde info
+        @{"v     " link READ_V      } Vis meldinger i konferanse
+        @{"vis   " link READ_VIS     } Vis konferanse status
+
+        @{fg highlight}andre kommandoer:@{fg text}
+        @{"sl    " link READ_SL      } Slett melding
+        @{"m     " link READ_M      } Merk meldinger pÜ forskjellige mÜter
+        @{"mk    " link READ_MK     } Kopier melding
+        @{"mod   " link READ_MOD   } Modus for meldings lesing
+        @{"fl    " link READ_FL    } Flytt melding til en annen konferanse
+        @{"he    " link READ_HE    } Gjenopprett en en slettet melding
+        @{"utm   " link READ_UTM    } Utmeld fra konereranser
+        @{"s     " link READ_S      } Sõke kommandoer
+
+        @{fg highlight}SysOp kommandoer:@{fg text}
+        @{"fiks  " link READ_FIKS    } Fiks ResymÇ linker
+        @{"fm    " link READ_FM     } Merk som sendt
+        @{"bruk  " link READ_BRUK   } Bruker Editor
+        @{"zap   " link READ_ZAP    } Endre meldingshode
+@endnode
+
+@node READ_ENTER "<enter> for Ü lese uleste meldinger"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}<enter>@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Ved Ü trykke <Enter> vil BBS'en vise deg neste uleste melding
+        i konferansen du er i. Hvis siste melding du leste var siste
+        i konferansen, vil du bli fõrt til neste konferanse. Meldingene
+        vil bli vist i den rekkefõlge som er spesifisert under
+        kommandoen R MODus.
+
+@{b}SE OGSè:@{ub}
+        @{"modus" link READ_MOD}
+@endnode
+
+@node READ_NUMBER "<nummer> lese melding med det nummeret"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}<nummer>@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        ved Ü kun skrive et nummer som kommando vil du fÜ frem meldingen
+        med det nummeret i den konferansen du er i. Hvis ingen melding
+        med det gitte nummer finnes, vil programmet rapportere det.
+@endnode
+
+@node READ_NE "Neste konferanse"
+@{b}KOMMANDO:@{ub}
+        @{fg highlight}ne@{fg text} [++ | /--]
+
+@{b}BESKRIVELSE:@{ub}
+        NESTE kommandoen flytter deg til neste konferanse som du er
+        medlem av. Brukes den uten parameter vil den flytte deg til
+        neste konferanse som inneholder uleste meldinger.
+
+@{b}PARAMETERE:@{ub}
+        @{fg highlight}++@{fg text} parameteret flytter til neste konferanse du er medlem av.
+           Konferansen kan, men mÜ ikke, ha uleste meldinger.
+
+        @{fg highlight}--@{fg text} parameteret flytter til forrige konferanse du er medlem av.
+           Konferansen kan, men mÜ ikke, ha uleste meldinger.
+
+@{b}EKSEMPEL:@{ub}
+        neste
+        ++
+        --
+
+@{b}SE OGSè:@{ub}
+        @{"glob/j" link GLOB_J}
+@endnode
+
+@node READ_T "Tilbake (forrige)"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}t@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser meldingen du leste like fõr forrige leste melding.
+        Bruker du denne kommandoen to ganger fÜr du meldingen som var
+        lest sist nÜr du fõrst brukte T kommandoen.
+@endnode
+
+@node READ_SV "Svar pÜ melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}sv@{ui}ar
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan skrive et svar til melding du nettopp har lest.
+@endnode
+
+@node READ_PSV "Privat Svar pÜ melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}psv@{ui}ar
+
+@{b}BESKRIVELSE:@{ub}
+        Bruk PSV hvis du vil svare privat pÜ noens meldinger. Hvis den
+        originale meldinger er 'echomail', vil svaret bli skrevet som
+        netmail. Adressen blir tatt fra origin linjen. Hvis den
+        originale meldinger er i en lokal konferaanse, vil svaret bli
+        skrevet i en privat konferanse. (som oftes i post konferansen).
+@endnode
+
+@node READ_SL "Slett melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}sl@{ui}ett
+
+@{b}BESKRIVELSE:@{ub}
+        Vil slette en melding som du har skrevet. Du kan ikke slette
+        meldinger andre har skrevet. Meldingen vil fortsatt finnes pÜ
+        harddisken til SysOp pakker konferansen.  Du kan bruke denne
+        kommandoen hvis det er en melding som er 'gÜtt over datoen'.
+        hvis du sletter en melding ved uhell, kan du gjenopprette den
+        med @{"HEnt" link READ_HE}.
+@endnode
+
+@node READ_HE "Hent slettet melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}he@{ui}nt
+
+@{b}BESKRIVELSE:@{ub}
+        Vil hente tilbake en melding du har slette ved uhell eller hvis
+        du bare vil gjenopprette den. Husk at dette ikke kan gjõres hvis
+        SysOp allerede har pakket konferansen etter at du slettet den.
+@endnode
+
+@node READ_- "- forrige melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}-@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil vise deg forrige melding i den konferansen du er i. Det er
+        meldingen nummerert en lavere enn den du nettopp leste. Hvis den
+        forrige meldingen har blitt slettet, vil den forrige 'aktive'
+        meldingen bli vist.
+@endnode
+
+@node READ_+ "+ neste melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}+@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil vise deg neste melding i den konferansen du er i. Det er
+        meldingen nummerert en hõyere enn den du nettopp leste. Hvis den
+        neste meldingen er blit slettet, vil den neste 'aktive'
+        meldingen bli vist.
+@endnode
+
+@node READ_M "Merk meldinger pÜ forskjellige mÜter"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}m@{ui}erk
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr det mulig Ü lese utvalg av meldinger. Du kan merke
+        meldinger pÜ forskjellige mÜter som forklart under.
+
+        Noter at med 'Merke' menes Ü merke meldingen som ulest og med
+        'Fjerne merke' menes Ü merke meldingen som lest. Dette er fordi
+        du vanligvis vil merke meldinger du allerede har lest for Ü lese
+        de pÜ nytt.
+
+        @{i}.@{ui}        Merker meldingen nettopp lest
+        @{i}#@{ui}        Merker melding nummer #
+        @{i}fo@{ui}       Merker meldinger fra en bestemt person
+        @{i}d@{ui}        Merker meldiner pÜ eller fra en dato
+        @{i}f@{ui}        Flytter dine meldinger fõrst i kõen
+        @{i}g@{ui}        Merker en gruppe meldinger etter nummer
+        @{i}n@{ui}        Spõr hvor mange meldinger som er merket
+        @{i}kp@{ui}       Fjerner merker pÜ alle mld ikke til/fra deg
+        @{i}p@{ui}        Finner og merker meldinger til deg (hele konf.)
+        @{i}r@{ui}        Fjerner alle merker
+        @{i}fm@{ui}       Merker meldinger til en spesiell mottaker
+        @{i}s@{ui}        Setter 'siste melding lest' peker
+        @{i}t@{ui}        Merker alle meldinger i denne trÜden
+        @{i}sl@{ui}       Fjerner merker for hele trÜden
+        @{i}u@{ui}        Fjerner merker for forfatter av mld. nettopp lest
+        @{i}gd@{ui}       Merker meldiner pÜ eller fra en dato (global)
+        @{i}gre@{ui}      Fjerner ALLE merker (global)
+        @{i}gj@{ui}       Gjenopprett alle merker fra begynnelsen av oppringningen
+        @{i}v@{ui}        Viser meldinger merket til nÜ.
+
+        @{i}a@{ub} og @{i}<enter>@{ui} vil ta deg tilbake til lese kommandoen.
+@endnode
+
+@node READ_. ". samme melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}.@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil vise deg melding du nettopp leste en gang til. Dette er
+        spesielt nyttig hvis du har mye file pÜ linjene mens du leser,
+        eller meldingen var veldig lang, sÜ kan du fÜ den vist pÜ nytt
+        fra begynnelsen.
+@endnode
+
+@node READ_VIS "Vis konferanse status"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}vis@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser en status over en gruppe konferanser.
+
+@{b}BRYTERE:@{ub}
+        @{i}vis@{ui}      Viser status for konferansene du er medlem av.
+        @{i}vis -a@{ui}   viser status for alle tilgjengelige konferanser.
+        @{i}vis -s@{ui}   Viser uleste meldinger i konferanser, samme format som
+                 i innloggings konferanse status.
+        @{i}vis -u@{ui}   Viser status for konferanser med uleste meldinger.
+@endnode
+
+@node READ_< "< vis refereanse"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}<@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg meldingen gjeldende melding er et svar til, gitt at
+        den gjeldene meldingen var et svar pÜ en melding.
+@endnode
+
+@node READ_> "> vis svar"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}>@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg fõrste svar pÜ gjeldende melding, gitt at det er blitt
+        svart pÜ meldingen.
+@endnode
+
+@node READ_= "= neste svar"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}=@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg neste svar pÜ meldingen du nettoppp leste, gitt at det
+        er blitt skrevet mer enn et svar til meldingen.
+@endnode
+
+@node READ_V "Vis meldinger"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}v@{ub}i
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan liste meldingene i konferansen hvis ikke õnsker
+        Ü lese alle sammen. Den viser deg overskriften pÜ meldingene og
+        hvis du vil forfatter og mottaker. Du vil bli spurt om kun
+        overskriftene skal bli vist. Hvis du svarer N vil ogsÜ forfatter
+        og mottaker til meldingene bli vist. Hvis det ikke er noen
+        meldinger til/fra deg e messages to/from you your name will show
+        up in a different color (this provided you have enabled colors
+        in BBBS).
+@endnode
+
+@node READ_UTM "Utmeld fra konferanser"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}utm@{ui}eld
+
+@{b}BESKRIVELSE:@{ub}
+        Uten parameter vil du fÜ frem konferanselisten hvor du kan
+        melde deg ut og inn av konferanser.
+
+        Legger du til parameteret J - for ja - sÜ blir du automatisk
+        utmeldt av den konferansen du er i.
+
+@{b}SE OGSè:@{ub}
+        @{"Join" link GLOB_JOIN}
+@endnode
+
+@node READ_SE "Send meldingspakke"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}se@{ui}nd
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan sende meldingspakken til din datamaskin. Den vil
+        bli pakket i det formatet du har valg i U AF. hvis det ikke er
+        valgt noe format, vil den ikke bli pakket, men sendt som
+        standard ASCII format.
+
+@{b}SE OGSè:@{ub}
+        @{" lese/dump " link READ_D}
+        @{" glob/mh   " link GLOB_MH}
+@endnode
+
+@node READ_S "Sõke kommandoer"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}s@{ui}õke
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan sõk meldinger pÜ forskjellige mÜter som er
+        beskrevet under. Meldinger som blir runner vil bli merket
+        som ulest.
+
+        @{i}s g@{ui}     Sõker i en gruppe av meldinger
+        @{i}s h@{ui}     Sõker kun i meldingshodene i meldingene.
+        @{i}s m@{ui}     Sõker kun i merkede meldinger.
+@endnode
+
+@node READ_DUP "DuplisÇr (omskriv) melding"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}dup@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan slette en melding og skrive en ny ved Ü editere
+        den slettede meldingen. Du kan kun DUPlisÇre dine egne
+        meldinger.
+@endnode
+
+@node READ_D "Dump meldinger til meldingspakke"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}d@{ui}ump
+
+@{b}BESKRIVELSE:@{ub}
+        Gjõr at du kan legge til enkelte meldinger eller grupper av
+        meldinger til meldingspakken som beskrevet under:
+
+        @{i}d k@{ui}     Dumper alle uleste meldinger i den konferansen du er i.
+        @{i}d a@{ui}     Dumper alle uleste meldinger i alle konferanser. Samme som MD
+                men sender ikke meldingpakken til deg. se: @{"lese/send" link READ_SE}
+        @{i}d m@{ui}     Dumper meldingen du nettopp leste.
+        @{i}d slett@{ui} Fjerner alle meldinger fra meldingspakken
+        @{i}d n@{ui}     Viser deg hvor mange meldinger det er i melidngspakken.
+
+@{b}SE OGSè:@{ub}
+        @{" lese/send " link READ_SE}
+        @{" glob/mh   " link GLOB_MH}
+@endnode
+
+@node READ_O "Vis original"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}o@{ub}riginal
+
+@{b}BESKRIVELSE:@{ub}
+        Viser den fõrste meldingen i gjeldende meldingskjede.
+@endnode
+
+@node READ_FL "Flytt melding til en annen konferanse"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}fl@{ui}ytt
+        [l] @{i}mv@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Flytter dine egne meldinger til andre konferanser hvis emnet
+        for diskusjonen er endret og passer bedre i en annen konferanse
+        enn den gjeldede. Etter at komandoen er sent vil du bli spurt
+        om navn pÜ konferansen du vil flytte den til og ny mottaker.
+@endnode
+
+@node READ_MOD "Modus for meldings lesing"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}mod@{ui}us
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg sett õnsket lese modus. (rekkefõlgen du vil lese
+        nye meldinger i.) De forskjellige modus er som fõlger:
+
+        @{i}mode f@{ui}  Les meldinger i nummerert rekkefõlge.
+        @{i}mode m@{ui}  Les merkede meldiner.
+        @{i}mode r@{ui}  Les meldinger som kjdeder (Fõrste meldng, svar,
+                         svar... fõrste melding, svar, svar... osv.)
+@endnode
+
+@node READ_OI "OmrÜde Info"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}oi@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Vil vise deg litt infor om den konferansen du er i. Hvis SysOp
+        ikke har laget egen informasjon for konferansen vil du fÜ frem
+        informasjonen fra <J>oin listen.
+@endnode
+
+@node READ_MK "Meldings kopiering"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}mk@{ui}
+        [l] @{i}cp@{ui}
+
+@{b}BESKRIVELSE:@{ub}
+        Meldings kopiering lar deg kopiere nylig leste melding til en
+        annen konferanse uten Ü õdelegger originalen.
+@endnode
+
+@node READ_I "Info om forfatter"
+@{b}KOMMANDO:@{ub}
+        [l] @{i}i@{ui}nfo
+
+@{b}BESKRIVELSE:@{ub}
+        Gir deg den samme inforamsjon som G INFO, men du behõver ikke Ü
+        skrive navnet pÜ brukeren, den viser informasjonen for
+        forfatteren av gjeldende melding.
+@endnode
+
+@node READ_FIKS "Fiks resymÇ linker"
+@{b}KOMMANDO:@{ub}
+        [l] @{fg highlight}fiks@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Brukes til Ü fikse linker mellom bruker nummer og meldingene i
+        resymÇ konferansen. Ikke bruk den hvis du ikke har problemer med
+        linkene i resymÇkonferansen da det tar en del tid Ü kjõre den.
+@endnode
+
+@node READ_FM "Merk som sent"
+@{b}KOMMANDO:@{ub}
+        [l] @{fg highlight}fm@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        FM vil merke alle meldinger i gjeldene konferanse som sendt. Eks
+        den vil fortelle BBBS BMSG til ikka Ü sende gjeldene melding
+        videre Dette har ingen effekt hvis BBS'en ikk er 'connected' til
+        noe meldings nettverk. Den er vanligvis brukt hvis du 'connects'
+        til et nettverk og inkluderer en av konferansene, da vil du
+        merke alle gamle meldinger til ikke Ü bli sendt videre.
+@endnode
+
+@node READ_BRUK "Bruker Editor"
+@{b}KOMMANDO:@{ub}
+        [l] @{fg highlight}bruk@{fg text}er
+
+@{b}BESKRIVELSE:@{ub}
+        Vil fõre deg til util menyen og automatisk finne bruker-posten
+        til forfatteren av meldingen du nettopp leste.
+@endnode
+
+@node READ_ZAP "Zap navn"
+@{b}KOMMANDO:@{ub}
+        [l] @{fg highlight}zap@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Gir deg mulighet til Ü endre meldingshodet for meldingen du
+        nettopp leste. Du kan endre FRA, TIL og SUBJEKT feltene.
+@endnode
+
+
+@node FILE "Fil Meny Kommandoer"
+@{b}BESKRIVELSE:@{ub}
+        I filmenyen kan du bruke alle globale kommandoer og fil
+        kommandoene. Disse kommandoene er for Ü overfõre filer mellom
+        din terminal og BBS'en.
+
+        Filsystemet i BBBS er stort sett basert pÜ de samme operasjoner
+        som i en normal OS prompt. Med det menes at du kan bevege deg
+        rundt i katalogene med cd kommandoen etc.
+
+        Kommandoer merket med bokstaven H har et alias med navnet H +
+        kommandoen (hsend, hcd etc.) som virker akkurat som originalen
+        men jobben blir gjort til/fra @{i}/tmp@{ui} -katalogen. De er
+        ikke dokumentert separat. For eksempel @{b}he foo@{ub} henter filen foo
+        fra gjeldende katalog, @{b}hhe foo@{ub} henter /tmp/foo.
+
+@{b}DELEMNER:@{ub}
+        @{fg highlight}Sending/Henting:@{fg text}
+       h@{"hent  " link FILE_HE   } Hent fil(er) (til deg)
+        @{"in    " link FILE_IN    } InstallÇr en fil (hard)
+        @{"lin   " link FILE_LIN   } InstallÇr en fil (mykt)
+        @{"psend " link FILE_PSE  } Send fil(er) privat til noen
+        @{"rz    " link FILE_RZ    } Zmodem sending
+        @{"send  " link FILE_SE   } Send fil(er) (til BBBS)
+
+        @{fg highlight}Sõking:@{fg text}
+        @{"em    " link FILE_EM     } Emneord sõk
+        @{"n     " link FILE_N     } Nye filer (dato)
+        @{"s     " link FILE_S     } Sõk for navn
+
+        @{fg highlight}Flytte i kataloger:@{fg text}
+       h@{"cd    " link FILE_CD    } Bytt katalog
+
+        @{fg highlight}File Information:@{fg text}
+       h@{"dir   " link FILE_DI    } Katalog listing
+        @{"i     " link FILE_I     } Vis informasjon for filen
+        @{"v     " link FILE_V     } Vis arkiv-fil
+        @{"t     " link FILE_T     } Liste en fil til skjermen
+        @{"hn    " link FILE_HN    } Hvem har hentet filen
+        @{"bes   " link FILE_BES   } Beskriv en fil
+
+        @{fg highlight}Flytting, sletting og kopiering:@{fg text}
+       h@{"le    " link FILE_LE   } Legg fil(er) til @{b}/tmp@{ub} katalogen
+       h@{"ko    " link FILE_KO    } Kopier fil(er) (mykt)
+        @{"tko   " link FILE_TKO   } Kopier fil(er) (hard)
+       h@{"sl    " link FILE_SL   } Slett fil(er)
+        @{"fl    " link FILE_FL    } Flytt fil(er)
+
+        @{fg highlight}Behandle arkiver:@{fg text}
+       h@{"ek    " link FILE_EK   } Ekstraher fil(er)
+       h@{"pa    " link FILE_PA    } Pakk fil(er)
+       h@{"lh    " link FILE_LH    } Lharc fil(er)
+       h@{"zip   " link FILE_ZIP   } ZIP fil(er)
+
+        @{fg highlight}Andre fil kommandoer:@{fg text}
+        @{"sp    " link FILE_SP    } Splitt store filer
+        @{"ber   " link FILE_BER   } Berõr en fil
+        @{"fri   " link FILE_FRI  } Gjõr filer frie
+        @{"ufri  " link FILE_UFRI} Ta tilbake frie filer
+@endnode
+
+@node FILE_HE "Hent filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}he@{fg text}nt
+        [f] @{fg highlight}d@{fg text}ownload
+
+@{b}BESKRIVELSE:@{ub}
+        HE fulgt av et filnavn vil overfõre den spesifiserte filen fra
+        BBS'en til din terminal hvis du har rettigheter til Ü hente den
+        aktuelle filen. Du mÜ vëre i samme katalog som filen eller oppgi
+        full sti (path) og filnavn. Du kan bruke jokertegn.
+
+        @{i}h@{ui}hent utfõrer i /tmp katalogen.
+@endnode
+
+@node FILE_PSE "Privat Sending"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}pse@{fg text}nd
+
+@{b}BESKRIVELSE:@{ub}
+        PSE vil sende en fil til en bestemt person. Fõr ud sender filen
+        vil du bli spurt for mottaker(e), navn pÜ filen(e) og etter
+        sendingen, en kort beskrivelse av filen(e).
+
+        Du kan skrive flere navn som mottakere og du kan sende flere
+        filer i en operasjon.
+
+@{b}SE OGSè:@{ub}
+        @{"send" link FILE_SE}
+        @{"rz " link FILE_RZ}
+@endnode
+
+@node FILE_SE "Sende filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}se@{fg text}nd
+        [f] @{fg highlight}up@{fg text}load
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg overfõre en fil fra din terminal til BBS'en. Etter
+        utfõring av kommandoen vil du bli bedt om navnet pÜ filen og om
+        Ü skrive en kort beskrivelse av filen du skal overfõre. Deretter
+        blir filen overfõrt og etterpÜ kan du gi en mer detaljert
+        beskrivelse av filen. Denne beskrivelsen vil bli puttet i
+        konferansen for nye filer hvor alle kan lese det (under forut-
+        setning av at SysOp har en egen konferanse for informasjon om
+        nye filer). Dette er en god mÜte Ü fÜ litt oppmerksomhet om
+        filen. Du kan ogsÜ velge Ü ikke gi noen detaljert informasjon
+        ved Ü svare N pÜ det siste spõrsmÜlet.
+
+        Du kan sende flere filer i en omgang ved Ü trykke <enter> pÜ
+        spõrsmÜlet om filnavn.
+
+        Husk Ü sjekke om filen allerede eksisterer med et annet
+        etternavn, hvis sÜ er tilfeller er det total forbud mot Ü sende
+        den filen.
+
+        Fõr filsending, sjekk filen for evt. viruser.
+
+        Overfõringsprotokken som blir brukt er den du har spesifisert
+        med kommandoen U O.
+
+        En Zmodem sending er det mulig Ü utfõre direkte til 'Fil Kommando'
+        prompten. Programmet vil stille deg spõrsmÜl nÜr den er ferdig
+        mottatt.
+
+@{b}SE OGSè:@{ub}
+        @{"pse" link FILE_PSE}
+        @{"rz " link FILE_RZ}
+@endnode
+
+@node FILE_RZ "Zmodem Sending"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}rz@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Starter Z-modem sending. Den er ogsÜ sendt av Z-modem ved fil
+        sending. Denne spesielle muligheten muliggjõr Z-modem sending
+        uten Ü mÜtte gjõre noe spesielt i starten.
+
+@{b}SE ALSO:@{ub}
+        @{"se " link FILE_SE}
+        @{"pse" link FILE_PSE}
+@endnode
+
+@node FILE_IN "InnstallÇr filer (hard)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}in@{fg text}stall
+
+@{b}BESKRIVELSE:@{ub}
+        InstallÇr en fil til BBBS (hard). Denne kommandoen vil fysisk
+        kopiere filen til din destinasjon. Du mÜ ha SysOp tilgang for
+        dette.
+
+@{b}SE OGSè:@{ub}
+        @{"lin" link FILE_LIN}
+@endnode
+
+@node FILE_LIN "InnstallÇr filer (mykt)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}lin@{fg text}stall
+
+@{b}BESKRIVELSE:@{ub}
+        InstallÇr en fil til BBBS (mykt). Denne kommandoene vil ikke
+        fysisk kopiere filen, men lager bare en link til den fysiske
+        stien i din destinasjons descript.ion fil. Krever SysOp tilgang.
+
+@{b}SE OGSè:@{ub}
+        @{"in" link FILE_IN}
+@endnode
+
+@node FILE_EM "Emneord sõking"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}em@{fg text}neord
+
+@{b}BESKRIVELSE:@{ub}
+        K gÜr igjeonnom alle filene i alle kataloger og viser deg en
+        liste over filer som inkluderer emneordet i for- eller etter-
+        navnet. Du kan bruke @{"RegExp" link REGEXP} for Ü lokalisere
+        filer. Du kan avbryte et sõk ved Ü trykke CTRL-K.
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-r@{fg text}  (rekursivt) sõker kun fra gjeldende katalog og dens
+            under-kataloger.
+
+@{b}SE OGSè:@{ub}
+        @{"s" link FILE_S}
+@endnode
+
+@node FILE_N "Nye filer (dato)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}n@{fg text}ye
+
+@{b}BESKRIVELSE:@{ub}
+        Viser filer som er kommet til BBS'en etter en gitt dato. Fil
+        merking virker med denne kommandoen. Sõk etter nye filer kan
+        avbrytes med @{fg highlight}CTRL-K@{fg text}.
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-r@{fg text}  (rekursivt) sõker kun fra gjeldende katalog og dens
+            under-kataloger.
+
+@{b}SE OGSè:@{ub}
+        @{"fileskip" link UTIL_SET_FILESKIP}
+@endnode
+
+@node FILE_S "Sõk for filnavn"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}s@{fg text}õk
+
+@{b}BESKRIVELSE:@{ub}
+        Sõker etter filnavn i en eller flere kataloger. Du kan bruke
+        @{"RegExp" link REGEXP} her. Du kan avbryte sõket med CTRL-K.
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-r@{fg text}  (rekursivt) sõker kun fra gjeldende katalog og dens
+            under-kataloger.
+
+@{b}SE OGSè:@{ub}
+        @{"em" link FILE_EM}
+@endnode
+
+@node FILE_CD "Bytt katalog"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}cd@{fg text}
+            @{fg highlight}ch@{fg text}dir
+
+@{b}BESKRIVELSE:@{ub}
+        CD er akkurat det samme som OS's CD kommando. Du kan bytte fra
+        katalog til katalog med denne kommandoen. Den har ogsÜ flere
+        TCSH lignende funksjoner som hvis du skriver en del av et
+        katalognavn, vil CD bytte til den fõrste katalogen som passer
+        din forespõrsel. Du kan bruke bÜde \\ og / for Ü separere
+        katalogene.
+
+        @{i}h@{ui}cd utfõrer i /tmp katalogen.
+
+@{b}EKSEMPLER:@{ub}
+        cd bbbs   Vil bytte til den fõrste katalogen med 'bbbs' i navnet
+        cd /bbbs  Vil bytte til katalogen bbbs under rotkatalogen
+        cd /      Vil bytte til rot katalogen
+        cd ..     Vil bytte til foreldre katalogen (et nivÜ opp)
+        hcd       Vil bytte til /tmp katalogen
+@endnode
+
+@node FILE_DI "Katalog listing"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}di@{fg text}rectory
+            @{fg highlight}lf@{fg text}
+            @{fg highlight}ls@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        lister filer i katalogen du er i eller alle katalogene i
+        rotkatalogen. NÜr -mer- vises kan du bruke piltastene til Ü
+        flytte til en fil av interesse og ved Ü trykke ordskiller vil
+        filen bli kopiert til /tmp katalogen. Det er kalt fil-merking.
+        Merkede filer blir kopiert til din midlertidige katalog,
+        vanligvis /tmp.
+
+        @{i}h@{ui}ls utfõrer i /tmp katalogen.
+
+@{b}BRYTERE:@{ub}
+        @{fg highlight}-l@{fg text}  Vil vise senderens navn pÜ hver fil.
+        @{fg highlight}-r@{fg text}  Vil liste alle underkataloger fra gjeldende katalog.
+@endnode
+
+@node FILE_I "Info om fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}i@{fg text}nfo
+
+@{b}BESKRIVELSE:@{ub}
+        I fulgt av et filnavn viser deg informasjonen om filen som
+        senderen har skrevet. Hvis filen var sendt av deg, kan du endre
+        informasjonen som er vist ved F DI og kommandoer som det.
+@endnode
+
+@node FILE_T "List en fil til skjerm"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}t@{fg text}ype
+        [f] @{fg highlight}cat@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        T fulgt av filnavnet lister den spesifiserte filen til skjermen.
+        Det er det samme som kommandoen TYPE i DOS. Filen mÜ vëre i
+        ASCII format. Hvis den ikke er det fÜr du en masse dr**t pÜ
+        skermen.
+
+        @{i}h@{ui}type utfõrer i /tmp katalogen.
+        @{i}h@{ui}cat utfõrer i /tmp katalogen.
+@endnode
+
+@node FILE_V "Vis arkiv-fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}v@{fg text}is
+
+@{b}BESKRIVELSE:@{ub}
+        V fulgt av et filnavn viser deg innholdet i en arkiv-fil. Etter-
+        navnet mÜ vëre ZIP, ARC, ARJ, LZH, LHA or PAK.
+
+        PÜ grafikk filer og musikk filer vil du fÜ en god del informasjon
+        om filene.
+@endnode
+
+@node FILE_HN "hvem nedlastet filen"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}hn@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        HN sõker etter opp-/ned-laster-databasen for gitt @{"RegExp" link REGEXP}.
+
+@{b}EKSEMPLER:@{ub}
+        HN FIL          Viser hvem som har hentet filen  *FIL*
+        HN <U>          Viser alle opplastinger
+        HN JOE HACKER   Viser hva JOE HACKER har hentet.
+        HN 12.10.92     Viser filer som ble hentet den 12. oktober 1992
+@endnode
+
+@node FILE_BES "Beskriv en fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}bes@{fg text}kriv
+
+@{b}BESKRIVELSE:@{ub}
+        Brukes til Ü legge inn beskrivelse for filer. Du mÜ ha skrive
+        tilgang i katalogen for Ü bruke denne kommandoen.
+        (Alle har skrivetilgang i @{i}/tmp@{ui} katalogen.
+@endnode
+
+@node FILE_LE "Legg en fil til /tmp"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}le@{fg text}gg
+
+@{b}BESKRIVELSE:@{ub}
+        kopierer en fil til /tmp katalogen. /tmp katalogen er hvor du kan
+        legge til fil(er) for henting. Den tõmmer seg alltid av seg selv
+        nÜr man logger seg av systemet.
+
+        Hvis noen har lagt en fil privat til deg, blir den automatisk
+        lagt til /tmp nÜr du logger inn helt du du sletter den.
+
+        @{i}h@{ui}le utfõrer i /tmp katalogen.
+@endnode
+
+@node FILE_KO "Kopier fil(er) (myk)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}ko@{fg text}pi
+            @{fg highlight}cp@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Kopierer link for fil(er) fra en katalog til en annen. Myk
+        betyr at filen ikke blir kopiert, BBBS lager bare en link til
+        der hvor den originale filen(e) befinner seg.
+
+        @{i}h@{ui}kopi utfõrer i /tmp katalogen.
+        @{i}h@{ui}cp utfõrer i /tmp katalogen.
+
+@{b}SE OGSè:@{ub}
+        @{"tko" link FILE_TKO}
+@endnode
+
+@node FILE_TKO "Kopier fil(er) (hard)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}tko@{fg text}pi
+
+@{b}BESKRIVELSE:@{ub}
+        Kopier fil(er) fra en katalog til en annen. Hard betyr at filene
+        blir kopiert fysisk.
+
+@{b}SE OGSè:@{ub}
+        @{"ko" link FILE_KO}
+@endnode
+
+@node FILE_SL "Slett fil(er)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}sl@{fg text}ett
+            @{fg highlight}rm@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Slett fjerner fil(er) fra katalogen. Du kan bruke jokertegn.
+        Du mÜ ha skrive tilgang i katalogen for Ü bruke dennne kommandoen
+        Alle har skrive tilgang i @{fg highlight}/tmp@{fg text} katalogen.
+
+        @{i}h@{ui}sl utfõrer i /tmp katalogen.
+        @{i}h@{ui}rm utfõrer i /tmp katalogen.
+@endnode
+
+@node FILE_FL "Flytt fil(er)"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}fl@{fg text}ytt
+            @{fg highlight}mv@{fg text}
+            @{fg highlight}ren@{fg text}ame
+
+@{b}BESKRIVELSE:@{ub}
+        Denne kommandoen lar deg flytte filer fra en katalog til en annen
+        eller endre filnavnet til et nytt navn.
+@endnode
+
+@node FILE_EK "Ekstraher fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}ek@{fg text}straher
+
+@{b}BESKRIVELSE:@{ub}
+        Ekstraherer en eller flere filer fra en arkivfil til katalogen
+        du spesifiserer. Normalt vil du spesifisere /tmp som til
+        katalogen.
+
+        @{i}h@{ui}ek utfõrer i /tmp katalogen.
+@endnode
+
+@node FILE_LH "LHarc filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}lh@{fg text}arc
+
+@{b}BESKRIVELSE:@{ub}
+        Denne kommandoen pakker de spesifiserte filene til LHA format.
+
+        @{i}h@{ui}lh utfõrer i /tmp katalogen.
+
+@{b}SE OGSè:@{ub}
+        @{"zip" link FILE_ZIP}
+        @{"pakk " link FILE_PA}
+@endnode
+
+@node FILE_PA "Pakk filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}pa@{fg text}kk
+
+@{b}BESKRIVELSE:@{ub}
+        Denne kommandoen pakker spesifiserte filer til det formatet du
+        har spesifisert med @{b}u af@{ub}.
+
+        @{i}h@{ui}pa utfõrer i /tmp katalogen.
+
+@{b}SE OGSè:@{ub}
+        @{"zip" link FILE_ZIP}
+        @{"lh " link FILE_LH}
+@endnode
+
+@node FILE_SP "Splitt fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}sp@{fg text}litt
+
+@{b}BESKRIVELSE:@{ub}
+        Deler opp en fil i flere mindre filer for enklere filhenting.
+        For Ü samle filene til en igjen, kopier bare de splittede filene
+        sammen.
+@endnode
+
+@node FILE_ZIP "Zip filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}zip@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Denne kommandoen pakker alle spesifiserte filer til ZIP format.
+
+        @{i}h@{ui}zip utfõrer i /tmp katalogen.
+
+@{b}SE OGSè:@{ub}
+        @{"lh" link FILE_LH}
+        @{"pa" link FILE_PA}
+@endnode
+
+@node FILE_FRI "Fri fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}fri@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Fri vil gjõre en fil offentlig, gratis Ü hente. Brukeren mÜ ikke
+        ha filhentingstilgang for Ü hente en FRI fil. Du mÜ ha SysOp
+        tilgang for Ü bruke denne kommandoen.
+
+@{b}SE OGSè:@{ub}
+        @{"ufri" link FILE_UFRI}
+@endnode
+
+@node FILE_UFRI "Ufri en fil"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}ufri@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Ufri vil fjerne FRI flagget fra en FRI fil. Du mÜ ha SysOp
+        tilgang for Ü bruke denne kommandoen.
+
+@{b}SE OGSè:@{ub}
+        @{"fri" link FILE_FRI}
+@endnode
+
+@node FILE_BER "Berõr filer"
+@{b}KOMMANDO:@{ub}
+        [f] @{fg highlight}ber@{fg text}õr
+
+@{b}BESKRIVELSE:@{ub}
+        Vil sette dagens dato pÜ filen. Du mÜ ha skrive tilgang til
+        katalogen for denne kommandoen.
+@endnode
+
+@node UTIL "Utility Meny"
+@{b}BESKRIVELSE:@{ub}
+        I utility menyen kan du bruke alle globale kommandoer og alle
+        utility kommandoene. De er brukt til Ü endre ditt oppsett pÜ
+        BBS'en eller skrive/endre informasjon om deg selv.
+
+@{b}DELEMNER:@{ub}
+        @{fg highlight}Personlig oppsett:@{fg text}
+        @{"a      " link UTIL_A       } Endre adresse
+        @{"bl     " link UTIL_BL      } Blink eget navn
+        @{"ed     " link EDITOR       } Editor type
+        @{"i      " link UTIL_I       } Info om deg selv
+        @{"k      " link UTIL_K       } Konferanse status ved login
+        @{"mf     " link UTIL_MF      } Nodemeldings filter
+        @{"n      " link UTIL_N       } Navneendring
+        @{"p      " link UTIL_P       } Passord endring
+        @{"res    " link UTIL_RES     } Endre ditt resymÇ
+        @{"see    " link UTIL_SEE     } Se egne meldinger
+        @{"si     " link UTIL_SI      } AutositÇr
+        @{"sprÜk  " link UTIL_SPR      } SprÜk valg
+        @{"x      " link UTIL_X       } Veksle ekspert modus
+
+        @{fg highlight}Terminal/modem oppsett:@{fg text}
+        @{"af     " link UTIL_AF      } Arkiv format
+        @{"far    " link UTIL_FAR     } Farger
+        @{"li     " link UTIL_LI       } Linjer i skjermen
+        @{"o      " link UTIL_O       } Overfõrings protokoll
+        @{"t      " link UTIL_T       } Sett tegnsett
+        @{"tast   " link UTIL_TAST     } VT100 tastatur emulering
+        @{"te     " link UTIL_TE      } Terminal type
+
+        @{fg highlight}Andre kommandoer:@{fg text}
+        @{"alias  " link UTIL_ALI     } Sett/vis/slett et alias
+        @{"set    " link UTIL_SET     } Sett/vis/slett set variabler
+        @{"unalias" link UTIL_UNALI   } Slett et alias
+        @{"unset  " link UTIL_UNSET   } Slett en set variabel
+        @{"v      " link UTIL_V       } Vis oppsett
+
+        @{fg highlight}SysOp kommandoer:@{fg text}
+        @{"ba     " link UTIL_BA      } Banktid
+        @{"beg    " link UTIL_BEG     } Begrensninger
+        @{"faks   " link UTIL_FAKS    } Fil tilgang
+        @{"finn   " link UTIL_FINN    } Finn en bruker/gruppe etter navn
+        @{"+      " link UTIL_+       } Neste bruker
+        @{"-      " link UTIL_-       } Forrige bruker
+        @{"inv    " link UTIL_INV     } Inviter en bruker/gruppe til konf.
+        @{"slett  " link UTIL_SLETT    } Slett bruker
+        @{"sta    " link UTIL_STA     } Status endring
+        @{"sys    " link UTIL_SYS     } SysOp Tilgang
+        @{"tbe    " link UTIL_TBE     } Tidsbegrensning
+        @{"uin    " link UTIL_UIN   } U-inviter bruker/gruppe
+@endnode
+
+@node UTIL_A "Adresse endring"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}a@{fg text}dresse
+
+@{b}BESKRIVELSE:@{ub}
+        Med denne kan du endre adresse, telefonnummer og din fõdselsdag.
+        Fõdselsdagen mÜ vëre i formatet dag-mÜned-Ür.
+@endnode
+
+@node UTIL_K "Konferanse status ved login"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}k@{fg text}onf
+
+@{b}BESKRIVELSE:@{ub}
+        Hvorvidt meldings konferanse status blir vist ved login eller ei.
+        Dette er veldig kjekt, men kan ta noe tid hvis du er medlem i
+        mange konferanser.
+@endnode
+
+@node UTIL_I "Info om deg selv"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}i@{fg text}nfo
+
+@{b}BESKRIVELSE:@{ub}
+        Viser ditt @{"resymÇ" link UTIL_RES}.
+@endnode
+
+@node UTIL_LI "Linjer i skjermen"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}li@{fg text}injer
+
+@{b}BESKRIVELSE:@{ub}
+        Setter antall linjer som skal vises pÜ skjermen fõr BBBS vil
+        stoppe listingen med @{i}--mere--@{ui} prompten. Du bõr settee denne til
+        det antall linjer skjermen din kan vise, minus eventuelle status
+        linjer.
+@endnode
+
+@node UTIL_N "Navne endring"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}n@{fg text}avn
+
+@{b}BESKRIVELSE:@{ub}
+        Tillater deg Ü endre navnet ditt. BBBS spõr fõrst om en
+        bekreftelse pÜ at du virkelig vil bytte navn fõr du blir spurt
+        om Ü oppgi nytt navn.
+@endnode
+
+@node UTIL_P "Passord endring"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}p@{fg text}assord
+
+@{b}BESKRIVELSE:@{ub}
+        Vil endre passordet ditt. BBBS spõr deg fõrst om Ü oppgi det
+        gamle passordet, skriv sÜ ditt nye passord, trykk <enter> og
+        skriv passordet en gang til for Ü vëre sikker pÜ at du skrev det
+        riktig den fõrste gangen. Hvis det siste ikke er likt det fõrste
+        vil ikke passordet bli endret.
+
+        Merk: Hvis du mister passordet ditt, sÜ kan ikke SysOp finne det
+        igjen, men han kan lage et nytt passord som han kan fortelle deg.
+@endnode
+
+@node UTIL_T "Velg Tegnsett"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}t@{fg text}egnsett
+
+@{b}BESKRIVELSE:@{ub}
+        Velger tegnsettet du bruker pÜ BBS'en. Vër sikker pÜ at tegn-
+        settet er det som i BBS'en som i ditt terminal program.
+        NÜr du endrer tegnsett kan du fÜ det riktig ved Ü trykke T
+        <enter> og trykk CTRL-Z for Ü tõmme kommandolinjern og skriv sÜ
+        ? for Ü fÜ hjelp til Ü velge riktig tegnsett. BBBS vil sÜ
+        forsõke Ü skrive en del forskjellige tegn og tabeller for Ü la
+        deg velge det riktige tegnsettet pÜ en enkel mÜte.
+
+Se pÜ disse tegnene...
+    1:[   2:]   3:ù   4:¿   5:#   6:^   7:{
+
+1) Hvis 1 er venstre klammeparantes sÜ
+   1a) hvis 3 er janpansk Yen tegn (story Y) har du     IBM
+   1b) hvis 3 er norsk OE da har du                     IBN
+   1c) hvis 3 er en liten u med aksent har du en Apple  MAC
+   1d) hvis 4 er stor A med aksent har du               ISO
+   1e) hvis 5 er et nummer tegn (dobbelt kryss) har du  US7
+2) hvis 1 er en stor A med to prikker over sÜ
+    a) hvis 2 er en U med to prikker over bruker du     GE7
+    b) hvis 2 er en A med en ring over bruker du        SF7
+3) hvis 1 er en stor AE sÜ
+   3a) hvis 6 er en caret (hatt) sÜ har du              NO7
+4) hvis 1 er et gradetegn sÜ
+   4a) hvis 7 er en liten e med aksent sÜ har du        FR7
+   4b) hvis 7 er en liten a med aksent sÜ har du        IT7
+5) hvis 1 er et oppned utropstegn sÜ har du             SP7
+
+@node UTIL_O "Overfõrings protokoll"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}o@{fg text}verfõring
+
+@{b}BESKRIVELSE:@{ub}
+        Med denne kand u endre filoverfõrings protkoll mellom BBS og ditt
+        system. Vër sikker pÜ at din terminal kan hÜndtere protokollen du
+        velger.
+
+        <@{fg highlight}X@{fg text}> .... Xmodem checksum
+        <@{fg highlight}C@{fg text}> .... Xmodem CRC
+        <@{fg highlight}Y@{fg text}> .... Ymodem (ogsÜ kjent som Xmodem-1K)
+        <@{fg highlight}YB@{fg text}> ... Ymodem Batch (ekte Ymodem)
+        <@{fg highlight}Z@{fg text}> .... Zmodem
+        <@{fg highlight}ZZ@{fg text}> ... ZedZap
+        <@{fg highlight}B@{fg text}> .... BiModem
+        <@{fg highlight}HS@{fg text}> ... HS/Link
+        <@{fg highlight}H@{fg text}> .... Hydra
+@endnode
+
+@node UTIL_V "Vis oppsett"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}v@{fg text}is
+
+@{b}BESKRIVELSE:@{ub}
+        Viser deg oppsettet du bruker i õyeblikket pÜ BBBS.
+@endnode
+
+@node UTIL_X "Ekspert modus"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}x@{fg text}pert
+
+@{b}BESKRIVELSE:@{ub}
+        Veksler ekspert modus av og pÜ. Med ekspert modus pÜ vil du fÜ
+        kortere og fërre 'prompts' og menyene vil ha mer komplekse
+        opsjoner/muligheter. Med ekspert modus av vil du fÜ en mer
+        informativ prompt, og kun de mest nõdvendige kommandoene i
+        menyene.
+@endnode
+
+@node UTIL_AF "Arkiv format"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}af@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Setter hvilken metode Hippo/QWK/OMEN/ASCII pakker vil bli pakket
+        med fõr de blir sendt til deg.
+@endnode
+
+@node UTIL_BL "Blink eget navn"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}bl@{fg text}ink
+
+@{b}BESKRIVELSE:@{ub}
+        Blinker ditt navn nÜr du leser en melding som er til deg.
+@endnode
+
+@node UTIL_MF "Nodemeldings filter"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}mf@{fg text}ilter
+
+@{b}BESKRIVELSE:@{ub}
+        MF kommandoen setter meldingsfilter nivÜ. Bruk meldingsfilter
+        for Ü filtrere ut forskjellige node meldinger du mottar fra
+        andre noder.
+@endnode
+
+@node UTIL_SI "SitÇr automatisk"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}si@{fg text}ter
+
+@{b}BESKRIVELSE:@{ub}
+        Skrur av eller pÜ automatisk sitÇring. Standard er av. NÜr du
+        skrur den pÜ,vil BBBS sitÇre hele meldingen og legge '>' merker
+        foran alle sitÇrte linjer. Du kan slette unõdvendige linjer med
+        CTRL-Y (i FSK) eller C-k (MG). Ikke sitÇr for mye! Det er veldig
+        irriterende.
+@endnode
+
+@node UTIL_TE "Terminal type"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}te@{fg text}rmtype
+
+@{b}BESKRIVELSE:@{ub}
+        Tilgjengelige terminal emuleringer er TTY, ANSI, AVATAR og VT320.
+        TTY er veldig enkel, ingen farger etc. de andre kan vise farger,
+        husk Ü skru pÜ @{"far" link UTIL_FAR}ger, ellers vil du se alt i grÜtt og
+        hvitt. De andre hÜndterer ogsÜ mer avanserte funksjoner som
+        markõrstyring m.m.
+@endnode
+
+@node UTIL_FAR "Farger"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}far@{fg text}ger
+
+@{b}BESKRIVELSE:@{ub}
+        Skrur farger av eller pÜ.
+@endnode
+
+@node UTIL_TAST "VT100 tastatur emulering"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}tast@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Med denne kommandoen kan du skru av/pÜ VT100 tastatur emulering.
+        NÜr skrudd pÜ, vil slette tegnet (127) brukes til Ü slette
+        tegnet til venstre for markõren, akkurat som tilbakerettings
+        tasten. NÜr skrudd av sletter den tegnet under markõren og
+        flytter ikke markõren.
+
+        De fleste terminal program krever/ virker med denne muligheten
+        skrudd pÜ.
+@endnode
+
+@node UTIL_RES "Editer ditt resymÇ"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}res@{fg text}yme
+
+@{b}BESKRIVELSE:@{ub}
+        RES vil la deg skrive ditt resymÇ, som vil vëre tilgjengelige
+        for andre brukere med 'I' kommanden. Hvis du allerede har
+        skrevet et resymÇ, vil du fÜ mulighet til Ü endre det du har
+        skrevet. Det er vanlig Ü skrive ditt navn, alder, bosted
+        hobbyer, datautstyr og hva ellers du mÜtte õnske Ü fortelle
+        andre brukere om deg selv.
+@endnode
+
+@node UTIL_SEE "Se egne meldinger"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}see@{fg text}gne
+
+@{b}BESKRIVELSE:@{ub}
+        Skrur av eller pÜ visning av egne meldinger. Standard er av.
+        NÜr skrudd pÜ vil meldinger som du skriver bli vist som nye
+        meldinger.
+@endnode
+
+@node UTIL_SET "Set variabler"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Ved bruk av SET kommandoen kan du definere oppsett variabler.
+
+        Du kan skrive hele kommandoen pÜ en linje, men hvis du gjõr det,
+        mÜ du inkludere den i dobble anfõrselstegn slik:
+
+        [u] set "mode" "b"<enter>
+
+        Variabel liste med gjeldene innhold kan sees ved IKKE Ü skrive
+        noen variabel som skal defineres. Ved Ü gi en tom verdi til en
+        variabel, slettes det gamle innholdet, se @{"unset" link UTIL_UNSET} for
+        fjerning av variabler.
+
+        (Alle disse variablene er BBBS interne variabler og kan derfor
+        ikke oversettes til norsk.)
+
+@{b}DELEMNER:@{ub}
+        @{"alias   " link UTIL_SET_ALIAS    } Alias navn
+        @{"away    " link UTIL_SET_AWAY     } Borte tekst
+        @{"grabdef " link UTIL_SET_GRABDEF  } Meldingshenting standarder
+        @{"hotkey  " link UTIL_SET_HOTKEY   } Hotkey menyer (ekstraprogram)
+        @{"nick    " link UTIL_SET_NICK     } Kalle navn
+        @{"killfile" link UTIL_SET_KILLFILE } Meldingsfilter
+        @{"kludges " link UTIL_SET_KLUDGES  } Meldings informasjon
+        @{"login   " link UTIL_SET_LOGIN    } Login kommandoer
+        @{"mg_x    " link UTIL_SET_MG_X     } MG oppstartsfil
+        @{"mode    " link UTIL_SET_MODE     } Prompt modus
+        @{"prompt  " link UTIL_SET_PROMPT   } Definer Prompt
+
+@{b}SE OGSè:@{ub}
+        @{"unset" link UTIL_UNSET}
+@endnode
+
+@node UTIL_SET_ALIAS "Alias navn"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set alias@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Bruk denne for Ü sette en Alias som vil bli brukt i konferanser
+        hvor alias kan brukes i steden for ditt egentlige navn.
+
+@{b}EKSEMPEL:@{ub}
+        u set "alias" "aliasnavn"
+@endnode
+
+@node UTIL_SET_AWAY "Borte tekst"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set away@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        NÜr noen sender deg en nodemelding vil BBBS automatisk svare
+        tilbake med denne meldingen.
+@endnode
+
+@node UTIL_SET_GRABDEF "meldingshenting standarder"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set grabdef@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Setter standard brytere for MH og GRAB kommandoer.
+
+@{b}SE OGSè:@{ub}
+        @{"mh" link GLOB_MH}
+@endnode
+
+@node UTIL_SET_HOTKEY "HotKey/$ konfigurasjons variabel"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set hotkey@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Konfigurasjons variabel for HotKey/$ intern bruk.
+        Fõlgende opsjoner kan settes:
+
+        @{i}A@{ui} - Automatisk start vel login
+        @{i}B@{ui} - Har blitt konfigurert
+        @{i}C@{ui} - Blank skjermen fõr meldingsvising
+        @{i}D@{ui} - Blank skjermen fõr menyvising
+        @{i}E@{ui} - Blank skjermen fõr fillisting
+        @{i}G@{ui} - Logg av BBBS nÜr du avslutter HotKey/$
+
+        Denne set variablen bõr KUN settes av HotKey/$ programmet.
+
+        Ikke alle systemer supporterer denne opsjonen.
+
+@{b}EKSEMPEL:@{ub}
+       set "hotkey" "abdg"
+@endnode
+
+@node UTIL_SET_NICK "Kalle navn"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set nick@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Setter kallenavn som blir brukt i gruppe chat.
+@endnode
+
+@node UTIL_SET_KILLFILE "Killfile"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set killfile@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Alle meldinger til eller fra @{fg highlight}killfile@{fg text} personer eller som
+        har et slikt subjekt blir filtrert ut, du vil ikke se dem.
+
+@{b}EKSEMPLER:@{ub}
+        SET "KILLFILE" "(Jan Parkki|Foobar)"
+@endnode
+
+@node UTIL_SET_KLUDGES "Meldings informasjon"
+@{b}COMMAND:@{ub}
+        [u] @{fg highlight}set kludges@{fg text}
+
+@{b}DESCRIPTION:@{ub}
+        Med denne variablen vil du fÜ tilleggs informasjon om
+        meldingshoder som tegnsett og forskjellig "tosser"
+        informasjon. For det meste brukt til debugging.
+
+        For Ü bruke denne mÜ du sette den nõyaktig som vist i eksemplet
+        under:
+
+@{b}EXAMPLES:@{ub}
+        SET "KLUDGES" "yebo_i_really_want_to_see_them"
+@endnode
+
+@node UTIL_SET_LOGIN "Login kommandoer"
+@{b}COMMAND:@{ub}
+        [u] @{fg highlight}set login@{fg text}
+
+@{b}DESCRIPTION:@{ub}
+        Setter kommandoer som skal utfõres rett etter login.
+
+@{b}EXAMPLES:@{ub}
+        SET "LOGIN" "MH;HVEM"
+@endnode
+
+@node UTIL_SET_MG_X "MG oppstarts fil"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set mg_@{b}x@{ub}@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        MG oppstarts fil, hvor x er et lõpende nummer startende fra 1.
+        Med denne kan du definere ditt eget oppsett av MG editoren.
+
+@{b}EKSEMPEL:@{ub}
+        u set "mg_1" "end-of-buffer"
+        u set "mg_2" "prefix-region"
+        u set "mg_3" "beginning-of-buffer"
+        u set "mg_4" "bsmap-mode"
+@endnode
+
+@node UTIL_SET_MODE "Modus"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set mode@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        sett denne til "b" for Ü fÜ B-lik kommandolinje og andre
+        bruker omgivelser. (bl.a. <del> tasten i fil-menyen
+@endnode
+
+@node UTIL_SET_PROMPT "Prompt"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}set prompt@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Du kan kreere din favoritt kommando prompt med denne variablen.
+        Verdier er:
+          foo      teksten "foo" som den er
+          \\c       navn pÜ gjeldende konferanse eller filkatalog
+          \\C       navn pÜ gjeldende konferanse eller filkatalog
+          \\a       normal farge prompt
+          \\A       B-mode farge prompt
+          \\t       tid igjen for denne oppringningen
+          \\T       Gjeldende tid med DING
+          \\e       ESC tegn (27)
+          \\r       CR tegn (13)
+          \\n       LF tegn (10)
+          \\b       backspace (8)
+          \\\\       "\\" character
+
+        Standard prompt'ene er:
+
+          normal, ekspert: (\\c) \\a:
+          normal, novise:  (\\c) \\a (? for help):
+          B-modus:         (\\T) \\A:\\e[1;37m\\C\\e[0;37m>
+@endnode
+
+@node UTIL_SPR "SprÜk valg"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}spr@{fg text}Ük
+
+@{b}BESKRIVELSE:@{ub}
+        Endrer sprÜket du opererer BBS'en i. Standard sprÜk er engelsk.
+@endnode
+
+@node UTIL_ALI "Alias"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}alias@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        ALIAS kommandoen tillater deg Ü definere alias for gamle
+        kommandoer eller lage nye.
+
+@{b}EKSEMPLER:@{ub}
+        U ALIAS "NEWFILES" "F N"
+        U ALIAS "LOG2" "G BLOGG 2"
+@endnode
+
+@node UTIL_UNSET "Fjern Set variabler"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}unset@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Fjerner tidliger satte set variabler satt med @{"set" link UTIL_SET} kommandoen.
+        Merk at du kan fjerne set variabler med "set" kommanden ogsÜ.
+@endnode
+
+@node UTIL_UNALI "Fjerne alias"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}unalias@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Fjerner alias definert med @{"alias" link UTIL_ALI} kommandoen.
+@endnode
+
+@node UTIL_BA "Bank Tid for brukere"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}ba@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        med denne kommandoen kan du endre tiden en bruker har lagret i
+        sin tidsbank.
+@endnode
+
+@node UTIL_FAKS "Bruker Filtilgang endring"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}faks@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Lar deg endre brukerens filtilgansrettigheter. Bruk fõrst @{"finn" link USER/FIND}
+        Dette er de forskjellige tilgangs typene:
+           0 - for bÜde opp og nedlasting
+           1 - for kun oppasting
+           2 - for kun nedlasting
+           3 for ingen rettigheter i det hele tatt.
+        Filtilgangen vil bli endret globalt for brukeren.
+@endnode
+
+@node UTIL_FINN "Finn bruker eller gruppe etter navn"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}finn@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        FINN vil sõke i bruker databasen og gruppefilen for Ü finne personer
+        eller grupper. Dette er brukt til Ü endre og se pÜ bruker oppsett.
+        Skriver du et gruppenavn her, vil alle medlemmer av gruppen bli
+        listet ut.
+
+        Hvis resultatet du fÜr pÜ skjermen er kun en linje og skrevet med
+        grõnt, fant ikke sõket ditt noe i databasen. Hvis fargen er 'cyan'
+        har BBBS satt meldingspekeren pÜ den brukeren.
+@endnode
+
+@node UTIL_+ "Neste bruker"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}+@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Setter meldingspekeren til neste bruker (etter brukernummer).
+@endnode
+
+@node UTIL_- "Forrige bruker"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}+@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Setter meldingspekeren til forrige bruker (etter brukernummer).
+@endnode
+
+@node UTIL_INV "Inviter en bruker/gruppe til en konferanse"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}inv@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Inviter en bruker eller en gruppe til gjeldende konferans hvis
+        brukeren/gruppen har tilstrekkelig tilgang. Hvis ikke, kan du
+        endre tilgangen ved Ü redigere i GROUPS filen.
+@endnode
+
+@node UTIL_SLETT "Slett bruker"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}slett@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Slett vil slette brukeren fra BBBS. Nye brukere kan bruke navnet
+        pÜ nytt for Ü logge in. Hvis du vil at navnet aldri skal logge
+        inn igjen, legg til navnet i din sõppelfil.
+
+@{b}SE OGSè:@{ub}
+        @{"status" link UTIL_STA}
+@endnode
+
+@node UTIL_BEG "Begrensninger for brukere"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}beg@{fg text}rensninger
+
+@{b}BESKRIVELSE:@{ub}
+        Putt en bruker eller gruppe i en begrensnings klasse (limits).
+        Se bcfg4.gui for videre informasjom om begrensninger.
+@endnode
+
+@node UTIL_SYS "SysOp tilgang"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}sys@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Endre SysOp nivÜet for gjeldende bruker. SysOp's tilgang er et
+        'bitfield integer'. Du kan bruker verdier fra 0 til 255,  som
+        fõlger:
+
+             1: Kan gÜt til OS og eksekvere OS kommandoer
+             2: Full tilgang til alle konferanser
+             4: Full tilgang til alle filer
+             8: Kan lese private meldinger fra alle konferanser
+            16: Kan endre passord
+            32: Kan editere bruker's status (slett, status)
+
+        For Ü sette en bestemt tilgang bare legg sammen tallene. For
+        eksempel hvis du vil at en bruker skal ha tilgang til alle
+        konferanser og private meldinger er verdien 10 (2+8).
+@endnode
+
+@node UTIL_STA "Status endring for brukere"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}sta@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Endre status for gjeldende bruker. Tilgjengelige status'er er:
+
+          Active:  normal status
+          Booted:  Bruker kan ikke logge inn
+          Killed:  Brukeren er slettet
+@endnode
+
+@node UTIL_TBE "Tidsbegrensning for brukere"
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}tbe@{fg text}
+
+@{b}BESKRIVELSE:@{ub}
+        Endrer maksimum tiden en bruker kan bruke i lõpet av en dag.
+@endnode
+
+@node UTIL_UIN "UInviter""
+@{b}KOMMANDO:@{ub}
+        [u] @{fg highlight}uin@{fg text}viter
+
+@{b}BESKRIVELSE:@{ub}
+        Vil melde brukeren eller gruppen ut fra gjeldende konferanse men
+        rettighetene vil vëre uendret. Eks. brukeren vil kunne melde seg
+        inn i konferansen igjen.
+
+@{b}SE OGSè:@{ub}
+        @{"inviter" link UTIL_INV}
+@endnode
+
+@node CHAT "Chat kommando"
+
+Lar deg smÜprate (chatte) med andre brukere.
+
+Mer hjelp er tilgjengele for fõlgende emner:
+
+        @{" <S> Chat med SysOp  " link CHAT_S}
+        @{" <I>kke tilgjengelig " link CHAT_I}
+        @{" <T>ilgjengelig      " link CHAT_T}
+        @{" <G>ruppe chat       " link CHAT_G}
+@endnode
+@node CHAT_S "Chat med SysOp"
+
+        Tillater deg Ü kalle pÜ SysOp for chat. For fullskjerms-chat mÜ
+        du ha en terminal med ANSI, AVATAR eller VT320 muligheter. Fõrst
+        vil du bli spurt om hvorfor du vil snakke med SysOp. SÜ vil BBBS
+        forsõke Ü kalle pÜ SysOp. Hvis han svarer, sÜ er det bare Ü
+        prate i vei en time eller to. Du kan endre fargene pÜ din tekst
+        med CTRL-QWERTY og CTRL-L vil blanke skjermen. Den eneste mÜten
+        Ü avslutte moduset er nÜr SysOp trykker <ESC> eller F6.
+@endnode
+@node CHAT_I "Ikke tilgjengelig"
+
+        I lar deg filtrere nesten alle node meldinger som ellers mÜtte
+        bli sendt til deg. Den har ingen effekt pÜ BroboCop eller Hippo
+        meldinger. Ei heller pÜ 'G SPI'.
+@endnode
+@node CHAT_T "Tilgjengelig"
+
+        Lar deg retunere tilbake til normale etter bruk av 'CHAT I eller
+        'G HIDE' kommandoen.
+@endnode
+@node CHAT_G "Gruppe chat"
+
+        Gruppe chat lar deg snakke med alle andre som mÜtte vëre logget
+        for õyeblikket ved Ü la alle andre se hva du skriver med visse
+        restriksjoner.
+
+        Gruppe chat har sine egne kommandoer:
+        (Disse vil ikke bli vis til andre brukere)
+
+        /Hjelp       Denne hjelpen
+        /Avslutt     Avslutter chat og returnerer til BBBS.
+        /Navn Hacker Endre ditt navn til Hacker.
+        /HVem        Viser hvem som er logget pÜ og som chatter.
+        /Rull        Skjermrulling av/pÜ. Krever ANSI eller VT100.
+        /Tid         Tid igjen i dag.
+        /#           Send node melding til node #. Eks [ /1 Yo! Hva skjer? ]
+        /Innmeld 0   GÜ til offentlig kanal.
+        /Innmeld #   GÜ til privat kanal med node #.
+
+        MERK! Hver bruker mÜ skrive kommandoen CHAT G for Ü komme til inn.
+        MERK! '/' er en del av kommandoen, hvis utelatt, blir teksten sent
+        til chat skjermen.
+@endnode
+
+@node REGEXP "Regulëre uttrykk"
+@{b}BESKRIVELSE:@{ub}
+        Regulëre uttrykk (RegExp) er en standar mÜte Ü sõke etter tekst.
+        RegExp har en egen syntaks for jokere som er forskjlleig fra
+        jokere brukt for Ü sõke etter filer. All tekst i BBBS blir sõkt
+        ved bruk av RegExp, sõkene skiller ikke pÜ store og smÜ
+        bokstaver.
+
+        RegExp          Hva det gjõr
+        ================================================================
+        foz             teksten "foz" som den er
+        ^               begynnelsen av linjen
+        $               slutten av linjen
+        .               hvilket som helst tegn
+        [foz]           tegnene `f', `o' eller `z'
+        [^foz]          alt annet enn `f', `o' eller `z'
+        [f-j]           det samme som kommandoen "[fghij]"
+        [^f-j]          det samme som kommandoen "[^fghij]"
+        (foo|bar)       teksten "foo" eller "bar"
+        x?              det samme som kommandoen "(x|)"
+        x+              en eller flere `x'
+        x*              null eller flere `x'
+        \\x              tegnet `x', brukt for Ü finne f.eks. `*'
+
+@{b}NOTE:@{ub}
+        Fõlgende RegExps er gyldig, men resultatet behõver ikke bli det
+        du trodde du sõkte etter.
+
+        RegExp          Hva det gjõr
+        ================================================================
+        .*              finner alt.
+        .               finner alt unntatt en tom linje
+        fub*            finner linjer med "fu"
+        file*.*         finner linjer med "fil"
+
+@{b}EKSEMPLER:@{ub}
+        RegExp          Hva det gjõr
+        ================================================================
+        foobar          sõker etter teksten "foobar" hvor som helst pÜ
+                        linjen
+        ^foobar         sõker etter en linje som starter med "foobar"
+        fo.bar          sõker etter en linje med teksten
+                        fo<hvasomhelst>bar
+        \\*              sõker for tegnet "*" hvor som helst pÜ linjen
+        foo(bar|ugh)*buz$
+                        sõker etter en linje med teksten "foo" fulgt av
+                        null eller flere "bar" eller "ugh" og fulgt av
+                        "buz" pÜ slutten av linjen. For eksmpel linjene
+                        "foobuz" og "junkfoobarughbarbuz" treffer dette
+                        sõket
+
+@{b}SE OGSè:@{ub}
+        @{"Jokere" link WILDCARDS}
+@endnode
+
+@node WILDCARDS "Joker-filsõk"
+@{b}BESKRIVELSE:@{ub}
+        Joker-filsõk er en standard mÜte Ü sõke etter filer med bruker-
+        definert mõnster. Mõnsteret mÜ treffe hele filnavn.
+
+        Joker           Hva det gjõr
+        ================================================================
+        foz             teksten "foz" som den er
+        *               null eller flere tegn (hvilket som helst)
+        ?               et hvilket som helst tegn
+        [foz]           tegnene `f', `o' eller `z'
+        [^foz]          alt annet enn `f', `o' eller `z'
+        [f-j]           det samme som kommandoen "[fghij]"
+        [^f-j]          det samme som kommandoen "[^fghij]"
+        \\x              tegnet `x', brukt for Ü finne f.eks. `*'
+
+@{b}NOTE:@{ub}
+        Fõlgende jokere er gyldig, men resultatet behõver ikke bli det
+        du trodde du sõkte etter.
+
+        Joker           Hva det gjõr
+        ================================================================
+        *.*             finner filnavn med "." i seg, ikke alle filer
+        foo*.*          finner filnavn som starter med "foo" og har "."
+                        i navnet
+
+@{b}EKSEMPLER:@{ub}
+        Joker           Hva det gjõr
+        ================================================================
+        *               alle filer
+        *foo*           filnavn med "foo" i seg
+        foo*bar[1-4x]   filnavn som starter med "foo" og slutter med
+                        "bar" fulgt av et tall fra 1 til 4 eller "x"
+
+@{b}SE OGSè:@{ub}
+        @{"Regulëre Uttrykk" link REGEXP}
+@endnode
+
+@node HELP "Hvordan bruke hjelpe systemet"
+        Hjelpe system kommandoer:
+
+        @{b}C@{ub} innhold - Viser innholdsfortegnelsen
+        @{b}I@{ub}ndeks    - Viser en alfabetisk indeks
+        @{b}H@{ub}jelp     - Viser deg denne hjelpen
+        @{b}R@{ub} tilbake - Viser den forrige hjelpeskjermen du sÜ pÜ
+        Bla @{b}<@{ub}     - Viser den forrige hjelpeskjermen i filen
+        Bla @{b}>@{ub}     - Viser the neste hjelpeskjermen i filen
+        @{b}Q@{ub} avslutt - Avslutt tilbake til BBBS
+
+        NÜr du er i hjelpesystemet kan du bevege deg opp og ned med
+        piltastene. Tastene Ctrl-R og Ctrl-C vil bla en side opp eller
+        ned.
+
+        Ofte vil du se ord eller setninger som er merket med en annen
+        bakgrunnsfarge. Detter er linker til annen relatert informasjon.
+        Bare trykk enter nÜr du har valg en link for Ü fÜ mer
+        informasjon om det emnet.
+
+@{b}SE OGSè:@{ub}
+        @{"nye brukere" link GLOB_NYB}
+@endnode
+
+@node INFO_Contact_B "Hvordan kontakte"
+For contacting, you may use addresses:
+
+Kim Heino                               BarCode BBS
+Paavolankatu 3 D 34                     v/Rune Johansen
+FIN-20240  TURKU                        Ospelia 23 B
+Finland                                 N-1481 Hagan
+Internet: b\@bbbs.net, Kim.Heino\@utu.fi  Norway
+BBS/FAX: +358 2 240 4036 (BCG-Box)      Internet: rune\@bbbs.net, rune\@cinet.no
+         +358 2 240 7755                BBS/FAX: +47-67 06 00 07 (BarCode)
+         +358 2 240 1413                FidoNet: 2:210/20
+         +358 2 240 4410
+FidoNet: 2:22/222
+@endnode
+
+@node Index "Indeks"
+        @{" > " link READ_+}  + neste melding
+        @{" > " link READ_-}  - forrige melding
+        @{" > " link READ_.}  . samme melding
+        @{" > " link READ_<}  < vis refereanse
+        @{" > " link READ_ENTER}  <enter> for Ü lese uleste meldinger
+        @{" > " link READ_NUMBER}  <nummer> lese melding med det nummeret
+        @{" > " link READ_=}  = neste svar
+        @{" > " link READ_>}  > vis svar
+        @{" > " link UTIL_A}  Adresse endring
+        @{" > " link UTIL_SET_ALIAS}  Alias navn
+        @{" > " link UTIL_ALI}  Alias
+        @{" > " link UTIL_AF}  Arkiv format
+        @{" > " link MAIN_BSTAT}  B Statistikk
+        @{" > " link MAIN_BLOGG}  Baklengs Logg
+        @{" > " link UTIL_BA}  Bank Tid for brukere
+        @{" > " link UTIL_BEG}  Begrensninger for brukere
+        @{" > " link FILE_BER}  Berõr filer
+        @{" > " link FILE_BES}  Beskriv en fil
+        @{" > " link UTIL_BL}  Blink eget navn
+        @{" > " link UTIL_SET_AWAY}  Borte tekst
+        @{" > " link READ_BRUK}  Bruker Editor
+        @{" > " link UTIL_FAKS}  Bruker Filtilgang endring
+        @{" > " link MAIN_BRL}  Bruker Login
+        @{" > " link GLOB_B}  Bulletiner
+        @{" > " link FILE_CD}  Bytt katalog
+        @{" > " link GLOB_CHAT}  Chat Kommandoer
+        @{" > " link CHAT}  Chat kommando
+        @{" > " link CHAT_S}  Chat med SysOp
+        @{" > " link READ_D}  Dump meldinger til meldingspakke
+        @{" > " link READ_DUP}  DuplisÇr (omskriv) melding
+        @{" > " link UTIL_RES}  Editer ditt resymÇ
+        @{" > " link UTIL_X}  Ekspert modus
+        @{" > " link FILE_EK}  Ekstraher fil
+        @{" > " link FILE_EM}  Emneord sõking
+        @{" > " link UTIL_FAR}  Farger
+        @{" > " link READ_FIKS}  Fiks resymÇ linker
+        @{" > " link GLOB_F}  Fil Kommandoer
+        @{" > " link FILE}  Fil Meny Kommandoer
+        @{" > " link UTIL_FINN}  Finn bruker eller gruppe etter navn
+        @{" > " link UTIL_UNSET}  Fjern Set variabler
+        @{" > " link UTIL_UNALI}  Fjerne alias
+        @{" > " link FILE_FL}  Flytt fil(er)
+        @{" > " link READ_FL}  Flytt melding til en annen konferanse
+        @{" > " link UTIL_-}  Forrige bruker
+        @{" > " link FILE_FRI}  Fri fil
+        @{" > " link EDITOR_FSE}  Fullskjerms Editor: FSK (Full Skjerm Editor)
+        @{" > " link MAIN_GJEM}  Gjem deg selv
+        @{" > " link GLOB}  Globale kommanoder (fungerer i nesten alle menyer)
+        @{" > " link CHAT_G}  Gruppe chat
+        @{" > " link GLOB_HA}  GÜ til Hoved Meny
+        @{" > " link GLOB_HA}  Hadet: Logge ut av BBS
+        @{" > " link FILE_HE}  Hent filer
+        @{" > " link READ_HE}  Hent slettet melding
+        @{" > " link GLOB_MH}  Hente Meldinger
+        @{" > " link MAIN_HIPPO}  Hippo kommando
+        @{" > " link INFO_Version_History}  Historie
+        @{" > " link GLOB_NYB}  Hjelp for nye brukere
+        @{" > " link GLOB_H}  Hjelp
+        @{" > " link UTIL_SET_HOTKEY}  HotKey/$ konfigurasjons variabel
+        @{" > " link MAIN_MENU}  Hoved meny kommandoer
+        @{" > " link GLOB_FIN}  Hvem er pÜlogget systemet
+        @{" > " link GLOB_HV}  Hvem er pÜlogget systemet
+        @{" > " link HELP}  Hvordan bruke hjelpe systemet
+        @{" > " link INFO_Contact_B}  Hvordan kontakte
+        @{" > " link UTIL_SET_NICK}  Kalle navn
+        @{" > " link CHAT_I}  Ikke tilgjengelig
+        @{" > " link MAIN_I}  Info om andre brukere
+        @{" > " link UTIL_I}  Info om deg selv
+        @{" > " link FILE_I}  Info om fil
+        @{" > " link READ_I}  Info om forfatter
+        @{" > " link Main}  Innholdsfortegnelse
+        @{" > " link FILE_IN}  InnstallÇr filer (hard)
+        @{" > " link FILE_LIN}  InnstallÇr filer (mykt)
+        @{" > " link UTIL_INV}  Inviter en bruker/gruppe til en konferanse
+        @{" > " link MAIN_JA}  Jargon sõking
+        @{" > " link WILDCARDS}  Joker-filsõk
+        @{" > " link MAIN_KAL}  Kalender
+        @{" > " link MAIN_KA}  Kast ut andre noder
+        @{" > " link FILE_DI}  Katalog listing
+        @{" > " link MAIN_KI}  Kikke i nodelister
+        @{" > " link UTIL_SET_KILLFILE}  Killfile
+        @{" > " link MAIN_DOS}  Kommando til OS
+        @{" > " link CLEDITOR}  Kommandolinje Editor: Gi kommandoer til BBBS
+        @{" > " link GLOB_KOM}  Kommentar til SysOp
+        @{" > " link UTIL_K}  Konferanse status ved login
+        @{" > " link FILE_TKO}  Kopier fil(er) (hard)
+        @{" > " link FILE_KO}  Kopier fil(er) (myk)
+        @{" > " link FILE_LH}  LHarc filer
+        @{" > " link FILE_LE}  Legg en fil til /tmp
+        @{" > " link GLOB_L}  Lese Kommandoer
+        @{" > " link READ}  Lese Meny
+        @{" > " link EDITOR_LINE}  Linje Editor
+        @{" > " link UTIL_LI}  Linjer i skjermen
+        @{" > " link FILE_T}  List en fil til skjerm
+        @{" > " link UTIL_SET_LOGIN}  Login kommandoer
+        @{" > " link UTIL_SET_MG_X}  MG oppstarts fil
+        @{" > " link EDITOR_MG}  MG
+        @{" > " link GLOB_J}  Melde deg inn i en konferanse/bytte konferanse
+        @{" > " link EDITOR}  Meldings Editor: Skrive meldinger i BBBS
+        @{" > " link UTIL_SET_KLUDGES}  Meldings informasjon
+        @{" > " link READ_MK}  Meldings kopiering
+        @{" > " link READ_M}  Merk meldinger pÜ forskjellige mÜter
+        @{" > " link READ_FM}  Merk som sent
+        @{" > " link READ_MOD}  Modus for meldings lesing
+        @{" > " link UTIL_SET_MODE}  Modus
+        @{" > " link UTIL_N}  Navne endring
+        @{" > " link UTIL_+}  Neste bruker
+        @{" > " link READ_NE}  Neste konferanse
+        @{" > " link GLOB_NO}  Node melding
+        @{" > " link UTIL_MF}  Nodemeldings filter
+        @{" > " link MAIN_RESET}  Nullstille den periodiske statistikken
+        @{" > " link FILE_N}  Nye filer (dato)
+        @{" > " link READ_OI}  OmrÜde Info
+        @{" > " link UTIL_O}  Overfõrings protokoll
+        @{" > " link FILE_PA}  Pakk filer
+        @{" > " link UTIL_P}  Passord endring
+        @{" > " link FILE_PSE}  Privat Sending
+        @{" > " link READ_PSV}  Privat Svar pÜ melding
+        @{" > " link UTIL_SET_PROMPT}  Prompt
+        @{" > " link REGEXP}  Regulëre uttrykk
+        @{" > " link UTIL_SEE}  Se egne meldinger
+        @{" > " link READ_SE}  Send meldingspakke
+        @{" > " link GLOB_MS}  Sende Meldinger
+        @{" > " link FILE_SE}  Sende filer
+        @{" > " link UTIL_SET}  Set variabler
+        @{" > " link MAIN_SHELL}  Shell til OS
+        @{" > " link UTIL_SI}  SitÇr automatisk
+        @{" > " link GLOB_SK}  Skrive en melding
+        @{" > " link UTIL_SLETT}  Slett bruker
+        @{" > " link FILE_SL}  Slett fil(er)
+        @{" > " link MAIN_SLETT}  Slett logg
+        @{" > " link READ_SL}  Slett melding
+        @{" > " link MAIN_SPI}  Spionere pÜ en node
+        @{" > " link FILE_SP}  Splitt fil
+        @{" > " link UTIL_SPR}  SprÜk valg
+        @{" > " link MAIN_STAT}  Statistikk
+        @{" > " link UTIL_STA}  Status endring for brukere
+        @{" > " link READ_SV}  Svar pÜ melding
+        @{" > " link MAIN_SV}  Svare pÜ spõrreskjemaer
+        @{" > " link UTIL_SYS}  SysOp tilgang
+        @{" > " link FILE_S}  Sõk for filnavn
+        @{" > " link READ_S}  Sõke kommandoer
+        @{" > " link UTIL_TE}  Terminal type
+        @{" > " link GLOB_TID}  Tid igjen
+        @{" > " link MAIN_BA}  Tids Bank
+        @{" > " link UTIL_TBE}  Tidsbegrensning for brukere
+        @{" > " link READ_T}  Tilbake (forrige)
+        @{" > " link CHAT_T}  Tilgjengelig
+        @{" > " link" UTIL_UIN}  UInviter
+        @{" > " link FILE_UFRI}  Ufri en fil
+        @{" > " link GLOB_U}  Utility Kommandoer
+        @{" > " link UTIL}  Utility Meny
+        @{" > " link READ_UTM}  Utmeld fra konferanser
+        @{" > " link UTIL_TAST}  VT100 tastatur emulering
+        @{" > " link UTIL_T}  Velg Tegnsett
+        @{" > " link MAIN_VER}  Versjon
+        @{" > " link FILE_V}  Vis arkiv-fil
+        @{" > " link MAIN_VIS}  Vis brukere
+        @{" > " link READ_VIS}  Vis konferanse status
+        @{" > " link MAIN_COMPU}  Vis ledig minne & diskplass
+        @{" > " link MAIN_LOGG}  Vis loggfiler
+        @{" > " link READ_V}  Vis meldinger
+        @{" > " link GLOB_?}  Vis meny
+        @{" > " link UTIL_V}  Vis oppsett
+        @{" > " link READ_O}  Vis original
+        @{" > " link READ_ZAP}  Zap navn
+        @{" > " link FILE_ZIP}  Zip filer
+        @{" > " link FILE_RZ}  Zmodem Sending
+        @{" > " link FILE_HN}  hvem nedlastet filen
+        @{" > " link UTIL_SET_GRABDEF}  meldingshenting standarder
+        @{" > " link MAIN_OP}  èpne en dõr til eksterne programmer
+@endnode
+

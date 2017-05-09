@@ -1,0 +1,13 @@
+[1;1H[2J[1;31mAsetusvalikon komennot:[0;37m
+
+<[1;33mV[0;37m> n„yt„ asetukset       <[1;33mED[0;37m> viestieditorin tyyppi <[1;33mLA[0;37m> menujen kieli
+<[1;33mS[0;37m> merkist”tyyppi        <[1;33mQU[0;37m> automaatt. lainaus    <[1;33mMF[0;37m> nodeviestisuodatin
+<[1;33mTE[0;37m>rminaaliemulaatio     <[1;33mFL[0;37m> vilk.nime„ otsikoissa <[1;33mAF[0;37m> pakkaustyypin vaihto
+<[1;33mKEY[0;37m> VT100 n„pp. on/off  <[1;33mREV[0;37m> n„yt„ omat viestit   <[1;33mGF[0;37m> et„lukutapa
+<[1;33mCOL[0;37m> v„rit on/off        <[1;33mC[0;37m> alueid.tila sis„„ntul. <[1;33mALIAS[0;37m> luo alias
+<[1;33mL[0;37m> rivim„„r„ ruudulla    <[1;33mI[0;37m> n„yt„ resumeviestisi   <[1;33mUNALIAS[0;37m> poista alias
+<[1;33mA[0;37m> osoitetietojen muokk. <[1;33mRES[0;37m> muokkaa resumeasi    <[1;33mSET[0;37m> luo muuttuja
+<[1;33mP[0;37m> salasanan vaihtaminen <[1;33mT[0;37m>iedonsiirtoprotokolla   <[1;33mUNSET[0;37m> poista muuttuja
+<[1;33mNAME[0;37m> nimen vaihtaminen  <[1;33mRET[0;37m> paluu enter-n„pp.    <[1;33mX[0;37m> ekspert/aloitt. menut
+<[1;33mSI[0;37m> hiljainen moodi      <[1;33mPAL[0;37m>ettiv„rit             <[1;33mWID[0;37m> ruudun leveys
+[0m

@@ -1,0 +1,10 @@
+Address the message to UserFix or BRoboCop. Enter your username+":"+password
+into subject line (for example "Joe User:secret").
+
+In message text...
+
+ %help                Gives this help
+ %newpass password    Change your password
+ %reply-to address    Send reply to address
+
+Write only one command per line.

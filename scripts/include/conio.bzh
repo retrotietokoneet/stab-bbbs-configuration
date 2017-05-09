@@ -1,0 +1,74 @@
+/******************************************************************************
+
+             Console Input/Output routines for BZ language
+
+           Copyright 1990-1999, Kim Heino and Tapani T. Salmi
+
+******************************************************************************/
+
+int clreol() {
+  printf("\e[K");
+}
+
+int clrscr() {
+  printf("\e[1;1H\e[2J");
+}
+
+int delline() {
+  printf("\e[1M");
+}
+
+int gotoxy(int x, int y) {
+  printf("\e[%u;%uH",y,x);
+}
+
+int textattr(int a) {
+  printf("\e[%sm",a);
+}
+
+int highvideo() {
+  textattr("1");
+}
+
+int insline() {
+  printf("\e[1L");
+}
+
+int lowvideo() {
+  textattr("0");
+}
+
+int normvideo() {
+  textattr("0");
+}
+
+int textbackground(char a) {
+  printf("\e[4%sm",a);
+}
+
+int textcolor(char a) {
+  printf("\e[3%sm",a);
+}
+
+int cgets() {
+  return(input("",79,0));
+}
+
+#define cprintf printf
+
+int cputs(char s) {
+  printf("%s\n",s);
+}
+
+int putch(char e) {
+  printf("%c",e);
+}
+
+int getche() {
+  int e;
+
+  e=getch();
+  putch(e);
+  return(e);
+}
+

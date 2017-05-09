@@ -1,0 +1,19 @@
+int main(char file, int confnro) {
+  // file is the filename of the message
+  // confnro is the number of conference where this message will be saved
+
+  char s;
+  int f;
+
+  if ((f=fopen(file,"rt"))!=-1) {
+    while ((s=fgets(f))!="") {
+      stupcase(s);
+      if (pos("LIVE FREE SEX",s) || pos("MAIL2NEWS@NYM.ALIAS.NET",s)) {
+        fclose(f);
+        return(1);
+      }
+    }
+    fclose(f);
+  }
+  return(0); // 1=cancel, 0=save
+}

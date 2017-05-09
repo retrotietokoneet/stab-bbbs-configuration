@@ -1,0 +1,4 @@
+int main() {
+  int f;
+  if ((f=fopen(sprintf("%susermail.flg",bg_tempdir),"wb"))!=-1) fclose(f);
+}

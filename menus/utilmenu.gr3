@@ -1,0 +1,13 @@
+[1;1H[2J[1;31mUtility Kommandoer:[0;37m
+
+<[1;33mV[0;37m>is ditt oppsett        <[1;33mED[0;37m>itor type              <[1;33mSPR[0;37m>†k i menyer
+<[1;33mT[0;37m>egnsett                <[1;33mSI[0;37m> automatisk sitering   <[1;33mMF[0;37m> nodemeldings filter
+<[1;33mTE[0;37m>rminal emulering      <[1;33mBL[0;37m>ink ditt navn          <[1;33mAF[0;37m> arkiv format
+<[1;33mTAST[0;37m> veksle VT100 tast. <[1;33mSEE[0;37m>gne meldinger         <[1;33mGF[0;37m> grab format
+<[1;33mFAR[0;37m>ger av/p†            <[1;33mK[0;37m>onf. status ved login   <[1;33mALIAS[0;37m> sett alias
+<[1;33mLI[0;37m>njer i skjermen       <[1;33mI[0;37m> vis ditt resyme        <[1;33mUNALIAS[0;37m> fjern alias
+<[1;33mA[0;37m>dresse data            <[1;33mRES[0;37m> editere ditt resyme  <[1;33mSET[0;37m> sett variabel
+<[1;33mP[0;37m> bytt ditt passord     <[1;33mO[0;37m>verf›ringsprotokoll     <[1;33mUNSET[0;37m> fjern variabel
+<[1;33mNAVN[0;37m> bytt ditt navn     <[1;33mRET[0;37m>urner med enter-tast  <[1;33mX[0;37m> ekspert/novise menyer
+<[1;33mST[0;37m>ille modus            <[1;33mPAL[0;37m>ette                  <[1;33mWID[0;37m>th
+[0m

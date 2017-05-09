@@ -1,0 +1,12 @@
+[1;1H[2J
+              You can move up/down with cursor keys.
+
+?       This help                       T       Type file
+C       Copy file                       V       View file
+D       Describe file                   W       Whodown
+F       Make file 'free'                ^L      Redraw screen
+H       Truecopy file (hard)            Enter   Next screen
+I       Info for file                   Space   Add file to hold
+Q       Quit flagging
+
+                  <<Press any key to continue>>

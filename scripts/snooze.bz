@@ -1,0 +1,1 @@
+int main() { return(bu_name=="KALLE SOIHA" || bu_name=="TUOMO SOINI" || bu_name=="KIM HEINO"); }

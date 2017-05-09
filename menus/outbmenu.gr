@@ -1,0 +1,18 @@
+[1;1H[2J[1;31mOutbound Manager Commands:[0;37m
+
+<[1;33mL[0;37m>ist {[1;37mnode#[0;37m}                    List messages (for node)
+<[1;33mCH[0;37m>ange [[1;37mmessage#[0;37m|[1;37mnode#[0;37m] {[1;37mmodif[0;37m} Change message number/all messages for node
+<[1;33mC[0;37m>reate [[1;37mnode#] {[1;37mmodifiers[0;37m}      Create message for node
+<[1;33mD[0;37m>elete [[1;37mmessage#[0;37m]               Delete message
+<[1;33mBA[0;37m>d [[1;37mnode#[0;37m] [[1;37mnumber[0;37m]            Change number of bad polls for node
+<[1;33mB[0;37m>usy [[1;37mnode#[0;37m] [[1;37mnumber[0;37m]           Change number of busy polls for node
+<[1;33mCL[0;37m>ear                           Clear tickdir and attach messages
+<[1;33mQ[0;37m>uit                            Quit back to main menu
+
+Modifiers are:
+
+{[1;33mNew_to_Node#[0;37m}
+{[1;33m+[0;37m|[1;33m-[0;37m}[1;33mI[0;37mmmediate  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mC[0;37mrash  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mH[0;37mold  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mR[0;37mequest  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mF[0;37mile  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mD[0;37mirect
+{[1;33m+[0;37m|[1;33m-[0;37m}[1;33mE[0;37mrase      {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mT[0;37mrunc  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mL[0;37mock
+{[1;33mNew_Subject[0;37m}
+[0m

@@ -1,0 +1,29 @@
+[1;1H[2J[1;31mMark Commands:[0;37m
+
+<[1;33m.[0;37m>          Marks message just read
+<[1;33m#[0;37m>          Marks message number #
+<[1;33mA[0;37m>uthor     Mark messages from particular person
+<[1;33mD[0;37m>ate       Mark messages on or after given date
+<[1;33mGD[0;37m>ate      Mark messages on or after given date (global)
+<[1;33mF[0;37m>irstmine  Moves your messages to head of queue
+<[1;33mG[0;37m>roup      Marks group of messages by number
+<[1;33mN[0;37m>umber     Asks how many messages are marked now
+<[1;33mO[0;37m>nly mine  Remove marks for all msgs not to/from you
+<[1;33mGO[0;37m>nlymine  Remove marks for all msgs not to/from you (global)
+<[1;33mOA[0;37m>ll       Remove marks for all msgs not to/from you or All
+<[1;33mGOA[0;37m>ll      Remove marks for all msgs not to/from you or All (global)
+<[1;33mP[0;37m>ersonal   Find and mark msgs to you (anywhere in conf)
+<[1;33mR[0;37m>eset      Reset ALL marks
+<[1;33mGRE[0;37m>set     Reset ALL marks (global)
+<[1;33mREC[0;37m>eiver   Mark messages to particular person
+<[1;33mV[0;37m>iew       View messages now marked
+<[1;33mS[0;37m>et        Set 'last message read' pointer
+<[1;33mT[0;37m>hread     Mark all messages in this thread
+<[1;33mU[0;37m>ndo       Remove marks for entire thread
+<[1;33mL[0;37m>ines      Remove marks for messages with more/less than lines
+<[1;33mZ[0;37m>ap        Remove marks for author of msg just read
+<[1;33mREST[0;37m>ore    Restore all marks to start of this call / last save
+<[1;33mCRest[0;37m>ore   Restore marks in this conference to start of this call / last save
+<[1;33mSA[0;37m>ve       Save lastread pointers for <REST>ore
+<[1;33mQ[0;37m>uit       Quit back to read menu
+[0m

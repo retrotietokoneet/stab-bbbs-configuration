@@ -1,0 +1,8 @@
+
+[1;31mRead Commands:[0;37m    <[1;33m?[0;37m> help    <[1;33mQ[0;37m> mainmenu    <[1;33mF[0;37m>iles    <[1;33mU[0;37m>tility menu
+
+Press [1m<enter>[0;37m to read next unread message in any area.   [1;33m+[0;37m/[1;33m-[0;37m for next/prev
+<[1;33mE[0;37m>nter a message     <[1;33mSH[0;37m>ow conference status  <[1;33mM[0;37m>ark menu
+<[1;33mRE[0;37m>ply               <[1;33mV[0;37m>iew headers of msgs    <[1;33mS[0;37m>earch menu
+<[1;33mJ[0;37m>oin/resign areas   <[1;33mMD[0;37m> download messages    <[1;33mMU[0;37m> upload
+[0m

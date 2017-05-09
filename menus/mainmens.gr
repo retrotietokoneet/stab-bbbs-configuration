@@ -1,0 +1,7 @@
+<[1;35mLOG[0;37m> view log file       <[1;35mHIDE[0;37m> from other nodes    <[1;35mDOS[0;37m> do OS command
+<[1;35mBLOG[0;37m> view log backwards <[1;35mSPY[0;37m> other node           <[1;35mSHELL[0;37m> to OS
+<[1;35mDELL[0;37m> delete log file    <[1;35mEJ[0;37m>ect other node         <[1;35mNOTE[0;37m> send note message
+<[1;35mBSTAT[0;37m> show statistics   <[1;35mUL[0;37m> login without needing <[1;35mCOMPU[0;37m>te free memory and
+<[1;35mRESET[0;37m> statistics           to know user's password        free disk space
+<[1;35mBSHELL[0;37m> to OS            <[1;35mOU[0;37m>tbound manager         <[1;35mMG[0;37m> text editor
+[0m

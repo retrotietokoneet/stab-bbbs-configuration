@@ -1,0 +1,10 @@
+
+[1;31mChat Commands:[0;37m    <[1;33m?[0;37m> help    <[1;33mQ[0;37m>uit
+
+<[1;33mA[0;37m>vailable for nodemessages (default)
+<[1;33mN[0;37m>ot available for nodemessages
+<[1;33mS[0;37m> yell SysOp to chat with you
+<[1;33mG[0;37m> join group chat
+
+See [1;33m/?[0;37m in read menu for extended chat help.
+[0m

@@ -1,0 +1,15 @@
+[1;1H[2J[1;31mLese Kommandoer:[0;37m
+
+trykk [1m<CR>[0;37m for neste uleste meld.   <[1;33m<[0;37m> vis meld. som denne meld. er svar p†
+<[1;33mnum[0;37m> les meld. med dette nummeret  <[1;33m>[0;37m> vis f›rste svar til denne melding
+<[1;33m+[0;37m> les neste melding               <[1;33m=[0;37m> vis neste svar, dersom det finnes
+<[1;33m-[0;37m> les forrige melding             <[1;33mO[0;37m> vis f›rste melding i denne tr†den
+<[1;33m.[0;37m> les samme melding omigjen       <[1;33mT[0;37m>ilbake til forrige melding
+<[1;33mSV[0;37m>ar p† denne melding   <[1;33mSL[0;37m>ett egen melding       <[1;33mD[0;37m>ump meldinger til pakke
+<[1;33mPSV[0;37m> privat svar         <[1;33mHE[0;37m>nt slettet melding     <[1;33mSE[0;37m>nd meldingspakke
+<[1;33mCSV[0;37m> conference svar     <[1;33mFL[0;37m>ytt melding            <[1;33mMOD[0;37m>us for lesing
+<[1;33mI[0;37m>nfo om forfatter       <[1;33mMK[0;37m> kopier melding        <[1;33mVIS[0;37m> konferanse status
+<[1;33mV[0;37m>is meldinger (liste)   <[1;33mDUP[0;37m>liser meldingen       <[1;33mUTM[0;37m>elding fra konferanse
+<[1;33mM[0;37m>erke kommandoer        <[1;33mOI[0;37m> omr†de informasjon    <[1;33mNE[0;37m>ste konferanse
+<[1;33mS[0;37m>›ke kommandoer         <[1;33mSAVE[0;37m> message to /tmp     <[1;33mGNUS[0;37m> fullscreen reader
+[0m

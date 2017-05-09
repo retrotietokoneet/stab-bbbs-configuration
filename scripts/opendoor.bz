@@ -1,0 +1,127 @@
+/*
+ * Run by the OPen command in main menu. Remember to recompile!
+ */
+
+#include <stdlib.bzh>
+
+int logdoor(int door) {
+  int f;
+
+  if ((f=fopen(bl_logfile,"at"))!=-1) {
+    fprintf(f,"%s %s:%s Opened door %u\n",copy(localtime(time()),3,6),copy(localtime(time()),9,2),copy(localtime(time()),11,2),door);
+    fclose(f);
+  }
+}
+
+int make_dorinfo1def(char fn) {
+  char nam1, nam2, sys1, sys2;
+  int f, security, foo;
+
+  if ((f=fopen(fn,"wt"))==-1) {
+    printf("No way, %s, man!",fn);
+    return(1);
+  }
+  if (bv_unum==0) security=32000;
+  else security=1;
+  nam1=copy(bu_name,1,pos(" ",bu_name)-1);
+  nam2=copy(bu_name,pos(" ",bu_name)+1,30);
+  sys1=copy(bg_sysop_name,1,pos(" ",bg_sysop_name)-1);
+  sys2=copy(bg_sysop_name,pos(" ",bg_sysop_name)+1,30);
+  if (!bv_com) foo=0;
+  else foo=bv_baud;
+//             1   2   3      4   5              6  7   8   9  10  11  12
+  fprintf(f,"%s\n%s\n%s\nCOM%u\n%u BAUD,N,8,1\n%u\n%s\n%s\n%s\n%u\n%u\n%d\n",
+      bg_bbbs_name,                  // 1    - BBS name
+      sys1,                          // 2    - SysOp first name
+      sys2,                          // 3    - SysOp last name
+      bv_com,                        // 4    - COM port
+      foo,                           // 5    - Baud rate
+      foo,                           // 6    - Baud, again
+      nam1,                          // 7    - User first name
+      nam2,                          // 8    - User last name
+      bu_city,                       // 9    - User location
+      (bu_termcap & 15)>0,           // 10   - ANSI (1/0)
+      security,                      // 11   - user security
+      bf_timleft);                   // 12   - Time left
+  fclose(f);
+  return(0);
+}
+
+int make_doorsys(char fn) {
+  int f;
+
+  if ((f=fopen(fn,"wt"))!=-1) {
+    fprintf(f,"%s\n%u\n%u\n%d\nG\nA\n",bu_name,bv_com,
+      bv_realbaud,bf_timleft);
+    fclose(f);
+  }
+}
+
+int main() {
+  char b;
+  int z, n;
+
+  if ((n=bn_zstatus)==1 && !(bn_bstatus & 8)) bn_zstatus=8;
+  if (bv_comstring=="") showfile(strcat(bg_menudir,"doormenu"));
+  do {
+    switch (z=parsecom("Quit/?/1/2/3/4/5/6/7",b=input("Number of door to open: ",60,1))) {
+       case 2:{
+                showfile(strcat(bg_menudir,"doormenu"));
+                break;
+              }
+       case 3:{
+                if (yellsysop(0)) {
+                  logdoor(1);
+                  tictactoe(1,0);
+                }
+                break;
+              }
+       case 4:{
+                if (yellsysop(0)) {
+                  tictactoe(2,1);
+                  logdoor(2);
+                }
+                break;
+              }
+       case 5:{
+                if (yellsysop(0)) {
+                  tictactoe(2,2);
+                  logdoor(3);
+                }
+                break;
+              }
+       case 6:{
+                if (yellsysop(0)) {
+                  logdoor(4);
+                  make_dorinfo1def(sprintf("dorinfo%u.def",bv_nodenumber));
+                  make_doorsys(sprintf("door%u.sys",bv_nodenumber));
+                  make_pcboard12sys(sprintf("pcb%u.s12",bv_nodenumber));
+                  make_pcboard14sys(sprintf("pcb%u.s14",bv_nodenumber));
+                  system("lw2 s3 duel",1,0);
+                }
+                break;
+              }
+       case 7:{
+                logdoor(5);
+                spawn("mastermind");
+                break;
+              }
+       case 8:{
+                logdoor(6);
+                spawn("bzrobots");
+                break;
+              }
+       case 9:{
+                logdoor(7);
+                spawn("bzmine");
+                break;
+              }
+     case 255:{
+                printf(bv_txt[23],b);
+                bv_comstring="";
+                break;
+              }
+    }
+  } while (bv_carrier && (z==2 || z==255));
+  bn_zstatus=n;
+}

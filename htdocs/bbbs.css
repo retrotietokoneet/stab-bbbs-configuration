@@ -1,0 +1,101 @@
+/* BBBS stylesheet */
+
+BODY, TABLE, TD, TH, P {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 10pt;
+}
+
+BODY { 
+  margin: 0pt;
+  color: black;
+  background-color: white; 
+}
+
+TH {
+  text-align: left;
+  color: white;
+  background-color: black;
+}
+
+H2 {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  color: white;
+  background-color: black;
+}
+
+PRE {
+  font-family: Courier, monospace;
+  font-size: 12pt;
+}
+
+A:link { 
+  color: #3351F4; 
+}
+
+A:visited { 
+  color: #000080; 
+}
+
+.logo {
+  font-size: 14pt;
+  font-weight: bold;
+  text-align: right;
+}
+
+.nw {
+  white-space: nowrap;
+}
+
+.header {
+  background-color: #E9EAEF;
+}
+ 
+.data {
+  background-color: #CEC1C8;
+}
+
+.msg { 
+  background-color: #EEEEEE; 
+}
+
+.odd { 
+  background-color: #EEEEEE; 
+}
+
+.even { 
+  background-color: #DDDDDD; 
+}
+
+.w153 {
+  width: 153px;
+}
+
+.w5 {
+  width: 5%;
+}
+
+.w15 {
+  width: 15%;
+}
+
+.w29 {
+  width: 29%;
+}
+
+.w35 {
+  width: 35%;
+}
+
+.w37 {
+  width: 37%;
+}
+
+.w40 {
+  width: 40%;
+}
+
+.w55 {
+  width: 55%;
+}
+

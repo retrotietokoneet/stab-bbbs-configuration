@@ -1,0 +1,15 @@
+
+[1;31mProtocol choices:[0;37m    <[1;33m?[0;37m> help
+
+<[1;33mX[0;37m>    Xmodem checksum
+<[1;33mC[0;37m>    Xmodem CRC
+<[1;33mK[0;37m>    Kermit
+<[1;33mY[0;37m>    Ymodem (also known as Xmodem-1K)
+<[1;33mYB[0;37m>   Ymodem Batch (also known as "true" Ymodem)
+<[1;33mZ[0;37m>    Zmodem
+<[1;33mZZ[0;37m>   ZedZap (Zmodem variant, max 8kB block size)
+<[1;33mH[0;37m>    HYDRA  (bidirectional with chat, this is the best)
+<[1;33mSZ[0;37m>   Slow-Zmodem  (for non-8bit links, like Telnet)
+<[1;33mSH[0;37m>   Slow-HYDRA   (for non-8bit links, like Telnet)
+<[1;33mU[0;37m>    UUcode       (for non-8bit links, like Telnet)
+[0m

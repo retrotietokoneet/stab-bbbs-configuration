@@ -1,0 +1,7 @@
+[1;1H[2J[1;31mAddOn Commands:[0;37m
+
+[1;37mMENU  CMND     DESCRIPTION[0;37m
+glob <[1;33mREGEXP[0;37m>  Show help about Regular Expressions
+glob <[1;33mCLS[0;37m>     Clears the screen
+util <[1;33mFILT[0;37m>    MBBS compability command
+[0m

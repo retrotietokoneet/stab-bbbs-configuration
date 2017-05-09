@@ -1,0 +1,135 @@
+/******************************************************************************
+
+               Standard Library routines for BZ language
+
+           Copyright 1990-1999, Kim Heino and Tapani T. Salmi
+
+******************************************************************************/
+
+#define SEEK_SET        0
+#define SEEK_CUR        1
+#define SEEK_END        2
+
+/* the getnodestatus() 'item' constants */
+
+#define GNS_SPLIT      0
+#define GNS_BSTATUS    1
+#define GNS_ZSTATUS    2
+#define GNS_SPEED      3
+#define GNS_TIME       4
+#define GNS_ENDTIME    5
+#define GNS_NICK       6
+#define GNS_REALNAME   7
+#define GNS_IDLE       8
+
+/* the getnodestatus() 'zstatus' constants */
+
+#define ZS_OFF         0
+#define ZS_ACTIVE      1
+#define ZS_NOTAVAIL    2
+#define ZS_WRITING     3
+#define ZS_GRAB        4
+#define ZS_DOWNLOAD    5
+#define ZS_UPLOAD      6
+#define ZS_SYSCHAT     7
+#define ZS_DOOR        8
+#define ZS_GROUPCHAT   9
+#define ZS_TELNET      10
+#define ZS_SHELLED     11
+
+#define TRUE 1
+#define FALSE 0
+
+#define void int
+#define FILE int
+
+/*****************************************************************************/
+
+#define atoi
+#define atol
+
+int abs(int j) {
+  if (j<0) return(-j);
+  else return(j);
+}
+
+#define labs abs
+
+int next_rand_seed=1;
+
+int srand(int seed) {
+  next_rand_seed=seed;
+}
+
+int randomize() {
+  srand(time());
+}
+
+int rand() {
+  return(((next_rand_seed=next_rand_seed*69069+5) >> 16) & 0x7fff);
+}
+
+char dirent_name, dirent_desc;
+int dirent_file;
+
+int bopendir(char dirname) {
+  char s;
+
+  dirname=strcat(dirname," ");
+  if ((dirent_file=fopen("filedirg.000","rt"))==-1) return(0);
+  while (1) {
+    s=fgets(dirent_file);
+    if (feof(dirent_file)) break;
+    if (pos(dirname,s)==1) {
+      fclose(dirent_file);
+      if (pos(" @0",s)) {
+        s=copy(s,pos(" @0",s)+3,255);
+        if (pos(" ",s)) s=copy(s,1,pos(" ",s)-1);
+      } else {
+        s=delete(s,1,pos(" ",s));
+        while (copy(s,1,1)==" ") s=delete(s,1,1);
+        if (pos(" ",s)) s=copy(s,1,pos(" ",s)-1);
+        s=strcat(s,"/descript.ion");
+      }
+      if ((dirent_file=fopen(s,"rt"))==-1) return(0);
+      return(1);
+    }
+  }
+  fclose(dirent_file);
+  return(0);
+}
+
+int breaddir() {
+  char s;
+
+  s=fgets(dirent_file);
+  if (feof(dirent_file)) return(0);
+  if (pos(" ",s)) {
+    dirent_name=copy(s,1,pos(" ",s)-1);
+    dirent_desc=copy(s,pos(" ",s)+1,768);
+    while (copy(dirent_desc,1,1)==" ") dirent_desc=delete(dirent_desc,1,1);
+  } else {
+    dirent_name=s;
+    dirent_desc="";
+  }
+  return(1);
+}
+
+int bclosedir() {
+  fclose(dirent_file);
+}
+
+int showfile(char fn) {
+  int f;
+  char s;
+
+  if ((f=fopen(fn,"rt"))==-1) return(0);
+  for (;;) {
+    s=fgets(f);
+    if (feof(f) && s=="") break;
+    printf("%s\n",s);
+  }
+  fclose(f);
+  return(1);
+}
+

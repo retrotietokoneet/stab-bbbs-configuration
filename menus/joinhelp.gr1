@@ -1,0 +1,12 @@
+[1;1H[2J
+              Siirry yl”s/alas kursorin„pp„imill„.
+
+?  T„m„ apuvalikko                    Q  Poistuminen
+F  Etsi tietty alue                   R  Eroa ryhm„st„ (regexp)
+G  Siirry kyseiselle alueelle         T  Muuta kys. alueen statusta
+H  Vaihda n„ytett„vi„ alueita    Ctrl-L  P„ivit„ ruutu
+I  Tietoa kyseisest„ alueesta     Enter  Siirry kyseiselle alueelle
+J  Liity ryhm„„n (regexp)         Space  Muuta kys. alueen statusta
+O  Vaihda j„rjestyst„
+
+             << Paina jotain n„pp„int„ jatkaaksesi >>

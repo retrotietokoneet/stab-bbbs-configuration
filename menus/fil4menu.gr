@@ -1,0 +1,17 @@
+[1;1H[2J[1;31mFile Commands:[0;37m
+
+<[1;33mL[0;37m>ist <[1;33mDI[0;37m>rectory        <[1;33mLH[0;37m> pack file with Lha    <[1;33mADD[0;37m> file to [1m/tmp[0;37m dir.
+<[1;33mCD[0;37m> change directory     <[1;33mZIP[0;37m> pack file with Zip   <[1;33mCO[0;37m>py file (create link)
+<[1;33mN[0;37m>ew files scan          <[1;33mPA[0;37m>ck with default arcer  <[1;33mTCO[0;37m>py file (true copy)
+<[1;33mS[0;37m>can files (wildcards)  <[1;33mEXT[0;37m>ract (unpack) file    <[1;33mMV[0;37m> move file
+<[1;33mK[0;37m>eyword scan (no wilds) <[1;33mV[0;37m>iew archive's contents  <[1;33mDEL[0;37m>ete file
+<[1;33mGE[0;37m>t <[1;33mD[0;37m>ownload file        or picture's resolution <[1;33mT[0;37m>ype file into screen
+<[1;33mPU[0;37m>t <[1;33mUP[0;37m>load file       <[1;33mSP[0;37m>lit file into pieces   <[1;33mI[0;37m>nfo about file
+<[1;33mPPUT[0;37m> private upload     <[1;33mGREP[0;37m> file                <[1;33mWD[0;37m> who downloaded what
+
+While listing files you can [1mhandle[0;37m files by first pressing the <[1mcursor up[0;37m> key.
+Then you can move the cursor with cursor keys and copy files to [1m/tmp[0;37m directory
+with <[1mspace[0;37m>. Use <[1;33mHGET[0;37m> to download them and <[1;33mHDEL[0;37m> to delete [1m/tmp[0;37m. <[1;33mHDIR[0;37m>
+shows the listing of [1m/tmp[0;37m directory. Generally, [1;33mH[0;37m<[1mcommand[0;37m> process files in
+[1m/tmp[0;37m directory.
+[0m

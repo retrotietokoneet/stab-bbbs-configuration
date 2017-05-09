@@ -1,0 +1,238 @@
+BBBS Reference card for all menus
+=================================
+
+Note that all commands can be 'stacked' if you know what the next
+question will be. For example, in the main menu you can type 'R SH U'
+to show all unread messages in conferences, or 'F HGET G Y' to get
+all files that are privately uploaded to you and afterwards log you
+out of the system.
+
+Type '?' en any menu to get a menu of all available commands.
+
+
+Global commands (apply everywhere in system)
+============================================
+    BYE............ logging out of BBBS
+    Bulletins...... read system bulletins
+    CHAT........... chat with Sysop or other user(s)
+        Avail...... set you available for chat
+        Group...... chat with a group of other users
+        Notavail... set you not available for chat
+        Quit....... quit back to menu
+        Sysop...... request a chat with SysOp
+    COMment........ write a comment to SysOp
+    EXIT........... logging out of BBBS
+    Enter.......... enter a message in current conference
+    File........... goto file menu
+    GRAB........... grab unread messages
+    Goodbye........ logging out of BBBS
+    Help........... help about BBBS
+    Join........... join a conference
+    LOGOut......... logging out of BBBS
+    MAN............ help about BBBS
+    MDownload...... download unread messages
+    MSG............ send node message
+    MUpload........ upload messages to BBBS
+    NEWUhelp....... show help for new users
+    NOde........... send node message
+    Quit........... logging out of BBBS
+    Read........... goto read menu
+    TELL........... send node message
+    TIMe........... show remaining
+    Utility........ goto utility menu
+    Who............ show who is online
+    /?............. extended chat help
+
+Main commands
+==============
+    ADDON.......... list addon commands
+    Answer......... answer questionaires
+    BAnk........... timebank
+        Store...... store time in the bank
+        Withdraw... withdraw time from the bank
+    BRowse......... browse nodelist(s)
+    CALendar....... view calendar
+    FINger......... finger out
+    FTP............ ftp out
+    HACK........... play NetHack
+    HUNT........... play Hunt
+    ID............. show BBBS Identification
+    Info........... show info about other users
+    JArgon......... search the Jargon file
+    OPen........... open a door (external system)
+    RLogin......... open standard rlogin session via TCP/IP network
+    STATistics..... show statistics about BBBS
+    Show........... browse a list of users
+    TELnet......... telnet to other systems via TCP/IP network
+        -7......... 7 bit mode (default
+        -8......... 8 bit binary
+    VERsion........ show BBBS version information
+
+Read commands
+=============
+    (enter)........ read next message (or next conference if none waiting)
+    (nnn).......... read message number nnn
+    +.............. next message
+    ++............. next conference
+    -.............. previous message
+    --............. previous conference
+    . ............. same message (read again)
+    <.............. show reference
+    >.............. show reply
+    =.............. show next reply
+    AInfo.......... show area information
+    Bulletins...... show conference bulletins (if active)
+    CREply......... reply to another conference
+    CP............. copy message
+    DUPlicate...... duplicate (rewrite) a message, killing the old one
+    Dump........... scratchpad commands, follow with
+        All........ dump all unread messages
+        CLEAR...... clear all messages from scratchpad
+        Conf....... dump marked messages in current conference
+        Message.... dump message last read
+        Now........ shows how many messages are in scratchpad
+    Info........... look at user info left by the author
+    Kill........... kill a message
+    MCopy.......... copy message
+    MODE........... set read mode, follow with:
+        Backward... read backward mode
+        Marked..... read marked mode
+        Reference.. read reference mode
+        Forward.... read forwards mode
+    MOVe........... move message to another conference
+    MV............. move message to another conference
+    Mark........... mark commands, follow with
+        . ......... marks message number #
+        #.......... marks message just read
+        Author..... mark messages from particular person
+        CRestore... restore marks in this conference to start of this call
+        Date....... mark messages on or after given date
+        Firstmine.. moves your messages to head of queue
+        GDate...... marks group of messages by number
+        GREset..... mark messages on or after given date (global)
+        Group...... resets ALL marks (global)
+        Number..... asks how many messages are marked now
+        Onlymine... remove marks for all msgs not to/from you
+        GOnlymine.. remove marks for all msgs not to/from you (global)
+        OAll....... remove marks for all msgs not to/from you or All
+        GOAll...... remove marks for all msgs not to/from you or All (global)
+        Personal... find and mark msgs to you (anywhere in conf)
+        RECeiver... resets ALL marks
+        RESTore.... mark messages to particular person
+        Reset...... restore all marks to start of this call.
+        SAve....... save lastread pointers to <REST>ore
+        Set........ sets 'last message read' pointer
+        Thread..... mark all messages in this thread
+        Undo....... removes marks for entire thread
+        Lines...... remove marks for messages with more/less than lines
+        View....... view messages now marked
+        Zap........ removes marks for author of msg just read
+    NExt........... goto next conference with unread messages
+    Original....... show original message
+    PREply......... private reply
+    Previous....... show previous message
+    RECover........ recover killed message
+    RESign......... resign from confernce(s)
+    REply.......... reply to message just read
+    SAVE........... save current message to /tmp
+    SEnd........... send scratchpad contents (use Dump first!)
+    SHow........... show status of all conferences you are a member of
+        -a......... show status of all conrerences
+        -s......... show unread messages in all conferences. same format
+                    as in the login conference status.
+        -u......... show the status of conferences with unread messages
+    Search......... search commands, follow with:
+        Group...... free-text search in a group of messages
+        Header..... search in message headers only (names and subjects)
+        Marked..... free-text search limited to marked messages
+    View........... view headers of messages
+
+File commands
+=============
+    ADd............ add file to /tmp directory
+    CAt............ catalog files
+    CD............. change directory
+    CHdir.......... change directory
+    COpy........... copy file(s)
+    CP............. copy file(s)
+    DELete......... delete file(s)
+    DEScribe....... describe file(s)
+    DIrectory...... list files in directory
+    Download....... download file(s)
+    EXTract........ extract file(s) from a file
+    GEt............ get file(s) (download)
+    GREP........... grep file(s)
+    HAdd........... add file(s) to /tmp directory
+    HCAT........... catalog files in /tmp directory
+    HCD............ changes directly to /tmp directory
+    HCOpy.......... copy file(s) to /tmp directory
+    HCP............ copy file(s) to /tmp directory
+    HDEL........... delete file(s) from /tmp directory
+    HDIr........... list files in /tmp directory
+    HEXTract....... extract file(s) from a file to /tmp directory
+    HGEt........... get all files in /tmp directory
+    HLHarc......... pack all files in /tmp with LHarc
+    HLS............ list files in /tmp directory
+    HPAck.......... pack all files in /tmp with default packer
+    HRM............ remove files from /tmp directory
+    HTYpe.......... show contents of a file in /tmp directory
+    HZIP........... pack all files in /tmp with default packer
+    Info........... show detailed information about a file
+    Key............ scan for files by keywords
+    LHarc.......... pack file(s) to new file with LHarc
+    LS............. list files in directory
+    List........... list files in directory
+    MOve........... move files to another directory
+    MV............. move files to another directory
+    New............ list new files since date (default: last login)
+    PAck........... pack file(s) to new file with default packer
+    PPUT........... put a private file into the box (Private upload)
+    PUt............ put file(s) to the box (upload)
+    REName......... rename file(s)
+    RETract........ remove file(s)
+    RM............. remove file(s)
+    RZ............. start Z-modem upload
+    SPlit.......... split large archives into smaller ones
+    SZ............. start Z-modem download
+    Scan........... scan for filenames using RegExp
+    TCOpy.......... true copy a file
+    TCP............ true copy a file
+    TOUch.......... touch a file with todays date
+    Type........... show the contents of a file
+    UPload......... upload file(s)
+    View........... view contents of an archived file
+    WDown.......... show who has up/downloaded a file
+    ZIP............ Pack file(s) to new file with ZIP
+
+Util commands
+=============
+    AFormat........ set preferred archive format
+    ALIas.......... set alias commands
+    Address........ change your address
+    COLors......... colors toggle
+    Conference..... show conference status at logon toggle
+    EDitor......... set preferred editor
+    FLash.......... flash you own name on messages toggle
+    GFormat........ set preferred grab format
+    GR............. G&R commands toggle
+    Info........... show your resume
+    KEYboard....... VT100 keyboard toggle
+    LAnguage....... change language (not avl on all systems)
+    Lines.......... change lines per page settings
+    MFilter........ internode message filtering
+    Name........... change your name
+    PALette........ change color palette
+    Password....... change your password
+    QUote.......... autoquote messages toggle
+    RESume......... edit your resum‚ (info about you)
+    RETurn......... return to read menu with enter key toggle
+    REView......... review own messages toggle
+    SET............ set set settings
+    Setchar........ select charset
+    TErmtype....... set preferred terminal type
+    Transfer....... set default file transfer protocol
+    UNALIas........ remove alias commands
+    UNSET.......... remove set settings
+    View........... view your current settings
+    Xpert.......... expert mode toggle
+

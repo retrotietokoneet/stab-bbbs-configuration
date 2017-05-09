@@ -1,0 +1,14 @@
+int main(char file, int confnrosave, int confnroread, int replyto) {
+  // file is the filename of the message
+  // confnro is the number of conference where this message will be saved/read
+  // replyto is the number of message to which this is a reply
+
+  if (confnrosave>0 && confnrosave<0xFFFF && bc_confname[confnrosave]=="email" && !bv_unum) {
+    if ((int f=fopen(file,"at"))!=-1) {
+      fprintf(f,"\n--\n");
+      fprintf(f," b@bbbs.net\n");
+      fclose(f);
+    }
+  }
+  return(0); // 1=cancel, 0=save
+}

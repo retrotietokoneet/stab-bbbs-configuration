@@ -1,0 +1,12 @@
+[1;1H[2J
+              You can move up/down with cursor keys.
+
+?       This help                       Q       Quit
+F       Find conference                 R       Resign group (regexp)
+G       Go to current                   T       Toggle current
+H       Change show value               ^L      Redraw screen
+I       Info about conference           Enter   Go to current
+J       Join group (regexp)             Space   Toggle current
+O       Change sort order
+
+                  <<Press any key to continue>>

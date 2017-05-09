@@ -1,0 +1,6 @@
+[1;1H[2J[1;31mMenu level choices:[0;37m    <[1;33m?[0;37m> help
+
+<[1;33mN[0;37m>ovice          Show quick help and long menus
+<[1;33mJ[0;37m>unior          Show long menus
+<[1;33mE[0;37m>xpert          Show short menus
+[0m

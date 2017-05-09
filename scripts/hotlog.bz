@@ -1,0 +1,3 @@
+int main(int hotnum) {
+  return(0);
+}

@@ -1,0 +1,21 @@
+[1;1H[2J[1;31mCharacter sets:[0;37m
+
+look at these characters...
+   [1;33m1:[   2:]   3:ù   4:¿   5:#   6:^   7:{[0;37m
+
+1) If 1 is a left square bracket then
+   1a) If 3 is a japanese Yen sign (capital Y) you have        [1;33mIBM[0;37m
+   1b) If 3 is a norwegian OE then you are using               [1;33mIBN[0;37m
+   1c) If 3 is a small u with an accent you are an Apple       [1;33mMAC[0;37m
+   1d) If 4 is a capital A with an accent then you have        [1;33mISO[0;37m
+   1e) If 5 is a number sign (double cross) you have           [1;33mUS7[0;37m
+2) If 1 is a capital A with two dots on it then
+   2a) If 2 is a U with two dots on it then you have           [1;33mGE7[0;37m
+   2b) If 2 is an A with a ring over it then you are using     [1;33mSF7[0;37m
+3) If 1 is a capital AE sign then
+   3a) If 6 is a caret (hat, circumflex accent) then it's      [1;33mNO7[0;37m
+4) If 1 is a degree sign then
+   4a) If 7 is a small e with an accent then you have          [1;33mFR7[0;37m
+   4b) If 7 is a small a with an accent then you have          [1;33mIT7[0;37m
+5) If 1 is an upside exclamation mark then you have            [1;33mSP7[0m
+

@@ -1,0 +1,15 @@
+
+[1;31mTiedonsiirtoprotokolla:[0;37m    <[1;33m?[0;37m> apua
+
+<[1;33mX[0;37m>    Xmodem checksum
+<[1;33mC[0;37m>    Xmodem CRC
+<[1;33mK[0;37m>    Kermit
+<[1;33mY[0;37m>    Ymodem (tunnettu my”s nimell„ Xmodem-1K)
+<[1;33mYB[0;37m>   Ymodem Batch (tunnettu my”s "oikeana" Ymodemina)
+<[1;33mZ[0;37m>    Zmodem
+<[1;33mZZ[0;37m>   ZedZap (Zmodem variaatio)
+<[1;33mH[0;37m>    HYDRA  (kaksisuuntainen + chat, t„m„ on paras)
+<[1;33mSZ[0;37m>   Slow-Zmodem  (ei-8bittisiin yhteyksiin, kuten Telnet)
+<[1;33mSH[0;37m>   Slow-HYDRA   (ei-8bittisiin yhteyksiin, kuten Telnet)
+<[1;33mU[0;37m>    UUcode       (ei-8bittisiin yhteyksiin, kuten Telnet)
+[0m

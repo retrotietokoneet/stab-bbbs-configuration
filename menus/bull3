@@ -1,0 +1,133 @@
+Read the terms and conditions of this license agreement carefully before
+using the software. If you for any reason, whatsoever, cannot accept the
+conditions in this agreement, you are not permitted to use BBBS.
+
+BBBS is a proprietary product of Kim Heino and Tapani T. Salmi, hereafter
+"the authors", protected by applicable copyright laws and international
+treaty provisions.
+
+BBBS is not, nor has ever been, public domain or free software. You must
+register after the 30-day evaluation period. If you decide to use this
+software then you are under both legal and moral obligations to register
+it with the author. Registration entitles you continue using BBBS.
+
+The registered version of BBBS may not be duplicated for other than
+backup purposes. In a non registered version the user's time limit is
+limited to 31 minutes. That limitation is removed from the registered
+version.
+
+BBBS is provided "as is", without warranty of any kind or fitness for a
+particular purpose, either expressed or implied, all of which are hereby
+explicitly disclaimed. The authors only guarantees that BBBS will occupy
+disk space. The authors liability resulting from your use or inability to
+use BBBS is limited to the amount that the affected party has paid for
+it.
+
+There are two different licenses for BBBS: commercial and noncommercial.
+You may use noncommercial license only if your BBS is free for all users
+(new and old ones) and it is public for everybody to log in. You must use
+commercial license if you use BBBS in a company for internal or external
+mail or file transfer purposes, or you run a support BBS for a company or
+it's products. In short: if you get money from it then it's commercial.
+
+One license for BBBS is valid only in one system, which may contain one
+or more computers physically connected to each other all the time via
+LAN. You may not use one license in two physically separated systems,
+i.e. in two different offices of one company.
+
+In the event that you are in violation of this license agreement you
+agree and accept that the authors may cancel your registration and any
+rights to use BBBS that you may have.
+
+In doubt contact the authors.
+
+
+One BBBS node can handle one concurrent connection. One connection means
+one phone call, one telnet session, one HTTP request, etc. See the table
+below for current prices in euros (EUR) and US dollars (USD).
+
+
+                Noncommercial |  Commercial
+ Nodes             EUR    USD |  EUR    USD
+ -----------------------------+------------
+ 2                  50     60 |  150    180
+ 7                  66     80 |  200    240
+ 12                 83    100 |  250    300
+ 22                116    140 |  350    420
+ 23 and over       ask    ask |  ask    ask
+
+
+Upgrading the number of nodes or changing the license type will cost
+the difference * 1.1. For example, if you want to upgrade from 2 node
+noncommercial license to 12 node noncommercial license the price in
+euros is (83 - 50) * 1.1 = 36.30 EUR. Fill in new registration form
+when you want to upgrade.
+
+
+Use following addresses for registering or contacting:
+
+ Kim Heino / Foobar Oy
+ Verkatehtaankatu 5 as 37
+ 20100 Turku
+ Finland
+
+ Email:   b@bbbs.net
+ BBS:     http://bbbs.net/
+          telnet://bbbs.net
+ FidoNet: 2:22/222
+ PayPal:  b@bbbs.net
+
+ BBBS Homepage: http://www.bbbs.net/
+
+
+                         BBBS Registration Form           Date: __/__/__
+
+
+      Your name/company: ____________________________________________
+
+         Street address: ____________________________________________
+
+            Postal code: ____________________________________________
+
+                Country: ____________________________________________
+
+            Voice phone: ____________________________________________
+
+ BBS name (max 18 char): _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+  BBS phones/open hours: ____________________________________________
+
+         Other BBS info: ____________________________________________
+
+        License type:
+        [_] Noncommercial license
+        [_] Commercial license
+        [_] Upgrade, current BBS name is __________________________,
+            license number _______ and number of nodes ________.
+
+        Number of nodes: __________          Total price: __________
+
+        Method of payment:
+        [_] Money included to letter
+        [_] PayPal to b@bbbs.net
+
+        Method of sending registration key to you:
+        [_] from BCG-Box, username:
+        [_] by email, to: _____________________________________
+
+ What kind of hardware and software are you using? (Name and model, hard
+ disk, amount of RAM, modem, operating system, LAN, etc.)
+
+ ________________________________________________________________________
+
+ ________________________________________________________________________
+
+ Other comments, ideas, etc:
+
+ ________________________________________________________________________
+
+ ________________________________________________________________________
+
+ I have read the BBBS license agreement and fully agree to obey it.
+
+         Signature: _________________________________________

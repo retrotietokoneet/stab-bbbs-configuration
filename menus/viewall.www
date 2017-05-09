@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+  <head>
+    <title>$b - $n</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="bbbs.css" type="text/css">
+  </head>
+  <body>
+    <table frame="border" cellpadding="5" width="640" border="1" cellspacing="0" class="header">
+      <tr><td class="logo">$u
+    </table>
+
+    <p>
+      [<a href="bbbs?id=$i;do=l">Logout</a>]
+      [<a href="bbbs?id=$i;do=s">Settings</a>]
+      [<a href="bbbs?id=$i;do=o">Who's Online</a>]
+      [<a href="bbbs?id=$i;do=l%2f,21">File Areas</a>]
+      [<a href="bbbs?id=$i;do=">Message Areas</a>]
+      [<a href="bbbs?id=$i;do=r$c">Show Unread Messages</a>]
+      [<a href="bbbs?id=$i;do=n$c">Next Area</a>]
+      [<a href="bbbs?id=$i;do=e$c.0">Enter Message</a>]
+    </p>
+
+    <p>
+      <h2>$n$N</h2>
+
+    <table cellpadding="2" border="0" cellspacing="0" width="100%">
+      <tr><th class="w5">Date</th><th class="w37">Subject</th><th class="w29">From</th><th class="w29">To</th>
+$d
+    </table>
+  </body>
+</html>

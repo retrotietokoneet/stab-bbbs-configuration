@@ -1,0 +1,4992 @@
+@database "Liftarin BBBS-k„sikirja (Suomi)"
+@author Monta tekij„„
+@index Index
+@help HELP
+@toc Main
+
+@remark =======================================================================
+@remark
+@remark  *** Guidelines to update this file: ***
+@remark
+@remark  - Set right marginal to 72 character and justify lines. Split longer
+@remark    lines.
+@remark  - Do not write commands between < and > characters, but do use links.
+@remark  - Node descriptions should reflect to the command, no extra spaces.
+@remark  - Don't write ":" after subsection name and use bold
+@remark  - Write one empty line between nodes and subsections.
+@remark  - Do not try to hide your name to commands, use "Joe Hacker" when
+@remark    needed.
+@remark  - When referring to a command in text, write command in lower case and
+@remark    use bold or a link.
+@remark  - Do not refer to your favorite shell or OS in the text.
+@remark
+@remark =======================================================================
+@remark
+@remark  *** ToDo ***
+@remark
+@remark  - lots of nodes to update/rewrite and check
+@remark  - much more links should be added
+@remark  - SysOp/sigop differences
+@remark  - chat commands
+@remark  - change order in read and util menu so that > and < will change
+@remark    according to contents lists.
+@remark
+@remark =======================================================================
+
+@node Main "Sis„llysluettelo"
+        @{b}LIFTARIN BBBS-KŽSIKIRJA@{ub}
+        =======================
+
+        @{i}BBBS:n k„ytt”:@{ui}
+        @{" Uuden k„ytt„j„n apu " link GLOB_NEWU     }  ...  T„st„ on hyv„ aloittaa.
+        @{" Komentorivieditori  " link CLEDITOR      }  ...  Kuinka editointikomentoja annetaan.
+        @{" Viestieditorit      " link EDITOR        }  ...  Tietoja viestieditoreista.
+
+        @{i}Komennot:@{ui}
+        @{" Yleiset komennot    " link GLOB          }  ...  N„m„ komennot toimivat kaikkialla.
+        @{" P„„valikko          " link MAIN_MENU     }  ...  Muutaman komennon kootut selitykset.
+        @{" Lukuvalikko         " link READ          }  ...  Viestien luku ja kirjoituskomennot.
+        @{" Tiedostovalikko     " link FILE          }  ...  Tiedostojen tuuppaaminen ja nouto.
+        @{" Asetusvalikko       " link UTIL          }  ...  Asetusten muuttaminen.
+
+        @{i}Lis„tietoa:@{ui}
+        @{" Yhteydenotto        " link INFO_Contact_B}  ...  Miten tavoitan tuen tarvittaessa?
+@endnode
+
+@node CLEDITOR "Komentorivieditori: Komentojen antaminen BBBS:lle"
+@{b}ESITTELY@{ub}
+        Komentorivieditori huolehtii rivist„, jolle kirjoitat komentosi
+        BBBS:lle. Sen p„„asiallinen tarkoitus on vastaanottaa ja ajaa
+        komentoja. Useimmiten kehoite (Prompt) n„ytt„„ t„lt„:
+
+        (Viestialue) Valikon_nimi (Jotain_muuta): _
+
+        Ž„rimm„isen„ vasemmalla on parhaillaan valittuna oleva
+        viestialue. Seuraavaksi on nykyinen valikko. Suluissa voi olla
+        lis„tietoa. Kehoite p„„ttyy kaksoispisteeseen ja kursoriin.
+
+@{b}KŽYTT™@{ub}
+        Annat komentoja kirjoittamalla ne, ja painamalla sen j„lkeen
+        <@{i}enter@{ui}>-n„pp„int„. K„yt„ kysymysmerkki (?)-komentoa n„hd„ksesi
+        parhaillaan k„ytett„viss„ olevat komennot.
+
+@{b}MUOKKAUS@{ub}
+        Voit muokata komentoja komentorivill„ kursori-, <@{i}backspace@{ui}>- ja
+        <@{i}del@{ui}>-n„pp„imill„. Komentorivihistoria toimii <@{i}kursori yl”s@{ui}> ja
+        <@{i}kursori alas@{ui}> -n„pp„imill„, aivan kuten mielikomentotulkissasi.
+        Tyhjent„„ksesi komentorivin paina n„pp„inyhdistelm„„ <@{i}CTRL-Z@{ui}>.
+
+@{b}KOMENTOJEN MUUTTAMINEN@{ub}
+        Samalla komentorivill„ voi olla useita komentoja parametreineen.
+        Muista erottaa komennot toisistaan v„lily”nnill„. T„t„ kutsutaan
+        komentojen ketjuttamiseksi.
+
+@{b}ESIMERKKEJŽ@{ub}
+        (Post office) Lukuvalikko (?:ll„ valikko): w
+        (Post office) Lukuvalikko (?:ll„ valikko): f get huu.haa
+        (Post office) Lukuvalikko (?:ll„ valikko): f up huu.haa "Selitys" N
+@endnode
+
+@node EDITOR "Viestieditori: Viestien kirjoittaminen BBBS:ss„"
+@{b}ESITTELY@{ub}
+        Voit k„ytt„„ viestieditoria kirjoittaaksesi ja muuttaaksesi
+        viestej„si. K„ytett„viss„si on kolme erityyppist„ editoria:
+        @{"rivieditori" link EDITOR_LINE}, kokoruutueditori (@{"FSE" link EDITOR_FSE}) ja @{"MG" link EDITOR_MG}.
+
+        Kokoruutueditoria k„ytt„m„ll„ voit editoida viesti„ koko
+        ruudulla. Rivieditorilla voit muokata viesti„ vain rivi
+        kerrallaan. Kokoruutueditori on paljon helpompi k„ytt„„ kuin
+        rivieditori, mutta se vaatii p„„teohjelmaltasi tukea joko
+        ANSI- tai VT320-koodeille. Tutki p„„teohjelmasi k„sikirjaa
+        josko jompikumpi olisi tuettuna.
+
+        Jos p„„teohjelmasi ei tue ANSI- tai VT320-koodeja, on sinun
+        hankittava toisenlainen p„„teohjelma, tai k„ytett„v„
+        rivieditoria.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{"MG" link EDITOR_MG}
+        @{"rivieditori" link EDITOR_LINE}
+        @{"FSE (kokoruutueditori)" link EDITOR_FSE}
+@endnode
+
+@node EDITOR_MG "MG"
+Voit asettaa t„m„n editorin oletuseditoriksesi komennolla: @{b}U ED MG @{ub}.
+MG on GNU Emacs -kopio ja on paras ja monipuolisin BBBS-editoreista.
+
+T„ss„ muutama esimerkki kuinka voit m„„ritell„ omat alkukomennot MG:lle:
+
+u set "mg_1" "end-of-buffer"
+u set "mg_2" "prefix-region"
+u set "mg_3" "beginning-of-buffer"
+u set "mg_4" "bsmap-mode"
+
+
+
+[LaTeX sequences stripped by Hannu Laurila (Well .. I tried)]
+
+
+
+The MG Reference Manual
+Release MG2A
+
+Copyright 1987, Sandra J. Loosemore
+
+This document, or sections of this document, may be freely
+redistributed provided that the copyright notice and the following disclaimer
+remain intact:  The author bears no responsibilities for errors in
+this document or the software it describes; and shall not be held liable
+for any indirect, incidental, or consequential damages.
+
+
+Introduction
+============
+
+MG is a small, fast, and portable Emacs-style text editor intended to
+be used by people who can't run a real Emacs for one reason or another
+--- as their main editor on smaller machines with limited memory or
+file space, or as a `quick-start' editor on larger systems, useful
+for composing short mail messages and the like.
+
+We've made MG compatible with GNU Emacs because that is the `big',
+full-featured editor that many of us use regularly and are most
+familiar with.  GNU Emacs is the creation of Richard M. Stallman, who
+was also the author of the original Emacs editor.  However, MG is not
+associated in any way with the GNU project, and the MG authors
+individually may or may not agree with the opinions expressed by
+Richard Stallman and the GNU project.
+
+MG is largely public domain.  You can use, modify, and redistribute MG
+as you like.  A few modules, however, are copyrighted; specifically,
+the regular expression code, the VMS termcap routines, and the Amiga
+support code.  Look at the source code for the exact copyright
+restrictions.
+
+There are several other editors in existence which call themselves
+MicroEmacs.  The original public domain version was written by Dave
+Conroy and circulated as version 1.6.  Derived from this, there is
+another PD version by Dave Conroy numbered v30; a significantly larger
+PD version by Daniel Lawrence which is now up to version 3.9; at least
+one proprietary implementation; an implementation for the Atari ST
+with an integrated command shell, by Prabhaker Mateti; and probably
+others that we don't know about.
+
+MG is derived from the v30 MicroEmacs, with key bindings, command
+names, and general functionality made more compatible with GNU Emacs.
+Like v30, MG is fairly small and quite robust.  We have generally
+resisted the temptation to overfeaturize.  Some features which are
+large and complex are flagged for conditional compilation.
+
+Many people have contributed their time to developing, improving, and
+porting MG.  Mike Meyer, Mic Kaczmarczik, and Bob Larson deserve
+particular mention for their efforts.
+
+Questions, suggestions, and offers of help should be addressed to:
+
+        mg-developers\@ucbvax.berkeley.edu   (ARPA)
+        ucbvax!mg-developers                (UUCP)
+
+Implementations of MG
+~~~~~~~~~~~~~~~~~~~~~
+
+MG runs on many different kinds of hardware under many different
+operating systems.  Currently, these include:
+
+ - 4.2 and 4.3 BSD Unix (including Ultrix-32)
+ - System V Unix
+ - VAX/VMS
+ - Primos
+ - OS9/68k
+ - Amiga
+ - Atari ST
+ - MS-DOS
+
+This document describes release MG2A.  When we talk of different
+versions of MG in this manual, the term "version" is used to
+refer to the different support MG provides for the various machines
+and operating systems it runs under, not to different releases of MG
+itself.  For example, we might speak of how the VMS version of MG
+differs from the Unix version.
+
+As mentioned above, some MG commands may not be implemented in all
+versions; these are noted in the documentation.  Some versions of MG
+also support features (such as mouse handling) that are not described
+here.
+
+A Note on Character Sets
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+MG uses the 128-character ASCII character set, and provides support for
+8-bit characters.  Whether the particular version of MG that you are running
+knows about extended character sets depends on whether your terminal and
+the host operating system know about them.  Moreover, since there is no
+standard 8-bit character set, the same character codes will probably
+give different glyphs on different systems.  Most versions of MG use
+the DEC multinational character set.
+
+Notation and Conventions
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this manual, commands and other things that must be typed in
+literally are indicated in a typewriter font, like "next-line".
+Placeholders such as command argument names use an italic font.
+
+The terms "command" and "function" are synonymous.  We often
+speak of a command being bound to a particular "key", although you
+may actually have to type more than one character to form a single key.
+Most commands are bound to keys with "control" and "meta" modifiers.
+
+To type a control character, use the control key on your
+keyboard like a shift key:  hold down the control key while typing the
+character.  In this manual, we will indicate control characters like
+"C-x" --- here, typing the character `x' while holding down
+the control key.
+
+Some keyboards also have a meta key that works like the control
+key.  (It may be labelled something else;  on the Atari ST, for example,
+the key marked  `Alternate' is the meta key.)  If your keyboard doesn't
+have a meta key, don't panic.  You can also use the escape key as a meta
+prefix; first type the escape, and "then" the character.  Meta
+characters will be indicated as "M-x".
+
+Besides the meta prefix, two other characters are used as prefixes:
+"C-x" and "C-h".  A few keys have special notation:  "SPC" is
+the space character, "DEL" is the delete or rubout character, "RET"
+is carriage return, and "ESC" is the escape character.  "NUL" is
+the null character (ASCII 0), which is usually equivalent to either
+"C-SPC" or "C-\@".
+
+Uppercase and lowercase characters are generally equivalent in command
+keystrokes.
+
+When you run MG from a shell, command line arguments are interpreted as the
+names of files you want to "visit", or edit.  Each file is
+read into a "buffer" in memory.  No changes are actually made to
+the file until you ask it to be written out to disk.
+
+Within MG, the large top part of the screen serves as a "window" into
+the buffer being edited.  Below this is the "mode line", which
+displays the name of the buffer.  Finally, at the very bottom of the screen,
+there is a one-line "minibuffer" which is used for displaying
+messages and answering questions.
+
+MG keeps track of two pointers into each window, the "point" and the
+"mark".  The "cursor" appears at the point in the current
+window, and we often speak of moving the cursor rather than of moving the
+point.  The text between the point and the mark is referred to as the
+"region".
+
+Some commands deal with "words" and "paragraphs".
+Generally, whitespace and punctuation separate words.  Lines that are
+empty or that contain only spaces or tabs separate paragraphs without
+being part of a paragraph.  A non-empty line that starts with a space
+or tab also begins a new paragraph.
+
+A number of commands are defined as "toggles".  If no prefix argument
+is supplied, these commands toggle an action.  The action is turned on if a
+negative or zero argument is supplied, and turned on if a positive argument
+is supplied.
+
+Getting Started
+~~~~~~~~~~~~~~~
+
+This document is intended primarily as a reference manual.  If you
+have never used any Emacs-like text editor before, it is strongly
+suggested that you run the on-line tutorial supplied with the MG
+distribution, instead of reading this manual.
+
+Do not be put off by the large number of commands described in this
+manual!  It is possible to get by with only a handful of basic commands.
+Here are the ones that are probably used most frequently:
+
+C-p     Move the cursor to the previous line
+C-n     Move the cursor to the next line
+C-b     Move the cursor backwards
+C-f     Move the cursor forwards
+C-v     Scroll forwards one screenful
+M-v     Scroll backwards one screenful
+M-<     Go to the beginning of the buffer
+M->     Go to the end of the buffer
+C-a     Go to the beginning of the line
+C-e     Go to the end of the line
+DEL     Delete the previous character
+C-k     Kill (delete) to the end of line
+C-y     Reinsert killed text.
+C-x C-c Exit MG
+C-x C-s Save the current buffer
+
+Using Commands
+==============
+
+Command Arguments
+~~~~~~~~~~~~~~~~~
+
+Some commands require arguments.  For example, if you want to read a
+file into a buffer, you must type in the name of the file.  In the
+descriptions of commands in this manual, if arguments are required,
+they are listed following the command name.
+
+MG prompts for command arguments in the minibuffer.  Within the minibuffer,
+the following characters can be used for editing:
+
+DEL, C-h        Erase the last character.
+C-x, C-u        Erase the entire input line.
+C-w             Erase to the beginning of the previous word.
+C-q, backslash  Quote the next character typed.
+RET             Signifies that you have completed typing in the argument.
+C-g             Abort the command in progress.
+
+Prefix Arguments
+~~~~~~~~~~~~~~~~
+
+All commands accept an optional numeric prefix argument.  This is
+often interpreted as a repetition count.  For example, the function
+"next-line", if given a prefix argument, will move the cursor
+forward that many lines; without an argument, it will move the cursor
+forward one line.  A few commands behave differently if given a prefix
+argument than they do without one, and others ignore the prefix
+argument entirely.
+
+
+digit-argument              M-0, M-1, M-2, M-3, M-4, M-5, M-6, M-7, M-8, M-9
+negative-argument                                                        M--
+
+One way to specify a command argument is to use the escape key
+as a meta prefix, and then type one or more digits.  A dash may be
+used for a negative argument.
+
+
+universal-argument                                                      C-u
+
+Another way to specify a command prefix is to type "C-u".
+Typing one "C-u" is equivalent to a prefix argument of 4, typing
+two gives a value of 16, and so on.  In addition, you can type digits
+following "C-u" to form a numeric prefix argument.
+
+Aborting
+~~~~~~~~
+
+keyboard-quit                                                           C-g
+
+Typing "C-g" cancels any command.  It is particularly useful
+for cancelling a command when MG is prompting for input in the minibuffer.
+
+Extended Commands
+~~~~~~~~~~~~~~~~~
+
+execute-extended-command command                                        M-x
+
+Commands that are not bound to keys can be executed through
+"execute extended-command".  If a prefix argument is supplied, it
+is passed to the command being executed.
+
+
+Moving the Cursor
+=================
+
+The commands described in this chapter move the cursor (sometimes
+called the point or dot) within the current window.  Commands which
+set the mark are included here as well.
+
+backward-char                                                           C-b
+
+Moves the cursor backward (left) one character.  If the cursor
+is at the left margin, it will be moved to the end of the previous line.
+
+backward-paragraph                                                      M-[
+
+Moves the cursor backwards to the beginning of the current
+paragraph, or to the beginning of the previous paragraph if the cursor
+is already at the beginning of a paragraph.
+
+backward-word                                                           M-b
+
+Moves the cursor backwards to the beginning of the current word,
+or to the beginning of the previous word if the cursor is already at
+the beginning of a word.
+
+beginning-of-buffer                                                     M-<
+
+Moves the cursor backwards to the beginning of the buffer.
+
+beginning-of-line                                                       C-a
+
+Moves the cursor backwards to the beginning of the current
+line.  This command has no effect if the cursor is already at the beginning
+of the line.
+
+end-of-buffer                                                           M->
+
+Moves the cursor forwards to the end of the buffer.
+
+end-of-line                                                             C-e
+
+Moves the cursor forwards to the end of the current line.  This
+command has no effect if the cursor is already at the end of the line.
+
+exchange-point-and-mark                                             C-x C-x
+
+Set the mark at the current cursor position, and move the cursor
+to the old location of the mark.
+
+forward-char                                                            C-f
+
+Moves the cursor forwards one character.  If the cursor is at the
+end of a line, it will be moved to the first character on the next line.
+
+forward-paragraph                                                       M-]
+
+Moves the cursor forwards to the next paragraph delimiter.
+
+forward-word                                                            M-f
+
+Moves the cursor forwards to the end of the current word, or to
+the end of the next word if the cursor is already at the end of a word.
+
+goto-line line-number
+
+Moves the cursor to the beginning of line "line-number" in
+the buffer.
+
+next-line                                                               C-n
+
+Moves the cursor down one line.  The cursor remains in the same
+column unless it would be past the end of the line, in which case it is
+moved to the end of the line.  At the end of the buffer, "C-n" will
+create new lines.
+
+previous-line                                                           C-p
+
+Moves the cursor up one line.    The cursor remains in the same
+column unless it would be past the end of the line, in which case it is
+moved to the end of the line.
+
+recenter                                                                C-l
+
+Redraws the entire screen, scrolling the current window if necessary
+so that the cursor is near the center.  With a positive prefix argument
+"n", the window is scrolled so that the cursor is "n" lines
+from the top.  A negative prefix argument puts the cursor that many lines
+from the bottom of the window.
+
+redraw-display
+
+Redraws the entire screen, but never scrolls.
+
+scroll-down                                                             M-v
+
+Scrolls the display down (moving backward through the buffer).  Without
+an argument, it scrolls slightly less than one windowful.  A prefix argument
+scrolls that many lines.
+
+scroll-one-line-down
+scroll-one-line-up
+
+These functions are similar to "scroll-down" and "scroll-up"
+(respectively), but when invoked without an argument, cause the display
+to scroll by one line only.  These functions are enabled by defining the
+compile-time option GOSMACS.
+
+scroll-other-window                                                   M-C-v
+
+Scrolls the `other' window forward as for "scroll-up".
+
+scroll-up                                                               C-v
+
+Scrolls the display up (moving forward through the buffer).  Without an
+an argument, it scrolls slightly less than one windowful.  A prefix argument
+scrolls that many lines.
+
+set-mark-command                                                        NUL
+
+Set the mark at the current cursor position.
+
+what-cursor-position                                                  C-x =
+
+Prints some information in the minibuffer about where the cursor is.
+
+
+Text Insertion Commands
+=======================
+
+The usual way to insert text into a buffer is simply to type the
+characters.  The default binding for all of the printing characters
+("self-insert-command") causes them to be inserted literally at
+the cursor position.
+
+insert  string
+
+Insert "string" into the current buffer at the cursor position.
+
+newline                                                                 RET
+
+Insert a line break into the current buffer at the cursor position,
+moving the cursor forward to the beginning of the new line.
+
+newline-and-indent                                                      C-j
+
+Insert a line break into the current buffer at the cursor position,
+then add extra whitespace so that the cursor is aligned in the same
+column as the first non-whitespace character in the previous line.
+
+open-line                                                               C-o
+
+Inserts a line break into the current buffer at the current position,
+but does not move the cursor forward.
+
+quoted-insert                                                           C-q
+
+This command acts as a prefix to
+cancel the normal interpretation of the next keystroke.  If "C-q"
+is followed by one to three octal digits, it is interpreted as the
+code of the character to insert.  Otherwise a single key is read and
+the character typed is inserted into the buffer instead of interpreted
+as a command.  This is used for inserting literal control characters
+into a buffer.
+
+self-insert-command
+
+This is the default binding for keys representing printable
+characters.  The character is inserted into the buffer at the cursor
+position, and the cursor moved forward.
+
+Killing, Deleting, and Moving Text
+==================================
+
+When text is deleted, it is erased completely.  Killing text, on the
+other hand, moves it into a temporary storage area called the kill
+buffer.  The saved text in the kill buffer is erased when another
+block of text is killed.  Until then, however, you can retrieve text
+from the kill buffer.  This can be used to move or copy blocks of
+text, as well as to restore accidentally killed text.
+
+backward-kill-word                                                    M-DEL
+
+Kill the text backwards from the cursor position to the beginning
+of the current word.  Typing "M-DEL" several times in succession
+prepends each killed word to the kill buffer.
+
+copy-region-as-kill                                                     M-w
+
+Copies the text in the region into the kill buffer, without removing
+it from the current buffer.
+
+delete-backward-char                                                    DEL
+
+Deletes the character to the left of the cursor.
+
+delete-blank-lines                                                  C-x C-o
+
+Deletes all blank lines after the current line, and if the current
+line is blank, deletes it and all blank lines preceeding it as well.
+
+delete-char                                                             C-d
+
+Deletes the character underneath the cursor.
+
+delete-horizontal-space                                         M-backslash
+
+Deletes all spaces and tabs on either side of the cursor.
+
+just-one-space                                                        M-SPC
+
+This is like "delete-horizontal-space", except it leaves a single
+space at the cursor position.
+
+kill-line                                                               C-k
+
+If no prefix argument is specified, this function kills text up
+to the next newline; or if the cursor is at the end of a line, the newline
+is killed.  A prefix argument specifies how many lines to kill.  Typing
+"C-k" several times in succession appends each line to the kill buffer.
+
+kill-paragraph
+
+This command kills the entire paragraph containing the cursor.
+If the cursor is positioned between paragraphs, the next paragraph is killed.
+
+kill-region                                                             C-w
+
+The region (all text between point and mark) is killed.
+
+kill-word                                                               M-d
+
+Text is killed forward from the cursor position to the next
+end of word.  If the cursor is at the end of the word, then the next
+word is killed.  Typing "M-d" several times appends the killed
+text to the kill buffer.
+
+yank                                                                    C-y
+
+Text is copied from the kill buffer into the current buffer at
+the cursor position.  The cursor is moved to the end of the inserted
+text.
+
+Searching and Replacing
+=======================
+
+Searching
+~~~~~~~~~
+
+The ordinary search command in MG differs from that in many other editors
+in that it is incremental:  it begins searching as soon as you begin
+typing the search string, instead of waiting for you to type the entire
+string.
+
+All of the search commands described in this section are case-insensitive.
+
+
+isearch-backward pattern                                                C-r
+isearch-forward  pattern                                                C-s
+
+These commands perform an incremental search backward and
+forward (respectively) for "pattern".  MG will move the cursor
+to the place in the buffer that matches as much of the pattern as you
+have typed so far, as each character is entered.
+
+Within the incremental search, the following characters are interpreted
+specially:
+
+DEL     Erase the last character in the search string.
+
+ESC     Stop searching; exit from incremental search
+        mode, leaving the cursor where the search brought it.
+
+C-g     If a match has been found, exits from
+        incremental search but leaves the cursor in its original position.  If
+        the search has failed, this will just erase the characters which have
+        not been found from the end of the search pattern.  In this case, you
+        must type "C-g" again to abort the search.
+
+C-s     Search forward for the next occurrence of the
+        same pattern.
+
+C-r     Search backward for the previous occurrence of
+        the same pattern.
+
+C-q     `Quotes' the next character typed, forcing it
+        to be interpreted as a literal character in the search pattern.
+
+In addition, normal commands such as "C-a" that do not have special
+meanings within incremental search cause the search to be terminated, and
+then are executed in the ordinary way.
+
+search-again
+search-backward pattern                                                 M-r
+search-forward  pattern                                                 M-s
+These commands perform ordinary, non-incremental searches.
+"Search-again" uses the same pattern and direction as the previous
+search.
+
+Replacing
+~~~~~~~~~
+
+query-replace pattern replacement                                       M-%
+
+The primary replace command in MG is an interactive query replace.
+MG searches forward for occurrences of "pattern", and asks you what
+to do about each one.  The choices are:
+
+
+SPC     Replace this match with "replacement",
+        and go on to the next.
+
+DEL     Skip to the next match without replacing this one.
+
+.       Replace this match, and then quit.
+
+!       Replace all remaining occurrences without asking again.
+
+ESC     Quit.
+
+By default, "query-replace" adjusts the case of lower-case letters
+in the replacement string to match that of the
+particular occurrence of the pattern; for example, replacing `Foo'
+with `bar' results in `Bar'.  Upper case letters in the replacement
+string are always left uppercase.   In addition, supplying a prefix argument
+will also tell "query-replace" to leave the case of the replacement
+string as-is.
+
+Note that "query-replace" always performs a case-insensitive search.
+
+Regular Expressions
+~~~~~~~~~~~~~~~~~~~
+
+Regular expressions provide a means for specifying complex search
+patterns, instead of just a literal string.  The commands in this
+section are available only if MG is compiled with the REGEX option
+defined.
+
+Regular expression syntax uses the following rules.  Most characters
+in a regular expression are considered to be "ordinary" characters,
+and will match themselves and nothing else.  The exceptions are the
+special characters listed below.
+
+.       Matches any single character except a newline.
+
+*       A suffix operator that matches zero or more
+        repetitions of the (smallest) preceding regular expression.
+
++       A suffix operator that matches one or more
+        repetitions of the (smallest) preceding regular expression.
+
+?       A suffix operator that matches either zero or one
+        occurence of the (smallest) preceding regular expression.
+
+[...]   Matches any one character listed in the character
+        set between the square brackets.  See examples below.
+
+^       Matches at the beginning of a line.
+
+$       Matches at the end of a line.
+
+\\       Except for the situations listed below, acts as a
+        prefix operator which causes the character following
+        to be treated as an ordinary character.
+
+|       An infix binary "or" operator.
+        It applies to the two largest surrounding expressions.
+
+(...)   A grouping construct, usually used to specify a larger
+        expression for postfix operators such as "*" or to limit
+        the scope of operands to "|".
+
+\\digit  Matches the same text matched by the "digit"th "\\(...\\)"
+        construct.  These are numbered from 1 to 9 in the order
+        that the open-parentheses appear.
+
+\\`      Matches at the beginning of the buffer.
+
+\\'      Matches at the end of the buffer.
+
+\\b      Matches at the beginning or end of a word.
+
+\\B      Matches anyplace "except" at the beginning or end of a word.
+
+\\<      Matches at the beginning of a word.
+
+\\>      Matches at the end of a word.
+
+\\w      Matches any word-constituent character.
+
+\\W      Matches any character which is "not" a word-constituent.
+
+
+Some examples may help clarify the rules.
+
+foo             Matches the literal string "foo".
+
+;.*             Matches all strings which begin with a semicolon and
+                continue to the end of a line.
+
+c[ad]+r         Matches strings of the form "car", "cdr", "caar", "cadr",
+                and so on.
+
+[a-z]           Matches any lowercase letter.
+
+[^a-z]          Matches any character "except" lowercase letters.
+
+[0-9+---]       Matches a digit or sign.
+
+(foo|bar)       Matches either the string "foo" or the string "bar".
+
+
+count-matches     pattern
+count-non-matches pattern
+
+These commands count the number of lines which do or do not
+(respectively) match the specified pattern.
+
+delete-matching-lines     pattern
+delete-non-matching-lines pattern
+
+These commands delete all lines which do or do not (respectively)
+match the specified pattern.
+
+
+query-replace-regexp pattern replacement
+
+This is the regular expression version of "query-replace".
+
+The "replacement" string may be a constant, or it can refer to
+all or part of the string matched by the "pattern". "\\&" in
+the replacement string expands into the entire text being replaced,
+while "\\n" (where n is a number) replaces the
+"n"th parenthesized expression in "pattern".
+
+re-search-again
+re-search-backward pattern
+re-search-forward  pattern
+
+These are the regular expression equivalents of the ordinary
+non-incremental search commands.
+
+set-case-fold-search
+
+This command toggles an internal variable that controls whether
+the regular expression search and replace commands pay attention to
+case.  By default, regular expression searches are case-insensitive.
+Ordinary searches are always case-insensitive and are not affected by
+the setting of this variable.
+
+
+Windows
+=======
+
+MG initially has only one text window displayed.  However, you can have
+as many windows as will fit on the screen.  Each window has its own mode
+line and must display at least two lines of text.  (Note that a MG's
+`windows' are distinct from the `windows' handled by screen managers
+such as the X Window System.)
+
+Multiple windows may be used to display different buffers.  You can also
+have the same buffer displayed in more than one window, which is useful
+if you want to see one part of a file at the same time as you are editing
+another part.
+
+Although many windows can be displayed at once, only one window is active
+at any given time.  This is the window where the cursor appears.
+
+Some commands refer to the `other' window.  This is the window directly
+below the current window, or the top window if you are in the bottom window.
+
+delete-other-windows                                                  C-x 1
+
+Makes the current window the only window.
+
+delete-window                                                         C-x 0
+
+Deletes the current window, making the `other' window the
+current window.  This command doesn't do anything useful if there is only
+one window being displayed.
+
+enlarge-window                                                          C-^
+
+Makes the current window larger.  Without a prefix argument, the
+window grows one line; otherwise, the prefix argument specifies how many
+lines to grow.
+
+other-window                                                          C-x o
+
+Makes the `other' window the current window.
+
+previous-window
+
+This is like "other-window", except that it cycles through
+the windows in reverse order.  This command is available only if MG was
+compiled with the GOSMACS option defined.
+
+shrink-window
+
+Makes the current window smaller.  Without a prefix argument, the
+window loses one line; otherwise, the prefix argument specifies how many
+lines go away.
+
+split-window-vertically                                               C-x 2
+
+Split the current window into two windows, both using the same buffer.
+
+
+Files and Buffers
+=================
+
+Most buffers are used to contain a file being edited.  It is
+also possible to have buffers that are not associated with any file;
+MG uses these for purposes such as displaying help text, for example.
+However, since most commands for dealing with files also deal with
+buffers, we have grouped all of these commands together into one chapter.
+
+Buffer Manipulation
+~~~~~~~~~~~~~~~~~~~
+
+insert-buffer buffer-name
+
+Inserts the contents of the named buffer into the current buffer
+at the cursor location.  The cursor moves to the end of the inserted
+text.
+
+kill-buffer buffer-name                                               C-x k
+
+The named buffer and its contents are deleted.  If the buffer has
+been marked as modified, MG will ask you if you really want to delete it.
+Note that, contrary to its name, this command "does not" save the
+buffer contents in the kill buffer.
+
+If a buffer is being displayed in a window when it is deleted, MG will
+find some other buffer to display in the same window.
+
+list-buffers                                                        C-x C-b
+
+This command writes information about the buffers currently in
+use to a buffer named "*Buffer List*".  This buffer is then displayed
+in the `other' window; if there is only one window, this command will
+split the screen into two windows.
+
+not-modified                                                            M-~
+
+This command makes MG think that the current buffer has not been
+modified, even if it really has been changed.  This affects the behavior
+of the "kill-buffer" and the buffer-saving commands described below.
+
+MG indicates modified buffers with two stars at the left end of the mode
+line.
+
+switch-to-buffer buffer-name                                          C-x b
+
+The current window is mapped onto the named buffer.  If there
+isn't already a buffer with that name around, MG will create one.
+
+switch-to-buffer-other-window buffer-name                           C-x 4 b
+
+This command works like "switch-to-buffer", except that the
+`other' window is used.  If there is only one window, this command
+splits the screen into two windows and maps the named buffer onto one
+of them.
+
+Reading and Writing Files
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+find-file file-name                                                   C-x f
+find-file-other-window file-name                                  C-x 4 C-f
+
+These commands are analagous to "switch-to-buffer" and
+"switch-to-buffer-other-window", respectively.  The difference is that
+these commands look for a buffer associated with the named file.  If no
+matching buffer is found, MG will create a new buffer with a name
+derived from the filename, and attempt to read the file into the buffer.
+If the named file cannot be opened, the buffer remains empty.
+
+insert-file file-name                                                  C-x i
+
+This command reads in the contents of the named file into the
+current buffer at the cursor position.  The cursor remains in the same
+place.
+
+save-buffer                                                         C-x C-s
+
+If the current buffer has been modified, it is saved.  Buffers
+that are not associated with files cannot be written out with this
+command.
+
+save-buffers-kill-emacs                                             C-x C-c
+
+This command is used to leave MG and return control to the shell
+or other program that was used to start MG.  If there are modified buffers,
+MG will ask you if you want to save them before exiting.
+
+save-some-buffers                                                     C-x s
+
+MG will ask you if you want to save modified buffers that are
+associated with files.
+
+write-file file-name                                                C-x C-w
+
+The current buffer is written out using the file name supplied.
+This is useful for saving buffers that are not associated with files, or
+for writing out a file with a different name than what was used to read
+it in.
+
+Backup Files
+~~~~~~~~~~~~
+
+MG provides a way to save a copy of the original version of files which
+have been modified and then written out again.  The backup copy reflects
+the state of the file as it existed the first time it was read into MG.
+The name used for the backup file varies, depending on the operating
+system.
+
+This feature is disabled if MG is compiled with NO_BACKUP defined.
+
+make-backup-files
+
+This command is a toggle which controls the state of an internal
+variable that determines whether MG creates backup files.
+
+Changing the Directory
+~~~~~~~~~~~~~~~~~~~~~~
+
+The commands in this section are disabled by defining NO_DIR.
+
+cd directory-name
+
+This command changes MG's notion of the `current' directory
+or pathname.  This is used to supply defaults for functions that read
+or write files.
+
+The syntax for "directory-name" is obviously specific to the
+particular operating system MG is running on.
+
+pwd
+
+Display what MG thinks is the current directory.
+
+
+Modes
+=====
+
+Modes are used to locally alter the bindings of keys on a
+buffer-by-buffer basis.  MG is normally in fundamental mode, and these
+are the bindings that are listed with the command descriptions in
+this manual.  Modes define additional keymaps that are searched for
+bindings before the fundamental mode bindings are examined; see the
+section on key binding below for more details on how this works.
+
+set-default-mode mode-name
+
+Normally, when MG visits a file, it puts the associated buffer
+into fundamental mode.  Using the "set-default-mode" command, you
+can specify that MG should default to use some other mode on all subsequent
+buffers that are created.  This command is a toggle.  With no prefix
+argument, if the named mode is not already on the list of
+default modes, then it will be added to the list; otherwise, it is removed
+from the list.
+
+No Tab Mode
+~~~~~~~~~~~
+
+In notab mode, tabs are expanded into spaces instead of inserted
+literally into the buffer.  Literal tab characters are displayed as
+"^I" (much like other control characters).  These commands are
+available if MG is compiled with the symbol NOTAB defined.  (This mode
+is mainly for use on systems such as PRIMOS that do not treat tab as a
+series of spaces.)
+
+no-tab-mode
+
+This command is a toggle to control whether notab mode is in effect.
+
+space-to-tabstop
+Insert enough spaces to move the cursor to the next tab stop.  In
+notab mode, this function is bound to "C-i".
+
+
+Overwrite Mode
+~~~~~~~~~~~~~~
+
+Normally, when characters are inserted into the buffer, they are spliced
+into the existing text.  In overwrite mode, inserting a character causes
+the character already at the cursor position to be replaced.  This is
+useful for editing pictures, tables, and the like.
+
+overwrite-mode
+
+This command is a toggle which controls whether overwrite mode is
+in effect.
+
+Auto Fill
+
+Fill mode causes newlines to be added automatically at word
+breaks when text is added at the end of a line, extending past the
+right margin.  Auto fill is useful for editing text and documentation
+files.
+
+auto-fill-mode
+
+This command is a toggle which controls whether fill mode is in effect.
+
+insert-with-wrap
+
+This command works like "self-insert", except that it checks
+to see if the cursor has passed the right margin.  If so, it fills
+the line by inserting a line break between words.  This command is bound to
+"SPC" in fill mode.
+
+fill-paragraph                                                          M-q
+
+Fill the paragraph containing the cursor.
+
+set-fill-column                                                       C-x f
+
+Without a prefix argument, this command sets the right margin
+at the current cursor column.  If a prefix argument is supplied, it is used
+instead as the line width.
+
+Auto Indent
+~~~~~~~~~~~
+
+Indent mode binds "RET" to "newline-and-indent", so
+that each new line is indented to the same level as the preceeding
+line.  This mode is useful for editing code.
+
+auto-indent-mode
+
+This command is a toggle which controls whether auto-indent mode
+is in effect.
+
+Blink
+~~~~~
+
+Blink mode makes it easier to match parentheses, brackets, and other
+paired delimiters.  When the closing delimiter is typed, the cursor
+moves momentarily to the matching opening delimiter (if it is on the
+screen), or displays the line containing the matching delimiter on the
+echo line.  This is useful for editing Lisp or C code, or for
+preparing input files for text processors such as LaTeX that use
+paired delimiters.
+
+blink-matching-paren
+
+This command is a toggle which controls whether blink mode is
+in effect.
+
+blink-matching-paren-hack
+
+This function behaves like "self-insert", except that it
+finds the matching delimiter as described above.  In blink mode, this
+function is bound to ")", which flashes the matching "(".  This
+function also knows about the pairs "{}", "[]", and "<>".
+All other characters match with themselves.
+
+Dired Mode
+~~~~~~~~~~
+
+`Dired' is an abbreviation for `directory editor', and it provides a way
+to browse through the contents of a directory from with MG.  Dired puts
+a directory listing into a buffer; you can use normal editing commands to
+move around the buffer, and a special group of commands to manipulate
+the files.  For example, there are commands to delete and rename files,
+and to read a file into an MG buffer.
+
+Since dired mode rebinds many keys, a table may be helpful:
+
+    C-d      dired-flag-file-deleted
+    SPC      next-line
+    c        dired-copy-file
+    d        dired-flag-file-deleted
+    e        dired-find-file
+    f        dired-find-file
+    n        next-line
+    o        dired-find-file-other-window
+    p        previous-line
+    r        dired-renamefile
+    u        dired-unflag
+    x        dired-do-deletions
+    DEL      dired-backup-unflag
+
+The commands in this section are disabled by defining NO_DIRED.
+
+dired directory-name                                                  C-x d
+
+Creates a dired buffer for the given directory name, and displays
+it in the current window.  The files
+in the directory are listed, usually along with information about the
+file such as its size and timestamp.  The exact format of the information
+is system-specific.
+
+dired-backup-unflag
+
+This function removes the deletion flag from the file listed on
+the previous line of the dired buffer.
+
+dired-copy-file new-name
+
+Copy the file listed on the current line of the dired buffer.
+
+dired-do-deletions
+
+Deletes the files that have been flagged for deletion.
+
+dired-find-file
+dired-find-file-other-window
+
+These function works like "find-file" and "find-file-other-window",
+except that the filename is taken from the current line in the dired buffer.
+
+dired-flag-file-deleted
+
+Flag the file listed on the current line for deletion.  This is
+indicated in the buffer by putting a `D' at the left margin.  No
+files are not actually deleted until the function "dired-do-deletions"
+is executed.
+
+dired-other-window directory-name
+
+This function works just like "dired", except that it puts the
+dired buffer in the `other' window.
+
+dired-rename-file new-name
+
+Renames the file listed on the current line of the dired buffer.
+Note that the dired buffer is not updated to reflect the change.
+
+dired-unflag
+
+Remove the deletion flag for the file on the current line.
+
+Miscellaneous
+=============
+
+Help
+~~~~
+
+Most of the commands in this section write useful information to the
+"*help*" buffer, which is then displayed in the `other' window.
+
+These commands can be disabled at compile-time by defining NO_HELP.
+
+apropos topic                                                         C-h a
+
+This command lists all functions whose names contain a string
+matching "topic" in the "*help*" buffer.
+
+describe-bindings                                                     C-h b
+
+Information about the key bindings in effect in the current buffer
+is listed in the "*help*" buffer.
+
+describe-key-briefly key                                              C-h c
+
+Information about the binding of "key" is printed in the
+minibuffer.
+
+help-help option                                                    C-h C-h
+
+This command lists all of the help options available and
+prompts for which one to run.  Currently, these include only "a
+to run "apropos", "b" to run "describe-bindings", and "c"
+to run "describe-key-briefly".
+
+
+Keyboard Macros
+~~~~~~~~~~~~~~~
+
+A keyboard macro is a saved set of commands from the keyboard that can be
+reexecuted later on.  There can only be one keyboard macro defined at
+any one time.
+
+The commands in this section are available unless they have been disabled
+by defining NO_MACRO.
+
+call-last-kbd-macro                                                   C-x e
+
+Execute the saved keyboard macro.  A prefix argument can be used
+to specify a repetition count.
+
+end-kbd-macro                                                         C-x )
+start-kbd-macro                                                       C-x (
+
+These functions are used to define a keyboard macro.  All keys
+entered after "start-kbd-macro" is executed, up to a "end-kbd-macro",
+are remembered as they are executed.  You can then reexecute the same
+sequence of operations using "call-last-kbd-macro".
+
+
+Changing Case
+~~~~~~~~~~~~~
+
+MG provides a number of functions for changing the case of text.
+
+capitalize-word                                                         M-c
+downcase-region                                                     C-x C-l
+downcase-word                                                           M-l
+upcase-region                                                       C-x C-u
+upcase-word                                                             M-u
+
+All of these commands do the obvious.
+
+Odds and Ends
+~~~~~~~~~~~~~
+
+This section describes miscellaneous commands that don't fit into any
+particular category.
+
+emacs-version
+
+Prints information about the version of MG you are running in
+the minibuffer.
+
+meta-key-mode
+
+If the particular version of MG you are running supports a meta key,
+this function can be used to determine whether MG actually pays attention
+to it or not.  If no prefix argument is supplied, the internal variable
+that controls the use of the meta key is toggled; a positive value enables
+the meta key, while a negative value disables it.
+
+prefix-region
+
+set-prefix-string string
+"Prefix-region" is used to prefix each line of the region
+with a string.  This is useful for indenting quoted text, making block
+comments, and the like.  The function "set-prefix-string" can be
+used to set the string used as the prefix.
+
+suspend-emacs                                                           C-z
+
+This command temporarily suspends
+MG so that you can run other programs, and later resume editing.  The
+exact behavior depends on which operating system you are running MG
+under.  Typically, MG will either spawn a new shell as a subprocess, or
+return you to the parent process.
+
+transpose-chars                                                         C-t
+
+This command transposes the previous two characters.
+
+
+Customization
+=============
+
+MG provides a limited support for customization.  However, unlike `real'
+Emacs, there is no extension language for interpretively defining new
+functions.
+
+Key Bindings
+~~~~~~~~~~~~
+
+MG allows keys to be rebound locally or globally.  To understand the
+difference between the two, some discussion on how modes are implemented
+is necessary.
+
+An internal data structure called a keymap is used to look up the
+function that is bound to a particular key.  The keymap for
+fundamental mode contains all of the default bindings which are listed
+with the command descriptions in this manual.  Modes define additional
+keymaps that are searched for a binding before the fundamental mode
+keymap is examined.  Keymaps have the same name as the mode they are
+associated with.
+
+MG does not provide commands for defining new modes, but you can alter
+the keymaps for existing modes.
+
+define-key keymap-name key command
+
+This command can be used to modify the keymap for the named mode.
+
+global-set-key key command
+global-unset-key key
+
+These commands modify the keymap for fundamental mode.  Bindings
+established by "global-set-key" will be inherited by all other modes,
+as long as they do not establish local rebindings of the same key.
+
+local-set-key key command
+local-unset-key key
+
+These commands modify the keymap currently in effect.
+
+
+Startup Files
+~~~~~~~~~~~~~
+
+Although MG does not include a general-purpose extension language, it
+does provide a way to read and evaluate commands using a somewhat
+different syntax than that used for executing extended commands.  This
+is typically used in a startup file to modify key bindings.
+
+A startup file consists of one or more expressions.  Each expression must
+appear on a separate line in the file; there may not be more than one
+expression per line, nor may expressions span across line breaks.
+Whitespace (spaces and tabs) separate the tokens in an expression.  For
+historical reasons, parentheses are also considered to be whitespace in
+this context.  A semicolon acts as a comment character, causing the rest
+of the line to be discarded.
+
+An expression consists of a function name, an optional prefix argument
+(given as an integer constant), and arguments to be passed to the
+function.  If an argument includes literal whitespace or nonprintable
+characters (for example, as in a keystroke argument to one of the key
+binding functions described in the previous section), it must be
+supplied as a string constant enclosed in double quotes.
+
+Within string constants, the following backslash escapes are available
+to specify nonprintable characters:
+
+
+\\t, \\T          Tab
+\\n, \\N          Newline
+\\r, \\R          Carriarge return
+\\e, \\E          Escape (Meta prefix)
+\\^              Control Prefix
+
+\\n              Specifies a character by its ASCII code, where
+                "n" may consist of from one to three octal
+                digits.
+
+\\fn, \\Fn        Specifies the keycode for the "n"th function key.
+                "N" may consist of one or two decimal digits.
+
+
+The following commands which deal with evaluation of expressions are
+disabled by defining the compile-time option NO_STARTUP.  See the
+implementation notes for your particular version of MG for information
+on how it handles startup files.
+
+eval-current-buffer
+
+Evaluate the expressions in the current buffer.
+
+eval-expression expression
+
+Evaluate the expression supplied.
+
+load file-name
+
+Read in the specified file and evaluate its contents.
+
+
+Fundamental Mode Key Bindings
+=============================
+
+NUL       set-mark-command
+C-a       beginning-of-line
+C-b       backward-char
+C-d       delete-char
+C-e       end-of-line
+C-f       forward-char
+C-g       keyboard-quit
+C-h       help
+TAB       self-insert-command
+C-j       newline-and-indent
+C-k       kill-line
+C-l       recenter
+RET       newline
+C-n       next-line
+C-o       open-line
+C-p       previous-line
+C-q       quoted-insert
+C-r       isearch-backward
+C-s       isearch-forward
+C-t       transpose-chars
+C-u       universal-argument
+C-v       scroll-up
+C-w       kill-region
+C-x       c-x prefix
+C-y       yank
+C-z       suspend-emacs
+ESC       meta prefix
+SPC .. ~  self-insert-command
+DEL       delete-backward-char
+
+C-h C-g   keyboard-quit
+C-h C-h   help-help
+C-h a     apropos
+C-h b     describe-bindings
+C-h c     describe-key-briefly
+
+C-x C-b   list-buffers
+C-x C-c   save-buffers-kill-emacs
+C-x C-f   find-file
+C-x C-g   keyboard-quit
+C-x C-l   downcase-region
+C-x C-o   delete-blank-lines
+C-x C-s   save-buffer
+C-x C-u   upcase-region
+C-x C-w   write-file
+C-x C-x   exchange-point-and-mark
+C-x (     start-kbd-macro
+C-x )     end-kbd-macro
+C-x 0     delete-window
+C-x 1     delete-other-windows
+C-x 2     split-window-vertically
+C-x 4     c-x 4 prefix
+C-x =     what-cursor-position
+C-x ^     enlarge-window
+C-x b     switch-to-buffer
+C-x d     dired
+C-x e     call-last-kbd-macro
+C-x f     set-fill-column
+C-x i     insert-file
+C-x k     kill-buffer
+C-x o     other-window
+C-x s     save-some-buffers
+C-x 4 C-f find-file-other-window
+C-x 4 C-g keyboard-quit
+C-x 4 b   switch-to-buffer-other-window
+C-x 4 f   find-file-other-window
+
+M-C-g     keyboard-quit
+M-C-v     scroll-other-window
+M-SPC     just-one-space
+M-%       query-replace
+M--       negative-argument
+M-0       digit-argument
+M-1       digit-argument
+M-2       digit-argument
+M-3       digit-argument
+M-4       digit-argument
+M-5       digit-argument
+M-6       digit-argument
+M-7       digit-argument
+M-8       digit-argument
+M-9       digit-argument
+M-<       beginning-of-buffer
+M->       end-of-buffer
+M-[       backward-paragraph
+M-\\       delete-horizontal-space
+M-]       forward-paragraph
+M-b       backward-word
+M-c       capitalize-word
+M-d       kill-word
+M-f       forward-word
+M-l       downcase-word
+M-q       fill-paragraph
+M-r       search-backward
+M-s       search-forward
+M-u       upcase-word
+M-v       scroll-down
+M-w       copy-region-as-kill
+M-x       execute-extended-command
+M-~       not-modified
+M-DEL     backward-kill-word
+
+
+                               -- END OF FILE --
+@endnode
+
+@node EDITOR_FSE "Kokoruutueditori: FSE"
+@{b}OTSIKKO@{ub}
+        Kirjoittaminen ja editointi kokoruutueditorissa. FSE-editori
+        on peruseditori, eik„ se sis„ll„ erikoisia ominaisuuksia, mutta
+        se on helpompik„ytt”inen aloittelijalle kuin @{"MG" link EDITOR_MG}.
+
+@{b}ASETUKSET KOKORUUTUEDITORIN KŽYTT™Ž VARTEN@{ub}
+        Tarkista pystyyk” p„„teohjelmasi k„sittelem„„n ANSI- tai VT320-
+        koodeja. Komennolla @{"U ED FSE" link UTIL_ED} saat kokoruutueditorin
+        k„ytt””n. P„„te-emulaatio vaihdetaan @{"U TE" link UTIL_TE} komennolla.
+
+@{b}ESITTELY@{ub}
+        Kokoruutueditori toimii samalla tavalla kuin tavallinen teksti
+        editori tai tekstink„sittelyohjelma. Aluksi ruutu on tyhj„.
+        Editori k„ytt„„ nelj„„ ylint„ rivi„ ruudulla tilannen„ytt”n„ ja
+        virheilmoituksiin. Tilannen„yt”n alla oleva tyhj„ on varattu
+        viestille.
+
+        Tilannen„ytt”rivit n„ytt„v„t t„lt„:
+
+Gaming #49 (YKS.) vast. Joe Hacker aihe: Viestinen kirjoittaminen
+Insert     Indent
+Ctrl/Z=talleta, Ctrl/Q=pois, Ctrl/U=apua, Ctrl/W=lainaus, liiku nuolilla/WSn„pp
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+
+        Tilannen„yt”n antamaa tietoa:
+
+        Line 1: Alueen nimi
+                Viestin numero viestialueella
+                (YKS.) jos viesti on yksityinen, muuten ei mit„„n
+                Vastaanottajan nimi
+                Viestin otsikko
+
+        Line 2: Lis„ys/Korvaus
+                Sisennys/Ei sisennyst„
+                Mahdolliset kysymykset
+
+        Line 3: Useimpien n„pp„inkomentojen k„ytt”ohjeet
+
+@{b}KŽYTT™@{ub}
+        Kokoruutueditorilla voit kirjoittaa teksti„ aivan kuin mill„
+        tahansa editorilla. Jos lis„ys on p„„ll„, siirtyy teksti kursorin
+        edell„. Jos korvaus on p„„ll„, kursorin edell„ oleva teksti
+        kirjoitetaan yli.
+
+        N„pp„inkomennot:
+
+<enter> (Rivinvaihto)
+        Jos 'lis„ys' on p„„ll„, n„pp„imen painallus luo uuden rivin, ja
+        kursori siirtyy sille. Jos 'korvaus' on p„„ll„, siirryt vain
+        uudelle riville. 'Sisennys' tilassa kursori siirtyy seuraavalle
+        riville edellisen rivin alkamiskohtaan.
+
+<home>
+        Kerran painettuna siirt„„ kursorin rivin alkuun, toisen kerran
+        painettuna siirt„„ kursorin ruudun yl„reunaan ja kolmannen
+        kerran j„lkeen siirt„„ kursorin viestin alkuun.
+
+<end>
+        Tekee p„invastoin kuin <home>. Paina <end> kerran ja kursori
+        siirtyy  rivin loppuun, toisella kerralla ruudun alareunaan ja
+        kolmanella painalluksella viestin loppuun.
+
+<backspace>
+        Tuhoaa merkin kursorin vasemmalta puolelta.
+
+<del>
+        Tuhoaa merkin kursorin kohdalta.
+
+<tab>
+        Siirt„„ kursoria kahdeksan kirjainta oikealle. (Se ei sisenn„
+        jo kirjoitettua teksti„.)
+
+Contrl-commands
+        ^-merkki kirjaimen edess„ tarkoittaa ett„ <ctrl>-n„pp„int„ pit„„
+        painaa samanaikaisesti kirjaimen kanssa.
+
+        ^A    Siirry yksi sana takaisin.
+        ^F    Siirry yksi sana eteenp„in.
+        ^R    Sivu yl”s.
+        ^C    Sivu alas.
+        ^D    Siirry yksi merkki oikealle.
+        ^S    Siirry yksi merkki vasemmalle.
+        ^E    Siirry rivi yl”s.
+        ^X    Siirry rivi alas.
+        ^Y    Tuhoa t„m„ rivi. Palauta ctrl-B:ll„.
+        ^G    Tuhoa kirjain. Sama kuin <del>.
+        ^B    Palauta tuhottu rivi.
+        ^L    Piirr„ ruutu uudestaan.
+        ^N    N„yt„ kursorin koordinaatit.
+        ^O    Aloita uusi rivi kursorin edest„.
+        ^Q    Poistu ilman tallennusta. Sama kuin ctrl-K Q.
+        ^T    Tuhoa yksi sana kursorista oikealle.
+        ^V    Vaihda 'lis„ys' and 'sisennys' tiloja.
+        ^W    Lainaa rivi. Esimerkkej„ k„yt”st„:
+              1. mene riville, jonka haluat laintata,
+              2. paina ctrl-W ja rivi varustetaan quote merkill„.
+                 Kaikki ylim„„r„iset v„lily”nnit rivin alusta
+                 poistetaan.
+        ^Z    Tallenna viesti ja poistu. Sama kuin ctrl-K Z.
+        ^K C  Tuhoa viestin loppu.
+        ^K O  Kirjoita viesti levylle, Kirjoita olemassaolevan
+              tiedoston p„„lle.
+        ^K Q  Poistu editorista ilman tallennusta. Sama kuin ctrl-Q
+        ^K R  Lue viesti levylt„ editoriin.
+        ^K S  Vaihda viestin otsikkoa.
+        ^K W  Kirjoita viesti levylle, lis„„ olemassaolevaan tiedostoon.
+        ^K Z  Piistu, tallenna viesti ja l„het„ se. Sama kuin ctrl-Z.
+
+@{b}KATSO MY™S@{ub}
+        @{"rivieditori" link EDITOR_LINE}
+@endnode
+
+@node EDITOR_LINE "Rivieditori"
+@{b}RIVIEDITORIN ASETUKSET@{ub}
+        Rivieditori on oletuseditori uusille k„ytt„jille. Jos sinulla on
+        syy siirty„ kokoruutueditorista rivieditoriin, k„yt„ Asetukset
+        valikon komentoa @{b}u ed l@{ub}.
+
+@{b}ESITTELY@{ub}
+        Jos p„„teohjelmasi ei osaa kommunikoida kokoruutueditorin kanssa
+        on sinun tyytyminen rivieditoriin. Rivieditori on hieman hankala
+        viestien kirjoittamiseen. On ERITTŽIN suositeltavaa k„ytt„„
+        p„„teohjelmaa, joka kykenee k„sittelem„„n ANSI- tai VT320-
+        koodeja.
+
+        Kuten nimikin kertoo, viesti editoidaan rivi kerrallaan. T„m„
+        merkitsee jonkinasteista ep„mukavuutta.
+
+@{b}KŽYTT™@{ub}
+        Aloitat viestin kirjoittamisen ensimm„iselt„ riviltt„. Kun olet
+        kirjoittanut viestin, paina <enter> tyhj„ll„ rivill„. Voit
+        valita seuraavista komennoista:
+
+        Komento:        Selitys:
+        -------------   ----------------------
+        @{i}C@{ui}jatka          viestin kirjoittamista.
+        @{i}I@{ui}lis„„          rivi.
+        @{i}D@{ui}tuhoa          rivi.
+        @{i}E@{ui}muokkaa        rivi.
+        @{i}L@{ui}n„yt„          viesti.
+        @{i}A@{ui}poistu         editorista. Poistu, ei tallennusta,
+                                 ei l„hetyst„.
+        @{i}S@{ui}tallenna       viesti. Poistu, tallenna, l„het„.
+
+@{b}KATSO MY™S@{ub}
+        @{"FSE" link EDITOR}
+@endnode
+
+@node GLOB "Yleiset komennot (toimivat l„hes jokaisessa valikossa)"
+@{b}ESITTELY@{ub}
+        Yleiset komennot ovat saatavilla jokaisessa BBBS:n valikosta.
+        Valikon vaihtokomennot ovat yleisi„ komentoja.
+
+        Komento Valikon nimi     Katso my”s
+        ------- ---------------- ----------
+        @{i}Q@{ui}       P„„valikko       @{"p„„valikko" link MAIN_MENU}
+        @{i}R@{ui}       Lukuvalikko      @{"luku      " link READ}
+        @{i}F@{ui}       Tiedostovalikko  @{"tiedosto  " link FILE}
+        @{i}U@{ui}       Asetusvalikko    @{"asetus    " link UTIL}
+
+        Yleiset komennot ovat saatavilla kaikissa em. valikoissa.
+
+@{b}ALAOTSIKOITA@{ub}
+        @{i}valikot@{ui}
+        @{"f     " link GLOB_F        } Tiedostokomennot
+        @{"q     " link GLOB_Q        } Palaa p„„valikkoon
+        @{"r     " link GLOB_R        } Lukukomennot
+        @{"u     " link GLOB_U        } Asetuskommennot
+        @{i}muita@{ui}
+        @{"?     " link GLOB_?        } N„yt„ valikko
+        @{"b     " link GLOB_B        } Tiedoitteet
+        @{"chat  " link GLOB_CHAT     } Juttelukomennot
+        @{"com   " link GLOB_COM      } J„t„ kommentti SysOpille
+        @{"e     " link GLOB_E        } Kirjoita viesti
+        @{"fin   " link GLOB_FIN      } L„sn„olijat
+        @{"g     " link GLOB_G        } N„kemiin: BBS:st„ l„hteminen
+        @{"h     " link GLOB_H        } Apua
+        @{"j     " link GLOB_J        } Liity viestialueelle
+        @{"md    " link GLOB_MD       } Viestien ottaminen kotiin
+        @{"mu    " link GLOB_MU       } Viestien l„hett„mien
+        @{"newu  " link GLOB_NEWU     } Uuden k„ytt„j„n pikaopas
+        @{"no    " link GLOB_NO       } L„het„ nodeviestej„
+        @{"tim   " link GLOB_TIM      } Aikaa j„ljell„ ja pankin saldo
+        @{"w     " link GLOB_W        } L„sn„olijat
+@endnode
+
+@node GLOB_Q "Palaa p„„valikkoon"
+@{b}KOMENTO@{ub}
+        @{i}q@{ui} p„„valikko
+
+@{b}ESITTELY@{ub}
+        @{b}Q@{ub} vie sinut p„„valikon kehoitteeseen. P„„valikossa kaikki
+        yleiset komennot ovat k„ytett„viss„.
+
+@{b}KATSO MY™S@{ub}
+        @{"p„„valikko" link MAIN_MENU}
+@endnode
+
+@node GLOB_R "Lukukomennot"
+@{b}KOMENTO@{ub}
+        @{i}r@{ui} viestit
+
+        <enter> (vain jos olet p„„, asetus tai tiedostovalikossa)
+
+@{b}ESITTELY@{ub}
+        R-komento vaihtaa lukuvalikkoon. Kaikki yleiset komennot ovat
+        k„ytett„viss„.
+
+@{b}KATSO MY™S@{ub}
+        @{"luku" link READ}
+@endnode
+
+@node GLOB_F "Tiedostokomennot"
+@{b}KOMENTO@{ub}
+        @{i}f@{ui} tiedostot
+
+@{b}ESITTELY@{ub}
+        F-komennolla p„„set tiedostovalikkoon. Kaikki yleiset komennot
+        ovat k„ytett„viss„.
+
+@{b}KATSO MY™S@{ub}
+        @{"tiedosto" link FILE}
+@endnode
+
+@node GLOB_U "Asetuskomennot"
+@{b}KOMENTO@{ub}
+        @{i}u@{ui} asetukset
+
+@{b}ESITTELY@{ub}
+        U-komento johdattaa sinut asetusvalikkoon. Kaikki yleiset
+        komennot ovat k„ytett„viss„.
+
+@{b}KATSO MY™S@{ub}
+        @{"asetus" link UTIL}
+@endnode
+
+@node GLOB_CHAT "Juttelukomennot"
+@{b}KOMENTO@{ub}
+        @{i}chat@{ui}
+
+@{b}ESITTELY@{ub}
+        CHAT-komennolla eksyt jutteluvalikkoon. Yleiset komennot eiv„t
+        ole saatavilla.
+
+        @{i}Juttelukomennot@{ui}
+        @{"A" link CHAT_A} olet saatavilla keskusteluun
+        @{"N" link CHAT_N} et ole saatavilla keskusteluun
+        @{"#" link CHAT_#} keskustelu linjan # kanssa
+        @{"S" link CHAT_S} pyyd„ SysOpia keskustelemaan kanssasi
+        @{"G" link CHAT_G} liity ryhm„keskusteluun
+        @{"Q" link CHAT_Q} takaisin edelliseen valikkoon
+
+@{b}KATSO MY™S@{ub}
+        @{"juttelu   " link CHAT}
+        @{"nodeviesti" link GLOB_NO}
+@endnode
+
+@node CHAT_S "Juttele SysOpin kanssa"
+@{b}KOMENTO@{ub}
+        [chat] @{i}s@{ui}
+
+@{b}ESITTELY@{ub}
+        S kutsuu SysOpia juttelemaan. Jotta kokoruutujuttelu olisi
+        mahdollista, tarvitset terminaalin joka mahdollistaa ANSI- tai
+        VT320-koodien k„yt”n. Ensimm„iseksi sinun t„ytyy kertoa miksi
+        haluat keskustella SysOpin kanssa. T„m„n j„lkeen BBBS yritt„„
+        tavoittaa SysOp:in juttelua varten. Jos h„n sattuu olemaan
+        tavoitettavissa, juttele vapaasti tunti tai pari. Voit vaihtaa
+        kirjoittamasi tekstin v„ri„ CTRL-QWERTY. CTRL-L:lla voit
+        tyhjent„„ ruudun. Ainoa tapa poistua juttelusta on ett„ SysOp
+        painaa <ESC>- tai <F6>-n„pp„int„.
+@endnode
+
+@node CHAT_N "Ei tavoitettavissa"
+@{b}KOMENTO@{ub}
+        [chat] @{i}n@{ui}
+
+@{b}ESITTELY@{ub}
+        N kytkee p„„lle suojan joka suodattaa pois l„hes kaikki
+        nodeviestit jotka muuten joutuisit vastaanottamaan. Suoja ei
+        vaikuta BRoboCop:in ja Hipon nodeviesteihin. Se ei my”sk„„n
+        vaikuta '@{"q spy" link MAIN_SPY}'-komentoon.
+@endnode
+
+@node CHAT_# "Keskustelu linjan # kanssa"
+@{b}KOMENTO@{ub}
+        [chat] @{i}#@{ui}
+
+@{b}ESITTELY@{ub}
+        # komennolla voit keskustella vain haluamasi linjan kanssa.
+        Korvaa @{i}#@{ui}-merkki haluamasi linjan numerolla.
+
+@{b}ESIMERKKI:@{ub}
+        chat 2
+@endnode
+
+@node CHAT_A "Tavoitettavissa"
+@{b}KOMENTO@{ub}
+        [chat] @{i}a@{ui}
+
+@{b}ESITTELY@{ub}
+        A kytkee normaalitilan @{"chat n" link CHAT_N} tai @{"q hide" link MAIN_HIDE} komentojen j„lkeen.
+        Voit vastaanottaa linjaviestej„ ja juttelupyynt”j„ normaalisti.
+@endnode
+
+@node CHAT_G "Ryhm„juttelu"
+@{b}KOMENTO@{ub}
+        [chat] @{i}g@{ui}
+
+@{b}ESITTELY@{ub}
+        G p„„st„„ juttelemaan kaikkien muiden linjallaolijoiden kanssa
+        samanaikaisesti. T„m„ tapahtuu n„ytt„m„ll„ muille sinun
+        kirjoituksesi tietyin rajoituksin.
+
+  Ryhm„juttelussa on omat komentonsa:
+  (T„t„ teksti„ ei n„ytet„ muille k„ytt„jille)
+  Komennot:
+   /Help     T„m„ apuvalikko
+   /Quit     Takaisin BBBS:„„n
+   /Name xxx Vaihda nimeksesi xxx
+   /Who      Ket„ on mukana chatissa
+   /Time     Aikaa j„ljell„
+   /#        L„het„ linjaviesti linjalle #
+   /Join 0   Liity yleiselle kanavalle
+   /Join #   Liity yksityiselle kanavalle linjan # kanssa
+
+  HUOMIO! Jokaisen k„ytt„j„n t„ytyy antaa komento @{b}chat g@{ub} liitty„kseen
+          ryhm„jutteluun.
+  HUOMIO! '/' on osa komentoa. Jos j„t„t sen pois, teksti kirjoitetaan
+          muiden jutteluruudulle.
+@endnode
+
+@node CHAT_Q "Poistu Jutteluvalikosta"
+@{b}KOMENTO@{ub}
+        [chat] @{i}q@{ui}
+
+@{b}ESITTELY@{ub}
+        Q palauttaa sinut takaisin edelliseen valikkoon.
+@endnode
+
+@node GLOB_COM "Kommentti SysOpille"
+@{b}KOMENTO@{ub}
+        @{i}com@{ui} kommentti
+
+@{b}ESITTELY@{ub}
+        Voit j„tt„„ kommenttiviestin SysOpilla COM-komennolla. Viesti
+        tallennetaan viestialueelle, joka on asetettu k„ytett„v„ksi
+        yksityisille viesteille. Vastaanottaja ja otsikko asennetaan
+        automaatisesti ja ainoa asia, josta sinun t„ytyy huolehtia, on
+        viestin kirjoittaminen.
+
+@{b}KATSO MY™S@{ub}
+        @{"viestieditori" link EDITOR}
+@endnode
+
+@node GLOB_E "Kirjoita viesti"
+@{b}KOMENTO@{ub}
+        @{i}e@{ui} kirjoita viesti
+
+@{b}ESITTELY@{ub}
+        E-komenolla kirjoitat viestin oletusviestialueelle. (tarkista
+        kehotteesta oletusviestialue). Viesti voi olla yksityinen tai
+        julkinen. Kaikille viestialueille ei ole mahdollista kirjoittaa
+        yksityisi„ viestej„ (voit kysy„ t„st„ asiasta SysOpilta).
+
+        Poikkeuksia: Et voi kirjoittaa yleist„ viesti„ yksityisviestien
+        alueelle. SysOp voi m„„ritell„ mink„ tahansa alueen vain
+        luettavaksi. T„m„ tarkoittaa, ett„ tavallisen k„ytt„j„n ei
+        anneta kirjoittaa viesti„ ko. alueelle. Uset uutis alueet ovat
+        vain luettavissa.
+
+        Viestin kirjoittaminen aloittaa uuden viestiketjun. Ennen kuin
+        voit kirjoittaa viestin, sinulta kysyyt„„n vastaanottajaa ja
+        viestin otsikkoa. Katso editorin avusta subjektin vaihtaminen
+        editorista.
+
+        Vastaanottaja voi olla kuka tahansa j„rjestelm„n k„ytt„jist„ tai
+        'Kaikille'. Jos vastaanottaja on 'Kaikille', viesti t„tyy
+        kirjoittaa julkiselle alueelle. Sinun ei tarvitse kirjoittaa
+        'Kaikille', paina vain <enter>.
+
+        Viestin otsikon pit„isi kuvata viestin sis„lt”„. Jos viestisi
+        k„sittelee ruokaa, voisit kirjoittaa esimerkiksi "Hesburgerin
+        hampurilaiset n„r„styksen l„hteen„"
+
+@{b}KATSO MY™S@{ub}
+        @{"vastaaminen" link READ_RE}
+        @{"viestieditori" link EDITOR}
+@endnode
+
+@node GLOB_MD "Uusien viestien ottaminen kotiin"
+@{b}KOMENTO@{ub}
+        @{i}md@{ui} [-otettavien_viestien_lukum„„r„_numerona]
+
+@{b}ESITTELY@{ub}
+        MD ker„„ kaikki lukemattomat viestit alueilta, joilla olet
+        j„senen„, pakkaa ne ja noutaa ne sinulle. Pakkaus tehd„„n
+        oletuksena tekstimuotoiseksi, mutta jos sinulla on k„ytett„viss„
+        et„lukuohjelma, voit valita et„lukuohjelman k„ytt„m„n formaatin
+        komennolla @{"u gf" link UTIL_GF}. Viestit pakataan pakkerilla, jonka valitset
+        komennolla @{"u af" link UTIL_AF}. Oletustiedonsiirtoprotokolla jota k„ytet„„n
+        tiedostojen siirrossa voidaan valita komennolla @{"u t" link UTIL_T}. Kun olet
+        saanut paketin kotiin, merkit„„n ottamasi viestit luetuiksi.
+        Viestipakettia voidaan k„sitell„ et„lukuohjelmalla. Esimerkiksi
+        BLMR, Hiphop, NMail ja SLMR ovat et„lukuohjelmia, joita voit
+        k„ytt„„
+
+        Viestipaketti tehd„„n k„ytt„en merkist”„, jonka olet asettanut
+        komennolla @{"u s" link UTIL_S} (oletuksena on IBM merkist”).
+
+@{b}VALITSIMIA@{ub}
+        @{i}-#@{ui}  rajoittaa ker„tt„v„t veistit # kappaleeseen.
+            Esimerkiksi: MD -50 ker„„ vain 50 viesti„.
+        @{i}-b@{ui}  Ker„„ uudet tiedotteet.
+        @{i}-m@{ui}  J„tt„„ uusien tiedostojen listan pois paketista.
+        @{i}-c@{ui}  Rakentaa HIPPO-formaatin kontrollitiedostot.
+        @{i}-s@{ui}  L„het„ pitk„t alueennimet QWK-paketissa.
+
+@{b}KATSO MY™S@{ub}
+            @{"mu  " link GLOB_MU}
+        [u] @{"set " link UTIL_SET}
+        [r] @{"send" link READ_SE}
+        [r] @{"dump" link READ_D}
+@endnode
+
+@node GLOB_MU "Message Upload"
+@{b}KOMENTO@{ub}
+        @{i}mu@{ui}
+
+@{b}ESITTELY@{ub}
+        MU vastaanottaa sinulta paketin joka sis„lt„„ viestej„ ja muita
+        asiaan liittyvi„ tiedostoja.
+
+@{b}KATSO MY™S@{ub}
+            @{"md  " link GLOB_MD}
+        [u] @{"set " link UTIL_SET}
+        [r] @{"send" link READ_SE}
+        [r] @{"dump" link READ_D}
+@endnode
+
+@node GLOB_H "H apua"
+@{b}KOMENTO@{ub}
+        @{i}h@{ui} apua
+
+@{b}ESITTELY@{ub}
+        H-komento tulostaa sinulle BBS komentoapun„yt”n. Aputekstit
+        on jaettu otsikkoihin ja alaotsikkoihin.
+@endnode
+
+@node GLOB_J "liity viestialueelle/vaihda viestialueeta"
+@{b}KOMENTO@{ub}
+        @{i}j@{ui} viestialueet [haluamasi_viestialueen_nimi]
+
+@{b}ESITTELY@{ub}
+        J-komento vaihtaa viestialuetta tai liittyy uuteen voit antaa
+        yhden alueen nimen erotettuna v„lily”nnill„ parametriksi
+        komennolle. Jos et anna parametri„, tulostetaan aluelista.
+
+@{i}Kursorit: liikkuminen  @{ui}@{b}F@{ub}@{i}:etsi   @{ui}@{b}J@{ub}@{i}:liity     aakk@{ui}@{b}O@{ub}@{i}stus:  ei  aakkosj„rjestys@{ui}
+@{i}V„lily”nti: liity/eroa @{ui}@{b}Q@{ub}@{i}:pois   @{ui}@{b}R@{ub}@{i}:eroa        @{ui}@{b}H@{ub}@{i}:n„yt„:  kaikki  j„sen ei-j„sen@{ui}
+
+u @{i}INT.C++@{ui}
+  @{i}INT.DESQVIEW@{ui}
+u @{i}INT.GAMING@{ui}
+u @{i}INT.GREEN.029@{ui}
+  @{i}INT.HS_MODEMS@{ui}
+
+        Voit liikkua listalla kursorin„pp„imill„. <Ctrl-R> ja <Ctrl-C>
+        liikkuvat yl”s ja alas sivu kerrallaan.
+
+        Jos BBS:ss„ on monta viestialuetta, joilla on samanlainen alku,
+        kuten SF.Info, SF.Markkinat, ... voit listata SF-alkuiset
+        komennolla @{b}j sf@{ub}.
+
+@{b}ESIMERKKI:@{ub}
+        j
+        j post
+        j sf
+
+@{b}KATSO MY™S@{ub}
+        @{"s„„nn”llinen ilmaus" link REGEXP}
+@endnode
+
+@node GLOB_NEWU "Uuden k„ytt„j„n pikaopas"
+
+          Olet saanut raahattua itsesi n„in pitk„lle! Erinomaista!
+                          Tervetuloa j„rjestelm„„n.
+
+        Aluksi kannattaa k„yd„ l„pi muutama hy”dyllinen komento:
+
+        Žl„ ole linjalla liian kauaa. Jos roikut linjalla liian kauan,
+        muut eiv„t p„„se j„rjestelm„„n. Linjan aukipit„minen tulee ajan
+        my”t„ my”s turhan arvokkaaksi. Ainakin jos puhelinyhti”
+        k„ytt„„ minuuttiveloitusta.
+
+        Valikko BBBS:ss„ (yksinkertaistettu):
+        @{i}q@{ui} P„„valikko
+        @{i}u@{ui} Asetukset
+        @{i}f@{ui} Tiedostot
+        @{i}r@{ui} Lukuvalikko (viestit)
+
+        Valikoissa on my”s komentoja ja alavalikoita.
+
+        Olet ehk„ huomannut, ett„ t„„ll„ on useita eri viestialueita.
+        Sinut on kutsuttu osalle niist„ ja voit liitty„ vapaasti
+        kaikille julkisille alueille, joille sinulla on sek„ luku-, ett„
+        kirjoitusoikeudet. K„yt„ @{"j" link GLOB_J}-komentoa alueiden valitsemiseen.
+
+        Viestit n„ytet„„n automaattisesti. Senkun painelet <@{i}enter@{ui}>:i„.
+        Komennolla @{"re" link READ_RE} voit kirjoittaa vastauksen viesitin.
+
+        On viisasta ottaa viestit kotiin ja tutkia niit„ kaikessa
+        rauhassa. T„m„n voit tehd„ komennolla @{"md" link GLOB_MD} mutta muista ensin
+        asettaa tarvittavat asetukset 'Asetukset' valikosta kuntoon.
+        @{"u t" link UTIL_T} valitsee tiedonsiirtoprotokollan. Kannattaa my”s valita
+        pakkeri, jolla viestit pakataan tiedonsiirtoajan minimoimiseksi.
+        Komento t„lle valinnalle on @{"u af" link UTIL_AF}.
+
+        On my”s j„rkev„„ opetella k„ytt„m„„n et„lukuohjelmaa.
+        Et„lukuohjelman k„ytt„minen antaa mahdollisuuden lukea viestit
+        kotona (sen j„lkeen kun olet siirt„nyt viestipaketin sinne).
+        Et„lukijaa k„ytt„en on mahdollista my”s vastata viesteihin l„hes
+        samalla tavalla kuin BBBS:n linjalla roikkuen. Tietysti ilman
+        sit„ roikkumista. Et„lukuohjelmia PC:lle ovat esimerkiksi: MR/2,
+        KWQ/2, HipHop, NMail ja BMLR. Monet n„ist„ voi ehk„ jopa
+        l”yt„„ t„m„n BBS:n tiedostoalueelta. Jos et l”yd„ yht„„n
+        et„lukuohjelmaa niin valita asiasta „„nekk„„sti SysOpille.
+        K„ytt„m„si et„lukuformaatti valitaan komennlla @{"u gf" link UTIL_GF}.
+
+        Jos et viel„k„„n ole huomannut, niin BBBS:ss„ voi ketjuttaa
+        komentoja samalle komentoriville. T„ll„ on BBS:n k„ytt”„
+        nopeuttava vaikutus. Komentorivieditorin ketkutuksen
+        yksituiskohtiin voit tutustua l„hemmin kohdasta
+        @{"komentorivieditori" link CLEDITOR}.
+
+        Kun olet lukenut muutaman viestin (linjalla <enter>:in painallus
+        riitt„„) ja l”yt„nyt jotain mielenkiintoista, johon haluaisit
+        vastata, voit tehd„ sen kirjoittamalla komennon @{"re" link READ_RE} (vastaus).
+        Joudut vastaamaan muutamaan kysymykseen ja jos p„„t„t lainata
+        alkuper„ist„ viesti„ omaasi, se tulostuu n„yt”llesi. Jos t„ss„
+        vaiheessa k„yt„t kokoruutueditoria, voit kommentoida lainauksia
+        alkuper„isest„ viestist„. Lainattu viesti on tapana erottaa
+        omasta tekstist„si lis„„m„ll„ merkki '>' lainattujen rivien
+        alkuun. T„m„n voit tehd„ automaattisesti painamalla ctrl-W
+        n„pp„inyhdistelm„„ kun kursori on lainatuksi haluamasi rivin
+        kohdalla. Tuhoa ylim„„r„iset rivit komennolla ctrl-Y.
+
+        Katso editorin apua komennolla ctrl-U.
+
+        Useimmissa BBS:iss„ on viestialue, josta l”ytyy SysOpin
+        k„ytt„jille kirjoittamat viestit. Alue voi olla nimelt„„n 'News'
+        tai 'SysOp News' tai jotain muuta ihmeellist„ SysOpin keksim„„.
+        T„lt„ alueelta et voi erota, vaan sinun t„ytyy lukea sinne
+        kirjoitetut viestit. Siell„ voi olla t„rke„„kin informaatiota.
+
+        Toivon, ett„ teet sen nyt. Jos sinulla on ongelmia, voit j„tt„„
+        viestin SysOpille komennolla @{"com" link GLOB_COM}ment.
+        H„n on kokenut k„ytt„j„, ja osaa todenn„k”isesti vastata
+        kysymyksiisi.
+@endnode
+
+@node GLOB_NO "Nodeviesti"
+@{b}KOMENTO@{ub}
+        @{i}no@{ui} noden_numero viesti
+
+@{b}ESITTELY@{ub}
+        NO-komento l„hett„„ viestin monilinjaisen BBS:n linjalta
+        toiselle. Voit antaa nodenumeron ja viestin parametrin„. Jos
+        et anna, sinulta kysyt„„n niit„. Nodeviesti nodelle 0 l„hett„„
+        viestin kaikille aktiivisille nodeille.
+
+        Tarvitset t„t„ komentoa, jos haluat pyyt„„ tiedostojen otto-
+        oikeuksia BRoboCopilta, joka on BBBS:n vahtikoira.
+        T„m„ tehd„„n kirjoittamalla seuravaa: NO 6 DOWNLOAD, jossa
+        6 on BRoboCopin nodenumero. Tarkista oikea nodenumero komennolla
+        @{"w" link GLOB_W}.
+
+@{b}ESIMERKKI@{ub}
+        no 3 Hei, mit„ puuhaat?
+        no 4 play
+
+@{b}KATSO MY™S@{ub}
+        @{"juttelu" link GLOB_CHAT}
+@endnode
+
+@node GLOB_B "Tiedotteet"
+@{b}KOMENTO@{ub}
+        @{i}b@{ui} tiedotteet [tiedotteen_numero D | L | W ]
+
+@{b}ESITTELY@{ub}
+        @{b}B@{ub}-komento ja sit„ seuraava tiedotteen numero n„ytt„v„t sinulle
+        tiedotteen. Tiedotteet ovat enemm„n tai v„hemm„n t„rkeit„
+        asioita jotka SysOp on p„„tt„nyt ripustaa tiedotevalikkoon. Saat
+        listan kaikista tiedotteista BBS:ss„ painamalla pelk„st„„n @{b}b@{ub}
+        <enter>. Voit listata tiedotteet uudestaan painamalla @{b}l@{ub}:„„
+        tiedotteet-valikossa. W tulostaa BBS:n tervetuloruudun. @{b}d@{ub}:n
+        painaminen k„ynnist„„ v„litt”m„sti tiedonsiirron ja saat juuri
+        lukemasi bulletin tiedoston itsellesi.
+        "@{b}A@{ub}" kopioi bulletiinin /tmp-hakemistoon.
+
+@{b}ESIMERKKI@{ub}
+        @{b}b 2@{ub}    N„ytt„„ tiedoteen numero 2.
+        @{b}b 2 d@{ub}  Kuten edell„, mutta k„ynnist„„ heti lukemisen j„lkeen
+               tiedonsiirron ja saat tiedotteen kotiin talteen.
+        @{b}b l@{ub}    N„ytt„„ listan saatavilla olevista tiedotteista.
+        @{b}b w@{ub}    N„ytt„„ tervetuloruudun.
+@endnode
+
+@node GLOB_TIM "Neiti aika"
+@{b}KOMENTO@{ub}
+        @{i}tim@{ui} neiti aika
+
+@{b}ESITTELY@{ub}
+        TIM-komento n„ytt„„ kellonajan, sis„„ntuloajan, j„ljell„
+        olevan k„ytt„j„ajan ja aikapankin saldon.
+@endnode
+
+@node GLOB_W "L„sn„olijat"
+@{b}KOMENTO@{ub}
+        @{i}w@{ui} l„sn„olijat
+
+@{b}ESITTELY@{ub}
+        W-komento antaa sinulle listan j„rjestem„ss„ l„sn„ olevista.
+        Lis„ksi n„et nodejen tilanteen, jos niit„ on j„rjestelm„ss„.
+        Joissain j„rjestelmiss„ on SysOp ei n„yt„ tyhji„ nodeja
+        esimerkiksi koska nodeja on niin paljon, ett„ kaikkien tyhjien
+        listaaminen veisi liikaa aikaa. Jos joku noutaa tiedostoja, BBBS
+        n„ytt„„ ennusteen tiedonsiirron p„„ttymisajankohdasta.
+
+@{b}KATSO MY™S@{ub}
+        @{"juttelu   " link GLOB_CHAT}
+        @{"nodeviesti" link GLOB_NO}
+@endnode
+
+@node GLOB_G "Poistuminen BBS:st„"
+@{b}KOMENTO@{ub}
+        @{i}g@{ui} [Y | N | A]
+        @{i}exit@{ui} [Y | N | A]
+        @{i}logout@{ui} [Y | N | A]
+
+@{b}ESITTELY@{ub}
+        G-komento on ainoa oikea tapa poistua systeemist„ vierailun
+        j„lkeen. Jos et anna komennolle mit„n parametreja, sinulta
+        kysyt„„„n viel„ oletko varma, ett„ haluat poistua systeemist„.
+        <enter>:in painaminen vastaa Y:t„.
+
+        Y varmentaa, ett„ haluat poistua.
+
+        N palauttaa sinut komentoriville.
+
+        A antaa sinulle mahdollisuuden uuteen sis„„nkirjoittautumiseen
+        esimerkiksi jos kaverisi haluaa kirjoittautua sis„„n
+        tietokoneeltasi.
+
+        Linjan katkaiseminen ilman uloskirjoittautumista ei ole
+        suotavaa. SysOp n„kee sekoilusi, eik„ h„n pid„ siit„.
+@endnode
+
+@node GLOB_? "N„yt„ valikko"
+@{b}KOMENTO@{ub}
+        @{i}?@{ui}
+
+@{b}ESITTELY@{ub}
+        @{b}?@{ub} n„ytt„„ valikon melkein miss„ tahansa. Valikko sis„lt„„ l„hes
+        kaikki komennot, jotka ovat saatavilla ja lyhyen selityksen
+        komennoista.
+@endnode
+
+@node MAIN_MENU "P„„valikon komennot"
+@{b}ESITTELY@{ub}
+        P„„valikossa voit k„ytt„„ p„„valikon komentojen lis„ksi yleisi„
+        komentoja, joista useimmat siirt„v„t johonkin muuhun valikkoon.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{i}Komennot:@{ui}
+        @{"a     " link MAIN_A     } Vastaa kyselyyn
+        @{"ba    " link MAIN_BA    } Aikapankki
+        @{"br    " link MAIN_BR    } Etsi nodelistalta
+        @{"cal   " link MAIN_CAL   } Kalenteri
+        @{"fin   " link MAIN_FIN   } Finger-haku
+        @{"hunt  " link MAIN_HUNT  } Pelaa Hunttia
+        @{"i     " link MAIN_I     } Tietoa k„ytt„j„st„
+        @{"ja    " link MAIN_JA    } Jargon-haku
+        @{"op    " link MAIN_OP    } Avaa ovet
+        @{"rl    " link MAIN_RL    } Rlogin-yhteys
+        @{"s     " link MAIN_S     } Listaa k„ytt„j„t
+        @{"stat  " link MAIN_STAT  } Tilastoa k„ytt„jist„
+        @{"tel   " link MAIN_TEL   } Telnet-yhteys
+        @{"ver   " link MAIN_VER   } N„yt„ BBBS-versio
+
+        @{i}SysOp-komennot:@{ui}
+        @{"blog  " link MAIN_BLOG  } N„yt„ lokitiedosto takaperoisesti
+        @{"bshell" link MAIN_BSHELL} OS/2 k„ytt”j„rjestelm„n kehoite
+        @{"bstat " link MAIN_BSTAT } N„yt„ B-tilasto
+        @{"compu " link MAIN_COMPU } N„yt„ vapaa levytila
+        @{"dell  " link MAIN_DELL  } Tyhjenn„ lokitiedostoja
+        @{"dos   " link MAIN_DOS   } Aja k„ytt”j„rjestelm„ss„ komento
+        @{"ej    " link MAIN_EJ    } Potki k„ytt„j„ pihalle
+        @{"hide  " link MAIN_HIDE  } Piilota itsesi
+        @{"hippo " link MAIN_HIPPO } L„het„ Hippoviesti
+        @{"log   " link MAIN_LOG   } N„yt„ lokitiedostoja oikeinp„in
+        @{"mg    " link MAIN_MG    } Editori
+        @{"ou    " link MAIN_OU    } Postinhallinta
+        @{"reset " link MAIN_RESET } Nollaa perioditilasto
+        @{"shell " link MAIN_SHELL } K„ytt”j„rjestelm„kehote
+        @{"spy   " link MAIN_SPY   } Vakoile k„ytt„j„„
+        @{"ul    " link MAIN_UL    } Sis„„ntulo k„ytt„j„n„
+@endnode
+
+@node MAIN_A "Vastaa kyselyihin"
+@{b}KOMENTO@{ub}
+        [q] @{i}a@{ui} Vastaa kyselyyn
+
+@{b}ESITTELY@{ub}
+        @{b}A@{ub} k„ynnist„„ skriptin, jossa voi olla esimerkiksi
+        SysOpin asentamia lis„komentoja tai kysely.
+@endnode
+
+@node MAIN_BA "Aikapankki"
+@{b}KOMENTO@{ub}
+        [q] @{i}ba@{ui} aikapankki
+
+@{b}ESITTELY@{ub}
+        Komennolla @{b}ba@{ub} voit k„ytt„„ aikapankkia. Korko ei ole
+        sit„, mihin olet tottunut normaalissa pankissa, vaan se on
+        negatiivinen. Jos tallennat viisi minuuttia, tilille tallettuu
+        yksi minuutti. Tilille mahtuu 60 minuuttia. Talletussuhde 5:1
+        ja tilin kapasiteetti 60 min ovat normaaliarvoja, eri BBS-
+        j„rjestelmiss„ arvot voivat vaihdella. Luottoa ei anneta ;)
+
+        Pankki hyv„ksyy seuraavia komentoja:
+
+          @{i}S@{ui} Tallettaa aikaa pankkiin.
+          @{i}W@{ui} Nostaa aikaa pankista ja lis„„ sen k„ytt„j„aikaasi.
+          @{i}Q@{ui} Poistuu pankista. <enter> toimii samoin seurauksin.
+@endnode
+
+@node MAIN_BR "Etsi nodelistalta"
+@{b}KOMENTO@{ub}
+        [q] @{i}br@{ui} etsi nodelistalta
+
+@{b}ESITTELY@{ub}
+        T„ll„ komennolla voit etsi„ nodelistalta mit„ tahansa teksti„
+        tai nodenumeroa s„„nn”llist„ ilmaisua k„ytt„en.
+
+        Hakemuksen tulos ulostetaan n„yt”lle seuraavassa j„rjestyksess„:
+
+Nodenumero    Nimi                   Systeemioperaattori    Sijainti
+===============================================================================
+2:222/151     BCG-Box                Kim Heino              Turku
+
+@{b}KATSO MY™S@{ub}
+        @{"s„„nn”llinen ilmaus" link REGEXP}
+@endnode
+
+@node MAIN_CAL "Kalenteri"
+@{b}KOMENTO@{ub}
+        [q] @{i}cal@{ui} kalenteri
+
+@{b}ESITTELY@{ub}
+        @{b}CAL@{ub}-kalenteri laskee ja tulostaa kuukauden annetusta vuodesta,
+        p„iv„st„ ja kuukaudesta. P„iv„ on korostetttu.
+@endnode
+
+@node MAIN_CALL "Takaisinsoitto"
+@{b}KOMENTO@{ub}
+        @{i}callback@{ui}
+
+@{b}ESITTELY@{ub}
+        T„ll„ komennolla BBBS soittaa sinulle takaisin antamaasi puhelin-
+        numeroon. Jotta voisit k„ytt„„ takaisinsoittokomentoa, on tilill„si
+        oltava katetta.
+@endnode
+
+@node MAIN_FIN "Finger-haku"
+@{b}KOMENTO@{ub}
+        [q] @{i}fin@{ui}ger k„ytt„j„[@osoite]
+
+@{b}ESITTELY@{ub}
+        @{b}FIN@{ub} k„ynnist„„ Finger-haun, jolla etsit„„n k„ytt„j„„ TCP/IP
+        verkosta. Jos et anna koneen nime„, haetaan vain samasta
+        koneesta. Jos systemiss„ ei ole Finger Daemonia, voi haku kest„„
+        todella kauan.
+
+@{b}ESIMERKKI@{ub}
+        fin kimheino\@utu.fi
+@endnode
+
+@node MAIN_HUNT "Pelaa Hunttia"
+@{b}KOMENTO@{ub}
+        [q] @{i}hunt@{ui} [-m] <hunt-serveri>
+
+@{b}KUVAUS@{ub}
+        @{i}Hunt@{ui}-pelin tarkoitus on tappaa toiset pelaajat. Peliss„ ei ole
+        huoneita, aarteita tai hirvi”it„. Sensijaan kuljet ymp„riins„
+        sokkelossa, l”yd„t kranaatteja, laukaiset miinoja ja ammut
+        sein„ ja pelaajia. Mit„ enemm„n pelaajia tapat ennenkuin sinut
+        tapetaan, sit„ paremmat pisteet saat.
+
+@{b}KŽYTT™@{ub}
+        Sinun t„ytyy tiet„„ Hunt-serverin osoite. Jos sysopisi on
+        installoinut sellaisen, @{b}localhost@{ub} saattaisi olla hyv„
+        kokeilukohde. Jos annat hunt-komennolle @{i}-m@{ui}-vivun, menet peliin
+        katsojana; n„et kaikki tapahtumat, muttet voi pelata.
+
+ N„pp„in           Selitys                            Ammuksia / kesto
+ -------           -------                            ----------------
+ @{i}h@{ui}, @{i}vasen@{ui}          Liiku vasemmalle
+ @{i}j@{ui}, @{i}alas@{ui}           Liiku alas
+ @{i}k@{ui}, @{i}yl”s@{ui}           Liiku yl”s
+ @{i}l@{ui}, @{i}oikea@{ui}          Liiku oikealle
+ @{i}H@{ui}, @{i}home@{ui}           Katso vasemmalle
+ @{i}J@{ui}, @{i}end@{ui}            Katso alas
+ @{i}K@{ui}, @{i}page up@{ui}        Katso yl”s
+ @{i}L@{ui}, @{i}page down@{ui}      Katso oikealle
+ @{i}f@{ui}, @{i}1@{ui}, @{i}v„lily”nti@{ui}  Ammu                               1
+ @{i}g@{ui}, @{i}2@{ui}              Heit„ kranaatti                    9
+ @{i}F@{ui}, @{i}3@{ui}              Heit„ laukkupommi                  25
+ @{i}G@{ui}, @{i}4@{ui}              Heit„ pommi                        49
+ @{i}5@{ui}                 Heit„ iso pommi                    81
+ @{i}6@{ui}                 Heit„ isompi pommi                 121
+ @{i}7@{ui}                 Heit„ viel„ isompi pommi           169
+ @{i}8@{ui}                 Heit„ siit„kin isompi pommi        225
+ @{i}9@{ui}                 Heit„ tosi iso pommi               289
+ @{i}0@{ui}                 Heit„ tosi, tosi iso pommi         361
+ @{i}@@{ui}                 Heit„ isoin pommi                  441
+ @{i}o@{ui}                 Heit„ pieni lima                   15
+ @{i}O@{ui}                 Heit„ iso lima                     30
+ @{i}p@{ui}                 Heit„ isompi lima                  45
+ @{i}P@{ui}                 Heit„ isoin lima                   60
+ @{i}s@{ui}                 Skannaa (n„yt„ muut pelaajat)      1/20 * pelaajien lkm
+ @{i}c@{ui}                 Verhoudu (piiloudu skannerilta)    1/20 siirtoa
+ @{i}q@{ui}                 Lopeta peli
+
+        Ruudulla n„kyv„t merkit ovat:
+
+        @{i}-|+@{ui}        sein„
+        @{i}/\\@{ui}         diagonaalinen sein„
+        @{i}#@{ui}          ovi
+        @{i};@{ui}          pieni miina
+        @{i}g@{ui}          iso miina
+        @{i}:@{ui}          ammus
+        @{i}o@{ui}          kranaatti
+        @{i}O@{ui}          laukkupommi
+        @{i}@@{ui}          pommi
+        @{i}?@{ui}          vaeltava limapommi
+        @{i}s@{ui}          pieni lima
+        @{i}$@{ui}          iso lima
+        @{i}~@{ui}          tulivuorenpurkaus
+        @{i}b@{ui}          saapas
+        @{i}p@{ui}          saapaspari
+        @{i}><^v@{ui}       sin„ katsoen oikealle, vasemmalle, yl”s ja alas
+        @{i}}{!i@{ui}       muu pelaaja katsoen oikealle, vasemmalle, yl”s ja alas
+        @{i}*@{ui}          r„j„hdys
+        @{i}\\|/@{ui}
+        @{i}-*-@{ui}        kranaatin tai suuren miinan r„j„hdys
+        @{i}/|\\@{ui}
+
+        Aloitat pelin lent„m„ll„ sokkeloon. Kun lenn„t, muut pelaajat
+        n„kev„t sinut, vaikket skannaisikaan. Pelin alussa olet hetken
+        verhoutunut. Verhoutuminen est„„ vain muita pelaajia n„kem„st„
+        sinua skannereissaan, he voivat silti n„hd„ sinut silm„st„
+        silm„„n. Et voi yhtaikaa olla verhoutunut ja k„ytt„„ skanneria.
+        Ammut vain siihen suuntaan, johon katsot.
+
+@{b}HUOMAUTUS@{ub}
+        Kun kuolet, muut pelaajat jatkavat pelaamista. Kun menet peliin
+        uudestaan, se jatkuu samassa sokkelossa ja pisteit„ s„„det„„n
+        tappajan hyv„ksi ja sinun tappioksesi, joten ei ole hy”ty„
+        odottaa muiden pelaajien l„htemist„ kun kuolet.
+
+@{b}VAROITUS@{ub}
+        @{i}Hunt@{ui} saattaa olla vaarallinen terveydellesi. "K„sikipua",
+        "t”nkk”sormisuutta" ja "huonoa verenkiertoa" sormissa on
+        tavattu paljon Huntin v„„rink„ytt„jien keskuudessa. @{i}Hunt@{ui} on
+        my”s hyvin addiktiivinen ja vieroitusoireet ovat hyvin
+        vaikeita.
+
+@{b}ESIMERKKI@{ub}
+        hunt localhost
+        hunt -m bcave.bbbs.net
+@endnode
+
+@node MAIN_I "Tietoa k„ytt„j„st„"
+@{b}KOMENTO@{ub}
+        [q] @{i}i@{ui} tietoa
+
+@{b}ESITTELY@{ub}
+        @{b}i@{ub} ja k„ytt„j„nimi sen per„ss„ tulostaa k„ytt„j„n tiedot jotka
+        h„n on kirjoittanut itsest„„n komennolla @{b}u res@{ub}. @{b}q i sysop@{ub}
+        n„ytt„„ SysOpin itsest„„n antamat tiedot. Jos sinulla on jotain
+        valmiiksi kirjoitettuna tekstimuotoon, voit l„hett„„ sen
+        tekstil„hetyksen„ editoriin. Lis„„ tietoa tekstil„heyksest„ saat
+        p„„teohjelmasi ohjekirjasta.
+@endnode
+
+@node MAIN_JA "Jargon-haku"
+@{b}KOMENTO@{ub}
+        [q] @{i}ja@{ui}
+
+@{b}ESITTELY@{ub}
+        Etsii jargon-tiedostosta annettua sanaa. Hakkerislangi sanakirja
+        on noin 1MT purettuna ja BBBS tutkii sen kokonaan. Toimenpide
+        voi kest„„ jonkin aikaa.
+
+@{b}ESIMERKKI@{ub}
+        q ja foobar
+@endnode
+
+@node MAIN_OP "Avaa ovi ulkoiseen ohjelmaan"
+@{b}KOMENTO@{ub}
+        [q] @{i}op@{ui} <oven_numero>
+
+@{b}ESITTELY@{ub}
+        OP avaa oven, ulkoisen ohjelman, joka on m„„ritelty BBS:„„n.
+
+@{b}ESIMERKKI@{ub}
+        op 5
+@endnode
+
+@node MAIN_RL "Rlogin-yhteys"
+@{b}KOMENTO@{ub}
+        [q] @{i}rl@{ui}ogin <osoite|IP-osoite>
+
+@{b}ESITTELY@{ub}
+        RL avaa rlogin-yhteyden toiseen koneeseen TCP/IP-verkon l„pi.
+
+@{b}ESIMERKKI@{ub}
+        rl avalon.icon.fi
+@endnode
+
+@node MAIN_S "Listaa k„ytt„j„t"
+@{b}KOMENTO@{ub}
+        [q] @{i}s@{ui}
+
+@{b}ESITTELY@{ub}
+        List„„ j„rjestelm„„n rekister”ityneet k„ytt„j„t. Komennolla
+        S <enter> <enter> saat listan kaikista systeemin k„ytt„jist„.
+        Komennolla S HACKER saat listan kaikista k„ytt„jist„, joiden
+        nimest„ l”ytyy merkkijono 'HACKER'. Komento j„tt„„ kirjainkoon
+        huomioimatta.
+
+        Jos annat komennon S <enter> E T, et saa listaa k„ytt„jist„ joiden
+        ensimm„inen nimi alkaa E-kirjaimella ja viimeinen nimi
+        T-kirjaimella, vaan saat sen sijaan listan k„ytt„jist„ joiden nimi
+        ensimm„inen nimi loppuu E-kirjaimeen ja sukunimi p„„ttyy
+        T-kirjaimeen. Enemm„n tietoa hauissa k„ytett„vist„ merkkijonoista
+        l”ytyy kohdasta @{"s„„nn”llinen ilmaus" link REGEXP}.
+@endnode
+
+@node MAIN_STAT "Tilastoa k„ytt„jist„"
+@{b}KOMENTO@{ub}
+        [q] @{i}stat@{ui} tilastoa
+
+@{b}ESITTELY@{ub}
+        STAT tulostaa henkil”kohtaisen systeemi tilastoja. Mik„
+        on k„ytt„j„numerosi, kuinka monta kertaa olet k„ynyt, koska
+        k„vit viimeksi, montako tiedostoa olet l„hett„nyt/hakenut.
+
+        Saat my”s jonkin ajan tilaston antamalla haluamasi kerrat
+        lukuarvona. T„t„ tilastoa kutsutaan my”s HuippuKymppi tilastoksi
+        vaikka voitkin listata jopa 60 parasta tilaa. Lista sis„lt„„
+        seuraavia tietoja:
+         - Sis„„nkirjoittautumisten lukum„„r„
+         - Kirjoitettujen viestien m„„r„
+         - L„hetettyjen tiedostojen m„„r„
+         - Haettujen tiedostojen lukum„„r„
+@endnode
+
+@node MAIN_TEL "Telnet"
+@{b}KOMENTO@{ub}
+        [q] @{i}tel@{ui}net [-8|-7] <osoite|IP-osoite> [portti]
+
+@{b}ESITTELY@{ub}
+        TEL avaa vakion telnet-protokolla p„„teyhteyden toiseen
+        j„rjestelm„„n TCP/IP-verkon l„pi. Oletuksena on 7-bittinen
+        yhteys (parametri -7) Jos tarvitset 8-bittist„ telnet-yhteytt„,
+        k„yt„ komentoriviparametri„ -8. Tarvitset 8-bittist„ telnet
+        yhteytt„ esimerkiksi tiedostojen siirtoa varten. Telnetin
+        pakomerkki voidaan poistaa k„yt”st„ paramterill„ -e ja vaihtaa
+        merkiksi #xx paramterill„ -exx. -e66 asettaa pakomerkiksi 'B'
+        Telnet tarvitsee komentoriviparametrikseen haluamasi
+        j„rjestelm„n osoitteen. Osoitteen j„lkeen voit laittaa viel„
+        porttinumeron tarvittaessa. Oletusportti on 23. Jos
+        nimipalvelin ei jostain syyst„ toimi, voit k„ytt„„ my”s
+        IP-osoitetta.
+
+@{b}ESIMERKKI@{ub}
+        tel -8 avalon.icon.fi
+@endnode
+
+@node MAIN_VER "Versio"
+@{b}KOMENTO@{ub}
+        [q] @{i}ver@{ui}
+
+@{b}ESITTELY@{ub}
+        VER n„ytt„„ mill„ BBBS:n versiolla systeemi py”rii parhaillaan.
+        My”s BBBS:n tekij„noikeustiedot tulostuvat.
+@endnode
+
+@node MAIN_BLOG "Lokitiedosto takaperoisesti"
+@{b}KOMENTO@{ub}
+        [q] @{i}blog@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ lokitiedostoa takaperoisessa aikaj„rjestyksess„.
+
+@{b}KATSO MY™S@{ub}
+        @{"log " link MAIN_LOG}
+        @{"dell" link MAIN_DELL}
+@endnode
+
+@node MAIN_BSTAT "N„yt„ B-tilasto"
+@{b}KOMENTO@{ub}
+        [q] @{i}bstat@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ ajank„ytt”, sis„„nkirjoittautumis- ja kirjoitettujen
+        viestien tilastot.
+@endnode
+
+@node MAIN_COMPU "N„yt„ vapaa levytila"
+@{b}KOMENTO@{ub}
+        [q] @{i}compu@{ui}
+
+@{b}ESITTELY@{ub}
+        Komento n„ytt„„ vapaan levytilan.
+@endnode
+
+@node MAIN_DELL "Tyhjenn„ lokitiedosto"
+@{b}KOMENTO@{ub}
+        [q] @{i}dell@{ui}
+
+@{b}ESITTELY@{ub}
+        Tyhjent„„ lokitiedoston. Jos systeemiss„ on useita nodeja,
+        t„ytyy komennolle antaa parametrin„ nodenumero, jonka
+        lokitiedoston haluat poistaa. Kaikkien nodejen lokit on my”s
+        mahdollista laittaa yhteen tiedostoon. T„ll”in lokin numero on
+        todenn„k”isesti 1.
+
+@{b}KATSO MY™S@{ub}
+        @{"log " link MAIN_LOG}
+        @{"blog" link MAIN_BLOG}
+@endnode
+
+@node MAIN_DOS "Aja k„ytt”j„rjestelm„ss„ komento"
+@{b}KOMENTO@{ub}
+        [q] @{i}dos@{ui}
+
+@{b}ESITTELY@{ub}
+        Antaa sinun ajaa komennon k„ytt”j„rjestelm„kehotteessa BBBS:st„
+        k„sin.
+@endnode
+
+@node MAIN_EJ "Potki k„ytt„j„ pihalle"
+@{b}KOMENTO@{ub}
+        [q] @{i}ej@{ui}
+
+@{b}ESITTELY@{ub}
+        EJ mahdollistaa toisella nodella olevan k„ytt„j„n potkaisemisen
+        pois linjalta. EJ tarvitsee parametrikseen nodenumeron.
+@endnode
+
+@node MAIN_HIDE "Piiloita itsesi"
+@{b}KOMENTO@{ub}
+        [q] @{i}hide@{ui}
+
+@{b}ESITTELY@{ub}
+        HIDE saa sinut n„kym„„n W-komennon antamassa listassa aivan kuin
+        olisit poistunut linjalta. Voit palauttaa tilanteen komennolla
+        @{"chat a" link CHAT_A}.
+@endnode
+
+@node MAIN_HIPPO "L„het„ Hippoviesti"
+@{b}KOMENTO@{ub}
+        [q] @{i}hippo@{ui}
+
+@{b}ESITTELY@{ub}
+        L„hett„„ Hippoviestin. T„ll„ komennolla voit l„hett„„
+        nodeviestin haluamallesi k„ytt„j„lle n kertaa. Kun k„ytt„j„
+        kirjoittautuu sis„„n seuraavat n kertaa, vastaanottaa h„n
+        Hippoviestin.
+@endnode
+
+@node MAIN_LOG "N„yt„ lokitiedostoja"
+@{b}KOMENTO@{ub}
+        [q] @{i}log@{ui}
+
+@{b}ESITTELY@{ub}
+        Komento n„ytt„„ lokitiedostoa aikaj„rjestyksess„ vanhimmasta
+        p„„st„ uusimpaan. Jos systeemiss„ on useita nodeja, t„ytyy LOG
+        komennolle antaa parametrin„ nodenumero.
+
+@{b}KATSO MY™S@{ub}
+        @{"blog" link MAIN_BLOG}
+        @{"dell" link MAIN_DELL}
+@endnode
+
+@node MAIN_OU "Postinhallinta"
+@{b}KOMENTO@{ub}
+        [q] @{i}ou@{ui}
+
+@{b}ESITTELY@{ub}
+        Postinhallinnalla ohjataan ulosp„in l„hd”ss„ olevaa postia.
+
+        Kun tulet postinhallintaruutuun, saat listan ulosl„htev„st„
+        postista. Lista on seuraavanlainen:
+
+Nodenumber         Age Flags     Bad Busy ArcMail Files
+------------------ --- --------- --- ---- ------- -------
+2:222/222.0          0 IC RFDE     0    0    45kB  1994kB
+2:220/666.0          0   H FDE     0   12     3kB    10kB
+
+        Age kertoo kuinka vanhaa on vanhin ulos l„hd”ss„ oleva
+        postiviesti ja samalla kertoo kuinka kauan on noden edellisest„
+        yhteydenotosta.
+
+        @{i}Liput ovat:
+
+        @{i}I@{ui}mmidiate (V„lit”n)
+        @{i}C@{ui}rash (Rys„ys)
+        @{i}H@{ui}old (Pito)
+        File @{i}R@{ui}equest (Tiedostopyynt”)
+        @{i}F@{ui}ile attach (Tiedosto mukaan)
+        @{i}D@{ui}irect (suoraan)
+        @{i}E@{ui}rase file when sent (Poita l„hetetty tiedosto)
+
+        @{i}Bad@{ui} kertoo ep„onnistuneiden viestiyhteyksien lukum„„n.
+        Voit rajoittaa suurinta sallittua lukum„„r„„ BCFG4:ll„.
+
+        @{i}Busy@{ui} kertoo varattujen soittojen lukum„„r„n. Varattujen
+        lukum„„r„ tyhjennet„„n joka y”.
+
+        @{i}ArcMail@{ui} kertoo ulosl„htevien viestipakettien kokojen summan.
+
+        @{i}Files@{ui} kertoo l„htevien tiedostojen yhteenlasketun kokojen
+        summan.
+
+@{b}SUBTOPICS@{ub}
+        @{"b    " link OUTB_B } Muuta varattunen soittojen lukum„„r„„
+        @{"ba   " link OUTB_BA} Vaihda ep„onnistuneiden yhteyksien m„„r„„
+        @{"c    " link OUTB_C } Luo viesti
+        @{"ch   " link OUTB_CH} Muuta viesti„ numero/kaikkia viestej„ nodelle
+        @{"cl   " link OUTB_CL} Puhdista tick-hakemisto ja attach-viestit
+        @{"d    " link OUTB_D } Poista viesti
+        @{"l    " link OUTB_L } Listaa Nodet/viestej„
+        @{"q    " link OUTB_Q } Palaa p„„valikkoon
+
+@{b}KATSO MY™S@{ub}
+        [r] @{"fm" link READ_FM}
+        [r] @{"unfm" link READ_UNFM}
+@endnode
+
+@node OUTB_B "Muuta varattunen soittojen lukum„„r„„"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}b@{ui}
+
+@{b}ESITTELY@{ub}
+        B-komennolla voit asettaa nodekohtaisesti varattujen soittojen
+        lukum„„r„n.
+
+@{b}ESIMERKKI@{ub}
+        Seuraava komento asettaa varatut soitot nodelle 2:222/222
+        kymmeneen.
+
+        b 2:222/222 10
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"ba" link OUTB_BA}
+@endnode
+
+@node OUTB_BA "Vaihda ep„onnistuneiden yhteyksien m„„r„„"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}ba@{ui}
+
+@{b}ESITTELY@{ub}
+        BA komentoa k„ytet„„n asettamaan/tyhjent„m„„n ep„onnistujen
+        soittojen laskuria. BA komennolla voit paitsi tyhjent„„ my”s
+        est„„ pollin nodeen luomalla maksimim„„r„n ep„onnistuneita!
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"b" link OUTB_B}
+@endnode
+
+@node OUTB_C "Luo viesti"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}c@{ui}
+
+@{b}ESITTELY@{ub}
+        C komennolla voit luoda viestin nodelle.
+
+@{b}SEMANTIIKKA@{ub}
+        c [node#] +Immediate +Crash +Hold +Request +File +Direct +Erase
+        +Trunc +Lock Viestin_otsikko
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"ch" link OUTB_CH}
+        [q ou] @{"d" link OUTB_D}
+@endnode
+
+@node OUTB_CH "Muuta viesti„ numero/kaikkia viestej„ nodelle"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}ch@{ui}
+
+@{b}ESITTELY@{ub}
+        CH-komennolla voit vaihtaa viestin otsikkoa tai lippuja
+        viestille tai kaikille nodelle meneville viesteille.
+
+@{b}SEMANTIIKKA@{ub}
+        ch [viesti#|node#] {Uusi_kohde_Node#} {+|-}Immediate {+|-}Crash
+        {+|-}Hold {+|-}Request {+|-}File {+|-}Direct {+|-}Erase
+        {+|-}Trunc {+|-}Lock {Uusi_otsikko}
+
+@{b}ESIMERKKI@{ub}
+
+        ch 2:222/151 2:222/222 +c +i
+
+        Ohjaa viestit 2:222/151:lle 2:222/222:n kautta ja lis„„ Crash ja
+        Immidiate liput.
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"c" link OUTB_C}
+        [q ou] @{"d" link OUTB_D}
+@endnode
+
+@node OUTB_CL "Puhdista tick-hakemisto ja attach-viestit"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}cl@{ui}
+
+@{b}ESITTELY@{ub}
+        CL puhdistaa tick hakemiston ja viestihakemiston. Tick-tiedostot
+        joille ei ole attach viesti„, ja attach viestit joiden tiedostoa
+        ei en„„ ole, poistetaan.
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"d" link OUTB_D}
+@endnode
+
+@node OUTB_D "Poista viesti"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}d@{ui}
+
+@{b}ESITTELY@{ub}
+        D-komentoa k„ytet„„n viestien poistamiseen.
+
+@{b}SEMANTIIKKA@{ub}
+        D [message#]
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"l" link OUTB_L}
+@endnode
+
+@node OUTB_L "Listaa Nodet/viestej„"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}l@{ui}
+
+@{b}ESITTELY@{ub}
+        L-komennolla voit listata kaikille linkeillesi l„hd”ss„ olevat
+        postit tai yhdelle nodelle l„hd”ss„ olevat.
+
+@{b}SEMANTIIKKA@{ub}
+        L {node#}
+
+@{b}ESIMERKKI@{ub}
+
+(17:22) outb:/NEWS> l 2:222/222
+
+Nodenumber         Age Flags     Bad Busy ArcMail Files
+------------------ --- --------- --- ---- ------- -------
+2:222/222.0          0  C  FDE     0   25     3kB    10kB
+
+Number Age Flags     Type Size   Subject
+------ --- --------- ---- ------ --------------------------------
+9161     0     FDE   ArcM    3kB c:\\bbs\\outbound\\85100805.su1
+9165     0     FD    File    9kB c:\\pub\\os2\\info\\foo.bar
+9166     0     FDE   File    1kB c:\\bbs\\ticks\\bb18b190.tic
+9184     0  C        Mail    0kB HUU HAA!
+
+(17:23) outb:/NEWS>
+
+@{b}KATSO MY™S@{ub}
+        [q ou] @{"ch" link OUTB_CH}
+        [q ou] @{"d" link OUTB_D}
+@endnode
+
+@node OUTB_Q "Palaa p„„valikkoon"
+@{b}KOMENTO@{ub}
+        [q ou] @{i}q@{ui}
+
+@{b}ESITTELY@{ub}
+        Q palaa takaisin p„„valikkoon postinhallinnasta
+@endnode
+
+@node MAIN_RESET "Nollaa perioditilasto"
+@{b}KOMENTO@{ub}
+        [q] @{i}reset@{ui}
+
+@{b}ESITTELY@{ub}
+        Komento nollaa perioditilaston uutta ajanjaksoa varten. T„m„
+        komento koskee tilastoa jonka saat p„„valikon @{"stat" link MAIN_STAT}-
+        komennolla.
+@endnode
+
+@node MAIN_SHELL "K„ytt”j„rjestelm„kehote"
+@{b}KOMENTO@{ub}
+        [q] @{i}shell@{ui}
+
+@{b}ESITTELY@{ub}
+        SHELL johdattaa sinut k„ytt”j„rjestelm„kehotteeseen ajamalla
+        SHELLx -skriptin (skriptin p„„te riippuu k„ytt„m„st„si
+        k„ytt”j„rjestelm„st„).
+
+@{b}KATSO MY™S@{ub}
+        [q] @{"bshell" link MAIN_BSHELL}
+        [q] @{"dos" link MAIN_DOS}
+@endnode
+
+@node MAIN_BSHELL "OS/2 kehoite"
+@{b}KOMENTO@{ub}
+        [q] @{i}bshell@{ui}
+
+@{b}ESITTELY@{ub}
+        BSHELL komennolla p„„set BBBS/2:ssa k„ytt”j„rjestelm„
+        kehoitteeseen joka on toteutettu BBBS:ss„ sis„isill„
+        uudelleenohjausrutiineilla.
+
+@{b}KATSO MY™S@{ub}
+        [q] @{"shell" link MAIN_SHELL}
+        [q] @{"dos" link MAIN_DOS}
+@endnode
+
+@node MAIN_MG "editori"
+@{b}COMMAND@{ub}
+        [q] @{i}mg@{ui} [filename]
+
+@{b}ESITTELY@{ub}
+        Tekstitiedostojen muokkaus MG-editorilla.
+
+@{b}KATSO MY™S@{ub}
+        @{"mg" link EDITOR_MG}
+@endnode
+
+@node MAIN_SPY "Vakoile k„ytt„j„„"
+@{b}KOMENTO@{ub}
+        [q] @{i}spy@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ komennot, joita k„ytt„j„ antaa. Komennot tulevat
+        n„kyville nodeviestein„.
+
+@{b}VALITSIMIA@{ub}
+        @{i}-d@{ui} Lopeta vakoilu
+@endnode
+
+@node MAIN_UL "Sis„„ntulo k„ytt„j„n„"
+@{b}KOMENTO@{ub}
+        [q] @{i}ul@{ui}
+
+@{b}ESITTELY@{ub}
+        P„„set systeemiin k„ytt„j„n„ ilman ett„ tarvitset k„ytt„j„n
+        salasanaa.
+@endnode
+
+@node READ "Lukuvalikko"
+@{b}ESITTELY@{ub}
+        Lukuvalikossa voit k„ytt„„ kaikkia yleisi„ komentoja tai
+        lukukomentoja. Lukukomennot ovat viestien lukua, kirjoittamista
+        ja vastaamista varten.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{i}Lukukomennot:@{ui}
+        @{"-     " link READ_-      } Edellinen viesti
+        @{"+     " link READ_+      } Seuraava viesti
+        @{".     " link READ_.      } N„yt„ sama viesti uudestaan
+        @{"<     " link READ_<      } N„yt„ ketjun edellinen viesti
+        @{">     " link READ_>      } N„yt„ vastaus
+        @{"=     " link READ_=      } Seuraava vastaus
+        @{"numero" link READ_NUMBER } Lue viesti numeroltaan
+        @{"ne    " link READ_NE     } Siirry seuraavalle viestialueelle
+        @{"o     " link READ_O      } N„yt„ alkuper„inen
+        @{"p     " link READ_P      } Edellinen luettu viesti
+
+        @{i}kirjoittaminen:@{ui}
+        @{"dup   " link READ_DUP    } Tuplaa (kirjoita uudestaan) viesti
+        @{"enter " link READ_ENTER  } Paina <@{i}enter@{ui}> lukeaksesi seuraavan viestin
+        @{"pre   " link READ_PRE    } Yksityinen vastaus
+        @{"re    " link READ_RE     } Vastaa viestiin
+
+        @{i}et„lukukomennot:@{ui}
+        @{"d     " link READ_D      } Lis„„ viesti viestipakettiin
+        @{"md    " link GLOB_MD     } Ker„„ ja noutaa viestipaketti
+        @{"mu    " link GLOB_MU     } L„het„ viestipaketti
+        @{"se    " link READ_SE     } Pakkaa ja noutaa viestit
+
+        @{i}tietoa:@{ui}
+        @{"ai    " link READ_AI     } Alueen tiedot
+        @{"i     " link READ_I      } Viestin kirjoittajan tiedot
+        @{"sh    " link READ_SH     } N„yt„ viestialuetilanne
+        @{"v     " link READ_V      } Listaa alueen viestit
+
+        @{i}muut komennot:@{ui}
+        @{"k     " link READ_K      } Poista viesti
+        @{"m     " link READ_M      } Merkitse viestej„ eri tavoin
+        @{"mc    " link READ_MC     } Viestin kopiointi
+        @{"mode  " link READ_MODE   } Vaihda viestienlukutapa
+        @{"move  " link READ_MOV    } Siirr„ viesti toiselle alueelle
+        @{"rec   " link READ_REC    } Palauta poistettu viesti
+        @{"res   " link READ_RES    } Eroa viestialueelta
+        @{"s     " link READ_S      } Hakukomennot
+
+        @{i}SysOp-komennot:@{ui}
+        @{"fix   " link READ_FIX    } Korjaa esittelyviestiviittaukset
+        @{"fm    " link READ_FM     } Merkitse l„hetetyksi
+        @{"unfm  " link READ_UNFM   } Merkitse uudeksi
+        @{"user  " link READ_USER   } K„ytt„j„editori
+        @{"zap   " link READ_Z      } Vaihda viestin l„hett„j„„/vastaanottajaa
+@endnode
+
+@node READ_ENTER "paina <enter> lukeaksesi viestej„"
+@{b}KOMENTO@{ub}
+        [r] @{i}<enter>@{ui}
+
+@{b}ESITTELY@{ub}
+        Painamalla <enter> BBS n„ytt„„ seuraavan lukemattoman viestin
+        viestialueilta joihin olet liittynyt. Jos viimeksi lukemasi
+        viesti oli alueen viimeinen, siirryt seuraavalle viestialueelle.
+        Viestit luetaan komennolla @{"R MODE" link READ_MODE} valitussa j„rjestyksess„.
+@endnode
+
+@node READ_NUMBER "<#> lue viesti jonka numero on #"
+@{b}KOMENTO@{ub}
+        [r] @{i}<numero>@{ui}
+
+@{b}ESITTELY@{ub}
+        Antamalla pelk„n numeron ilman komentoja n„ytt„„ viestin jonka
+        numeron annoit alueelta jolla olet parhaillaan. Jos antamallasi
+        numerolla varustettua viesti„ ei l”ydy, saat virheilmoituksen.
+@endnode
+
+@node READ_NE "Seuraava alue"
+@{b}KOMENTO@{ub}
+        @{i}ne@{ui} seuraava alue [++ | /--]
+
+@{b}ESITTELY@{ub}
+        NE-komennolla siirryt seuraavalle alueelle jonka j„senen„ olet.
+        Komento ilman parametrej„ vie seuraavalle alueelle jossa sinulla
+        on yh„ lukemattomia viestej„.
+
+        ++ valitsin siirt„„ seuraavalle alueelle jolla olet j„senen„.
+        Aluella ei tarvitse olla lukemattomia veistj„.
+
+        -- valitsin siirt„„ edelliselle alueelle jonka j„senen„ olet.
+        Alueella ei tarvitse olla lukemattomia viestej„.
+
+@{b}ESIMERKKI@{ub}
+        ne
+        ++
+        --
+
+@{b}KATSO MY™S@{ub}
+        @{"yleis/liity" link GLOB_J}
+@endnode
+
+@node READ_P "Edellinen - juuri luettu"
+@{b}KOMENTO@{ub}
+        [r] @{i}p@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ viestin, jonka luit toiseksi viimeiseksi. K„ytt„m„ll„
+        t„t„ komentoa kahdesti p„„set viestiin jonka luit ennen
+        ensimm„ist„ P komentoa.
+@endnode
+
+@node READ_RE "RE vastaa viestiin"
+@{b}KOMENTO@{ub}
+        [r] @{i}re@{ui} vastaa
+
+@{b}ESITTELY@{ub}
+        Antaa mahdollisuuden kirjoitta vastaus viestiin jonka juuri
+        luit.
+@endnode
+
+@node READ_PRE "PRE yksityinen vastaus"
+@{b}KOMENTO@{ub}
+        [r] @{i}pre@{ui}
+
+@{b}ESITTELY@{ub}
+        K„yt„ PRE komentoa, jos haluat vastata johonkin viestiin
+        yksityisesti Jos alkuper„inen viesti oli kaikupostialueella,
+        vastaus kirjoitetaan verkkopostina. Osoite otetaan origin
+        rivilt„. Jos alkuper„inen viesti oli paikallisella alueella,
+        vastaus kirjoitetaan yksityisviestialueelle.
+@endnode
+
+@node READ_K "Poista viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}k@{ui} poista
+
+@{b}ESITTELY@{ub}
+        Poistaa viestin, jonka olet kirjoittanut. Et voi poistaa muiden
+        kirjoittamia viestej„. Viesti on yh„ levyll„ kunnes SysOp pakkaa
+        viestialueet. Voit k„ytt„„ t„t„ esimerkiksi jos viesti ei ole
+        en„„ ajankohtainen. Jos vahingossa poistat viestin, voit
+        palauttaa sen @{"REC" link READ_REC} komennolla.
+@endnode
+
+@node READ_REC "Palauta poistettu viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}rec@{ui} palauta
+
+@{b}ESITTELY@{ub}
+        Palauttaa viestin jonka olet vahingossa poistanut tai haluat
+        muuten palauttaa.
+@endnode
+
+@node READ_- "Edellinen viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}-@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ edellisen viestin alueella jota parhaillaan luet. T„m„
+        tarkoittaa yht„ pienemm„ll„ numerolla varustettua viesti„. Jos
+        edellien viesti on poistettu, n„ytet„„n edellinen 'aktiivinen'
+        viesti.
+@endnode
+
+@node READ_+ "Seuraava viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}+@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ seuraavan viestin alueelal jota parhaillaan olet
+        lukemassa. TArkoittaa viesti„ jonka numero on yht„ suurempi
+        kuin edellisen lukemasi viesttin numero. Jos seuraava viesti
+        on poistettu, n„ytet„„n seuraava 'aktiivinen' viesti.
+@endnode
+
+@node READ_M "Merkitse viestej„ eri tavoin"
+@{b}KOMENTO@{ub}
+        [r] @{i}m@{ui}erkitse
+
+@{b}ESITTELY@{ub}
+        Antaa mahdollisuuden olla lukematta joitain viestej„. Voit
+        merkit„ viestej„ monella eri tavalla kuten j„ljenp„n„
+        selostetaan.
+
+        Huomaa ett„ 'Merkit„' tarkoittaa  viestien merkitsemist„
+        lukemattomiksi ja merkinn„n poistaminen tarkoittaa ett„ viesti
+        on luettu. T„m„ johtuu siit„ ett„ yleens„ merkitseti jo luettuja
+        viestej„ uudelleen luettavaksi.
+
+        @{i}m .@{ub}      Merkitsee juuri luetun viestin.
+        @{i}m #@{ub}      Merkitsee viestin annetulla numerolla. (esim. M 680)
+        @{i}m a@{ub}      Merkitsee jonkin kirjoittajan kirjoittamat viestit.
+        @{i}m d@{ub}      Merkitsee annetun p„iv„n j„lkeen kirjoitetut viestit.
+        @{i}m f@{ub}      Siirt„„ sinulle osoitetut viestit jonon alkuun. K„yt„
+                 t„t„ jos haluat lukea omat viestisi ensimm„iseksi.
+        @{i}m g@{ub}      Merkitse viestiryhm„ numeron perusteella (n:st„ nn:„„n).
+        @{i}m n@{ub}      N„ytt„„ merkittyjen (lukemattomien) viestien m„„r„n
+                 alueella.
+        @{i}m o@{ub}      Merkitsee kirjoittamasi viestit. Eli vain viestit
+                 sinulle/sinulta merkit„„n luettaviksi.
+        @{i}m p@{ub}      Etsii ja merkitsee kaikki viestit sinulle/sinulta. Voit
+                 antaa viestinumerot, joiden v„list„ etsit„„n
+                 (n:st„ nn:„„n).
+        @{i}m r@{ub}      Poista kaikki merkit alueelta. Merkitsee siis kaikki
+                 viestit alueella luetuiksi.
+        @{i}m rec@{ub}    Merkitsee kaikki viestit joiden vastaanottajan annat.
+        @{i}m s@{ub}      Merkitsee kaikki viestit annetun numeron j„lkeen
+                 luetuiksi.
+        @{i}m s -xx@{ub}  Siirt„„ viestiosoittimen xx viesti„ takaisinp„in.
+        @{i}m t@{ub}      Merkitse kaikki viestit jotka ovat vastauksia
+                 viesteihin jotka juuri luit.
+        @{i}m z@{ub}      Poistaa kaikki merkit viesteist„, jotka on kirjoittanut
+                 edellisen lukemasi viestin kirjoittaja.
+        @{i}m gd@{ub}     Merkitse annetun p„iv„m„„r„n j„lkeen kirjoitetut viesti
+                 kaikilta alueilta.
+        @{i}m gre@{ub}    Poistaa kaikki merkinn„t kaikista viesteist„ kaikilta
+                 alueilta.
+        @{i}m u@{ub}      Poistaa kaikki merkinn„t viesteist„ jotka ovat
+                 vastineita juuri lukemiisi viesteihin.
+
+        @{i}q@{ub} ja @{b}<enter>@{ub} johdattavat sinut takaisin lukuvalikkoon.
+@endnode
+
+@node READ_. "Sama viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}.@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ juuri lukemasi viestin uudestaan. T„m„ on hy”dyllinen
+        komento erikoisesti jos viesti„ lukiessasi tulee paljon
+        linjaroskaa tai jos viesti oli eritt„in pitk„ ja haluat n„hd„
+        sen uudestaan alusta.
+@endnode
+
+@node READ_SH "N„yt„ alueiden tila"
+@{b}KOMENTO@{ub}
+        [r] @{i}sh@{ui} n„yt„
+
+@{b}ESITTELY@{ub}
+        Tulostaa viestialueryhmien tilanteet. Oletusryhm„t selitet„„n
+        seuraavassa.
+
+        @{i}sh@{ui}      N„ytt„„ alueiden joiden j„sen olet tilanteen.
+        @{i}sh -a@{ui}   N„ytt„„ kaikkien alueiden tilanteen.
+        @{i}sh -s@{ui}   N„ytt„„ lukemattomat viestit alueilla, samalla tavalla
+                kuin sis„„nkirjoittautuessa.
+@endnode
+
+@node READ_< "N„yt„ ketjun edellinen viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}<@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ viestin johon parhaillaan lukemasi viesti oli vastaus,
+        jos se oli vastaus viestiin.
+@endnode
+
+@node READ_> "n„yt„ vastaus"
+@{b}KOMENTO@{ub}
+        [r] @{i}>@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ ensimm„isen vastauksen viestiin, jonka olet juuri
+        lukenut. Jos sille nyt on vastauksia.
+@endnode
+
+@node READ_= "seuraava vastaus"
+@{b}KOMENTO@{ub}
+        [r] @{i}=@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ seuraavan vastauksen viestiin, johon juuri lukemasi
+        viesti oli vastaus.
+@endnode
+
+@node READ_V "Listaa alueen viestit"
+@{b}KOMENTO@{ub}
+        [r] @{i}v@{ub} listaa
+
+@{b}ESITTELY@{ub}
+        Mahdollistaa alueen viestien listaamisen jos et halua lukea
+        niit„ kaikkia. Komento n„ytt„„ viestien otsikot ja halutessasi
+        my”s kirjoittajat ja vastaanottajat. Vastaamalla kysymykseen
+        "Pelk„st„„n aiheet:" N saat listaukseen my”s viestien
+        kirjoittajat ja vastanottajat. Jos viesti on sinun kirjoittamasi
+        tai osoitettu sinulle n„kyy nimesi eri v„rill„. (Tietenkin vain
+        jos olet kytkenyt v„rit p„„lle.)
+@endnode
+
+@node READ_RES "Eroa viestialueelta"
+@{b}KOMENTO@{ub}
+        [r] @{i}res@{ui} eroa
+
+@{b}ESITTELY@{ub}
+        Erottaa sinut viestialueelta, jonka j„senen„ olet ollut. Vastaa
+        kysymykseen Y erotaksesi alueelta ja N jatkaaksesi j„senen„.
+@endnode
+
+@node READ_SE "Pakkaa ja imuroi viestit"
+@{b}KOMENTO@{ub}
+        [r] @{i}se@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit noutaa ker„„m„si viestit omalle koneellesi. Viestit
+        pakataan menetelm„ll„ joka valitaan komennolla @{"u af" link UTIL_AF}. Jos
+        menetelm„„ ei ole valittu, viestej„ ei pakata vaan ne l„hetet„„n
+        tekstiformaatissa.
+
+@{b}KATSO MY™S@{ub}
+        [r] @{"d " link READ_D}
+            @{"md" link GLOB_MD}
+@endnode
+
+@node READ_S "Hakukomennot"
+@{b}KOMENTO@{ub}
+        [r] @{i}s@{ui} haku
+
+@{b}ESITTELY@{ub}
+        Mahdollistaa erilaiset haut viesteist„. L”ydetyist„ poistetaan
+        merkint„.
+
+        @{i}s g@{ui}     Etsii viestiryhm„st„.
+        @{i}s h@{ui}     Etsii vain viestien otsikoista.
+        @{i}s m@{ui}     Vain merkityt viestit tutkitaan.
+@endnode
+
+@node READ_DUP "Tuplaa (kirjoita uudestaan) viesti"
+@{b}KOMENTO@{ub}
+        [r] @{i}dup@{ui}
+
+@{b}ESITTELY@{ub}
+        Poistaa vanhan viestin ja antaa sinulle mahdollisuuden
+        kirjoittaa uusi viesti muuttelemalla vanhaa. Voit tuplata vain
+        omia viestej„si.
+@endnode
+
+@node READ_D "Lis„„ viesti viestipakettiin"
+@{b}KOMENTO@{ub}
+        [r] @{i}d@{ui} lis„„
+
+@{b}ESITTELY@{ub}
+        Voit lis„t„ yhden viestin tai nipun viestej„ viestipakettiin
+        seuraavasti:
+
+        @{i}d c@{ui}     Lis„„ kaikki lukemattomat viestit viestialueelta jolla
+                olet.
+        @{i}d a@{ui}     Lis„„ kaikki lukemattomat viestit kaikilta alueilta.
+                Sama kuin MD mutta ei siirr„ pakettia. Katso: @{"luku/se" link READ_SE}
+        @{i}d m@{ui}     Lis„„ juuri lukemasi viestit pakettiin.
+        @{i}d clear@{ui} Tyhjent„„ paketin.
+        @{i}d n@{ui}     N„yt„„ paketin viestim„„r„n.
+
+@{b}KATSO MY™S@{ub}
+        @{"luku/se " link READ_SE}
+        @{"yleis/md" link GLOB_MD}
+@endnode
+
+@node READ_O "N„yt„ alkuper„inen"
+@{b}KOMENTO@{ub}
+        [r] @{i}o@{ub}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ viestiketjun ensimm„isen viestin.
+@endnode
+
+@node READ_MOV "Siirr„ viesti toiselle alueelle"
+@{b}KOMENTO@{ub}
+        [r] @{i}mov@{ui}
+        [r] @{i}mv@{ui}
+
+@{b}ESITTELY@{ub}
+        Siirt„„ oman viestisi toiselle alueella jos viestin aihe on
+        vaihtunut niin ett„ se sopii paremmin jonkin toisen alueen
+        aihepiiriin. Komennon j„lkeen sinulta kysyt„„n uutta
+        viestialuetta ja uutta vastaanottajaa.
+@endnode
+
+@node READ_MODE "Vaihda viestienlukutapa"
+@{b}KOMENTO@{ub}
+        [r] @{i}mode@{ui}
+
+@{b}ESITTELY@{ub}
+        Mahdollistaa viestienlukutavan vaihtamisen. Eli j„rjestyksen,
+        jossa luet uusia viestej„.
+
+        @{i}mode f@{ui}  Lue viestej„ numeroj„rjestyksess„.
+        @{i}mode m@{ui}  Lue merkityt viestit.
+        @{i}mode r@{ui}  Lue viestit ketjuina. (Ensimm„inen viesti, vastaus,
+                vastaus... ensimm„inen, vastaus, vastaus... jne.)
+@endnode
+
+@node READ_AI "Alueen tiedot"
+@{b}KOMENTO@{ub}
+        [r] @{i}ai@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ sinulle tietoa alueesta jolla juuri olet.
+@endnode
+
+@node READ_MC "Viestin kopiointi"
+@{b}KOMENTO@{ub}
+        [r] @{i}mc@{ui}
+        [r] @{i}cp@{ui}
+
+@{b}ESITTELY@{ub}
+        Viestin kopiointi mahdollistaa viestin l„hett„misen useammalle
+        alueelle.
+@endnode
+
+@node READ_I "Viestin kirjoittajan tiedot"
+@{b}KOMENTO@{ub}
+        [r] @{i}i@{ui}
+
+@{b}ESITTELY@{ub}
+        Antaa samanlaisen selvityksen k„ytt„j„st„ kuin @{"q i" link MAIN_I} komento
+        mutta sinun ei tarvitse antaa k„ytt„j„n nime„, sill„ komento
+        n„ytt„„ viestin kirjoittajan tiedot.
+@endnode
+
+@node READ_FIX "Korjaa esittelyviestiviittaukset"
+@{b}KOMENTO@{ub}
+        [r] @{i}fix@{ui}
+
+@{b}ESITTELY@{ub}
+        Korjaa viittaukset k„ytt„jien ja esittelyviestien v„liset
+        viittaukset k„ytt„j„n ja esittelyviestialueen v„lill„. Žl„ k„yt„
+        t„t„ komentoa jos sinulla ei ole ongelmia viittausten kanssa
+        koska komennon suorittaminen voi vied„ pitk„n aikaa.
+@endnode
+
+@node READ_FM "Merkitse l„hetetyksi"
+@{b}KOMENTO@{ub}
+        [r] @{i}fm@{ui}
+
+@{b}ESITTELY@{ub}
+        FM merkitsee kaikki merkityt viestit alueella jo l„hetetyiksi.
+        BOGUS tai BMSG eiv„t l„het„ en„„ viestej„ alueelta eteenp„in.
+        Komennolla ei ole mit„„n merkityst„ jos kyseess„ ei ole
+        'verkkoalue'. Komentoa k„ytet„„n yleens„ jos liityt verkkoon ja
+        haluat kytke„ verkkoalueen jo olemassa olevaan alueeseen. Haluat
+        ehk„ t„ll”in merkit„ vanhat viestit jo l„hetetyiksi.
+
+@{b}KATSO MY™S@{ub}
+        [r] @{"unfm" link READ_UNFM}
+@endnode
+
+@node READ_UNFM "Merkitse uudeksi"
+@{b}KOMENTO@{ub}
+        [r] @{i}unfm@{ui}
+
+@{b}ESITTELY@{ub}
+        UNFM merkitsee kaikki merkityt viestit alueella uusiksi. BOGUS
+        tai BMSG l„hett„v„t t„ll”in n„m„ viestit eteenp„in. Komentoa
+        k„ytet„„n yleens„ jos haluat l„hett„„ vietej„ uudestaan
+        verkkoalueelle.
+
+@{b}KATSO MY™S@{ub}
+        [r] @{"fm" link READ_FM}
+@endnode
+
+@node READ_USER "K„ytt„j„editori"
+@{b}KOMENTO@{ub}
+        [r] @{i}user@{ui}
+
+@{b}ESITTELY@{ub}
+        Johdattaa sinut asetukset valikkoon ja hakee automaattisesti
+        juuri lukemasi viestin kirjoittajan k„ytt„j„tiedot.
+@endnode
+
+@node READ_Z "Vaihda viestin l„hett„j„„/vastaanottajaa"
+@{b}KOMENTO@{ub}
+        [r] @{i}z@{ui}
+
+@{b}ESITTELY@{ub}
+        Antaa mahdollisuuden muuttaa juuri lukemasi viestin
+        otsikkokentt„„. Voit vaihtaa l„hett„j„„, vastaanottajaa ja
+        aiheen.
+@endnode
+
+@node FILE "Tiedostovalikon komennot"
+@{b}ESITTELY@{ub}
+        Tiedostovalikosta voit k„ytt„„ kaikkia yleisi„ komentoja ja
+        tiedostokomentoja. N„ill„ komennoilla suoritetaan tiedonsiirtoa
+        p„„teohjelmasi ja BBS:n v„lill„.
+
+        BBBS:n tiedostoj„rjestelm„ perustuu paljolti samaan rakenteeseen
+        kuin tavallinen k„ytt”j„rjestelm„n kehoite. T„m„ tarkoittaa
+        sit„, ett„ voit siirty„ pitkin hakemistopuuta "cd hakemisto"
+        komennoilla jne.
+
+        H -kirjaimella merkityill„ komennoilla on my”s toinen nimi joka
+        on muotoa H + komento (hget, hcd, hdel jne.) joka toimii kuten
+        alkuper„inenkin, mutta teht„v„ suoritetaan @{i}/tmp@{ui}-hakemistoon
+        tai hakemistosta. Esimerkiksi @{b}get foo@{ub} noutaa tiedoston nimelt„„n
+        foo oletushakemistosta, @{b}hget foo@{ub} noutaa tiedoston /tmp/foo.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{i}Tuuppaa/Imuroi:@{ui}
+       h@{"get   " link FILE_GE    } Imuroi tiedosto(ja)
+        @{"put   " link FILE_PU    } Tuuppaa tiedosto(ja)
+        @{"pput  " link FILE_PPUT  } Henkil”kohtainen tuuppaaminen
+        @{"in    " link FILE_IN    } Asenna tiedosto
+        @{"lin   " link FILE_LIN   } Asenna tiedosto (linkki)
+
+        @{i}Etsint„:@{ui}
+        @{"k     " link FILE_K     } Avainsana etsint„
+        @{"n     " link FILE_N     } Uudet tiedostot (p„iv„ys)
+        @{"s     " link FILE_S     } Etsi tiedostoa nimen perusteella
+
+        @{i}Siirtyminen hakemistoissa:@{ui}
+       h@{"cd    " link FILE_CD    } Vaihda oletushakemistoa
+
+        @{i}Tiedoston tiedot:@{ui}
+       h@{"dir   " link FILE_DI    } Hakemistolistaus
+        @{"i     " link FILE_I     } N„yt„ tiedoston tiedot
+        @{"v     " link FILE_V     } Katso pakattuun tiedostoon
+       h@{"t     " link FILE_T     } Tulosta tiedosto n„yt”lle
+        @{"wd    " link FILE_WD    } Kuka on noutanut
+        @{"des   " link FILE_DES   } Kuvaa tiedostoa
+
+        @{i}Siirtely, poista ja kopionti:@{ui}
+        @{"add   " link FILE_AD    } Lis„„ tiedosto(ja) @{b}/tmp@{ub}-hakemistoon
+       h@{"co    " link FILE_CO    } Kopio tiedosto(ja) (linkki)
+        @{"tco   " link FILE_TCO   } Kopio tiedosto(ja)
+       h@{"del   " link FILE_DEL   } Poista tiedosto(ja)
+        @{"move  " link FILE_MO    } Siirr„ tiedosto(ja)
+
+        @{i}Pakkettien k„sittely:@{ui}
+       h@{"ext   " link FILE_EXT   } Pura tiedosto(ja)
+       h@{"pa    " link FILE_PA    } Pakkaa tiedosto(ja)
+       h@{"lh    " link FILE_LH    } Pakkaa tiedosto(ja) LHA-menetelm„ll„
+       h@{"zip   " link FILE_ZIP   } Pakkaa tiedosto(ja) ZIP-menetelm„ll„
+
+        @{i}Muut tiedostokomennot:@{ui}
+        @{"sp    " link FILE_SP    } Pilko isoja tiedostoja
+        @{"tou   " link FILE_TOU   } Koske tiedostoa
+        @{"free  " link FILE_FREE  } Vapauta tiedoston nouto
+        @{"unfree" link FILE_UNFREE} Rajoita tiedoston noutoa
+@endnode
+
+@node FILE_GE "Imuroi tiedostoja"
+@{b}KOMENTO@{ub}
+        [f] @{i}get@{ui}
+            @{i}d@{ui} imuroi
+
+@{b}ESITTELY@{ub}
+        GET ja sit„ seuraava tiedostonimi noutaa annetun tiedoston
+        j„rjestelm„st„ koneellesi jos sinulla on riitt„v„t oikeudet.
+        Sinun t„ytyy olla samassa hakemistossa kuin tiedosto tai antaa
+        koko polku ja tiedostonimi. Voit k„ytt„„ jokerimerkkej„.
+
+        @{i}h@{ui}@{b}get@{ub} puree /tmp-hakemistoon.
+@endnode
+
+@node FILE_PPUT "Henkil”kohtainen tuuppaaminen"
+@{b}KOMENTO@{ub}
+        [f] @{i}pput@{ui}
+
+@{b}ESITTELY@{ub}
+        PPUT  komennolla voit tuupata tiedoston tietylle henkil”lle.
+        Ennen tuuppaamista sinulta kysyt„„n vastaanottaja, tiedoston nimi
+        ja lyhyt kuvaus.
+
+        Voit antaa useamman vastaanottajaa ja tiedostoa yhdell„
+        kerralla.
+
+@{b}KATSO MY™S@{ub}
+        @{"put" link FILE_PU}
+@endnode
+
+@node FILE_PU "Tuuppaa tiedostoja"
+@{b}KOMENTO@{ub}
+        [f] @{i}put@{ui}
+        [f] @{i}up@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit siirt„„ tiedostoja koneeltasi BBS:„„n. Komennon j„lkeen
+        sinulta kysyt„„n tiedoston nimi ja lyhyt kuvaus siirrett„v„st„
+        tiedostosta. Seuraava vaihe on tiedonsiirto, jonka j„lkeen voit
+        antaa tarkemman kuvauksen tiedostosta. Tarkempi selvitys pannaan
+        viestialueelle, joka on m„„ritelty uusille tiedostoille, ja jota
+        kaikki voivat lukea. Voit my”s valita ettet anna tarkempaa
+        kuvausta vastaamalla viimeiseen kysymykseen N.
+
+        Voit tuupata useamman tiedostoa yhdell„ kerralla painamalla
+        <enter> tiedostonimen kyselyyn.
+
+        Muista tarkistaa ettei tiedostoa ole jo j„rjestelm„ss„ toisella
+        p„„tteella varustettuna koska t„ss„ tapauksessa tiedoston
+        l„hett„minen on kielletty„.
+
+        Tarkista tiedosto virusten varalta ennen l„hetyst„.
+
+        K„ytett„v„ tiedonsiirtoprotokolla valitaan @{"U T" link UTIL_T} komennolla.
+
+@{b}KATSO MY™S@{ub}
+        @{"pput" link FILE_PPUT}
+@endnode
+
+@node FILE_IN "Asenna tiedostoja"
+@{b}KOMENTO@{ub}
+        [f] @{i}in@{ui}
+
+@{b}ESITTELY@{ub}
+        Asenna tiedostoja BBBS:„„n. T„m„ komento kopioi tiedoston.
+        Vaatii SysOp oikeudet.
+
+@{b}KATSO MY™S@{ub}
+        @{"lin" link FILE_LIN}
+@endnode
+
+@node FILE_LIN "Asenna tiedosto (linkki)"
+@{b}KOMENTO@{ub}
+        [f] @{i}lin@{ui}kki
+
+@{b}ESITTELY@{ub}
+        Asenna tiedosto BBBS:„„n linkkaamalla ilman ett„ tiedostoa
+        todella siirret„„n. Komento vain luo linkin todelliseen
+        hakemistoon ja tiedostoon. Vaatii SysOp oikeudet.
+
+@{b}KATSO MY™S@{ub}
+        @{"in" link FILE_IN}
+@endnode
+
+@node FILE_K "Avainsana etsint„"
+@{b}KOMENTO@{ub}
+        [f] @{i}k@{ui}
+
+@{b}ESITTELY@{ub}
+        K k„y l„pi kaikki tiedostot kaikissa hakemistoissa ja n„ytt„„
+        listan niist„ tiedostoista joiden nimist„ tai p„„tteista l”ytyy
+        hakuavain. Voit k„ytt„„ @{"s„„nn”llist„ ilmausta" link REGEXP} tiedostojen hakuun.
+        Etsinn„in voi keskeytt„„ CTRL-C:ll„.
+
+@{b}VALITSIMIA@{ub}
+        @{i}-r@{ui}  Etsii vain oletushakemistoita ja sen alihakemistoista.
+
+@{b}KATSO MY™S@{ub}
+        @{"s" link FILE_S}
+@endnode
+
+@node FILE_N "Uudet tiedosto (p„iv„ys)"
+@{b}KOMENTO@{ub}
+        [f] @{i}n@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ tiedostot jotka on tuupattu systeemiin tietyn p„iv„yksen
+        j„lkeen. Tiedostojen merkitseminen onnistuu t„m„n komennon
+        yhteydess„ Uusien tiedostojen etsinn„n voi keskeytt„„ painamalla
+        @{i}CTRL-C@{ui}:t„.
+
+@{b}VALITSIMIA@{ub}
+        @{i}-r@{ui}  Etsii uusia tiedostoja vain oletushakemistosta ja sen
+            alihakemistoista.
+@endnode
+
+@node FILE_S "Etsi nimen perusteella"
+@{b}KOMENTO@{ub}
+        [f] @{i}s@{ui}
+
+@{b}ESITTELY@{ub}
+        Etsii tiedoston nimen perusteella yhdest„ tai useammasta
+        hakemistosta Voit k„ytt„„ @{"jokerimerkkej„" link WILDCARDS} apuna.
+        Voit keskeytt„„ etsinn„in @{i}CTRL-C@{ui}:ll„.
+
+@{b}VALITSIMIA@{ub}
+        @{i}-r@{ui}  Hakee tiedostoa vain oletushakemistosta ja sen
+            alihakemistoista.
+
+@{b}KATSO MY™S@{ub}
+        @{"k" link FILE_K}
+@endnode
+
+@node FILE_CD "Vaihda oletushakemistoa"
+@{b}KOMENTO@{ub}
+        [f] @{i}cd@{ui}
+            @{i}ch@{ui}
+
+@{b}ESITTELY@{ub}
+        CD on tarkalleen sama kuin k„ytt”j„rjestelm„n CD komento. T„ll„
+        komennolla voit siirty„ hakemistosta toiseen. Komennossa on my”s
+        paljon TCSH tyylisi„ ominaisuuksia kuten jos annat hakemiston
+        nimen vain osittain, CD vaihtaa oletushakemiston ensimm„iseen
+        hakemistoon, jonka nimi on sama kuin antamasi. Voit k„ytt„„ sek„
+        \\ ett„ / hakemistoerottimia.
+
+        @{i}h@{ui}cd siirt„„ /tmp-hakemistoon.
+
+@{b}ESIMERKKI@{ub}
+        cd bbbs   Siirtyy ensimm„iseen hakemistoon, jonka nimess„ on 'bbbs'.
+        cd /bbbs  Siirtyy bbbs hakemistoon joka on juuren alla.
+        cd /      Siirtyy juurihakemistoon.
+        cd ..     Siirtyy ylem„„n hakemistoon.
+        hcd       Siirtyy /tmp-hakemistoon.
+@endnode
+
+@node FILE_DI "Hakemistolistaus"
+@{b}KOMENTO@{ub}
+        [f] @{i}di@{ui}
+            @{i}ls@{ui}
+
+@{b}ESITTELY@{ub}
+        listaa tiedostot hakemistosta joka annetaan komennon j„lkeen tai
+        oletushakemistosta. Kun -more- kehote tulee n„kyviin, voit
+        k„ytt„„ nuolin„pp„imi„ siirty„ksesi kiinnostavan tiedoston
+        kohdalle ja voit kopioida sen /tmp-hakemistoon painamalla
+        v„lily”nnin. Toimenpidett„ kutsutaan tiedostojen liputtamiseksi.
+        Liputetut tiedostot kopioidaan v„liaikaishakemistoon, yleens„
+        /tmp:hen.
+
+        @{i}h@{ui}dir listaa /tmp-hakemiston sis„ll”n.
+        @{i}h@{ui}ls listaa /tmp-hakemiston sis„ll”n.
+
+@{b}VALITSIMIA@{ub}
+        @{i}-l@{ui}  N„ytt„„ tiedostojen tuuppaajien nimet.
+        @{i}-r@{ui}  Listaa my”s alihakemistojen sis„ll”t.
+@endnode
+
+@node FILE_I "Tiedosto tietous"
+@{b}KOMENTO@{ub}
+        [f] @{i}i@{ui}
+
+@{b}ESITTELY@{ub}
+        I  ja sit„ seuraava tiedostonimi antavat sinulle tiedostosta
+        tiedot, jotka tiedoston tuuppaaja on kirjoittanut. Jos kyseess„
+        on sinun tuuppaamasi tiedosto, voit kirjoittaa tiedot jotka
+        n„kyv„t @{"F DI" link FILE_DI} tms komennoilla.
+@endnode
+
+@node FILE_T "Tulosta tiedosto n„yt”lle"
+@{b}KOMENTO@{ub}
+        [f] @{i}t@{ui}
+        [f] @{i}cat@{ui}
+
+@{b}ESITTELY@{ub}
+        T ja sit„ seuraava tiedostonimi tulostavat annetun tiedoston
+        n„yt”lle. Tiedoston t„ytyy olla teksti„ tai saat n„yt”llesi
+        roppakaupalla paskaa.
+
+        @{i}h@{ui}t tulostaa /tmp-hakemistossa olevan tiedoston.
+        @{i}h@{ui}cat tulostaa /tmp-hakemistossa olevan tiedoston.
+@endnode
+
+@node FILE_V "Katso pakattuun tiedostoon"
+@{b}KOMENTO@{ub}
+        [f] @{i}v@{ui}
+
+@{b}ESITTELY@{ub}
+        V ja tiedostonimi listaavat pakatun tiedoston sis„ll”n.
+        Tiedoston p„„tteen t„ytyy olla ZIP, ARC, ARJ, LZH, LHA tai PAK.
+@endnode
+
+@node FILE_WD "Kuka on noutanut"
+@{b}KOMENTO@{ub}
+        [f] @{i}wd@{ui}
+
+@{b}ESITTELY@{ub}
+        WD etsii nouto/tuuppaus-tietokannasta annettua
+        @{"s„„nn”llist„ ilmausta" link REGEXP}.
+
+@{b}ESIMERKKI@{ub}
+        WD FILE         N„ytt„„ kuka on noutanut tiedoston *FILE*.
+        WD <U>          N„ytt„„ kaikki tuuppaamiset.
+        WD JOE HACKER   N„ytt„„ mit„ Joe Hacker on noutanut.
+        WD 12.10.92     N„ytt„„ tiedostot jotka noudettiin 12. Lokakuuta
+                        1992.
+@endnode
+
+@node FILE_DES "Kuvaile tiedosto"
+@{b}KOMENTO@{ub}
+        [f] @{i}des@{ui}
+
+@{b}ESITTELY@{ub}
+        Komentoa k„ytet„„n tiedoston kuvailemiseen. Jotta voisit k„ytt„„
+        komentoa, sinulla t„ytyy olla hakemistoon kirjoitusoikeudet.
+@endnode
+
+@node FILE_AD "Lis„„ tiedosto /tmp-hakemistoon"
+@{b}KOMENTO@{ub}
+        [f] @{i}add@{ui}
+
+@{b}ESITTELY@{ub}
+        Lis„„ tiedoston /tmp-hakemistoon. /tmp on hakemisto, johon voit
+        kopioida tiedostoja noutoa odottamaan. Hakemisto tyhjennet„„n
+        aina kun kirjottaudut ulos systeemist„.
+@endnode
+
+@node FILE_CO "Kopioi tiedostoja (linkki)"
+@{b}KOMENTO@{ub}
+        [f] @{i}co@{ui}py
+            @{i}cp@{ui}
+
+@{b}ESITTELY@{ub}
+        Kopiointi linkkaa tiedoston hakemistosta toiseen. Linkkaaminen
+        tarkoittaa sit„ ett„ tiedostoa ei kopioida. BBBS vain rakentaa
+        linkin paikkaan jossa alkuper„inen tiedosto sijaitsee.
+
+        @{i}h@{ui}copy linkkaa /tmp-hakemistoon.
+        @{i}h@{ui}cp linkkaa /tmp-hakemistoon.
+
+@{b}KATSO MY™S@{ub}
+        @{"tco" link FILE_TCO}
+@endnode
+
+@node FILE_DEL "Poista tiedosto(ja)"
+@{b}KOMENTO@{ub}
+        [f] @{i}del@{ui}
+            @{i}rm@{ui}
+
+@{b}ESITTELY@{ub}
+        DEL poistaa tiedosto(ja) hakemistosta. Voit k„ytt„„
+        jokerimerkkej„. Komennon k„ytt„minen vaatii kirjoitusoikeuksia
+        kohdehakemistoon. Kaikilla on kirjoitusoikeudet @{i}/tmp@{ui}
+        hakemistoon.
+
+        @{i}h@{ui}del vaikuttaa /tmp-hakemistoon.
+        @{i}h@{ui}rm vaikuttaa /tmp-hakemistoon.
+@endnode
+
+@node FILE_EXT "Pura tiedosto"
+@{b}KOMENTO@{ub}
+        [f] @{i}ext@{ui}
+
+@{b}ESITTELY@{ub}
+        Purkaa yhden tai useamman tiedoston paketista hakemistoon jonka
+        annat. Anna yleens„ /tmp-hakemistoksi.
+
+        @{i}h@{ui}ext purkaa suoraan /tmp-hakemistoon.
+@endnode
+
+@node FILE_LH "Pakkaa tiedosto LHA menetelm„ll„"
+@{b}KOMENTO@{ub}
+        [f] @{i}lh@{ui}a
+
+@{b}ESITTELY@{ub}
+        Komento pakkaa annetut tiedostot LHA menetelm„ll„.
+
+        @{i}h@{ui}lh pakkaa /tmp-hakemiston tiedostot tiedostoon /tmp/hold.
+
+@{b}KATSO MY™S@{ub}
+        @{"zip" link FILE_ZIP}
+        @{"pa " link FILE_PA}
+@endnode
+
+@node FILE_MO "Siirr„ tiedosto(ja)"
+@{b}KOMENTO@{ub}
+        [f] @{i}move@{ui}
+            @{i}mv@{ui}
+            @{i}ren@{ui}
+
+@{b}ESITTELY@{ub}
+        T„ll„ komennolla voit siirt„„ tiedostoja hakemistosta toiseen
+        tai vaihtaa tiedoston nime„.
+@endnode
+
+@node FILE_PA "Pakkaa tiedostot"
+@{b}KOMENTO@{ub}
+        [f] @{i}pa@{ui}
+
+@{b}ESITTELY@{ub}
+        Pakkaa annetut tiedostot menetelm„ll„ jonka olet antanut @{"U AF" link UTIL_AF}
+        komennolla.
+
+        @{i}h@{ui}pa pakkaa /tmp-hakemiston /tmp/hold.<ext> nimiseksi.
+
+@{b}KATSO MY™S@{ub}
+        @{"zip" link FILE_ZIP}
+        @{"lh " link FILE_LH}
+@endnode
+
+@node FILE_SP "Pilko tiedosto"
+@{b}KOMENTO@{ub}
+        [f] @{i}sp@{ui}
+
+@{b}ESITTELY@{ub}
+        Pilkkoo tiedoston useamaan pienemp„„n osaan helpompaa noutoa
+        varten. Tiedoston uudelleen yhdist„minen onnistuu kopioimalla
+        palaset yhteen.
+@endnode
+
+@node FILE_TCO "Todellinen kopiointi"
+@{b}KOMENTO@{ub}
+        [f] @{i}tco@{ui}
+
+@{b}ESITTELY@{ub}
+        Kopioi tiedostot hakemistosta toiseen.
+
+@{b}KATSO MY™S@{ub}
+        @{"co" link FILE_CO}
+@endnode
+
+@node FILE_ZIP "Pakkaa tiedosto ZIP menetelm„ll„"
+@{b}KOMENTO@{ub}
+        [f] @{i}zip@{ui}
+
+@{b}ESITTELY@{ub}
+        Pakkaa kaikki annetut paketit zip formaattiin.
+
+        @{i}h@{ui}zip pakkaa /tmp-hakemiston /tmp/hold.zip nimiseksi.
+
+@{b}KATSO MY™S@{ub}
+        @{"lh" link FILE_LH}
+        @{"pa" link FILE_PA}
+@endnode
+
+@node FILE_FREE "Vapauta tiedosto"
+@{b}KOMENTO@{ub}
+        [f] @{i}free@{ui}
+
+@{b}ESITTELY@{ub}
+        FREE tekee tiedostosta vapaasti noudettavan. K„ytt„j„ll„ ei
+        tarvitse olla nouto-oikeuksia jotta voisi noutaa vapaan
+        tiedoston. T„m„ komento vaatii SysOp oikeuksia.
+
+@{b}KATSO MY™S@{ub}
+        @{"unfree" link FILE_UNFREE}
+@endnode
+
+@node FILE_UNFREE "Rajoita tiedoston noutoa"
+@{b}KOMENTO@{ub}
+        [f] @{i}unfree@{ui}
+
+@{b}ESITTELY@{ub}
+        UNFREE poistaa vapaa lipun tiedostosta joka on vapautettu FREE
+        komennolla. Tarvitset SysOp oikeuksia tehd„ksesi t„m„n.
+
+@{b}KATSO MY™S@{ub}
+        @{"free" link FILE_FREE}
+@endnode
+
+@node FILE_TOU "Koske tiedostoa"
+@{b}KOMENTO@{ub}
+        [f] @{i}tou@{ui}
+
+@{b}ESITTELY@{ub}
+        Asetttaa tiedoston p„iv„yksen nykyiseksi. Tarvitset
+        kirjoitusoikeudet hakemistoon.
+@endnode
+
+@node UTIL "Asetukset valikko"
+@{b}ESITTELY@{ub}
+        Asetusvalikossa voit k„ytt„„ kaikkia yleisi„ komentoja ja
+        asetuskomentoja. Asetuskomennot on tarkoitettu asetustesi
+        muuttamiseen tai itse„si koskevan tiedon antamisen.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{i}Henkil”kohtaiset asetukset:@{ui}
+        @{"a      " link UTIL_A       } Osoitteen vaihdos
+        @{"af     " link UTIL_AF      } Pakkausmetodi
+        @{"c      " link UTIL_C       } Viestialueiden tilan n„ytt” sis„„nkirjoittauduttaessa
+        @{"ed     " link UTIL_ED      } Editorin tyyppi
+        @{"fl     " link UTIL_FL      } Vilkuta nime„
+        @{"i      " link UTIL_I       } Tietoa itsest„si
+        @{"lang   " link UTIL_LA      } Kielen valinta
+        @{"mf     " link UTIL_MF      } Nodeviestisuodatin
+        @{"n      " link UTIL_N       } Nimen vaihto
+        @{"p      " link UTIL_P       } Salasanen vaihto
+        @{"qu     " link UTIL_QU      } Automaattilainaus
+        @{"res    " link UTIL_RES     } Muokkaa esittely„si
+        @{"ret    " link UTIL_RET     } Palaa lukuvalikkoon painamalla <enter>
+        @{"rev    " link UTIL_REV     } Omien viestien uudelleenn„ytt”
+        @{"x      " link UTIL_X       } Vaihda konkari/aloittelija aputasoa
+
+        @{i}P„„teohjelma asetuksia:@{ui}
+        @{"col    " link UTIL_COL     } V„rit
+        @{"key    " link UTIL_KEY     } VT100 n„pp„imist”
+        @{"l      " link UTIL_L       } Riveja ruudulla
+        @{"s      " link UTIL_S       } Aseta merkist”
+        @{"si     " link UTIL_SI      } Hiljaisuus/„„nimerkit
+        @{"t      " link UTIL_T       } Tiedonsiirtoprotokolla
+        @{"te     " link UTIL_TE      } P„„te-emulaatio
+
+        @{i}Muut komennot:@{ui}
+        @{"alias  " link UTIL_ALI     } Aseta/katso/poista alias
+        @{"set    " link UTIL_SET     } Aseta/katso/poista asetus
+        @{"unalias" link UTIL_UNALI   } Poista alias
+        @{"unset  " link UTIL_UNSET   } Poista SET asetus
+        @{"v      " link UTIL_V       } Katso asetuksia
+
+        @{i}SysOp-komennot:@{ui}
+        @{"aas    " link UTIL_AAS     } Liit„ k„ytt„j„jille tili
+        @{"aad    " link UTIL_AAD     } Lis„„ tilille rahaa
+        @{"ac     " link UTIL_AC      } Muuta luottotietoja
+        @{"am     " link UTIL_AM      } Tilin k„ytt„j„t
+        @{"av     " link UTIL_AV      } N„yt„ tili
+        @{"ba     " link UTIL_BA      } Tallenna aikaa k„ytt„jille
+        @{"facc   " link UTIL_FACC    } Tiedosto-oikeustaso
+        @{"find   " link UTIL_FIND    } Etsi k„ytt„j„/ryhm„ nimen perusteella
+        @{"+      " link UTIL_+       } Seuraava k„ytt„j„
+        @{"-      " link UTIL_-       } Edellinen k„ytt„j„
+        @{"inv    " link UTIL_INV     } Kutsu k„ytt„j„/ryhm„ viestialueelle
+        @{"kill   " link UTIL_KILL    } Poista k„ytt„j„
+        @{"limit  " link UTIL_LIM     } Rajat
+        @{"sys    " link UTIL_SYS     } SysOp Oikeudet
+        @{"sta    " link UTIL_STA     } Tilan vaihto
+        @{"tli    " link UTIL_TLI     } Aikarajoitus
+        @{"uninv  " link UTIL_UNINV   } Erota k„ytt„j„/ryhm„ alueelta
+        @{"wotu   " link UTIL_WOTU    } WandOfTurnUndead
+@endnode
+
+@node UTIL_A "Osoitteen vaihto"
+@{b}KOMENTO@{ub}
+        [u] @{i}a@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit vaihtaa osoitettasi, puhelinnumeroasi ja syntym„aikaasi.
+        Syntym„ajan t„ytyy olla muodossa p„iv„-kuukausi-vuosi.
+@endnode
+
+@node UTIL_C "Viestialueiden tilan n„ytt” sis„„nkirjoittauduttaessa"
+@{b}KOMENTO@{ub}
+        [u] @{i}c@{ui}
+
+@{b}ESITTELY@{ub}
+        M„„rittelee n„ytet„„nk” sis„„nkirjoittautumisen yhteydess„
+        viestialueiden tila. T„m„ on eritt„in k„tev„ optio, mutta voi
+        vied„ paljonkin aikaa jos olet usean viestialueen j„sen.
+@endnode
+
+@node UTIL_I "Tietoa itsest„si"
+@{b}KOMENTO@{ub}
+        [u] @{i}i@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ @{"esittely" link UTIL_RES} viestisi.
+@endnode
+
+@node UTIL_L "Riveja ruudulla"
+@{b}KOMENTO@{ub}
+        [u] @{i}l@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa p„„teohjelmasi ruudun korkeuden rivein„ niin ett„ BBBS
+        tiet„„ milloin sinulle pit„„ n„ytt„„ @{i}--lis„„--@{ui} kehoite. Eli
+        sinun pit„„ antaa numeroina rivim„„r„, jonka terminaalisi pystyy
+        n„ytt„m„„n. Tilarivit eiv„t kuulu mukaan.
+@endnode
+
+@node UTIL_N "Nimen vaihto"
+@{b}KOMENTO@{ub}
+        [u] @{i}n@{ui}
+
+@{b}ESITTELY@{ub}
+        Mahdollistaa nimen vaihdon. Ennen uuden nimen antamista BBBS
+        haluaa varmistaa ett„ todellakin haluat vaihtaa sit„.
+@endnode
+
+@node UTIL_P "Salasanen vaihto"
+@{b}KOMENTO@{ub}
+        [u] @{i}p@{ui}
+
+@{b}ESITTELY@{ub}
+        P vaihtaa salasanasi. Ennen salasanan vaihtoa sinun t„ytyy
+        antaa BBBS:lle vanha salasanasi. Kun olet antanut uuden
+        salasanan, paina <enter> ja kirjoita uusi salasana toiseen
+        kertaan varmistukseksi. Koska salasanaa ei n„ytet„ n„yt”ll„ on
+        t„m„ varmuustoimenpide v„ltt„m„t”n. Jos ensimm„isell„ ja
+        toisella kerralla antamasi uusi salasana ovat erilaiset, ei
+        salasanaa vaihdeta. Huomio: Jos olet hukannut salasanasi, ei
+        SysOp saa sit„ selville sinulle. H„n voi vain antaa uuden
+        salasanan ja kertoa sen sinulle.
+@endnode
+
+@node UTIL_S "Aseta merkist”"
+@{b}KOMENTO@{ub}
+        [u] @{i}s@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa merkist”n jota k„yt„t BBS:ss„. Varmista ett„ merkist”
+        on sama p„„teohjelmassasi ja BBS:ss„. Voit vaihtaa oikean
+        merkist”n seuraavalla tavalla: Paina S <enter> ja sen j„lkeen ?
+        saadaksesi apua merkist”n valitsemiseksi. BBBS yritt„„ tulostaa
+        muutaman eri merkin ja taulukon, jonka avulla voit helposti
+        valita oikean merkist”n.
+
+Merkist”tyypin valinta:
+
+Katsohan n„it„ merkkej„...
+   1:[   2:]   3:   4:À   5:#   6:^   7:{
+
+1) Jos 1 on avautuva hakasulku, ja..
+   1a) jos 3 on japanilainen Yen merkki (iso Y), sinulla on    IBM
+   1b) jos 3 on norjalainen OE, sinulla on                     IBN
+   1c) jos 3 on pieni u heittomerkin kanssa, sinulla on Apple  MAC
+   1d) jos 4 on iso A heittomerkin kanssa, sinulla on          ISO
+   1e) jos 5 on ns. risuaita, sinulla on                       US7
+2) Jos 1 on iso a ja sen p„„ll„ on kaksi pistett„, ja..
+   2a) jos 2 on U kahdella pisteell„, sinulla on               GE7
+   2b) jos 2 on A ja sen p„„ll„ on ympyr„, sinulla on          SF7
+3) Jos 1 on iso AE merkki, ja..
+   3a) jos 6 on nuolen n„k”inen juttu yl”sp„in osoittaen..     NO7
+4) Jos 1 on astemerkki, ja..
+   4a) jos 7 on pieni e heittomerkin kanssa, sinulla on        FR7
+   4b) jos 7 on pieni a heittomerkin kanssa, sinulla on        IT7
+5) Jos 1 on yl”salaisin oleva huutomerkki, sinulla on          SP7
+@endnode
+
+@node UTIL_ED "Viestieditorin valinta:"
+@{b}KOMENTO@{ub}
+        [u] @{i}ed@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa editorin jota k„yt„t viestej„ kirjoittaessasi ja
+        muuttaessasi. K„ytett„viss„si on kolme erityyppist„ editoria:
+        @{"rivieditori" link EDITOR_LINE}, kokoruutueditori (@{"FSE" link EDITOR_FSE}) ja @{"MG" link EDITOR_MG}.
+@endnode
+
+@node UTIL_GF "Valitse et„lukumuoto:"
+@{b}KOMENTO@{ub}
+        [u] @{i}gf@{ui}
+
+@{b}ESITTELY@{ub}
+        Valitsee muodon johon et„lukupaketti rakennetaan. Viestit
+        ker„t„„n haluttulla menetelm„ll„ ja pakataan pakkerilla joka
+        valitaan komennolla @{"U AF" link UTIL_AF}. K„ytett„viss„si on viisi erilaista
+        keruumenetelm„„: @{i}T@{ui}eksti, @{i}P@{ui} Vanha Hippo, @{i}H@{ui}ippo v2.0, @{i}O@{ui}MEN ja
+        @{i}W@{ui} QWK.
+
+@{b}KATSO MY™S@{ub}
+            @{"md" link GLOB_MD}
+            @{"mu" link GLOB_MU}
+        [r] @{"d " link READ_D}
+        [r] @{"se" link READ_SE}
+        [u] @{"af" link UTIL_AF}
+        [u] @{"t " link UTIL_T}
+@endnode
+
+@node UTIL_T "Tiedonsiirtoprotokolla"
+@{b}KOMENTO@{ub}
+        [u] @{i}t@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit vaihtaa tiedonsiirtoprotokollan jota k„yt„t BBS:n ja
+        koneesi v„liseen tiedostojen siirtoon. Varmista ett„
+        p„„teohjelmasi pystyy k„sittelem„„n valitsemaasi protokollaa.
+
+        @{i}X@{ui} .... Xmodem checksum
+        @{i}C@{ui} .... Xmodem CRC
+        @{i}Y@{ui} .... Ymodem (tunnettu my”s nimell„ Xmodem-1K)
+        @{i}YB@{ui} ... Ymodem Batch (tunnettu my”s "oikeana" Ymodemina)
+        @{i}Z@{ui} .... Zmodem
+        @{i}ZZ@{ui} ... ZedZap (Zmodem variaatio)
+        @{i}H@{ui} .... HYDRA  (kaksisuuntainen + chat, t„m„ on paras)
+        @{i}SZ@{ui} ... Slow-Zmodem  (ei-8bittisiin yhteyksiin, kuten Telnet)
+        @{i}SH@{ui} ... Slow-HYDRA   (ei-8bittisiin yhteyksiin, kuten Telnet)
+@endnode
+
+@node UTIL_V "Katso asetuksia"
+@{b}KOMENTO@{ub}
+        [u] @{i}v@{ui}
+
+@{b}ESITTELY@{ub}
+        N„ytt„„ sinulla k„yt”ss„ olevat asetukset.
+@endnode
+
+@node UTIL_X "Vaihda konkari/aloittelija aputasoa"
+@{b}KOMENTO@{ub}
+        [u] @{i}x@{ui}
+
+@{b}ESITTELY@{ub}
+        Vaihtaa konkari aputason p„„lle ja pois. Konkari tasolla saat
+        lyhyemm„t valikot ja sinulta kysell„„n v„hemm„n. Valikot my”skin
+        n„ytt„v„t monimutkaisempia optioita. aloittelija aputasolla saat
+        enemm„n tietoa sis„lt„vi„ kysymyksi„ ja valikoissa on vain
+        peruskomennot.
+@endnode
+
+@node UTIL_AF "Pakkausmetodi"
+@{b}KOMENTO@{ub}
+        [u] @{i}af@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa metodin jolla Hippo/QWK/OMEN/Teksti paketti pakataan
+        ennen noutoa.
+@endnode
+
+@node UTIL_FL "Vilkuta nime„"
+@{b}KOMENTO@{ub}
+        [u] @{i}fl@{ui}
+
+@{b}ESITTELY@{ub}
+        V„lkytt„„ nime„si kun luet viesti„ joka on osoitettu sinulle.
+@endnode
+
+@node UTIL_MF "Nodeviestisuodatin"
+@{b}KOMENTO@{ub}
+        [u] @{i}mf@{ui}
+
+@{b}ESITTELY@{ub}
+        MF asettaa nodeviestisuodattimen tason. K„yt„ viestisuodatinta
+        suodattamaan pois erilaisia viestej„ joita saat toisilta
+        nodeilta.
+
+        Eri suodatustasot ovat:
+        @{i} 1@{ui}      tunteet
+        @{i} 2@{ui}      sis„„ntulo / poistuminen
+        @{i} 4@{ui}      viestin kirjoitus
+        @{i} 8@{ui}      viestit julkisella kanavalla
+        @{i}16@{ui}      yksityiset viestit
+        @{i}32@{ui}      ilmoitusviestit
+
+        Eli jos haluat suodattaa pois tunteet ja julkiset viestit,
+        k„yt„ tasoa 1 + 8 = 9.
+@endnode
+
+@node UTIL_QU "Automaattilainaus"
+@{b}KOMENTO@{ub}
+        [u] @{i}qu@{ui}
+
+@{b}ESITTELY@{ub}
+        Kytkee p„„lle ja pois automaattilainauksen. Oletus on poissa
+        p„„lt„. Jos lainaus on p„„ll„, BBBS lainaa koko alkuper„isen
+        viestin ja lis„„ '>' merkin jokaisen lainatun rivin alkuun.
+        T„m„n j„lkeen voit tuhota ylim„„r„iset rivit CTRL-Y komennolla
+        (FSE) tai C-k komennolla (MG). Žl„ lainaa liikaa! Se on eritt„in
+        n”yryytt„v„„.
+@endnode
+
+@node UTIL_TE "P„„te-emulaatio"
+@{b}KOMENTO@{ub}
+        [u] @{i}te@{ui}
+
+@{b}ESITTELY@{ub}
+        Saatavilla olevat p„„te-emuloinnit ovat TTY, DummyANSI,
+        ANSI X3.64 ja VT320. TTY on eritt„in rajoittunut. Ei v„rej„ jne.
+        Toiset vaihtoehdot kykenev„t n„ytt„m„„n v„rej„, muista kytke„
+        v„rit p„„lle @{"col" link UTIL_COL} komennolla, muuten n„et vain valkoista ja
+        harmaata.
+
+        DummyANSI on eritt„in hidas, ja on tarkoitettu k„ytett„v„ksi
+        vain puutteellisella ANSI-amulaatiolla varustettujen
+        p„„teohjelmien kanssa.
+@endnode
+
+@node UTIL_COL "V„rit"
+@{b}KOMENTO@{ub}
+        [u] @{i}col@{ui}
+
+@{b}ESITTELY@{ub}
+        Kytkee v„rit pois ja p„„lle.
+@endnode
+
+@node UTIL_SI "Hiljaisuus/„„nimerkit"
+@{b}KOMENTO@{ub}
+        [u] @{i}si@{ui}
+
+@{b}ESITTELY@{ub}
+        Kytkee „„nimerkit pois ja p„„lle.
+@endnode
+
+@node UTIL_KEY "VT100 n„pp„imist”"
+@{b}KOMENTO@{ub}
+        [u] @{i}key@{ui}
+
+@{b}ESITTELY@{ub}
+        T„ll„ komennolla voit kytke„ p„„lle ja pois VT100 n„pp„imist”n.
+        Kun VT100 n„pp„imist” on k„yt”ss„, poisto-merkki„ (127)
+        k„ytet„„n poistamaan merkki kursorin vasemmalta puolelta, aivan
+        kuten <backspace>. Jos poissa p„„lt„, se poistaa kursorin
+        kohdalla olevan merkin, eik„ liikuta kursoria.
+
+        Useimmat p„„teohjelmat vaativat / toimivat t„m„n option kanssa.
+@endnode
+
+@node UTIL_RES "Muokkaa esittely„si"
+@{b}KOMENTO@{ub}
+        [u] @{i}res@{ui}
+
+@{b}ESITTELY@{ub}
+        RES  antaa sinun kirjoittaa esittelyn itsest„si. T„m„ esittely
+        on muiden k„ytt„jien luettavissa @{"I" link READ_I} komennolla lukuvalikossa.
+        Jos olet jo kirjoittanut jotain, voit muuttaa sit„. Tapana on
+        kirjoittaa nimi, ik„, asuinpaikka, harrastukset,
+        tietokonelaitteistosi ja muuta, jota haluat kertoa itsest„si.
+@endnode
+
+@node UTIL_RET "Palaa lukuvalikkoon painamalla <enter>"
+@{b}KOMENTO@{ub}
+        [u] @{i}ret@{ui}
+
+@{b}ESITTELY@{ub}
+        RET valitsee siirrytk” lukuvalikkoon painamalla <enter>:i„ ilman
+        komentoa. Oletuksena optio on poissa p„„lt„.
+@endnode
+
+@node UTIL_REV "Omien viestien uudelleenn„ytt”"
+@{b}KOMENTO@{ub}
+        [u] @{i}rev@{ui}
+
+@{b}ESITTELY@{ub}
+        Kytkee p„„lle ja pois omien viestien uudelleen n„yt”n.
+        Oletuksana asetus on pois p„„lt„. Kun se on kytkettyn„ p„„lle,
+        kirjoittamasi viestit n„ytet„„n uusina viestein„.
+@endnode
+
+@node UTIL_SET "Aseta/katso/poista asetus"
+@{b}KOMENTO@{ub}
+        [u] @{i}set@{ui}
+
+@{b}ESITTELY@{ub}
+        SET komennolla voit asettaa monia asetuksia.
+
+        Voit kirjoittaa  koko komennon yhdelle komentoriville, mutta jos
+        teet sen, on k„ytett„v„ tuplalainausmerkkej„ kuten t„ss„:
+
+        [u] set "mode" "b"<enter>
+
+        Asetuslista nykyisista asetuksista saadaan jos mit„„n asetusta
+        ei anneta komentorivill„. Antamalla tyhj„ arvo asetukselle
+        poistaa vanhan asetuksen. Katso @{"unset" link UTIL_UNSET} kohdasta lis„„ asetusten
+        poistamisesta.
+
+@{b}ALAOTSAKKEITA@{ub}
+        @{"alias   " link UTIL_SET_ALIAS   } Alias nimi
+        @{"away    " link UTIL_SET_AWAY    } Poissaolo teksti
+        @{"fileskip" link UTIL_SET_FILESKIP} V„ltett„v„t hakemistot
+        @{"grabdef " link UTIL_SET_GRABDEF } Kahmaisu (Grab) oletukset
+        @{"hotkey  " link UTIL_SET_HOTKEY  } Pikan„pp„invalikot (optionaalinen)
+        @{"nick    " link UTIL_SET_NICK    } Lempinimi
+        @{"killfile" link UTIL_SET_KILLFILE} Viestisuodatin
+        @{"kludges " link UTIL_SET_KLUDGES } Ylim„„r„iset viesti otsikot
+        @{"login   " link UTIL_SET_LOGIN   } Sis„„nkirjoittautumiskomennot
+        @{"mg_x    " link UTIL_SET_MG_X    } MG Startup tiedosto
+        @{"mode    " link UTIL_SET_MODE    } Kehoitetila
+        @{"prompt  " link UTIL_SET_PROMPT  } M„„rittele kehoite
+        @{"huntmsg " link UTIL_SET_HUNTMSG } Hunt-viesti
+
+@{b}KATSO MY™S@{ub}
+        @{"unset" link UTIL_UNSET}
+@endnode
+
+@node UTIL_SET_ALIAS "Alias nimi"
+@{b}KOMENTO@{ub}
+        [u] @{i}set alias@{ui}
+
+@{b}ESITTELY@{ub}
+        K„yt„ komentoa asettaaksesi alias nimen k„ytett„v„ksi
+        viestialueilla joissa moinen on sallittua.
+
+@{b}ESIMERKKI@{ub}
+        u set "alias" aliasnimi
+@endnode
+
+@node UTIL_SET_AWAY "Poissaolo teksti"
+@{b}KOMENTO@{ub}
+        [u] @{i}set away@{ui}
+
+@{b}ESITTELY@{ub}
+        Kun joku l„hett„„ sinulle nodeviestin, BBBS automaattisesti
+        vastaa t„ll„ viestill„.
+@endnode
+
+@node UTIL_SET_FILESKIP "Fileskip"
+@{b}KOMENTO@{ub}
+        [u] @{i}set "fileskip" "hakemistojen_s„„nn”llinen_ilmaus"@{ui}
+
+@{b}ESITTELY@{ub}
+        FILESKIP asetuksella voit m„„ritell„ hakemistot joita ei tutkita
+        kun listataan uusia tiedostoja. FILESKIP k„ytt„„
+        @{"s„„nn”llist„ ilmausta" link REGEXP} hakemistojen valitsemiseen.
+
+@{b}ESIMERKKI@{ub}
+        u set "fileskip" "^/graph/gif"      Ei listaa hakemistoa
+                                            /graph/gif.
+        u set "fileskip" "(dos|win)"        Ei listaa hakemistoa jonka
+                                            nimess„ on "dos" tai "win".
+        u set "fileskip" "txt$"             Ei listaa hakemistoja,
+                                            joiden nimi p„„ttyy "txt".
+@endnode
+
+@node UTIL_SET_GRABDEF "Kahmaisu (Grab) oletukset"
+@{b}KOMENTO@{ub}
+        [u] @{i}set grabdef@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa oletusvalitsimia k„ytett„v„ksi md ja grab komennoissa.
+
+@{b}ESIMERKKI@{ub}
+        u set "grabdef" "-b"           Noutaa automaattisesti uudet
+                                       tiedotteet.
+        u set "grabdef" "-bm"          kuten edell„, mutta j„tt„„
+                                       lis„ksi uusien tidostojen listan
+                                       pois paketista.
+
+@{b}KATSO MY™S@{ub}
+        @{"md" link GLOB_MD}
+@endnode
+
+@node UTIL_SET_HOTKEY "HotKey/$ asetuskset"
+@{b}KOMENTO@{ub}
+        [u] @{i}set hotkey@{ui}
+
+@{b}HUOMAUTUS@{ub}
+        T„m„ on ylim„„r„inen lis„tt„viss„ oleva skripti, useimmat
+        j„rjestelm„t eiv„t tue t„t„.
+
+@{b}ESITTELY@{ub}
+        Asetus HotKey/$ sis„iseen k„ytt””n.
+        Seuraavat valinnat ovat mahdollisia:
+
+        @{i}A@{ui} - Automattinen aloitus sis„„nkirjoituksessa
+        @{i}B@{ui} - On ollut asetettuna
+        @{i}C@{ui} - Tyhjenn„ n„ytt” ennen viestin n„ytt„mist„
+        @{i}D@{ui} - Tyhjenn„ n„ytt” ennen valikkoa
+        @{i}E@{ui} - Tyhjenn„ ruutu ennen tiedostolistaa
+        @{i}G@{ui} - Poistu BBBS:st„ kun poistut HotKey/$:st„.
+
+        VAIN HotKey/$:n pit„isi muuttaa n„it„ asetuksia.
+
+@{b}ESIMERKKI@{ub}
+       set "hotkey" "abdg"
+@endnode
+
+@node UTIL_SET_NICK "Lempinimi"
+@{b}KOMENTO@{ub}
+        [u] @{i}set nick@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa lempinimen k„ytett„v„ksi ryhm„juttelussa.
+@endnode
+
+@node UTIL_SET_KILLFILE "Killfile"
+@{b}KOMENTO@{ub}
+        [u] @{i}set killfile@{ui}
+
+@{b}ESITTELY@{ub}
+        Kaikki viestit jotka tulevat tai menev„t @{i}killfile@{ui}-asetuksessa
+        m„„ritellyille ihmisille suodatetaan pois. Et n„e niit„.
+
+@{b}ESIMERKKI@{ub}
+        SET "KILLFILE" "(Jan Parkki|Huuhaa)"
+@endnode
+
+@node UTIL_SET_KLUDGES "Ylim„„r„iset viestin otsikkokent„t"
+@{b}KOMENTO@{ub}
+        [u] @{i}set kludges@{ui}
+
+@{b}ESITTELY@{ub}
+        T„m„ asetus kytkee p„„lle ylim„„r„iset tiedot viestin
+        otsikkokent„ss„, kuten viestin id, merkist” ja erilaiset
+        tiedot viestink„sittelyohjelmista. K„ytet„„n yleens„ debug-
+        tarkoituksessa.
+
+@{b}ESIMERKKI@{ub}
+        SET "KLUDGES" "jepo_haluan_todella_n„hd„_ne"
+@endnode
+
+@node UTIL_SET_LOGIN "Sis„„nkirjoittautumiskomennot"
+@{b}KOMENTO@{ub}
+        [u] @{i}set login@{ui}
+
+@{b}ESITTELY@{ub}
+        Asettaa komennot jotka ajetaan heti sis„„nkirjoittautumisen
+        j„lkeen.
+
+@{b}ESIMERKKI@{ub}
+        SET "LOGIN" "MD;WHO"
+@endnode
+
+@node UTIL_SET_MG_X "MG startup-tiedosto"
+@{b}KOMENTO@{ub}
+        [u] @{i}set mg_@{b}x@{ub}@{ui}
+
+@{b}ESITTELY@{ub}
+        MG startup-tiedosto jossa x on juokseva numero alkaen 1:st„.
+        T„ll„ voit asettaa omat m„„rittelyt MG:n toiminnalle.
+
+@{b}ESIMERKKI@{ub}
+        u set "mg_1" "end-of-buffer"
+        u set "mg_2" "prefix-region"
+        u set "mg_3" "beginning-of-buffer"
+        u set "mg_4" "bsmap-mode"
+@endnode
+
+@node UTIL_SET_MODE "Mode"
+@{b}KOMENTO@{ub}
+        [u] @{i}set mode@{ui}
+
+@{b}ESITTELY@{ub}
+        Aseta t„m„ "b":ksi saadaksesi B-m„inen komentorivi ja muut
+        asetukset.
+@endnode
+
+@node UTIL_SET_PROMPT "Prompt"
+@{b}KOMENTO@{ub}
+        [u] @{i}set prompt@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit luoda mieli kehoitteesi t„ll„ asetuksella.
+        Arvot ovat:
+          foo      teksti "foo" sellaisenaan
+          \\c       nykyisen viestialueen:lukematta tai tiedostoalueen nimi
+          \\C       nykyisen /viestialueen:lukematta tai tiedostoalueen nimi
+          \\z       nykyisen viestialueen tai tiedostoalueen nimi
+          \\Z       nykyisen /viestialueen tai tiedostoalueen nimi
+          \\a       normaalin v„rinen kehoite
+          \\A       B-tila v„rivaihtoehto
+          \\#       Nykyinen keskustelun kohde
+          \\t       T„ll„ soitolla j„ljell„oleva aika
+          \\T       Nykyinen aika varustettuna DING:ill„
+          \\m       Nykyisen viestin numero
+          \\M       Nykyisen alueen viimeisen viestin numero
+          \\e       ESC merkki (27)
+          \\r       CR merkki (13)
+          \\n       LF merkki (10)
+          \\b       backspace (8)
+          \\\\       "\\" merkki
+
+        Oletuskehoitteet ovat:
+
+          normaali, konkari:    (\\c) \\a:
+          normal, aloittelija:  (\\c) \\a (? for help):
+          B-tila:               (\\T) \\A:\\e[1;37m\\C\\e[0;37m>
+@endnode
+
+@node UTIL_SET_HUNTMSG "Hunt-viesti"
+@{b}KOMENTO@{ub}
+        [u] @{i}set huntmsg@{ui}
+
+@{b}KUVAUS@{ub}
+        T„ll„ muuttujalla voit asettaa viestin joka l„hetet„„n muiden
+        pelaajien ruuduille, kun aloitat @{i}Hunt@{ui}-pelin pelaamisen.
+        Kaikkein useiten sit„ k„ytet„„n sanomaan "Sy”k„„ limakuolemaa -
+        JoeH tulee ja tappaa!".
+
+@{b}ESIMERKKI@{ub}
+        u set "huntmsg" "Sy”k„„ limakuolemaa - JoeH tulee ja tappaa!"
+
+@{b}KATSO MY™S@{ub}
+        q @{"hunt" link MAIN_HUNT}
+@endnode
+
+@node UTIL_LA "Kielen valinta"
+@{b}KOMENTO@{ub}
+        [u] @{i}lang@{ui}
+
+@{b}ESITTELY@{ub}
+        Vaihda kielt„ jolla haluat toimia BBS:ss„. Huomioi ett„ komennot
+        eiv„t vaihdu samalla kun kieli. Oletuskielen„ on englanti.
+@endnode
+
+@node UTIL_ALI "Alias"
+@{b}KOMENTO@{ub}
+        [u] @{i}alias@{ui}
+
+@{b}ESITTELY@{ub}
+        ALIAS-komennolla rakennetaan aliaksia vanhoille komennoille tai
+        luodaan uusia komentoja. Esimerkiksi:
+
+        U ALIAS "NEWFILES" "F N;;"
+        U ALIAS "LOG2" "Q BLOG 2"
+@endnode
+
+@node UTIL_UNSET "Poista SET asetus"
+@{b}KOMENTO@{ub}
+        [u] @{i}unset@{ui}
+
+@{b}ESITTELY@{ub}
+        Voit poistaa asetuksen joka on tehty aiemmin @{"set" link UTIL_SET} komennolla.
+        Huomaa: Voit poistaa asetuksia my”s "set" komennolla.
+@endnode
+
+@node UTIL_UNALI "Poista alias"
+@{b}KOMENTO@{ub}
+        [u] @{i}unalias@{ui}
+
+@{b}ESITTELY@{ub}
+        Poistaa aliakset jotka on annettu @{"alias" link UTIL_ALI} komennolla.
+@endnode
+
+@node UTIL_AAS "Liit„ k„ytt„jille tili"
+@{b}KOMENTO@{ub}
+        [u] @{i}aas@{ui}
+
+@{b}ESITTELY@{ub}
+        Antaa k„ytt„jille oikeuden tilille. Tili voi olla uusi tai jo
+        olemassa oleva.
+
+@endnode
+
+@node UTIL_AAD "Lis„„ tilille rahaa"
+@{b}KOMENTO@{ub}
+        [u] @{i}aad@{ui}
+
+@{b}ESITTELY@{ub}
+        Lis„„ valitun k„ytt„j„n tilille rahaa.
+@endnode
+
+@node UTIL_AC "Muuta luottotietoja"
+@{b}KOMENTO@{ub}
+        [u] @{i}ac@{ui}
+
+@{b}ESITTELY@{ub}
+        Muuta valitun k„ytt„j„n luottotietoja. Vaihtoehdot ovat joko
+        luotollinen tili tai luototon tili.
+
+@endnode
+
+@node UTIL_AM "Tilin k„ytt„j„t"
+@{b}KOMENTO@{ub}
+        [u] @{i}am@{ui}
+
+@{b}ESITTELY@{ub}
+        N„yt„ tilin k„ytt„j„t.
+
+@endnode
+
+@node UTIL_AV "N„yt„ tili"
+@{b}KOMENTO@{ub}
+        [u] @{i}av@{ui}
+
+@{b}ESITTELY@{ub}
+        N„yt„ tili.
+
+@endnode
+
+@node UTIL_BA "Tallenna aikaa k„ytt„jille"
+@{b}KOMENTO@{ub}
+        [u] @{i}ba@{ui}
+
+@{b}ESITTELY@{ub}
+        T„ll„ komennolla voit muuttaa k„ytt„j„n aikapankin saldoa.
+@endnode
+
+@node UTIL_FACC "Tiedosto-oikeustaso"
+@{b}KOMENTO@{ub}
+        [u] @{i}facc@{ui}
+
+@{b}ESITTELY@{ub}
+        p„„st„„ muuttamaan k„ytt„j„n tiedosto-oikeuksia. K„yt„ ensin @{"find" link UTIL_FIND}
+        komentoa k„ytt„j„n etsimiseen.
+        Tiedosto-oikeustasot:
+           0 - ei oikeuksia
+           1 - vain nouto-oikeudet
+           2 - vain tuuppaamisoikeudet
+           3 - sek„ tuuppaamis- ett„ nouto-oikeudet
+@endnode
+
+@node UTIL_FIND "Etsi k„ytt„j„/ryhm„ nimen perusteella"
+@{b}KOMENTO@{ub}
+        [u] @{i}find@{ui}
+
+@{b}ESITTELY@{ub}
+        FIND etsii k„ytt„j„tietokannasta ja GROUPS-tiedostosta mit„
+        tahansa k„ytt„j„„ johon antamasi merkkijono sopii. T„t„
+        k„ytet„„n k„ytt„j„n oikeustason ja asetusten muuttamiseen.
+        Ryhm„n nimen etsiminen tulostaa ryhm„n j„senet.
+
+        Jos etsinn„n tulos on vain rivi joka on kirjoitettu vihre„ll„,
+        ei etsim„„si nime„ l”ytynyt tai kyseess„ on ryhm„. Jos v„ri on
+        turkoosi on kyseess„ yksitt„inen k„ytt„j„ ja BBBS on asettanut
+        kohdistimen sen kohdalle.
+
+@{b}KATSO MY™S@{ub}
+        [u] @{i}wotu@{ui}
+@endnode
+
+@node UTIL_+ "Seuraava k„ytt„j„"
+@{b}KOMENTO@{ub}
+        [u] @{i}+@{ui}
+
+@{b}ESITTELY@{ub}
+        Siirt„„ kohdistimen seuraavaan k„ytt„j„„n (suurempaan
+        k„ytt„j„numeroon).
+@endnode
+
+@node UTIL_- "Edellinen k„ytt„j„"
+@{b}KOMENTO@{ub}
+        [u] @{i}-@{ui}
+
+@{b}ESITTELY@{ub}
+        Siirt„„ kohdistimen edelliseen k„ytt„j„„n (pienem„„n
+        k„ytt„j„numeroon.)
+@endnode
+
+@node UTIL_INV "Kutsu k„ytt„j„/ryhm„ viestialueelle"
+@{b}KOMENTO@{ub}
+        [u] @{i}inv@{ui}
+
+@{b}ESITTELY@{ub}
+        Kutsu k„ytt„j„ tai ryhm„ nykyiselle viestialueelle, jos
+        k„ytt„j„taso on riitt„v„. Jos k„ytt„j„taso ei ole riitt„v„, voit
+        muuttaa sit„ muokkaamalla GROUPS-tiedostoa.
+@endnode
+
+@node UTIL_KILL "Poista k„ytt„j„"
+@{b}KOMENTO@{ub}
+        [u] @{i}kill@{ui}
+
+@{b}ESITTELY@{ub}
+        KILL poistaa k„ytt„j„n nimen BBBS:st„. Uusi k„ytt„j„ voi k„ytt„„
+        nime„ uudestaan. Jos et halua nime„ en„„ k„ytett„v„n, lis„„ se
+        trashcan-tiedostoon.
+@endnode
+
+@node UTIL_LIM "Rajat"
+@{b}KOMENTO@{ub}
+        [u] @{i}limit@{ui}
+
+@{b}ESITTELY@{ub}
+        Pane k„ytt„j„ tai ryhm„ rajoitettuun luokkaan. katso bcfg4.gui:ta
+        saadaksesi lis„tietoa rajoituksista.
+@endnode
+
+@node UTIL_SYS "SysOp-oikeudet"
+@{b}KOMENTO@{ub}
+        [u] @{i}sys@{ui}
+
+@{b}ESITTELY@{ub}
+        Muuta SysOp-tasoa k„ytt„j„lle. SysOp-taso on bittikartta
+        kokonaisluku. Voit k„ytt„„ arvoja 0:sta 255:een seuraavasti:
+
+             1: Voi k„ytt„„ k„ytt”j„rjestelm„kehotetta ja
+                ajaa k„ytt”j„rjestelm„ss„ komentoja
+             2: T„ydet oikeudet kaikille viestialueille
+             4: T„ydet oikeudet kaikkiin tiedostoihin
+             8: Voi lukea yksityisi„ viestej„ kaikilta alueilta
+            16: Voi vaihtaa salasanoja
+            32: Voi muuttaa k„ytt„j„n tilaa (@{"kill" LINK UTIL_KILL}|@{"sta" LINK UTIL_STA})
+            64: Voi muuttaa NetMail-viestin tilaa
+           128: Saa k„ytt„„ kaikkia keskustelukomentoja
+
+        Jos haluat antaa tiettyj„ oikeuksia, summaa haluamasi numerot.
+        Esimerkiksi, jos haluat k„ytt„j„ll„ olevan oikeuden
+        viestialueille ja yksityisiin viesteihin, arvo on 10 (2+8).
+@endnode
+
+@node UTIL_STA "Tilan vaihto"
+@{b}KOMENTO@{ub}
+        [u] @{i}sta@{ui}
+
+@{b}ESITTELY@{ub}
+        Vaihda nykyisen k„ytt„j„n tilaa. Vaihtoehdot ovat:
+
+          Aktiivinen:           Normaalitila
+          Potkittu ulos:        K„ytt„j„ ei p„„se j„rjetelm„„n
+          Tapettu:              K„ytt„j„ on poistettu
+@endnode
+
+@node UTIL_TLI "K„ytt„j„n aikarajoitus"
+@{b}KOMENTO@{ub}
+        [u] @{i}tli@{ui}
+
+@{b}ESITTELY@{ub}
+        Muuttaa vuorokautista maksimiaikaa, joka on k„ytett„viss„.
+@endnode
+
+@node UTIL_UNINV "Erota"
+@{b}KOMENTO@{ub}
+        [u] @{i}uninv@{ui}
+
+@{b}ESITTELY@{ub}
+        Erottaa k„ytt„j„n tai ryhm„n nykyiselt„ viestialueelta oikeustasoa
+        muuttamatta. Eli k„ytt„j„ voi liitty„ alueelle uudestaan.
+
+@{b}KATSO MY™S@{ub}
+        @{"inv" link UTIL_INV}
+@endnode
+
+@node UTIL_WOTU "WandOfTurnUndead"
+@{b}KOMENTO@{ub}
+        [u] @{i}wotu@{ui}
+
+@{b}ESITTELY@{ub}
+        WOTU toimii kuten @{"FIND" link UTIL_FIND} mutta etsii k„ytt„j„tietokannasta
+        my”s @{"tapettuja" link UTIL_KILL} k„ytt„ji„.
+@endnode
+
+@node REGEXP "S„„nn”llinen ilmaus"
+@{b}ESITTELY@{ub}
+        S„„nn”llinen ilmaus on standarditapa etsi„ teksti„.
+        S„„nn”llisell„ ilmauksella on tietty semantiikka
+        erikoismerkeille, jotka erovat tiedostopuolella k„ytetyist„
+        jokerimerkeist„. Kaikkia tekstej„ BBBS:ss„ tutkitaan
+        s„„nn”llisell„ ilmaisulla. Haussa kirjainten koko ei merkitse.
+
+        SI              Toiminto
+        ================================================================
+        hih             teksti "hih" sellaisenaan
+        ^               rivin alku
+        $               rivin loppu
+        .               mik„ tahansa merkki
+        [foz]           merkki `f', `o' tai `z'
+        [^foz]          muu kirjain kuin `f', `o' tai `z'
+        [f-j]           sama kuin komento "[fghij]"
+        [^f-j]          sama kuin komento "[^fghij]"
+        (huu|haa)       teksti "huu" tai "haa"
+        x?              sama kuin komento "(x|)"
+        x+              yksi tai useampi `x'
+        x*              nolla tai useampi `x'
+        \\x              merkki `x', k„ytet„„n esimerkiksi haettaessa `*':„
+
+@{b}HUOMAUTUS@{ub}
+        Seuraavat s„„nn”lliset ilmaukset ovat oikeita, mutta tulokset eiv„t
+        ehk„ ole odotettuja.
+
+        SI              Mit„ se tekee?
+        ================================================================
+        .*              sopii kaikkeen
+        .               sopii kaikkeen paitsi tyhj„„n riviin
+        huu*            sopii riveihin joilla on "hu"
+        tiedosto*.*     sopii riveille joilla on "tiedost"
+
+@{b}ESIMERKKI@{ub}
+        SI              Vaikutus
+        ================================================================
+        huuhaa          etsii teksti„ "huuhaa" rivilt„
+        ^huuhaa         etsii rivi„ joka alkaa "huuhaa"
+        hu.haa          etsii rivi„ jolla hu<mik„ tahansa merkki>haa
+        \\*              etsii merkki„ "*" rivlt„
+        huu(haa|hii)*hoo$
+                        etsii riiv„ jolla teksti "huu" jota seuraa nolla
+                        tai useampi "haa" tai "hii" ja sit„ seuraava "hoo"
+                        rivin lopussa. Esimerkiksi rivin "huuhoo" ja
+                        "roskahuuhaahiihaahoo" sopii t„h„n S„„nn”lliseen
+                        Ilmaukseen
+
+@{b}KATSO MY™S@{ub}
+        @{"Jokerimerkit" link WILDCARDS}
+@endnode
+
+@node WILDCARDS "Jokerimerkit"
+@{b}ESITTELY@{ub}
+        Jokerimerkki tiedostonetsint„ on vakio tapa etsi„ tiedostoja
+        k„ytt„j„n antamalla osajono. Jonon t„ytyy t„sm„t„ koko
+        tiedostonimeen.
+
+        Jokerimerkki    Vaikutus
+        ================================================================
+        har             teksti "har" sellaisenaan
+        *               nolla tai useampi merkki (mik„ tahansa)
+        ?               mik„ tahansa merkki
+        [har]           merkki `h', `a' tai `r'
+        [!har]          mik„ tahnsa merkki paitsi `h', `a' tai `r'
+        [f-j]           sama kuin komento "[fghij]"
+        [!f-j]          sama kuin komento "[!fghij]"
+        \\x              merkki `x', k„ytet„„n esim. etsitt„ess„ `[':„
+
+@{b}HUOMAUTUS@{ub}
+        Seuraavat jokerimerkit ovat oikeita mutta antavat ehk„ muun kuin
+        halutun tuloksenv„„r„n tuloksen.
+
+        Jokerimerkki    T„sm„„
+        ================================================================
+        *.*             t„sm„„ tiedostonimiin joissa on "." ei kaikkiin
+        huu*.*          t„sm„„ tiedostoihin joiden nimi alkaa "huu" ja
+                        joissa on "."
+
+@{b}ESIMERKKI@{ub}
+        Jokerimerkki    T„sm„„
+        ================================================================
+        *               kaikkiin tiedostoihin
+        *huu*           tiedostonimiin joissa on "huu"
+        huu*haa[1-4x]   tiedostonimiin jotka alkavat "huu" ja loppuvat
+                        "haa" jota seuraa numero yhdest„ nelj„„n tai "x"
+
+@{b}KATSO MY™S@{ub}
+        @{"s„„nn”llinen ilmaus" link REGEXP}
+@endnode
+
+@node HELP "Kuinka apuj„rjestelm„„ k„ytet„„n"
+        Apuj„rjestelm„n komennot:
+
+        @{b}C@{ub}:sis„lt” - N„ytt„„ sis„ll”n (p„„valikon)
+        @{b}I@{ub}ndexi    - N„ytt„„ akkosellisen hakemiston
+        @{b}H@{ub}:apua    - N„ytt„„ t„m„n
+        @{b}R@{ub}:paluu   - Palaa takaisin edelliseen kohtaan
+        Selaa @{b}<@{ub}   - N„ytt„„ edellisen apuruudun aputiedostosta
+        Selaa @{b}>@{ub}   - N„ytt„„ seuraavan apuruudun aputiedostosta
+        @{b}S@{ub}:etsi    - Etsi hakusanalla
+        @{b}Q@{ub}:pois    - Palaa takaisin BBBS:„„n
+
+        Kun olet apuj„rjestelm„ss„ voit siirty„ yl”s ja apas
+        kursorin„pp„imill„. N„pp„inyhdistelm„t Ctrl-R ja Ctrl-C
+        vieritt„v„t sivun yl”s ja alas.
+
+@{b}KATSO MY™S@{ub}
+        @{"uusi k„ytt„j„" link GLOB_NEWU}
+@endnode
+
+@node INFO_Contact_B "How to contact"
+For contacting, you may use addresses:
+
+Kim Heino                               BarCode BBS
+Paavolankatu 3 D 34                     v/Rune Johansen
+FIN-20240  TURKU                        Ospelia 23 B
+Finland                                 N-1481 Hagan
+Internet: b\@bbbs.net, Kim.Heino\@utu.fi  Norway
+BBS/FAX: +358 2 240 4036 (BCG-Box)      Internet: rune\@bbbs.net, rune\@cinet.no
+         +358 2 240 7755                BBS/FAX: +47-67 06 00 07 (BarCode)
+         +358 2 240 1413                FidoNet: 2:210/20
+         +358 2 240 4410
+FidoNet: 2:22/222
+@endnode
+
+@node Index "Indeksi"
+        @{" > " link READ_NUMBER}  <#> lue viesti jonka numero on #
+        @{" > " link MAIN_BA}  Aikapankki
+        @{" > " link MAIN_DOS}  Aja k„ytt”j„rjestelm„ss„ komento
+        @{" > " link UTIL_SET_ALIAS}  Alias-nimi
+        @{" > " link UTIL_ALI}  Alias
+        @{" > " link READ_AI}  Alueen tiedot
+        @{" > " link FILE_LIN}  Asenna tiedosto (linkki)
+        @{" > " link FILE_IN}  Asenna tiedostoja
+        @{" > " link UTIL_S}  Aseta merkist”
+        @{" > " link UTIL_SET}  Aseta/katso/poista asetus
+        @{" > " link UTIL}  Asetukset valikko
+        @{" > " link GLOB_U}  Asetuskomennot
+        @{" > " link UTIL_QU}  Automaattilainaus
+        @{" > " link MAIN_OP}  Avaa ovi ulkoiseen ohjelmaan
+        @{" > " link FILE_K}  Avainsana etsint„
+        @{" > " link READ_P}  Edellinen - Juuri luettu
+        @{" > " link UTIL_-}  Edellinen k„ytt„j„
+        @{" > " link READ_-}  Edellinen viesti
+        @{" > " link MAIN_MG}  Editori
+        @{" > " link CHAT_N}  Ei tavoitettavissa
+        @{" > " link READ_RES}  Eroa viestialueelta
+        @{" > " link UTIL_UNINV}  Erota
+        @{" > " link UTIL_FIND}  Etsi k„ytt„j„/ryhm„ nimen perusteella
+        @{" > " link FILE_S}  Etsi nimen perusteella
+        @{" > " link MAIN_BR}  Etsi nodelistalta
+        @{" > " link UTIL_SET_FILESKIP}  Fileskip
+        @{" > " link GLOB_H}  H apua
+        @{" > " link FILE_DI}  Hakemistolistaus
+        @{" > " link READ_S}  Hakukomennot
+        @{" > " link FILE_PPUT}  Henkil”kohtainen tuuppaaminen
+        @{" > " link UTIL_SI}  Hiljaisuus/„„nimerkit
+        @{" > " link UTIL_SET_HOTKEY}  HotKey/$ asetuskset
+        @{" > " link INFO_Contact_B}  How to contact
+        @{" > " link MAIN_HUNT}  Hunt
+        @{" > " link UTIL_SET_NICK}  lempinimi
+        @{" > " link Index}  Indeksi
+        @{" > " link MAIN_JA}  Jargon-haku
+        @{" > " link WILDCARDS}  Jokerimerkit
+        @{" > " link CHAT_S}  Juttele SysOpin kanssa
+        @{" > " link GLOB_CHAT}  Juttelukomennot
+        @{" > " link UTIL_SET_GRABDEF}  Kahmaisu (Grab) oletukset
+        @{" > " link MAIN_CAL}  Kalenteri
+        @{" > " link UTIL_V}  Katso asetuksia
+        @{" > " link FILE_V}  Katso pakattuun tiedostoon
+        @{" > " link UTIL_LA}  Kielen valinta
+        @{" > " link UTIL_SET_KILLFILE}  Killfile
+        @{" > " link GLOB_E}  Kirjoita viesti
+        @{" > " link EDITOR_FSE}  Kokoruutueditori: FSE
+        @{" > " link CLEDITOR}  Komentorivieditori: Komentojen antaminen BBBS:lle
+        @{" > " link GLOB_COM}  Kommentti SysOpille
+        @{" > " link FILE_CO}  Kopioi tiedostoja (linkki)
+        @{" > " link READ_FIX}  Korjaa esittelyviestiviittaukset
+        @{" > " link FILE_TOU}  Koske tiedostoa
+        @{" > " link HELP}  Kuinka apuj„rjestelm„„ k„ytet„„n
+        @{" > " link FILE_WD}  Kuka on noutanut
+        @{" > " link UTIL_INV}  Kutsu k„ytt„j„/ryhm„ viestialueelle
+        @{" > " link FILE_DES}  Kuvaile tiedosto
+        @{" > " link READ_USER}  K„ytt„j„editori
+        @{" > " link UTIL_TLI}  K„ytt„j„n aikarajoitus
+        @{" > " link MAIN_SHELL}  K„ytt”j„rjestelm„kehote
+        @{" > " link GLOB_J}  Liity viestialueelle/vaihda viestialueeta
+        @{" > " link OUTB_L}  Listaa Nodet/viestej„
+        @{" > " link READ_V}  Listaa alueen viestit
+        @{" > " link MAIN_S}  Listaa k„ytt„j„t
+        @{" > " link FILE_AD}  Lis„„ tiedosto /tmp-hakemistoon
+        @{" > " link READ_D}  Lis„„ viesti viestipakettiin
+        @{" > " link MAIN_BLOG}  Lokitiedosto takaperoisesti
+        @{" > " link GLOB_R}  Lukukomennot
+        @{" > " link READ}  Lukuvalikko
+        @{" > " link OUTB_C}  Luo viesti
+        @{" > " link MAIN_HIPPO}  L„het„ Hippoviesti
+        @{" > " link GLOB_FIN}  L„sn„olijat systeemiss„
+        @{" > " link GLOB_W}  L„sn„olijat
+        @{" > " link UTIL_SET_MG_X}  MG startup-tiedosto
+        @{" > " link EDITOR_MG}  MG
+        @{" > " link READ_FM}  Merkitse l„hetetyksi
+        @{" > " link READ_UNFM}  Merkitse uudeksi
+        @{" > " link READ_M}  Merkitse viestej„ eri tavoin
+        @{" > " link GLOB_MU}  Message Upload
+        @{" > " link UTIL_SET_MODE}  Mode
+        @{" > " link UTIL_RES}  Muokkaa esittely„si
+        @{" > " link UTIL_AC}  Muuta luottotietoja
+        @{" > " link OUTB_B}  Muuta varattunen soittojen lukum„„r„„
+        @{" > " link OUTB_CH}  Muuta viesti„ numero/kaikkia viestej„ nodelle
+        @{" > " link GLOB_TIM}  Neiti aika
+        @{" > " link FILE_N}  Uudet tiedostot (p„iv„ys)
+        @{" > " link UTIL_N}  Nimen vaihto
+        @{" > " link GLOB_NO}  Nodeviesti
+        @{" > " link UTIL_MF}  Nodeviestisuodatin
+        @{" > " link MAIN_RESET}  Nollaa perioditilasto
+        @{" > " link FILE_GE}  Imuroi tiedostoja
+        @{" > " link UTIL_AAS}  Liit„ k„ytt„j„jille tili
+        @{" > " link UTIL_AAD}  Lis„„ tilille rahaa
+        @{" > " link MAIN_BSTAT}  N„yt„ B-tilasto
+        @{" > " link READ_O}  N„yt„ alkuper„inen
+        @{" > " link READ_SH}  N„yt„ alueiden tila
+        @{" > " link READ_<}  N„yt„ ketjun edellinen viesti
+        @{" > " link MAIN_LOG}  N„yt„ lokitiedostoja
+        @{" > " link UTIL_AV}  N„yt„ tili
+        @{" > " link GLOB_?}  N„yt„ valikko
+        @{" > " link READ_>}  N„yt„ vastaus
+        @{" > " link MAIN_COMPU}  N„yt„ vapaa levytila
+        @{" > " link MAIN_BSHELL}  OS/2-kehoite
+        @{" > " link UTIL_REV}  Omien viestien uudelleenn„ytt”
+        @{" > " link UTIL_A}  Osoitteen vaihto
+        @{" > " link READ_PRE}  PRE yksityinen vastaus
+        @{" > " link READ_ENTER}  Paina <enter> lukeaksesi viestej„
+        @{" > " link READ_SE}  Pakkaa ja imuroi viestit
+        @{" > " link FILE_LH}  Pakkaa tiedosto LHA-menetelm„ll„
+        @{" > " link FILE_ZIP}  Pakkaa tiedosto ZIP-menetelm„ll„
+        @{" > " link FILE_PA}  Pakkaa tiedostot
+        @{" > " link UTIL_AF}  Pakkausmetodi
+        @{" > " link GLOB_Q}  Palaa p„„valikkoon
+        @{" > " link OUTB_Q}  Palaa p„„valikkoon
+        @{" > " link READ_REC}  Palauta poistettu viesti
+        @{" > " link MAIN_HIDE}  Piiloita itsesi
+        @{" > " link FILE_SP}  Pilko tiedosto
+        @{" > " link UTIL_SET_AWAY}  Poissaoloteksti
+        @{" > " link UTIL_UNSET}  Poista SET-asetus
+        @{" > " link UTIL_UNALI}  Poista alias
+        @{" > " link UTIL_KILL}  Poista k„ytt„j„
+        @{" > " link FILE_DEL}  Poista tiedosto(ja)
+        @{" > " link OUTB_D}  Poista viesti
+        @{" > " link READ_K}  Poista viesti
+        @{" > " link GLOB_G}  Poistuminen BBS:st„
+        @{" > " link MAIN_OU}  Postinhallinta
+        @{" > " link MAIN_EJ}  Potki k„ytt„j„ pihalle
+        @{" > " link UTIL_SET_PROMPT}  Prompt
+        @{" > " link OUTB_CL}  Puhdista tick-hakemisto ja attach-viestit
+        @{" > " link FILE_EXT}  Pura tiedosto
+        @{" > " link UTIL_TE}  P„„te-emulaatio
+        @{" > " link MAIN_MENU}  P„„valikon komennot
+        @{" > " link READ_RE}  RE vastaa viestiin
+        @{" > " link UTIL_LIM}  Rajat
+        @{" > " link FILE_UNFREE}  Rajoita tiedoston noutoa
+        @{" > " link UTIL_L}  Rivej„ ruudulla
+        @{" > " link EDITOR_LINE}  Rivieditori
+        @{" > " link MAIN_RL}  Rlogin
+        @{" > " link CHAT_G}  Ryhm„juttelu
+        @{" > " link UTIL_P}  Salasanen vaihto
+        @{" > " link READ_.}  Sama viesti
+        @{" > " link READ_NE}  Seuraava alue
+        @{" > " link UTIL_+}  Seuraava k„ytt„j„
+        @{" > " link READ_=}  Seuraava vastaus
+        @{" > " link READ_+}  Seuraava viesti
+        @{" > " link FILE_MO}  Siirr„ tiedosto(ja)
+        @{" > " link READ_MOV}  Siirr„ viesti toiselle alueelle
+        @{" > " link Main}  Sis„llysluettelo
+        @{" > " link UTIL_SET_LOGIN}  Sis„„nkirjoittautumiskomennot
+        @{" > " link MAIN_UL}  Sis„„ntulo k„ytt„j„n„
+        @{" > " link UTIL_SYS}  SysOp-oikeudet
+        @{" > " link REGEXP}  S„„nn”llinen ilmaus
+        @{" > " link MAIN_TEL}  Telnet <osoite>
+        @{" > " link UTIL_BA}  Tallenna aikaa k„ytt„jille
+        @{" > " link CHAT_A}  Tavoitettavissa
+        @{" > " link UTIL_T}  Tiedonsiirtoprotokolla
+        @{" > " link FILE_I}  Tiedostotietous
+        @{" > " link UTIL_FACC}  Tiedosto-oikeustaso
+        @{" > " link GLOB_F}  Tiedostokomennot
+        @{" > " link FILE}  Tiedostovalikon komennot
+        @{" > " link GLOB_B}  Tiedotteet
+        @{" > " link UTIL_I}  Tietoa itsest„si
+        @{" > " link MAIN_I}  Tietoa k„ytt„j„st„
+        @{" > " link UTIL_STA}  Tilan vaihto
+        @{" > " link MAIN_STAT}  Tilastoa k„ytt„jist„
+        @{" > " link UTIL_AM}  Tilin k„ytt„j„t
+        @{" > " link FILE_TCO}  Todellinen kopiointi
+        @{" > " link FILE_T}  Tulosta tiedosto n„yt”lle
+        @{" > " link READ_DUP}  Tuplaa (kirjoita uudestaan) viesti
+        @{" > " link FILE_PU}  Tuuppaa tiedostoja
+        @{" > " link MAIN_DELL}  Tyhjenn„ lokitiedosto
+        @{" > " link GLOB_NEWU}  Uuden k„ytt„j„n pikaopas
+        @{" > " link GLOB_MD}  Uusien viestien ottaminen kotiin
+        @{" > " link UTIL_KEY}  VT100-n„pp„imist”
+        @{" > " link OUTB_BA}  Vaihda ep„onnistuneiden yhteyksien m„„r„„
+        @{" > " link UTIL_X}  Vaihda konkari/aloittelija-aputasoa
+        @{" > " link FILE_CD}  Vaihda oletushakemistoa
+        @{" > " link READ_MODE}  Vaihda viestienlukutapa
+        @{" > " link READ_Z}  Vaihda viestin l„hett„j„„/vastaanottajaa
+        @{" > " link MAIN_SPY}  Vakoile k„ytt„j„„
+        @{" > " link UTIL_GF}  Valitse et„lukumuoto:
+        @{" > " link FILE_FREE}  Vapauta tiedosto
+        @{" > " link MAIN_A}  Vastaa kyselyihin
+        @{" > " link MAIN_VER}  Versio
+        @{" > " link UTIL_C}  Viestialueiden tilan n„ytt” sis„„nkirjoittauduttaessa
+        @{" > " link EDITOR}  Viestieditori: Viestien kirjoittaminen BBBS:ss„
+        @{" > " link UTIL_ED}  Viestieditorin valinta:
+        @{" > " link READ_I}  Viestin kirjoittajan tiedot
+        @{" > " link READ_MC}  Viestin kopiointi
+        @{" > " link UTIL_FL}  Vilkuta nime„
+        @{" > " link UTIL_COL}  V„rit
+        @{" > " link UTIL_WOTU}  WandOfTurnUndead
+        @{" > " link GLOB}  Yleiset komennot (k„ytett„viss„ l„hes jokaisessa valikossa)
+        @{" > " link UTIL_SET_KLUDGES}  Ylim„„r„iset viestin otsikkokent„t
+@endnode
+
+

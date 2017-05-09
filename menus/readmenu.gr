@@ -1,0 +1,15 @@
+[1;1H[2J[1;31mRead Commands:[0;37m
+
+press [1m<CR>[0;37m to read next unread msg  <[1;33m<[0;37m> show the msg that this msg is reply to
+<[1;33mnum[0;37m> read msg with that number     <[1;33m>[0;37m> show first reply to this message
+<[1;33m+[0;37m> read next message               <[1;33m=[0;37m> show next reply, if there is one
+<[1;33m-[0;37m> read previous message           <[1;33mO[0;37m> show the first msg of this reply chain
+<[1;33m.[0;37m> read same message again         <[1;33mP[0;37m> show msg that you read before this msg
+<[1;33mRE[0;37m>ply to this message   <[1;33mK[0;37m>ill msg written by you  <[1;33mD[0;37m> add msgs to scratchpad
+<[1;33mPRE[0;37m> private reply       <[1;33mREC[0;37m>over killed msg       <[1;33mSE[0;37m> download scratchpad
+<[1;33mCRE[0;37m> conference reply    <[1;33mMOVE[0;37m> msg to other conf.  <[1;33mMODE[0;37m> for msg reading
+<[1;33mI[0;37m>nfo about author       <[1;33mMC[0;37m>opy msg to other conf. <[1;33mSH[0;37m>ow conference status
+<[1;33mV[0;37m>iew headers of msgs    <[1;33mDUP[0;37m>licate this message   <[1;33mRES[0;37m>ign conferences
+<[1;33mM[0;37m>ark menu               <[1;33mAI[0;37m> info about conf.      <[1;33mNEXT[0;37m> move to next conf.
+<[1;33mS[0;37m>earch menu             <[1;33mSAVE[0;37m> message to /tmp     <[1;33mGNUS[0;37m> fullscreen reader
+[0m

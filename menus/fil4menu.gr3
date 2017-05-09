@@ -1,0 +1,17 @@
+[1;1H[2J[1;31mFil Kommandoer:[0;37m
+
+<[1;33mLF[0;37m> list filer <[1;33mDI[0;37m>r     <[1;33mLH[0;37m> pakk fil med Lha      <[1;33mLE[0;37m>gg fil til [1m/tmp[0;37m dir.
+<[1;33mCD[0;37m> bytt katalog         <[1;33mZIP[0;37m> pakk fil med Zip     <[1;33mKO[0;37m>pier fil(er) (link)
+<[1;33mN[0;37m>ye filer               <[1;33mPA[0;37m>kk fil m/valgt pakker  <[1;33mTKO[0;37m>pier fil(er) (hard)
+<[1;33mS[0;37m>›ke etter filer (*.*)  <[1;33mEK[0;37m>straher (pakk ut) fil  <[1;33mFL[0;37m>ytt fil(er)
+<[1;33mEM[0;37m>neord s›king          <[1;33mV[0;37m>is arkivs innhold       <[1;33mSL[0;37m>ett fil(er)
+<[1;33mHE[0;37m>nt <[1;33mD[0;37m>ownload fil(er)    eller bildes oppl›sning <[1;33mT[0;37m>ype fil p† skjermen
+<[1;33mSE[0;37m>nd <[1;33mUP[0;37m>load file(er)  <[1;33mSP[0;37m>litt fil s† du kan     <[1;33mI[0;37m>nfo for file
+<[1;33mPSE[0;37m>nd privat fil(er)        hente den i biter      <[1;33mHN[0;37m> Hvem Nedlastet hva
+
+N†r du lister filer kan du [1mmerke[0;37m filer ved f›rst † trykke p† <[1mpil opp[0;37m> tasten.
+N† kan du flytte mark›ren med piltastene og kopiere filer til [1m/tmp[0;37m katalogen
+med <[1mspace[0;37m>. Bruk <[1;33mHHE[0;37m>nt for † laste de ned og <[1;33mHSL[0;37m>ett for † slette [1m/tmp[0;37m.
+<[1;33mHDI[0;37m> viser innholdet av [1m/tmp[0;37m katalogen. Vanligvis vil [1;33mH[0;37m<[1mkommando[0;37m> ber›re filer
+i [1m/tmp[0;37m katalogen.
+[0m

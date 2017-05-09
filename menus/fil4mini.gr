@@ -1,0 +1,8 @@
+
+[1;31mFile Commands:[0;37m    <[1;33m?[0;37m> help    <[1;33mR[0;37m>eadmenu    <[1;33mQ[0;37m> mainmenu    <[1;33mU[0;37m>tility menu
+
+<[1;33mDI[0;37m>rectory list        <[1;33mN[0;37m>ew files scan   <[1;33mGE[0;37m>t file
+<[1;33mCD[0;37m> change directory   <[1;33mK[0;37m>eyword scan     <[1;33mPU[0;37m>t file
+While listing files you can handle files by pressing the <[1mcursor up[0;37m> key.
+Mark files with <[1mspace[0;37m> and download them with <[1;33mHGET[0;37m>.
+[0m

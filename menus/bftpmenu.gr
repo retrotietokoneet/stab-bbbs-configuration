@@ -1,0 +1,12 @@
+[1;1H[2J[1;31mFTP Commands:[0;37m
+
+<[1;33mC[0;37m>d              Change directory
+<[1;33mD[0;37m>ir             Directory listing
+<[1;33mG[0;37m>et             Get file(s) to [1;37m/tmp[0;37m
+<[1;33mP[0;37m>ut             Put file
+<[1;33mT[0;37m>ype            Type file(s)
+<[1;33mN[0;37m>ames           Filenames in current directory
+<[1;33mDEL[0;37m>ete          Delete file(s)
+<[1;33mS[0;37m>ite            Site specific commands, try <[1;37msite help[0;37m>
+<[1;33mQ[0;37m>uit            Quit back to main menu
+[0m

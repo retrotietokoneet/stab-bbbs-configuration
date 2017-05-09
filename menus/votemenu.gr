@@ -1,0 +1,8 @@
+[1;1H[2J[1;31mVote Booth Commands:[0;37m
+
+<[1;33mV[0;37m>ote
+<[1;33mL[0;37m>ist results
+<[1;33mA[0;37m>dd new booth
+<[1;33mDEL[0;37m>ete booth you created
+<[1;33mRESET[0;37m> booth you created
+[0m

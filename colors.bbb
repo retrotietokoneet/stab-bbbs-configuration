@@ -1,0 +1,87 @@
+;
+; syntax:
+;   schemename:xxxxxxx
+;
+; where x is color number:
+;   0=Black         8=Bold-Black
+;   1=Red           9=Bold-Red
+;   2=Green         a=Bold-Green
+;   3=Yellow        b=Bold-Yellow
+;   4=Blue          c=Bold-Blue
+;   5=Magenta       d=Bold-Magenta
+;   6=Cyan          e=Bold-Cyan
+;   7=White         f=Bold-White
+;
+;
+; color code (\3cx):
+;   a=message, header
+;   b=message, user name
+;   c=message, subject
+;   d=message, normal text
+;   e=message, quoted text
+;   f=message, double-quoted text
+;   g=message, net info
+;   h=file, path
+;   i=file, header
+;   j=file, directory
+;   k=file, normal
+;   l=file, free
+;   m=file, link
+;   n=file, desc1
+;   o=file, desc2
+;   p=file, numbers
+;   q=nodemsg, my chat
+;   r=nodemsg, remote chat
+;   s=nodemsg, private
+;   t=nodemsg, info
+;   u=nodemsg, prefix
+;   v=nodemsg, remote, to me
+;   w=Join, header
+;   x=Join, highlight
+;   y=Join, selected
+;   z=Join, unselected
+;   A=Join, local area
+;   B=Join, network area
+;   C=Join, local post area
+;   D=Join, network post area
+;   E=Join, description
+;   F=Show, headers
+;   G=Show, total separator
+;   H=Show, numbers
+;   I=Show, to you
+;   J=Util, header
+;   K=Util, text
+;   L=Util, numbers
+;   M=Who, header
+;   N=unused
+;   O=unused
+;   P=Who, speed, active
+;   Q=Who, speed
+;   R=Who, status, active
+;   S=Who, status
+;   T=Who, when, active
+;   U=Who, when
+;   V=Who, nick, active
+;   W=Who, nick
+;   X=Who, caller name, active
+;   Y=Who, caller name
+
+;       abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXY
+Classic:6fb266772f627e67aebffd2fb726f77227b26727777f677f6f6
+Djadja :6ffe764f2fbae667aebff92fb762f77267b26727777f677f6f6
+tis    :2ffe768f2efffe67ebdff92fb7f79de2f7b26727778f678f6e6
+euro/2 :2fa6eef72de76f766e9bf92ab86e2a3a27b267f7778e678b3a2
+MaTo   :dfae76adadaaae67fbdbae2fb762f77267b26727777f677f6f6
+mikav  :7fff7bef2fbaee67aedff97fb77ef677f7b7ef777f7e6f7e6f6
+JariS  :6fb266872f6b7e677ebffd2fb762f77267b26727728f878b8f8
+Shades of Gray:f7f7ff88fff87f7878f8ff7ff87f887f77fff7ff878f778f7f7
+Cyber  :6fbf774ecb7e7f76eebffa6ebaecf76ef8be67e77f8f8f8f8f8
+Vale-Z :8f9df7e18fdade67bdf97ecfdb62f7f8fdf8df877f7d5f7d5d5
+Johnson:ce7766cf9e2a7be7fef6a98bb862e77689e6bd677b6b6b6b6b6
+LegeNda:7f2788880f62666825d7fd2fb773992336f67f27777f677f6f6
+RS/Look:5dd7ffd75f728d575dffff7fd85df77557f5f757777f877f8f8
+
+;
+; Do not edit these but create your own palette. If you want to make it
+; default to all of your users put it first in the list.
+;

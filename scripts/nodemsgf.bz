@@ -1,0 +1,19 @@
+// -*- mode: c -*-
+
+int main(char message, int beeped, int fromnode, int multi) {
+	/*
+	 * message  = one line of the message
+	 * beeped   = beeped=0 if we haven't returned 1 yet, see below
+	 * fromnode = sender of the message
+	 * multi    = 0: only line of message
+	 *            1: first line of multipart message
+	 *            2: continue line of multipart
+	 *            3: last line of multipart
+	 */
+	/* Print message to user */
+	bv_outputstopp = bv_outputstopp & 0xf8; /* Enable output */
+	if (beeped == 0)
+		printf("\a");
+	printf("%s\n", message);
+	return 1; /* 1 = message printted, 0 = message skipped */
+}

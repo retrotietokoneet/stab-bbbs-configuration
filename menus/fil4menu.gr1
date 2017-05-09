@@ -1,0 +1,17 @@
+[1;1H[2J[1;31mTiedostovalikon komennot:[0;37m
+
+<[1;33mL[0;37m>istaa hakemisto ([1;33mDI[0;37mr)  <[1;33mLH[0;37m> pakkaa tied. Lha:lla  <[1;33mADD[0;37m> kopioi [1m/tmp[0;37m:iin
+<[1;33mCD[0;37m> vaihda hakemistoa    <[1;33mZIP[0;37m> pakkaa Zipill„       <[1;33mCO[0;37m> kopioi tied. (link)
+<[1;33mN[0;37m> listaa uudet tied.    <[1;33mPA[0;37m>kkaa oletuspakkerilla  <[1;33mTCO[0;37m> kopioi tiedosto
+<[1;33mS[0;37m> etsi tied.(jok.merk.) <[1;33mEXT[0;37m> pura pakattu tied.   <[1;33mMV[0;37m> siirr„ tiedosto
+<[1;33mK[0;37m> hakusana (ei jok.mrk) <[1;33mV[0;37m> n„yt„ pakatun sis„lt”  <[1;33mDEL[0;37m> tuhoa tiedosto
+<[1;33mGE[0;37m>t imuroi ([1;33mD[0;37mownload)       tai kuvan resoluutio   <[1;33mT[0;37m>ulosta tied. ruudulle
+<[1;33mPU[0;37m>t l„het„ ([1;33mUP[0;37mload)     <[1;33mSP[0;37m> pilko tiedosto osiin  <[1;33mI[0;37m>nfoa tiedostosta
+<[1;33mPPUT[0;37m> yksityinen l„hetys <[1;33mGREP[0;37m> etsi tiedostosta    <[1;33mWD[0;37m> kuka imuroi mit„
+
+Tiedostolistauksessa voit [1mk„sitell„[0;37m tiedostoja painamalla ensin <[1mkursori yl”s[0;37m>
+n„pp„int„. Voit sitten siirt„„ kursorin haluamasi tiedoston kohdalle ja
+kopioida sen [1m/tmp[0;37m hakemistoon <[1mv„lily”ntin„pp„imell„[0;37m>. Kopioidut tiedostot
+voit imuroida <[1;33mHGET[0;37m> komennolla, <[1;33mHDEL[0;37m> tyhj„„ [1m/tmp[0;37m:in. Yleens„kin [1;33mH[0;37m<[1mkomento[0;37m>
+suorittaa komennon [1m/tmp[0;37m hakemistossa.
+[0m

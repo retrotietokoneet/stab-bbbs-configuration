@@ -1,0 +1,30 @@
+int main(char file, int confnro, char mfrom, char mto, char fido) {
+  // file is the filename of the message
+  // confnro is the number of conference where this message will be saved
+  // mfrom is message sender
+  // mto is message receiver
+  // fido is receivers nodenumber, or empty if not gated
+
+#if 0
+  /*
+   * This is an example how to forward a message to a local unix user (or a
+   * remote user / mailing list processor / ...) instead of a BBBS user.
+   * Messages addressed to "testuser@myhost" will be saved to root's mailbox.
+   */
+  if (mto=="testuser") {
+    char fn;
+    int f;
+    
+    fn=sprintf("%s.sh",file);
+    f=fopen(fn,"wt");
+    fprintf(f,"#!/bin/sh\n/usr/sbin/sendmail -oi -oem root < %s",file);
+    fclose(f);
+    system(sprintf("/bin/chmod 700 %s",fn),0,0);
+    system(fn,0,0);
+    remove(fn);
+    return(1);
+  }
+#endif
+
+  return(0); // 1=cancel, 0=save
+}

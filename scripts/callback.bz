@@ -1,0 +1,48 @@
+#include <stdlib.bzh>
+
+int main() {
+  //
+  // If you use callback then don't forget to put "del main\callback.dat" to
+  // your _daily_ event.
+  //
+  if (pos("callback",bv_groups)) {
+    if (copy(localtime(time()),9,2)<=6) {
+      int i=_account_get_money(bu_account);
+      if (i>0) {
+        char s;
+        printf("You have %u credit units left (charge=1).\n\n",i);
+        s=input("Give your number in intl form (\"358-2-2345678\"): ",60,0);
+        if (copy(s,1,6)=="358-2-" && copy(s,7,1)>=2 && copy(s,7,1)<=8 && copy(s,7,100)+0==copy(s,7,100)) {
+          int s1=time()+30; // start time
+          int e1=time()+180; // end time
+          printf("\nCalling you back from %02u:%02u:%02u to %02u:%02u:%02u, time is now %02u:%02u:%02u.\nIf you don't hear from us then all lines are busy, so try again later.\nMachines don't call people.   -- Wargames\n\nPress '*' to abort or any other key to hang up and callback.\n",
+                 copy(localtime(s1),9,2),
+                 copy(localtime(s1),11,2),
+                 copy(localtime(s1),13,2),
+                 copy(localtime(e1),9,2),
+                 copy(localtime(e1),11,2),
+                 copy(localtime(e1),13,2),
+                 copy(localtime(time()),9,2),
+                 copy(localtime(time()),11,2),
+                 copy(localtime(time()),13,2));
+          if (getch()!="*") {
+            FILE f;
+            if ((f=fopen(sprintf("%scallback.dat",bg_maindir),"at"))!=-1) {
+              fprintf(f,"2 %u %u %s\n",s1,e1,s); // try 2 times (max 9)
+              fclose(f);
+              _account_change_money(bu_account,-1);
+              bv_carrier=0;
+            } else printf("Can't open callback database, aborted.\n");
+          } else
+            printf("Aborted.\n");
+        } else
+          printf("Sorry, that number is not allowed.\n");
+      } else
+        printf("Sorry, you don't have any credit units left.\n");
+    } else
+      printf("Sorry, callback is allowed only in between 00:00 and 06:59.\n");
+  } else
+    printf("%s\n",bv_txt[22]);
+  bv_comstring="";
+  return(0);
+}

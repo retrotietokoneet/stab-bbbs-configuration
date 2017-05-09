@@ -1,0 +1,17 @@
+[2J[1;1H
+Fullskjerms editor hjelp:
+
+    Enter = ny linje                    Backspace = slett forrige tegn
+    Home  = start linje, side, melding  Del = slett gjeldende tegn
+    End   = slutt linje, side, melding  TAB = hopp 8 plasser
+
+Ctrl/A tilbake et ord    Ctrl/B gjenopprett linje Ctrl/D forover et tegn
+Ctrl/E opp et linje      Ctrl/F forover et ord    Ctrl/G slett tegn
+Ctrl/L frisk opp skjerm  Ctrl/O sett inn linje    CTRL/Q avslutt, IKKE LAGRE
+Ctrl/S tilbake et tegn   Ctrl/T slett ord         Ctrl/V sett inn/innrykk
+Ctrl/W auto-sit‚r        Ctrl/X ned en linje      Ctrl/Y slett linje
+Ctrl/R side opp          Ctrl/C side ned          Ctrl/N veksle XY-visning
+CTRL/Z LAGRE og AVSLUTT  Ctrl/K,S endre subjekt   Ctrl/K,C slett resten av mld
+Ctrl/K,P veksle privat
+
+                 <<Trykk en tast for retur til editoren>>

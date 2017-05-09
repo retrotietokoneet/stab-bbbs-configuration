@@ -1,0 +1,72 @@
+#include <stdlib.bzh>
+
+// PLAY is handled internally.
+
+int main(char command) {
+  FILE f;
+  char s, m=0;
+
+  randomize();
+  if (!pos(copy(command,1,1),"\1\2") && pos("FUCK",command)) {
+    printf("Dead or alive, you're coming with me!\n");
+    for (f=0; f<100; f++) printf("\a");
+    delay(30);
+    bv_carrier=0;
+  }
+  if ((f=fopen("brobo.wht","rt"))!=-1) {
+    if (!pos(copy(command,1,1),"\1\2") && bn_bstatus & 128 && !(rand() % 10))
+      command="FULLMOON";
+    while ((s=fgets(f))!="") {
+      if (pos(copy(s,1,1),"<>()")) {
+        if (m) break;
+        switch (copy(s,1,1)) {
+          case "(":/* login */
+            {
+              if (copy(command,1,1)=="\1" && regexp(copy(s,2,1024),copy(command,2,128))) m=1;
+              break;
+            }
+          case ")":/* logout */
+            {
+              if (copy(command,1,1)=="\2" && regexp(copy(s,2,1024),copy(command,2,128))) m=1;
+              break;
+            }
+          case "<":/* feeling */
+            {
+              if (copy(command,1,1)=="\e" && regexp(copy(s,2,1024),copy(command,2,128))) m=1;
+              break;
+            }
+          case ">":/* node message */
+            {
+              if (!pos(copy(command,1,1),"\1\2\e") && regexp(copy(s,2,1024),command)) m=1;
+              break;
+            }
+        }
+      } else
+        if (m) m[m++]=s;
+    }
+    fclose(f);
+    if (m>1) {
+      m=m[(rand() % (m-1))+1];
+      while (m!="") {
+        if (pos("\\n",m)) {
+          s=copy(m,1,pos("\\n",m)-1);
+          m=copy(m,pos("\\n",m)+2,1024);
+        } else {
+          s=m;
+          m="";
+        }
+        if (pos("$F",s)) s=sprintf("%s%s%s",copy(s,1,pos("$F",s)-1),bn_nick,copy(s,pos("$F",s)+2,200));
+        if (s!="" && pos(copy(s,1,1),"*+#")) {
+          for (f=1; f<=bg_max_nodes; f++)
+            if (getnodestatus(f,2)) {
+              if (copy(s,1,1)=="#") /* chat */
+                sendnode(bg_max_nodes+1,f,copy(s,pos(" ",s)+1,250),8,(pos(":",copy(s,1,pos(" ",s)-1)))?copy(s,1,pos(" ",s)-1):sprintf("%s:BRoboCop",copy(s,1,pos(" ",s)-1)));
+              else /* feeling */
+                sendnode(bg_max_nodes+1,f,copy(s,2,250),1,sprintf("#%s :BRoboCop \e[1;37m",(copy(s,1,1)=="*")?"*":" "));
+            }
+        } else /* nodemessage */
+          sendnode(bg_max_nodes+1,bv_nodenumber,s,16,"BRoboCop");
+      }
+    }
+  }
+}

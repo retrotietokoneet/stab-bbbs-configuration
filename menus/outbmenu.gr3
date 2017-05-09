@@ -1,0 +1,18 @@
+[1;1H[2J[1;31mUtg†ende Styrings Kommandoer:[0;37m
+
+<[1;33mL[0;37m>iste {[1;37mnode#[0;37m}                   List meldinger (for node)
+<[1;33mE[0;37m>ndre  [[1;37mmelding#[0;37m|[1;37mnode#[0;37m] {[1;37mparam[0;37m} Endre meldings nummer/alle meldinger for node
+<[1;33mLA[0;37m>ge   [[1;37mnode#[0;37m] {[1;37mparametere[0;37m}     Lage melding for node
+<[1;33mS[0;37m>lette [[1;37mmelding#[0;37m]               Slett melding
+<[1;33mG[0;37m>al    [[1;37mnode#[0;37m] [[1;37mnummer[0;37m]         Endre antall gale pollinger for node
+<[1;33mO[0;37m>pptat [[1;37mnode#[0;37m] [[1;37mnummer[0;37m]         Endre antall opptatt pollinger for node
+<[1;33mB[0;37m>lank                           Blank tickdir og tilknyttede meldinger
+<[1;33mA[0;37m>vslutt                         Tilbake til hovedmenyen
+
+Parametere er:
+
+{[1;33mNy_til_Node#[0;37m}
+{[1;33m+[0;37m|[1;33m-[0;37m}[1;33mU[0;37mmiddelbart {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mK[0;37mr‘sj   {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mH[0;37mold  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mA[0;37mnomde   {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mF[0;37mil  {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mD[0;37mirekte
+{[1;33m+[0;37m|[1;33m-[0;37m}[1;33mS[0;37mlette      {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mAV[0;37mkorte {[1;33m+[0;37m|[1;33m-[0;37m}[1;33mL[0;37m†s
+{[1;33mNytt_Subjekt[0;37m}
+[0m

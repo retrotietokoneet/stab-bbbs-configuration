@@ -1,0 +1,9 @@
+
+[1;31mMark Commands:[0;37m    <[1;33m?[0;37m> help    <[1;33mQ[0;37m>uit
+
+<[1;33mD[0;37m>ate       Mark messages on or after given date
+<[1;33mG[0;37m>roup      Marks group of messages by number
+<[1;33mO[0;37m>nly mine  Remove marks for all msgs not to/from you
+<[1;33mOA[0;37m>ll       Remove marks for all msgs not to/from you or All
+<[1;33mR[0;37m>eset      Reset ALL marks
+[0m

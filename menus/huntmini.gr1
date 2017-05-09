@@ -1,0 +1,10 @@
+
+[1;31mEtsint„valikon komennot:[0;37m    <[1;33m?[0;37m> apua    <[1;33mQ[0;37m> paluu
+
+<[1;33mG[0;37m>  etsii hakusanaa ryhm„st„ viestej„
+<[1;33mH[0;37m>  etsii hakusanaa vain viestien otsikoista (nimet ja aihe)
+<[1;33mM[0;37m>  etsii hakusanaa vain merkityist„ viesteist„
+<[1;33mNG[0;37m> etsii negatiivisesti hakusanaa ryhm„st„ viestej„
+<[1;33mNH[0;37m> etsii negatiivisesti hakusanaa vain viestien otsikoista (nimet ja aihe)
+<[1;33mNM[0;37m> etsii negatiivisesti hakusanaa vain merkityist„ viesteist„
+[0m

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+
+<html>
+  <head>
+    <title>$b</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link rel="stylesheet" href="bbbs.css" type="text/css">
+  </head>
+  <body>
+    <table frame="border" cellpadding="5" width="640" border="1" cellspacing="0" class="header">
+      <tr><td class="logo">$u
+    </table>
+
+    <form action="bbbs?id=;do=W" method="post" onSubmit="window.status='Trying to log in'; return true">
+      <table border="1" cellspacing="0" cellpadding="5">
+        <tr class="header">
+          <td><strong>Register as a new user</strong></td>
+        </tr>
+        <tr>
+          <td>
+            <table class="data" cellspacing="1" border="0" cellpadding="5">
+              <tr>
+                <td align="right"><strong>First name:</strong></td>
+                <td><input type=text name="userid1" size=29></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Last name:</strong></td>
+                <td><input type=text name="userid2" size=29></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Password:</strong></td>
+                <td><input type=password name="passwd1" size=29 maxlength=70></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Password:</strong></td>
+                <td><input type=password name="passwd2" size=29 maxlength=70></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Street address:</strong></td>
+                <td><input type=text name="straddr" size=29></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Postal code and state:</strong></td>
+                <td><input type=text name="postal" size=29></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Telephone number:</strong></td>
+                <td><input type=text name="tele" size=17></td>
+              </tr>
+              <tr>
+                <td align="right"><strong>Date of birth:</strong></td>
+                <td><input type=text name="dob" size=17></td>
+              </tr>
+              <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Login as a new user"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+#include <stdlib.bzh>
+
+int main() {
+  if (!bv_quicklogin) showfile(strcat(bg_menudir,"birthday"));
+  if (!bu_resume && bc_resume_conf!=0xFFFF) {
+    printf("\n");
+    if (bu_language==1) {
+      printf(">>> Et ole kirjoittanut mit„„n tietoja itsest„si viel„? Ehk„\n");
+      printf(">>> olisi jo aika, k„yt„ komentoa U RES kertoaksesi itsest„si!\n");
+    } else
+      if (bu_language==2) {
+        printf(">>> Du ha inte skrivit n†got om dig sj„lv „nnu? Kanske det skulla vara\n");
+        printf(">>> p† sin plats att anv„nda kommandot U RES och ber„tta om dig sj„lv!\n");
+      } else
+        if (bu_language==3) {
+          printf(">>> Du har ikke skrevet noe om deg selv enda? Kanskje det er p† tide\n");
+          printf(">>> † bruke kommandoen U RES og fortelle litt om deg selv!\n");
+        } else {
+          printf(">>> Not entered any information about yourself yet? Maybe it's\n");
+          printf(">>> about time you did, use U RES to tell us about yourself!\n");
+        }
+    printf("\n");
+  }
+  if (bn_bstatus & 128) {
+    printf("\nYou are lucky, it's full moon tonight!\n\n");
+    if (!(time() % 7) && bg_gtoggles & 4)
+      sendnode(bg_max_nodes+1,bv_nodenumber,sprintf("I'm afraid %s, my mind is going. I can feel it!",bn_nick),255,"BRoboCop");
+  }
+}

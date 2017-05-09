@@ -1,0 +1,4 @@
+int main() {
+  printf("Logout\n");
+  if (bv_carrier && bv_com) delay(20);
+}

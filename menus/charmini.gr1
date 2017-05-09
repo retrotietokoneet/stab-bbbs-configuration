@@ -1,0 +1,22 @@
+
+[1;31mMerkistîtyypin valinta:[0;37m    <[1;33m?[0;37m> apua
+
+Katsohan nÑitÑ merkkejÑ...
+   [1;33m1:[   2:]   3:ù   4:¿   5:#   6:^   7:{[0;37m
+
+1) Jos 1 on avautuva hakasulku, ja..
+   1a) jos 3 on japanilainen Yen merkki (iso Y), sinulla on    [1;33mIBM[0;37m
+   1b) jos 3 on norjalainen OE, sinulla on                     [1;33mIBN[0;37m
+   1c) jos 3 on pieni u heittomerkin kanssa, sinulla on Apple  [1;33mMAC[0;37m
+   1d) jos 4 on iso A heittomerkin kanssa, sinulla on          [1;33mISO[0;37m
+   1e) jos 5 on ns. risuaita, sinulla on                       [1;33mUS7[0;37m
+2) Jos 1 on iso a ja sen pÑÑllÑ on kaksi pistettÑ, ja..
+   2a) jos 2 on U kahdella pisteellÑ, sinulla on               [1;33mGE7[0;37m
+   2b) jos 2 on A ja sen pÑÑllÑ on ympyrÑ, sinulla on          [1;33mSF7[0;37m
+3) Jos 1 on iso AE merkki, ja..
+   3a) jos 6 on nuolen nÑkîinen juttu ylîspÑin osoittaen..     [1;33mNO7[0;37m
+4) Jos 1 on astemerkki, ja..
+   4a) jos 7 on pieni e heittomerkin kanssa, sinulla on        [1;33mFR7[0;37m
+   4b) jos 7 on pieni a heittomerkin kanssa, sinulla on        [1;33mIT7[0;37m
+5) Jos 1 on ylîsalaisin oleva huutomerkki, sinulla on          [1;33mSP7[0m
+

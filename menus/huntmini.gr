@@ -1,0 +1,10 @@
+
+[1;31mSearch Commands:[0;37m    <[1;33m?[0;37m> help    <[1;33mQ[0;37m>uit
+
+<[1;33mG[0;37m>  free-text search in a Group of messages
+<[1;33mH[0;37m>  search in message Headers only (names and subject)
+<[1;33mM[0;37m>  free-text search limited to Marked messages
+<[1;33mNG[0;37m> negative free-text search in a Group of messages
+<[1;33mNH[0;37m> negative search in message Headers only (names and subject)
+<[1;33mNM[0;37m> negative free-text search limited to Marked messages
+[0m

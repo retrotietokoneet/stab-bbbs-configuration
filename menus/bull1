@@ -1,0 +1,923 @@
+
+v4.10   RSN (Toy)
+        Unlike previous betas Toy-3 works also with unregistered key file.
+        bbbsd supports incoming IPv6 connections (except for ftpd).
+        There is no outgoing IPv6 support yet.
+        Parameters for nodemsgf-script are changed. See example script.
+        "[ftndomains]" section in external.bbb defines domains for FidoNet
+           addresses in BinkP. Format is "regexp_of_addr domain".
+        Incoming FTS-5003 charset kludge support.
+        Support INA, ITN, IBN and ICM nodelist flags for outgoing calls.
+        Linux version supports UTF-8 for local logins. It's enabled if your
+           LANG or BBBSLANG environment variable contains "utf" or "UTF"
+           string (for example "BBBSLANG=en_US.utf8 ./bbbs 0 1").
+        Some bugfixes, protocol updates, better interop, etc...
+        Some ANSI fixes to BTERM.
+v4.01   070128 (Flag)
+        New options to configure:
+          - Maximum cps rate for ftpd.
+          - btick's dupefile size.
+          - listdefs-section in inet.bbb.
+	bbbsd: option to bind only to specific interface.
+        lostpass-script is run if user has lost his/her password.
+        Added to Util: WIDth (screen width)
+	"IRCJoin" supports "server" and "server:port" as parameter.
+        bbbsd supports SSL (https, stelnet, ...).
+        Automatic (un)subscribing robot added to mailing lists. Email to
+          brobocop@bbbs.net with text "help" for more info.
+        Nicks matching regexps in maindir/badnick are not accepted, only nicks
+          matching regexps in maindir/oknick are accepted.
+        Alt-Y in BTERM toggles local echo.
+        `command -hh` gives help for command and then quits.
+        Soiha-filter added.
+        BTERM supports "ATTuser@hostname:port" for SSH protocol.
+        BSSH supports "bssh user@hostname:port".
+        Backscroll size can be configured via BBBSBACK environment variable.
+          Default is 1024 lines (~200kB).
+v4.00   991225 (MP)
+        New options to configure:
+          - emailcopy-section in inet.bbb.
+          - Callback verify required.
+          - My own IPs and netmasks.
+          - AllFix reply conference in archie-section of external.bbb.
+          - Deny/allow IPs and netmasks for bbbsd.
+          - Don't allow anonymous FTP login toggle.
+          - Don't allow anonymous WWW login toggle.
+          - Disable BOGUS security (DANGEROUS!).
+        HTTPD added to bbbsd. Message and file areas can be accessed via HTTP.
+          See sysop.gui for more information.
+        FTP-user can do "get grab" and "put grab".
+        TPD added to bbbsd.
+        Wili-filter added to IRC support.
+        SSH support added to BTERM. Use dial string "ATT".
+        "Junior" menu level added.
+        Local F3 in BTERM sends SMS message using connected Nokia Communicator
+          GSM-phone. Prefix the message with '!' to specify operator SMS
+          (aka Class 0 SMS aka Flash-SMS).
+        Rename bterm.exe to btelnet.exe to create a telnet program.
+          Usage: btelnet hostname
+        Rename bterm.exe to bssh.exe to create a SSH program.
+          Usage: bssh hostname
+        SysOp can attach files to local/email messages with "e -f", "re -f"
+          and "dup -f" commands.
+        "bcfg4 bckill" can be used to kill inactive conferences.
+        "bcfg4 bmove" changes old paths to new paths.
+v3.42   990201 (1s)
+        New options to configure:
+          - How to answer to incoming call. (Distinctive Ring)
+          - Upload uses time toggle.
+          - Change titlebar toggle.
+          - Allow outgoing Internet connections only from ##:## to ##:##.
+          - Sender in listin-section of inet.bbb.
+          - accept_from- and accept_to-sections in inet.bbb.
+          - Email forwards in emailforward-section of inet.bbb.
+          - Incoming FTP user aliases in ftpalias-section of inet.bbb.
+          - Outgoing conf->email aliases in listout-section of inet.bbb.
+          - SMS server and sender.
+          - AllFix search directories in archie-section of external.bbb.
+          - Netmail copying in netmail_copy-section of external.bbb.
+          - Netmail bouncing in netmail_bounce-section of external.bbb.
+          - Maximum number of lines in AllFix (Archie) reply.
+          - login.bbb: shortcut names for login.
+          - NNTP cleanfeed.
+        Script changes, see sysop.gui for more information:
+          - Parameters of nodemsgf, editor, msgfilt and msgpfilt. See example.
+          - "_account_get_money(account)" returns the amount of money in
+            an account.
+          - "_account_change_money(account,add)" adds money to an account.
+          - Variable bv_logintime added. It replaces bv_loginhour and
+            bv_loginmin.
+          - "time()" returns seconds-since-dawn-of-time. It replaces bf_hour,
+            bf_min and bf_sec.
+          - "localtime(time)" formats seconds-since-dawn-of-time to date.
+        Updated command lines for BTIME and BSMTP. See help.
+        FTPD added. It uses header file "menudir/ftpd".
+        AreaFix uses regexps.
+        nntpfilt-script is run before importing NNTP message.
+        smtpfilt-script is run before importing SMTP message.
+        tickfilt-script is run before processing incoming TICK file.
+        fidopoll-script is run after FidoNet mail session.
+        gotsmtp-script is run after incoming SMTP session.
+        Added to Main: CALLback (See callback.bz)
+        Added to Main: URL (members of group "url" may download url.)
+        Added to Main: V (vote booth)
+        Added to Read: GNUS (Fullscreen message reader)
+        Added to Util: CALL (edit times on)
+        Added to Search: NGroup, NHeader, NMarked (negative search)
+        Added to command line: BOGUS Z (remove node from external.bbb)
+        Added to command line: BOGUS D (print route table for debug purposes)
+        Added to command line: BBBS2TXT (save message to text file)
+        Added to command line: BPURGE (remove old files)
+        Added to command line: BFSTAT (file statistics)
+        Added to command line: BFAG (convert filelist to AmigaGuide format)
+        In groups file:
+          - "<a#" matches users younger than # years, ">a#" older
+          - "<c#" called less than # times, ">c#" more
+          - "<r#" read less than # messages, ">r#" more
+          - "<w#" written less than # messages, ">w#" more
+          - "<u#" uploaded less than # kilobytes, ">u#" more
+          - "<d#" downloaded less than # kilobytes, ">d#" more
+          - "<p#" uploaded less than # files, ">p#" more
+          - "<o#" downloaded less than # files, ">o#" more
+          - "<l#" user has limit-value less than #, ">l#" more
+        "[badtick]" section of external.bbb defines how new tick echos
+          will be autocreated.
+        Local Alt-U in BTERM changes baud rate.
+        Local F2 in BTERM sends SMS message.
+        Instant dupecheck on internal protocols.
+        "command >>file" redirects the output to both screen and file in hold.
+        Up/down-limits are checked instantly in "f get" command.
+        "@b:group" in filedirg-files means browse-access.
+        "@u:group" in filedirg-files means upload-access.
+        The ultimate emulator of NodeHeebo's Ericsson emulator.
+        If "Description save directory" in bcfg4://CDROM-installer is empty
+          then it will work as HD-installer.
+        Extended regular expressions added.
+        UUcode protocol added.
+        bbbsd replaces bbbs.*d.exe.
+        ESMTP support with fallback to SMTP.
+        CGI-bulletins: BBBS tries to run bull#-script if no text file bulletin
+          found.
+        Fido-SysOp can change attributes of the message when sending NetMail.
+          (Sh|h)e can use following chars in the front of the nodenumber:
+          - '!' Crash
+          - '-' Hold
+          - '?' Receipt Request
+          - '>' File Attach
+          - '<' File Request
+          - '*' Immediate
+          - '/' KillSent
+        More chat commands, see /? for help.
+v3.33   970626 (How)
+        New options to configure:
+          - Email to conference aliases, inet.bbb.
+          - Maximum SMTP message size to be imported in bbbs.smtpd.exe.
+          - Voice settings.
+          - InterNet logfile.
+          - Grab is free toggle.
+          - Uploader owns file toggle.
+          - Local keyboard lockup.
+          - IRC server.
+          - Directory for scripts. BBBS will look for your scripts only from
+            this directory.
+          - Allow all names toggle.
+          - Lot of options dealing with chat.
+          - Number of limits increased up to 128.
+          - Sysop Notes message toggle.
+          - FidoNet settings for conferences (group, name, flags, export) can
+            be configured from BCFG4.
+          - Save all incoming NNTP message headers.
+          - Save all incoming SMTP message headers.
+          - Chat uses time.
+          - inet.bbb configuration file added. It includes inet shortcuts,
+            telnet/rlogin/finger/ftp targets, in/out aliases and incoming
+            finger aliases. See example file for more information.
+          - CD-ROM paths (replaces old 'CD-ROM drives'), in regexp.
+          - Packer settings in external.bbb: af_pack1 is removed and af_pack2
+            is renamed to af_pack.
+          - Spy file, all the commands user enters are logged here.
+          - Number of events increased from 10 to 90.
+          - Remote domain for NNTP/SMTP gateway.
+          - NNTP gateway (BOGUS).
+          - SMTP gateway (BOGUS).
+          - Number of nodenumbers increased from 10 to 44.
+          - NNTP/SMTP organization.
+          - NNTP/SMTP hostname.
+        Added to Read: MODE B (read messages backward)
+        Added to Read: SAVE (save current message to /tmp)
+        Added to Read: CREply (Reply to message in other conference)
+        Added to File: DES -A (automatic, don't ask anything from user)
+        Added to File: GREP (grep files)
+        Added to File: MKDir (make new directory)
+        Added to Util: PALette (change colors)
+        Added to Util: FUP, BUP, FDown, BDown (SysOp can edit up/down file/byte
+          counts.)
+        Added to Main: HACK (members of group "hack" may play NetHack.)
+        Added to Main: HUNT (members of group "hunt" may play hunt.)
+        Added to Main: FTP (members of group "ftp" may ftp out.)
+        Added to Mark: CREstore (restore marks in this conference to start of
+          this call)
+        Added to Mark: Lines (remove marks for messages with less/more than
+          lines)
+        Added to Mark: OAll (mark only messages to you or to all)
+        Added to Mark: GOAll (mark only messages to you or to all (global))
+        Added to Mark: SAve (Save lastread pointers for RESTore.)
+        Added to Mark: GOnlymine (Mark messages to/from you in all areas.)
+        Added to bulletins: Add (Copy bulletin to hold)
+        Added to command line: BOGUS N (create area connection notify to all
+          downlinks or to specified nodes)
+        Added to command line: BTIME (check you clock with time protocol)
+        Added to command line: BFTP (batch-FTP)
+        Added to command line: BMKILL (kill/list messages with criterias)
+        Added to command line: BFILEIDX D (Create fileindex and report which
+          files don't have any description.)
+        Added to command line: BWHO (Who's on.)
+        Added to command line: BNDIFF (Update uncompressed nodelist from
+          compressed nodediff files. BNDIFF reads nodediff names from
+          nodelist-section of external.bbb file. For example, you can use line
+          "c:/bbs/node/nodelist.* c:/bbs/pub/fido/nodediff.*" in external.bbb.)
+        Added to command line: BNNTP (Send and receive news to/from NNTP
+          servers.)
+        Added to command line: BFILEIDX O (Create fileindex and report which
+          files are offline.)
+        Added to command line: BKILL (Kill users with criterias.)
+        Added to command line: BSMTP (Send and receive email to/from SMTP
+          server.)
+        Added to command line: BPC T (Scan for bad area(s) and fix, if found.)
+        Added to command line: BPOP (Receive emails from POP3 server.)
+        Added to command line: BCSTAT (Show conference statistics.)
+        Script changes, see sysop.gui for more information:
+          - "var" token replaced with "int" and "char" tokens. Currently it
+            does not matter if you use int or char but someday it will.
+            Easy hack: Search-n-replace "var" to "char".
+          - Functions are defined with "int" and "char" tokens, not with
+            "function". You can and should use int and char tokens before
+            function's parameters, but currently it is not obligatory.
+            Easy hack: Search-n-replace "function" to "char".
+          - "breceive(dir)" receives files from remote to dir.
+          - bg_updir-variable is no more constant.
+          - BZC can handle dummy "#define foo bar" expressions, hex-numbers
+            (0x42), octal-numbers (0102) and conditional expressions.
+          - "sendnode(...)" takes one additional parameter, prefix. See
+            bbbsdef.h/chatrec for list of prefixes.
+          - bv_outputstopp is bitmapped, also replaces bv_nobreaknow.
+          - "opendir()", "readdir()", "rewinddir()" and "closedir()".
+          - "fflush(file)" causes any unwritten data to be written to the file.
+          - BZC supports ^=, *=, +=, -=, |=, &=, /=, <<= and >>=.
+          - Variable bv_vername added. It contains BBBS version name.
+          - Variable bv_ver added. It contains BBBS version number.
+          - Variable bv_tomenu added. It contains menu number where user is in.
+          - "fgetc(filehandle)" reads one byte from the file and returns it's
+            ASCII value, or -1 if end of file.
+          - "fputc(ascii_value,filehandle)" writes one byte to the file.
+          - "breceive()" receives files from remote to bl_newdir.
+          - "bsend(filename)" sends files listed in filename to remote. It
+            returns 1 if ok and 0 if failed.
+          - Lot of changes in commands dealing with chat.
+          - "++variable" increases the value of variable by one and returns it.
+          - "--variable" decreases the value of variable by one and returns it.
+          - "variable++" returns the value of variable and increases it by one.
+          - "variable--" returns the value of variable and decreases it by one.
+          - Variable bv_realdir added. It contains the real (OS) directory for
+            bv_crrdir.
+          - "fopen()" takes two parameters, filename and openmode. It returns
+            file handle, or -1 if failure. Remember to save return value to
+            variable and use it in fclose(), fprintf(), ... too!
+          - "loaduser(usernumber)" loads user's #usernumber data to bu_*
+            variables. You must use "freeuser()" to write them back to the
+            disk and restore normal values. Both functions returns 0 if ok,
+            or nonzero if failure. If you want to change data of a user who
+            is online on other node you must send "\2UDATA" nodemessage to
+            that/all node(s) after you've called freeuser().
+            !!! WARNING: Using these functions without knowing exactly what you
+            !!!          are doing might delete your user database!
+          - "_delay(ms)" sleeps approximately ms milliseconds. Timer interval
+            is about 50ms on most OSes.
+          - "_getch(type)" reads one keypress. If none is available it returns
+            ascii 255. Available values for type are:
+            - 0: Read from both local and remote (you should use getch()
+                 instead!).
+            - 1: Read only from local keyboard.
+            - 2: Read only from remote line.
+          - Indexed variables bg_zone[x], bg_net[x], bg_node[x] and bg_point[x]
+            added (zone:net/node.point as defined in bcfg4://global/fidonet).
+            Currently valid indexes are 0..43.
+          - '$' character may not be used in variable names anymore.
+            Easy hack: Just remove all '$' characters from all of your sources.
+          - bc_confname, bc_description, bc_lastread and bc_status
+            are now indexed variables. For example, to get the name of the
+            current conference (as the old "bc_confname") you must use
+            "bc_confname[bv_confnro]". In REXX you can use
+            "bbbs_getvar("bc_confname",bbbs_getvar("bv_confnro"));".
+            !!! WARNING: Old scripts using these variables are not compatible
+            !!!          with these new indexes. They default to index 0,
+            !!!          which is conference #0, not the current conference.
+          - New indexed variables added:
+             - bc_ulastread[x] (User's lastread pointer for conference #x.)
+             - bc_ustatus[x] (User's status bits for conference #x.)
+             - bc_uaccess[x] (User's access bits for conference #x.)
+          - bl_spyfile const added (bcfg4/local/general/spyfile).
+          - "exec(scriptname);" exists from current program and executes it's
+            parameter.
+          - "getnodemessage(filenum);" reads a nodechatrec from filenum and
+            returns a formatted nodemessage (empty, if no more available).
+          - If in multi-parameter of input-function the bit 7 (value 128) is
+            set, no nodemessages are processed.
+        upscript-script is run after all uploaded files are processed.
+        msgpfilt-script is run before starting message editor.
+        msgfilt-script is run after user has accepted to save the message
+          (s?)he just wrote.
+        uscript-script is run before asking a description to the file user
+          just uploaded.
+        auscript-script is run after user has entered description to the file
+          (s?)he just uploaded.
+        usermail-script is run after human caller if mail entered and
+          usermail_errorlevel is zero.
+        gascript-script is run when user logs out with "g a" command.
+        nodemsgf-script is used to show a nodemessage to user.
+        When BBBS tries to print "\2foo\2", where \2 is ascii 2 (Ctrl-B), it
+          runs script foo. This can be used almost everywhere; menus, bbbstxt,
+          bulletins, ...
+          !!! WARNING: Using this feature without knowing exactly what you are
+          !!!          doing might crash your system!
+        "\2" in bbbstxt is Ctrl-B.
+        New message editor called "Script" added ("u ed s"). BBBS runs editor
+          script with filename, conference number and reply-to as parameters.
+          See example file for more information.
+        newupass-script is run before asking closed system password.
+        REXX with some extensions is supported as a script language.
+          See sysop.gui for more information.
+        JAVA and perl are supported as script languages. See sysop.gui for
+          more information.
+        postchat-script is run after SysOp chat.
+        "gotfax" script receives "fax_number,remote_FLID" as first parameter.
+        "[section.os]" must be before "[section]" in external.bbb.
+        BackDoor supports xHYDRA (RH1).
+        S-key in help is search.
+        "-B" switch in cat/hcat in File menu shows file backwards.
+        New grab format, "REP". It exports QWK-reply packet and imports
+          QWK packet. This is only available for agnet-users.
+        "[agnet]" section of external.bbb can be used to define
+          AGNET/QWK-based network setup.
+        "[node_remap]" section of external.bbb can be used to specify new
+          nodelist entry for a node.
+        "[netmail_remap]" section of external.bbb can be used to create alias
+          names, forwardings and so on for users and nodes.
+        "[badecho]" section of external.bbb defines how badecho-conferences
+          will be autocreated. If missing, default options are used.
+        "X" flag in external.bbb/nodes/st disables xHYDRA protocol.
+        S-key in BCFG4's conference browser sorts conferences with the same
+          prefix than the current conference.
+        BNNTP checks for tempdir/shutdown.ntp flagfile.
+        Slight remapping of local keys.
+        "tempdir/bogus.run" renamed to "tempdir/bbbsrun.c".
+        More chat commands, see /? for help.
+        New SysOp level: 128 (May use all chat commands.)
+        'u mf' is bitmapped. Please set new filtering value.
+        filedirc.num file is scanned for directories too when user is in
+          conference #num.
+        BackDoor supports WaZOO update requests. Correct freq flag is XX.
+        For members of group "okchat" SysOp is always available.
+        New meta in external.bbb:
+          - %A (comdevice)
+          - %L (nodenumber)
+        Local Alt-M in BTERM toggles Newline/Linefeed mode.
+        New SysOp level: 64 (May change NetMail message attributes.)
+        "-I" switch in grab disables QWK-index files.
+        "bcfg4.exe bad" checks badecho directory for new conferences and
+          automatically renames "Unnamed" conferences and updates external.bbb.
+          You have to restart nodes before they see new conference names.
+        DEL and INS keys work in BCFG4's conference browser. They move current
+          conference to the end of list and vice versa.
+        Kermit protocol added.
+        bbbs.fingerd.exe added. It uses header file "menudir/fingerd".
+        "R" flag in external.bbb/nodes/st disables EMSI session protocol.
+        "D" flag in external.bbb/nodes/st disables FTS-001 session protocol.
+        BOGUS supports "unbounded" message sizes limited only by available
+          disk space.
+        Maximum line length in descript.ion file increased to 4096, except
+          in BBBS/D where it still is 768.
+        While listing files few previous lines can be scrolled back.
+        While transfering files with HYDRA user can type "/group" to chat
+          window to enter group chat.
+        Hippo messages can be delayed until given date.
+        'F' in Join removes unmatched conferences from the list.
+        "-S" switch in dir/new/key/scan in File menu gives short output.
+        "-num" switch in dir/new/key/scan in File menu gives only num lines of
+          description.
+        "-N", "-M" and "-O" switches in dir/new/key/scan in File menu gives
+          different output formats.
+        "filedef" setting added to allow user to set up default switches for
+          file commands.
+        Local sysop keys Alt-F1 ... Alt-F8 (inc/dec time) changed to
+          Shift-F1 ... Shift-F8.
+        Local Alt-E in BackDoor asks errorlevel and exits.
+        "Real" lastread pointers for all areas are maintenanced while user is
+          online.
+        "SHow" in Read defaults to old "-u" switch, "-l" switch added (as the
+          old default).
+        "preftp" file is shown to user before asking ftp address.
+        Local F6 in BCFG4 checks badecho directory for new conferences.
+        User #0 can change attributes of the message when sending NetMail.
+          (Sh|h)e can use following chars in the front of the nodenumber:
+          - '!' Crash
+          - '-' Hold
+          - '?' Receipt Request
+          - '>' File Attach
+          - '<' File Request
+        BBBS can reformat the messages on-the-fly while you read/grab them.
+          Use 'u set "margin" left,right,fill,paragraph' to setup the
+          formatting parameters:
+          - "left" is the left margin (1..60)
+          - "right" is the right margin (left+21..250)
+          - "fill" is 1 if right margin is justified, otherwise 0
+          - "paragraph" is 0 if empty line is used to separate paragraphs,
+            values 1..20 will indent new paragraph n chars.
+        Members of group "foo" who are not members of group "bar" belongs to
+          group "foo!bar". A shortcut for "all!bar" is "!bar".
+        Blue Wave grabbing format added ("u gf b").
+        When starting BBBS for local node you can add keycodes after node
+          parameter. For example "bbbs 0 1 User Name^Mpassword^Mwho^M".
+        Passwords matching regexps in maindir/trashpas are not accepted.
+        BOGUS + bbbs.smtpd.exe + BNNTP + BSMTP can be used as a FidoNet <->
+          InterNet gateway. For more information see bcfg4.exe.
+        Only aka(s) listed in the TICKS-section of external.bbb are added
+          to TICK-file.
+        Flags '<' and '>' can be used as global flags for an area in
+          the echomail-section of external.bbb.
+        Duplicate packet check added to "mu" command. File "grabdupe" will be
+          shown to user if duplicate packet was uploaded.
+        Maximum number of BOGUS's open files incresed to 70.
+        CD-ROM disk to BBBS's filearea installer added to BCFG4.
+        "event" file is shown to user when user's timelimit expires and it
+          was reduced by an event.
+        "Shelled to OS" status added to Who command.
+        "termmenu" file is shown to user before asking terminal type ("u te").
+        "grabmenu" file is shown to user before asking grab format ("u gf").
+        "editmenu" file is shown to user before asking editor ("u ed").
+        Dummy-ANSI terminal emulation added ("u te d"). Veeeery slow, but
+          should work on all toy-terminals too.
+        RIP terminal emulation added ("u te r"). RIP is a graphical interface
+          and requires RIP-compatible terminal program. Menu files are named
+          as "*.r", "*.r1", "*.rx" and "*.rx1" (novice, novice-language,
+          expert, expert-language). BBBS will automatically convert Dummy-ANSI
+          control codes to RIP TTY window codes. BBBS will also filter out
+          RIP control code start sequence ("!|") and therefore you must replace
+          "!" character in your menu files with Ctrl-A (0x01). BBBS will eat
+          all characters from Ctrl-A to end-of-printf/CR/LF is RIP is not
+          selected.
+        "\1" in bbbstxt is Ctrl-A.
+        ripc.exe added, it can compile text-mode RIP files to binary menu
+          files. See "ripc -h" for more help.
+        Much faster FOSSIL routines in DOS version (should help on uploading
+          with internal protocols with FOSSIL driver loaded).
+        Nodelist index format changed to support points. BBBS can read both
+          "Boss" and "Point" format pointlists.
+        bbbs.smtpd.exe added, it can receive incoming email.
+        Maximum length of sender, receiver and subject in the message header
+          is 71 chars. Old 00*.dat files must be converted to 00*.hdr files.
+        *** Remember to recompile _all_ of your scripts! ***
+        *** Old users: See 314_333.zip for update-info   ***
+v3.14.95 950823 (GT)
+        New options to configure:
+          - Voice settings
+          - "RINGING" count before "NO ANSWER".
+          - Save all netmail messages passing through your system.
+          - Download kB limit per day.
+          - kB/Day limit relative to 9600 bps.
+          - New user account name.
+          - Account cost per call.
+          - Account cost per minute.
+          - Account cost per hour.
+          - OK poll flags.
+          - Use "slow" protocols in EMSI session.
+          - Bit order on FAX send/receive.
+          - CDROM driveletters.
+          - Maximum outgoing bundle size for BOGUS.
+          - Buffered output for modem (OS/2).
+          - Rockwell modem (OS/2).
+          - NNTP hostname and newsgroup name for conference.
+        Script changes, see script.gui for more information:
+          - help() takes two parameters, helpfile and nodename.
+          - $bv_comhandle has communication device handle (OS/2).
+          - $bv_comdevice has communication device name (OS/2).
+        *** Remember to recompile _all_ of your scripts! ***
+        Voice support with ZyXEL modems, you can share one phoneline with
+          voice, data and FAX.
+        up_scan.* receives directory, filename and nodenumber as parameters.
+        up_scan.* is run while processing incoming TICK files too.
+        BBBS can receive incoming FAXes with group 3 class 2.0 (TIA/EIA-592)
+          and class 2 FAXmodems.
+        gotfax-script is run after FAX session if FAX received.
+        gotvoice-script is run after voice session if voice recorded.
+        snooze-script is run on sleep disconnect. If it returns true user is
+          not dumped out.
+        All users are members of groups "all", "firstname.lastname" and
+          "limit*", where '*' is his/her "u limit"-value.
+        All file requests belong to group "all,normal,zone:net/node.point" and
+          "point" when main AKA is point address and "secure" when session is
+          password protected.
+        For members of group "nochat" SysOp is always unavailable.
+        Members of group "nonode" aren't allowed to send nodemessages.
+        Ignores Terminate's braindead DECID answer.
+        bbbs.telnetd.exe added, users can telnet to BBBS (OS/2).
+        By starting BBBS with additional "TCPIP" parameter you can "dial" out
+          with standard telnet protocol (OS/2).
+        No phonenumber conversion will be done to systems having user-flags
+          "IP", "DN" or "TEL" in nodelist.
+        "preteln" file is shown to user before asking telnet address.
+        "prerlog" file is shown to user before asking rlogin address.
+        "prefing" file is shown to user before asking finger address.
+        "inet.aka" file can be used to define Telnet and Rlogin shortcuts.
+        "brobo_fr" is the header for file request replies.
+        Slow-HYDRA protocol added, can be used with non-8bit links.
+        Slow-Zmodem protocol added.
+        RAR is default packer #7, also supported in "f v" command.
+        BLIST and BNEWF can take "group" as second parameter (default is "all")
+          and "starting directory" as third parameter (default is "/").
+        AmigaGuide reader can wrap and format long lines.
+        First parameter of BTXT2BBS is area name, not number.
+        Second parameter of BPC is area name, not number.
+        Door 5 defaults to MasterMind game (not included to packet).
+        "cxxxj" file is shown to user when entering conference #xxx.
+        "B" flag in external.bbb/nodes/st disables HYDRA protocol.
+        Local Alt-B goes to backscroll, cursor keys scrolls, ESC quits,
+          Enter and Space paste current line (OS/2).
+        Local Alt-C in BTERM selects charset.
+        Local Alt-E in BTERM shows elapsed online time.
+        User belongs to group...
+          - "noaccount" if no account defined
+          - "account" if account defined and has some money/credit left
+          - "nomoney" if account defined but no money/credit left
+        Added to Main: TELnet (members of group "telnet" may telnet out, OS/2.
+                               Default is 7 bit mode (-7), switch -8 is binary.
+                               Escape character can be disabled with -E and
+                               defined to char #xx with -Exx.)
+        Added to Main: RLogin (members of group "rlogin" may rlogin out, OS/2)
+        Added to Main: FINger (members of group "finger" may finger out, OS/2)
+        Added to Main: MG (SysOp may edit files from disk)
+        Added to Util: RETurn (Return to read menu with enter-key)
+        Added to Util: AASsign (Assign user to account)
+        Added to Util: AADd (Add money to account)
+        Added to Util: AChange (Change account flags)
+        Added to Util: AView (View account)
+        Added to Util: AMembers (Show members of account)
+        Added to Util: # (Find user number #)
+        Removed from Glob: FINger (you can use Who-command)
+        Added to command line: BAADD (Add/take money to/from account)
+        Added to command line: BNNTP (Poll news from NNTP server(s), OS/2)
+        Removed from command line: BUUCP
+v3.14   950123 (Zebra)
+        New options to configure:
+          - Priorities for threads in OS/2
+          - Use watchcat and allow user to break while (un)packing in OS/2
+          - Show output of (un)packer for user in OS/2
+          - Don't allow remote SysOp logins
+          - BOGUS settings
+          - HYDRA (tx|rx) window size
+          - Event: don't allow users
+          - Event: don't allow mail calls
+          - Event: don't allow mail pickup
+          - Event: don't allow file requests
+          - Event: don't send crashmail to CM systems
+          - Event: send crashmail to all systems
+          - BackDoor: Dial setup according to the nodelist entry
+          - BackDoor: Number of calls when BUSY and/or BAD
+          - BackDoor: "NO CARRIER" means BUSY
+          - Aftercall init and lines
+          - Network logfile
+        gotmail-script is run after mail session if mail received.
+        notavail-script is run after chat request if SysOp was not available.
+        Members of group "okuser" may log in during nouser-event.
+        Private messages can be addressed to "@group".
+        If "shutdown.{node}" file is found from tempdir and the file...
+          - is empty, BackDoor will exit with errorlevel 0
+          - has line with number, BackDoor will exit with errorlevel {number}
+          - has line with text, BackDoor will execute script {text}
+        If "rescan.{node}" file is found from tempdir, BackDoor will rescan
+          outbound and removes the file.
+        "password" section is included to new "nodes" section in external.bbb.
+        "tick" sections are included to new "ticks" section in external.bbb.
+        Caller ID information is recorded to the log if presented by the modem.
+        C-[qwert] changes color in line chat.
+        Local Alt-U in HYDRA adds file to outgoing batch.
+        Local Alt-Z in BTERM jumps to OS shell.
+        Local Alt-X in BTERM exits directly to OS.
+        Local Alt-J in BTERM clears screen.
+        Local Alt-B in BTERM sends break signal.
+        Local Alt-T in BTERM goes to backscroll, cursor keys scrolls.
+        Local Shift-F10 in BTERM gives help.
+        Local Alt-O in BackDoor starts outbound manager.
+        Added to Util: WOTU (Wand Of Turn Undead - Find killed users too)
+        Added to Util: SIlent (Toggles bell on/off)
+        Added to Main: BSHELL (Shell to OS/2 with internal redirections)
+        Added to Main: OUtbound (Outbound Manager)
+        Added to Read: UNFM (Resend marked messages to network)
+        Added to command line: BOM (Outbound Manager)
+        FidoNet message tosser, BOGUS, added.
+        BBBS can receive incoming FAXes with group 3 class 2 FAXmodems.
+        BackDoor supports FSC-0062 (Txx-flag).
+        BCFG4 can import fidonet.na file (press F5 in conference edit).
+        BTICK supports "replaces".
+        BTICK can create announce message.
+v3.11   941011
+        New options to configure:
+          - FidoNet settings
+          - FAX receive settings
+          - Don't check carrier
+          - SysOp can be removed from the stats
+          - Download path in BTERM
+          - BTERM init string
+          - Charset settings in FidoNet message import and export
+          - Options not to ask address and/or birthday from new user
+          - Hide userlists
+          - Delete duplicate uploads
+          - Alias allowed in conference
+          - Hotlogin strings
+        User can enter a message when s?he has lost h(is|er) password.
+        `command -h` gives help for command.
+        `q stat` gives more statistics; bytes uploaded and bytes downloaded.
+        If enabled, `com` asks who do you want to comment.
+        prechat file will be shown to user before SysOp chat.
+        predesc file will be shown before asking descriptions for files.
+        New meta in external.bbb:
+          - %l (linespeed)
+          - %F (filename (%f), but "*.*" will be converted to "*")
+          - %D (filename (%d), but "*.*" will be converted to "*")
+        Local F6 / Alt-C starts bchat if user has ANSI or VT320.
+        Local F7 starts line chat.
+        Local Alt-U in BTERM starts upload.
+        Local Alt-H in BTERM sends hangup string.
+        Local macros works in BTERM
+        Script can be started from local sysop macro.
+        Internal async routine supports IRQ0 to IRQ15, baud rates to 115200.
+        Internal file transfer protocols logs events for each file separately.
+        SysOp can define mailinglists (internal editors only).
+        EMSI and FTS-0001 compatible FidoNet mailer, BackDoor, added.
+        FidoNet message tracker, BMT, added.
+        BNC can check if the nodelist index is already up to date.
+        BHATCH can read the description for the file from BBBS's filearea.
+        Scan for similar filenames in upload added.
+        "fileskip" setting added to allow user to exclude filedirs in scan.
+        "login" setting added, commands to be executed after login.
+        If carrier is lost in editor, the message will be saved to you in post.
+        areatoss and bbbsrun files are written to tempdir, not current dir.
+        Withdrawing from timebank is disabled in rush hours.
+        Lines of trashcan and okuser are matched as regexps.
+        Added to Mark: View (view headers for marked messages)
+        Distribution, support and sales in Norway: BarCode BBS, +47 67 06 00 07
+        !!! Old users: See 08a_311.lzh for update-info !!!
+v0.8a   940419
+        New options to configure:
+          - blackout timer in the answer mode
+          - user sleep disconnect time
+          - message packing
+          - maximum length of the file description in lines
+          - size of the WhoDown database
+          - null modem login by pressing <enter>
+        Usernames are shown in dual case.
+        More secure check about illegal filenames in the filearea.
+        SysOp can enter "on change directory" messages for directories.
+        Tab (and C-d in B-mode) can be used to browse files.
+        Ctrl-K,P can be used to toggle private/public in FSE.
+        Change in the utilmenu: Length -> Lines
+        `-b` switch added to `grab` to collect updated bulletins.
+        `q stat` also shows your ranking.
+        Faster and extended operations for groups in the utilmenu.
+        Second <space> untags the file in the fileflag.
+        BTICK can repack incoming TICK files to your favourite packer.
+        BTERM handles now up to 93 VT320-sequences and _lots_ of parameters.
+        New error.bz conditions.
+        brobo.bz for unknown BRoboCop commands.
+        Added to Read: PREply (private reply)
+        Added to Util: Info (show userinfo)
+        Added to Mark: RESTore (restore all marks to start of this call)
+        New script commands:
+          - sendnode()          sends a node message
+          - getnodestatus()     returns info about node
+v0.89   931231
+        SUMU/2
+        GROUP/4
+        BCFG/4
+        BTERM added
+        BallFix added
+        OMEN revision H
+        Internal ANSI driver added
+        Internal ZedZap, Zmodem, Ymodem-Batch, Ymodem, Xmodem CRC and Xmodem
+        Alt-E and Alt-L added
+        Alt-F5, Alt-F6, Alt-F7, Alt-F8 added
+        OKUSER and OKFILES added
+        Added to command line: BNC, BHATCH, BTICK
+        See SCRIPT.GUI for script changes
+        !!! Old users: See 071_089.LZH for update-info !!!
+v0.71   930812
+        JOIN/4
+        See SCRIPT.DOC for script changes
+v0.40   930705
+        FILE/4 filesystem
+        LASTREAD/4 database
+        Moved to Glob: RES, MRES, MU
+        Added to Util: GF
+        Added to Read: --, ++
+        Added to command line: BLINKFIX, BFILSORT
+        BBBSCOMP.EXE renamed to BZC.EXE
+        See SCRIPT.DOC for script changes
+        !!! Old users: See 039_040.LZH for update-info !!!
+v0.39   930425
+        QWK version 1.6
+        See SCRIPT.DOC for script changes
+v0.38   930423
+        New script language
+        LSCRIPT added
+v0.32   930401
+        Regexp added to `Q S', `Q JA', `F K', `F WD' and `R S *'
+        Automatic packer detection for unpacking
+        Internal HYDRA and Mg2a added
+        UP_SCAN.BAT added
+        Alt-Q added
+        Added to Main: CAL, JA
+        Added to Read: GNUS
+        Added to File: SP
+        Added to Glob: FIN #, FIN /R, OLDHIP, NEWHIP
+        A-Added to Glob: MAN
+v0.31   921229
+        UNIX-alike wildcards added to `F S' and `! PUT'
+        Added to Open: 12
+        Added to Read: V -xxx
+        Added to Util: MF, AS, AUNS, SS, SUNS
+        Added to Glob: FIN
+        Added to editor: Ctrl-K+O
+        Added to command line: BUUCP, BNMSG, BSETPACK, BORDER
+        A-Added to Glob: FINGER xxx
+        !!! Old users: Remember to run BBBS BUPDATE A !!!
+v0.30   921111
+        Alt-D added
+        HELLO added
+        Added to Chat: #
+        A-Added to Read: MV, CP
+v0.29   921025
+        Hotkeys added
+        BFR added
+        BCom version 2.0 added
+        QWK version 1.2
+        OMEN revision F
+        Avatar mode added
+        MAC charset added
+        PREPREUP added
+        Added to Main: US
+        Added to Mark: S -xxx
+        Added to Read: RES /A, I, SH U, SH A
+        Added to Open: 5 /M, 5 /S, 9 /M, 11
+        Added to File: L /F, N /F, S xx /F, K xx /F, REN, FJ, FR, FSH, LP, RET
+        Added to Glob: HIPPO, OMEN, QWK, NEXT /+, NEXT /-
+        Added to Util: HOT
+        Added to command line: BNDIFF
+        A-Added to File: MV, RM, LS
+        A-Added to Glob: FINGER, CD, TELL, LOGOUT, EXIT
+        Foo-Added to Util: FILT
+        !!! Old users: Contact Kim Heino to get a new BBBS.KEY !!!
+v0.28   920526
+        Added to Mark: P, T, U, REC
+v0.27   920512
+        OMEN support added
+        HippoGrab added
+        FILEINFO.*, TRASHCAN, TRASHFIL added
+        Added to Read: GRAB /x
+        Added to Dump: A /x, C /x
+        Added to Open: 5 /x, 8, 8 /x, 9, 9 /x, 10
+        Added to File: WD, PU
+        Added to Mark: GRE
+        Added to GroupChat: *x, *J
+v0.26   920507
+        BBBS.LZH is now splitted to BBBS1.LZH and BBBS2.LZH
+        Faster conference status
+        Added to command line: BCFG2
+        Panic - Answer with _slow_ modems fixed
+v0.25   920504
+        Batch upload added
+        Multiple SysOp-levels added
+        Added to GroupChat: *S, *T
+        Added to Dump: N
+        Added to Read: MC
+        Added to Mark: A, GD
+        !!! Old users: Remember to run BBBS BUPDATE H !!!
+v0.24   920429
+        Ansi autodetect added
+        Conference bulletins added
+        Local upload and download added
+        Time bank added
+        Added to Main: BA
+        Added to Chat: G
+        Added to Mark: S
+        Added to Read: AI, MRES, SH /S
+        Added to editor: Ctrl-P
+v0.23   920422
+        Panic - Login with conference status on + invite fixed
+v0.22   920414
+        Alt-F1..Alt-F4, Alt-1..Alt-0, Alt-K added
+        Configurable up/down limits added
+        Rush hour time limits added
+        Minimum login baud added
+        Local macros added
+        Added to Mark: F, D, Z
+        Added to editor: Ctrl-R, Ctrl-C, PgUp, PgDn
+        !!! Old users: Remember to run BBBS BUPDATE G !!!
+v0.21   920409
+        SCR_[SMURFI][123456789] added
+        IEMSI login added
+        SigOps added
+        Added to File: ADD FILE1+FILE2+...+FILEn
+        Added to Read: USER
+        Added to Util: ANSI
+        Added to Glob: B
+v0.20   920405
+        SCR_[MRUF][12345] added
+        Added to File: L /I, N /I, S xxx /I, K xxx /I
+v0.19   920403
+        RSCRIPT added
+        Alt-T, Alt-R, Alt-S, Alt-C, Shift-F10 added
+        Added to File: BI
+        Added to Util: C
+        Added to Read: MODE
+        Added to editor: Ctrl-L
+        Added to command line: BNEWF
+v0.18   920330
+        Alt-1, Alt-2, Alt-3, Alt-4 added
+        BMSG v3.17
+        More memory to DOS shells
+        Added to File: LHA
+        HS/Link support added
+        !!! Old users: Remember to run BBBS BUPDATE F !!!
+v0.17   920326
+        External doors added
+        Door #7 added (Make MLR)
+        Finnish BBBSTXT added
+        Added to Util: LANG
+v0.16   920322
+        SYSNOTE file added
+        USCRIPT, DSCRIPT added
+        Alt-F added
+        "(read)" added
+        Added to command line: BFORDER
+v0.15   920319
+        NS16550AFN support added
+        Unstandard COM support added
+        !!! Old users: Remember to run BBBS BUPDATE E !!!
+v0.14   920318
+        Free files added
+        Private to Conference files added
+        Faster QWK grab
+        Alt-A, Alt-N added
+        Hercules support added (except BCORDER)
+        SCRIPT, ASCRIPT, GSCRIPT added
+        Added to Main: O, A
+        Added to command line: BSTAT
+        !!! Old users: Remember to run BBBS BUPDATE D !!!
+v0.12   920315
+        Quick-login added (Firstname Lastname Q Password)
+        SYSOP.AVA file added
+        ALIAS.BBB file added
+        More stuff to configure
+        Added to Main: VER
+        Added to editor: Ctrl-K+Q, Ctrl-K+Z, Ctrl-K+C
+        !!! Old users: Remember to run BBBS BUPDATE C !!!
+v0.10   920314
+        Panic - BBBS BFILEDIT fixed for those locase losers
+        Faster GRAB
+        Added to File: S
+        Added to editor: AutoIndent (Ctrl-V twice)
+v0.11   920311
+        BBBS BCFG finally fixed!
+        Private messages are hidden from Co-SysOps
+        Added to command line: BCORDER
+v0.09   920310
+        Events added
+        Internal YModem
+        Added to editor: Ctrl-K+R
+        Added to command line: BTXT2BBS, BFILEDIT
+v0.08   920308
+        Internal XModem and XModem CRC
+        Node-Hippo added
+        Login.Log added
+        !!! Old users: Remember to run BBBS BUPDATE B !!!
+v0.07   920306
+        Guru added
+        Answer to incoming call added
+        QWK support added
+        Added to command line: BUPDATE
+        !!! Old users: Remember to run BBBS BUPDATE A !!!
+v0.06   920302
+        Panic - BBBS BCFG fixed again (too smart copy protection :-)
+v0.05   920302
+        Panic - BBBS BCFG fixed for new users
+        Panic - BBBSDEF.PAS and BBBSPACK.TPU were missing
+        Ctrl-X and Ctrl-C stops output
+v0.04   920302
+        First public version of BBBS
+        ARJ support added to archive viewer
+        Huffman-coder to message files, saves 50%
+        F N's date remembered until logoff
+        Added to Chat: N, A
+        Added to Read: SH /A, SH /U, RES /C:topic/*, RES /C:conf
+        Added to Glob: G A
+        Added to input: DEL
+        Added to editor: Ctrl-B, Ctrl-K+W, END-END-END
+        Added to command line: BOK, BCONF, BLIST, BUTIM
+v0.03   920226
+        BCG-Box started to use BBBS instead of MBBS
+        Last message read remembered for failed grab/dump
+        New FSE with wordwrap, VT100-scrolling and buffered output
+        Login fixed to look like MBBS
+        Reply-chains to FidoNet areas
+        "Join SF" -> "Topics are..."
+        More stuff to configure
+        MBBS->BBBS converter
+        BBBSTXT-file added
+        Multinode support
+        Added to Main: EDIT
+        Added to File: TYP, EXT, ARC, ZIP, DEL, I
+        Added to Read: B
+v0.02   920218
+        First beta-releases
+v0.01   901220
+        First version

@@ -1,0 +1,18 @@
+[1;1H[2J
+Screen editor help:
+
+    Enter = new line                   Backspace = delete prev char
+    Home = start line, page, message   Del = delete current char
+    End = end line, page, message      Tab = skip 8 columns
+
+Ctrl/A back a word       Ctrl/B restore line      Ctrl/D forward one char
+Ctrl/E up one character  Ctrl/F forward a word    Ctrl/G delete character
+Ctrl/S back a character  Ctrl/O open new line     Ctrl/Q exit DON'T SAVE
+Ctrl/W autoquote         Ctrl/T delete word       Ctrl/V insert/indent modes
+Ctrl/R page up           Ctrl/X down a character  Ctrl/Y delete line
+Ctrl/Z SAVE and EXIT     Ctrl/C page down         Ctrl/N toggle XY-display
+Ctrl/K,P toggle private  Ctrl/K,S change subject  Ctrl/L redraw screen
+Ctrl/K,C delete rest     Ctrl/K,R read from file  Ctrl/K,W write to file
+Ctrl/K,O write to file   Ctrl/K,Q exit don't save Ctrl/K,K delete line
+
+          <<Press any key to return to the editor>>

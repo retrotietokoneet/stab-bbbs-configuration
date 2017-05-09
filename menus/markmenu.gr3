@@ -1,0 +1,25 @@
+[1;1H[2J[1;31mMerke Kommandoer:[0;37m
+
+<[1;33m.[0;37m>          Merker meldingen du nettopp leste
+<[1;33m#[0;37m>          Merker melding nummer #
+<[1;33mFO[0;37m>rfatter  Merker meldinger fra en bestemt person
+<[1;33mD[0;37m>ato       Merker meldinger etter gitt dato
+<[1;33mF[0;37m>›rstegne  Flytter dine meldinger f›rst i k›en
+<[1;33mG[0;37m>ruppe     Merker grupper av meldinger etter nummer
+<[1;33mN[0;37m>ummer     Sp›r om hvor mange meldinger som er merket
+<[1;33mKP[0;37m>ersonlig Fjerner merker for alle meldinger ikke til/fra deg
+<[1;33mP[0;37m>ersonlig  Finner og merker meldinger til deg (i hele konferansen)
+<[1;33mR[0;37m>eset      Fjerner ALLE merker
+<[1;33mFM[0;37m>         Merker meldinger til en bestemt person
+<[1;33mV[0;37m>iew       Vis alle merkede meldinger
+<[1;33mS[0;37m>ett       Setter 'siste melding lest' peker
+<[1;33mT[0;37m>r†d       Merker alle meldinger i denne tr†den
+<[1;33mSL[0;37m>ett      Fjerner merker for hele tr†den
+<[1;33mU[0;37m>          Fjern merker p† meldinger fra samme forfatter som nettopp lest
+<[1;33mGD[0;37m>ato      Merker meldinger etter gitt dato (global)
+<[1;33mGRE[0;37m>set     Fjerner ALLE merker (global)
+<[1;33mGJ[0;37m>         Gjenopprett alle merker til begynnelsen av oppring
+<[1;33mSA[0;37m>ve       Save lastread pointers for <GJ>
+<[1;33mA[0;37m>vslutt    G† tilbake til lesemeny
+<[1;33mL[0;37m>ines      Remove marks for messages with more/less than lines
+[0m

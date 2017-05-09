@@ -1,0 +1,749 @@
+#include <stdlib.bzh>
+
+int globtest_1=1;
+
+int globtest_0;
+
+int already_voted(char username, char votename) {
+  int f;
+  char s;
+
+  if ((f=fopen(votename,"rt"))==-1) return(0);
+  while (1) {
+    s=fgets(f);
+    if (feof(f)) {
+      fclose(f);
+      return(0);
+    }
+    if (s==username) {
+      fclose(f);
+      return(1);
+    }
+    fgets(f);
+  }
+}
+
+int add_to_vote(char username, char votename, char voteletters) {
+  int f;
+
+  f=fopen(votename,"at");
+  fprintf(f,"%s\n%s\n",username,voteletters);
+  fclose(f);
+}
+
+int summary_votes(char votename, char voteletter) {
+  int f, sum;
+
+  if ((f=fopen(votename,"rt"))==-1) return(0);
+  sum=0;
+  while (1) {
+    fgets(f);
+    if (feof(f)) {
+      fclose(f);
+      return(sum);
+    }
+    if (pos(voteletter,fgets(1))) sum=sum+1;
+  }
+}
+
+int testit2(int foo) {
+  printf("$foo2=%s\n",foo);
+  return(foo+1);
+}
+
+int testit(int foo) {
+  printf("$foo=%04u\n",foo);
+  return(testit2(foo+1));
+}
+
+char testi(char ugh) {
+  return(ugh);
+}
+
+int testrev(int a, int b, int c) {
+  printf("yksi=%u, kaksi=%u, kolme=%u\n",a,b,c);
+}
+
+int paratest() {
+  int s=4+5;
+  return(s+1);
+}
+
+int exp_bzc() {
+  for (int i=0; i<4; i++) printf("%u\n",i);
+  if ((int a=3)==3) printf("ok\n");
+  else printf("error\n");
+  switch (int b=3) {
+    case int c=b-2: { printf("error\n"); break; }
+    case ++c:       { printf("error\n"); break; }
+    case c++:       { printf("error\n"); break; }
+    case --b:       { printf("error\n"); break; }
+    case c:         { printf("ok\n"); break; }
+    default:        { printf("error\n"); break; }
+  }
+  printf("over\n");
+}
+
+int globtest_2=2;
+
+int math_bzc() {
+  int i;
+
+  i=42; i[1]=24; i+=2; i[1]+=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i-=2; i[1]-=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i*=2; i[1]*=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i/=2; i[1]/=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i&=2; i[1]&=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i|=2; i[1]|=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i^=2; i[1]^=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i>>=2; i[1]>>=2; printf("i=%u, []=%u\n",i,i[1]);
+  i=42; i[1]=24; i<<=2; i[1]<<=2; printf("i=%u, []=%u\n",i,i[1]);
+}
+
+int iinit() {
+  int i, j;
+
+  i[5]=6;
+  i={1,2,3,4,5};
+  i[6]={3+4,i[1]+6,-1};
+  for (j=0; i[j]!=-1 && j<10; ++j)
+    printf("%u\n",i[j]);
+}
+
+int globtest_3[1]={1,2,3};
+
+int main() {
+  int bar, foo, i, f;
+
+  if (stupcase(bu_name)!=stupcase(bg_sysop_name) || bv_serno!=1)
+    printf("\nSorry, no questionnaire available.\n\n");
+  else {
+
+    foo[0]=42;
+    foo[1]=43;
+    foo[100]=44;
+
+    printf("%u, %u, %u, %u, %u, %u\n",foo[0],foo[3],foo[1],foo[80],foo[100],foo[150]);
+
+    foo=time();
+    while (time()==foo);
+    printf("sec=%u\n",time());
+    for (bar=0; bar<600000; bar++) foo=bar;
+    printf("sec=%u, foo=%u, bar=%u\n",time(),foo,bar);
+
+    foo=time();
+    while (time()==foo);
+    printf("sec=%u\n",time());
+    for (bar=0; bar<12000; bar++) foo[bar]=bar;
+    printf("sec=%u, foo=%u, bar=%u\n",time(),foo[bar-1],bar);
+
+    foo=time();
+    while (time()==foo);
+    printf("sec=%u\n",time());
+    for (bar=0; bar<12000; bar++) i=foo[bar];
+    printf("sec=%u, foo=%u, bar=%u\n",time(),i,bar);
+
+exit(1);
+
+    for (i=0; ; i++) {
+      if (loaduser(i)) break;
+      if (bu_timelimit!=333)
+        printf("%-35s %d\n",bu_name,bu_timelimit);
+      freeuser();
+    }
+
+exit(1);
+
+#if sizeof(int)==4 && sizeof(long)==4
+    printf("int==long==4\n");
+#else
+    printf("int?\n");
+#endif
+
+exit(1);
+
+    printf("Hi! I'm line %u in %s%s!\nCompiled %s, %s, bzb version %s.\n",__LINE__,bg_scriptdir,__FILE__,__DATE__,__TIME__,__BZC__);
+
+exit(1);
+
+    do {
+      i=getch();
+      printf("%u, *%c*\n",i,i);
+    } while (bv_carrier && i!="z");
+
+    exit(1);
+
+    if (opendir("./*.exe")) {
+      for (f=0; f<3; f++) {
+        rewinddir();
+        printf("\n");
+        while ((bar=readdir())!="") {
+          foo=copy(bar,pos("\2",bar)+1,255);
+          i=copy(foo,pos("\2",foo)+1,255);
+          i=copy(i,1,pos("\2",i)-1);
+          printf("%-22s %9u %02u.%02u.%02u\n",
+                 copy(bar,1,pos("\2",bar)-1),
+                 copy(foo,1,pos("\2",foo)-1),
+                 ((i>>25) & 127)+80,
+                 (i>>21) & 15,
+                 (i>>16) & 31);
+        }
+      }
+      closedir();
+    }
+
+exit(1);
+
+    if (getenv("TEST")!="") printf("yes\n");
+
+exit(1);
+
+    printf("\e[0;37;44mfoo\e[37mbar\e[0;37;40mbar\n");
+
+exit(1);
+
+    printf("%u\n",strlen(bv_groups));
+    printf("%s\n",bv_groups);
+
+exit(1);
+
+    bar=getch();
+    if (bar=="\010") printf("\\010\n");
+    if (bar=="\b") printf("\\b\n");
+    if (bar=="\014") printf("\\014\n");
+    if (bar=="\f") printf("\\f\n");
+
+exit(1);
+
+    bv_temptime=3;
+
+exit(1);
+
+    printf("delay(30)\n");
+    delay(30);
+    printf("_delay(3000)\n");
+    _delay(3000);
+
+exit(1);
+
+    printf("now=%u, %s\n",time(),localtime(time()));
+    printf("login=%u, %s\n",bv_logintime,localtime(bv_logintime));
+    printf("online=%ds\n",time()-bv_logintime);
+
+exit(1);
+
+    printf("4=%u\n",1>0?4:0);
+    printf("4=%u\n",(1>0)?4:0);
+    printf("4=%u\n",1?4:0);
+    printf("4=%u\n",0?0:4);
+    printf("3=%u\n",0?2:3);
+    printf("2=%u\n",1?2:3);
+    printf("2=%u\n",1?0?4:2:3);
+    printf("2=%u\n",0?0?4:3:1?1+1:5);
+
+exit(1);
+
+    printf("1\e[5C6\e[5D2\e[2B3\n");
+
+exit(1);
+
+    printf("0=%u\n",regexp("foo","12345678"));
+    printf("1=%u\n",regexp("^","12345678"));
+    printf("5=%u\n",regexp("5","12345678"));
+    printf("7=%u\n",regexp("78$","12345678"));
+
+exit(1);
+
+    printf("time=%u\n",time());
+    printf("idle=%u\n",getnodestatus(bv_nodenumber,GNS_IDLE));
+
+exit(1);
+
+    printf("1\n*\n2\n4\n\n\e[2A\e[1L3\r\e[2A\e[1M\e[4B");
+
+exit(1);
+
+    bar=42;
+    foo=10;
+    printf("bar=%d, foo=%d\n",bar,foo);
+    bar+=(foo-30);
+    printf("(bar+=(foo-30))=%d\n",bar);
+
+    bar=42;
+    foo=10;
+    printf("bar=%d, foo=%d\n",bar,foo);
+    bar+=foo-30;
+    printf("(bar+=foo-30)=%d\n",bar);
+
+    bar=42;
+    foo=10;
+    printf("bar=%d, foo=%d\n",bar,foo);
+    bar-=(foo-30);
+    printf("(bar-=(foo-30))=%d\n",bar);
+
+    bar=42;
+    foo=10;
+    printf("bar=%d, foo=%d\n",bar,foo);
+    bar-=foo-30;
+    printf("(bar-=foo-30)=%d\n",bar);
+
+    math_bzc();
+
+exit(1);
+
+    fopen("error","error");
+
+exit(1);
+
+    for (i=0; !loaduser(i); ++i) {
+      if ((bu_readmode & 15)==2) printf("%s\n",bu_name);
+      freeuser();
+    }
+
+exit(1);
+
+    _delay(1000);
+    bbbs("q mg nul");
+
+exit(1);
+
+    for (i=0; i<30; i++) setenv("\1COLORS","");
+
+exit(1);
+
+    showfile("testfile");
+    printf("printf=%u\n",printf("abc"));
+    printf("delay=%u\n",delay(1));
+
+exit(1);
+
+    printf("?=%u\n",globtest_0);
+    printf("1=%u, %u\n",globtest_1,globtest_3[1]);
+    printf("2=%u, %u\n",globtest_2,globtest_3[2]);
+    printf("3=%u\n",globtest_3[3]);
+
+exit(1);
+
+    printf("go\n");
+    iinit();
+    printf("back\n");
+
+exit(1);
+
+    printf("cr=%u\n",'\r');
+    printf("bs=%u\n",'\b');
+    printf("b=%u\n",'b');
+    printf("'=%u\n",'\'');
+    printf("\"=%u\n",'\"');
+    printf("G=%u\n",'G');
+
+exit(1);
+
+    f=fopen("testfile.tmp","wt");
+    fputc(65,f);
+    fputc(66,f);
+    fputc(67,f);
+    printf("fputc\n");
+    getch();
+
+    fflush(f);
+    printf("fflush\n");
+    getch();
+
+    fclose(f);
+    printf("fclose\n");
+    getch();
+    remove("testfile.tmp");
+
+exit(1);
+
+    f=fopen("c:/bbbs/bzc.exe","rb");
+    i=fopen("c:/bbbs/test","wb");
+    while ((bar=fgetc(f))!=-1) fputc(bar,i);
+    fclose(i);
+    fclose(f);
+
+exit(1);
+
+    do {
+      bar=_getch(1);
+      if (bar!="ÿ") printf("%c",bar);  // ascii 255, not space
+      else _delay(50);
+    } while (bar!="Q");
+
+exit(1);
+
+    do {
+      bar=getch();
+      printf("key=%s, %u\n",bar,bar);
+    } while (bar!="q" && bv_carrier);
+
+exit(1);
+
+    math_bzc();
+
+exit(1);
+
+    bu_language=0;
+
+exit(1);
+
+    exp_bzc();
+
+#define NIXON 0x30
+
+    switch(0x30) {
+      case NIXON:{ printf("nixon\n"); break; }
+      default: { printf("dunno\n"); break; }
+    }
+
+exit(1);
+
+    foo=time();
+    while (time()==foo);
+    foo=1;
+    printf("sec=%u\n",time());
+    for (bar=0; bar<100000; bar++);
+    printf("sec=%u, foo=%u, bar=%u\n",time(),foo,bar);
+
+    foo=time();
+    while (time()==foo);
+    foo=1;
+    printf("sec=%u\n",time());
+    for (bar=0; bar<100000; ++bar);
+    printf("sec=%u, foo=%u, bar=%u\n",time(),foo,bar);
+
+    foo=time();
+    while (time()==foo);
+    printf("sec=%u\n",time());
+    for (bar=0; bar<100000; ++bar) {
+      foo="abc";
+      foo="bcd";
+      foo="cde";
+    }
+    printf("sec=%u, foo=%s, bar=%u\n",time(),foo,bar);
+
+exit(1);
+
+    if (opendir("./*.exe")) {
+      bar=readdir();
+      printf("%s\n",copy(bar,1,pos("\2",bar)-1));
+      closedir();
+    }
+    if (opendir("./*.exe")) {
+      bar=readdir();
+      printf("%s\n",copy(bar,1,pos("\2",bar)-1));
+      closedir();
+    }
+
+exit(1);
+
+    i=opendir("./does_not_exist");
+    printf("opendir returned %u\n",i);
+
+exit(1);
+
+    bv_outputstopp=0;
+    for (i=0; i<10; i++) {
+      printf("%u - %u\n",bv_outputstopp,i);
+      delay(10);
+    }
+
+    bv_outputstopp=16;
+    for (i=0; i<10; i++) {
+      printf("%u - %u\n",bv_outputstopp,i);
+      delay(10);
+    }
+    bv_outputstopp=32;
+    for (i=0; i<10; i++) {
+      printf("%u - %u\n",bv_outputstopp,i);
+      delay(10);
+    }
+
+    bv_outputstopp=64;
+    for (i=0; i<10; i++) {
+      printf("%u - %u\n",bv_outputstopp,i);
+      delay(10);
+    }
+
+    bv_outputstopp=128;
+    for (i=0; i<10; i++) {
+      printf("%u - %u\n",bv_outputstopp,i);
+      delay(10);
+    }
+    bv_outputstopp=0;
+
+exit(1);
+
+    sendnode(bv_nodenumber,bv_nodenumber,"uTest?",16,bn_nick);
+    sendnode(bv_nodenumber,bv_nodenumber,"cTest?",16,sprintf("#chat:%s",bn_nick));
+    sendnode(11,bv_nodenumber,"bTest?",16,"BRoboCop");
+
+exit(1);
+
+    bar=bg_updir;
+    printf("up=%s$\n",bg_updir);
+    bg_updir="c:/bbbs/";
+    printf("up=%s$\n",bg_updir);
+    bg_updir=bar;
+    printf("up=%s$\n",bg_updir);
+
+exit(1);
+
+    printf("receive\n");
+    breceive();
+    printf("send\n");
+    printf("%d\n",bsend("c:/bbbs/transfer.lst"));
+
+exit(1);
+
+    printf("%u,",0);
+    printf("%u,",00);
+    printf("%u,",0x0);
+    printf("%u,",1);
+    printf("%u,",01);
+    printf("%u,",0x1);
+    printf("%u,",32);
+    printf("%u,",040);
+    printf("%u,",0x20);
+    printf("%u,",999);
+    printf("%u,",0777);
+    printf("%u\n",0xff);
+
+exit(1);
+
+    printf("groups=%s$\n",bv_groups);
+    bar=bv_groups;
+    bv_groups="foo,bar";
+    printf("groups=%s$\n",bv_groups);
+    bv_groups=bar;
+    printf("groups=%s$\n",bv_groups);
+
+exit(1);
+
+    for (i=0; i<=bc_count_of_co; i++) {
+      printf("%s: %s\n",bc_confname[i],bc_description[i]);
+      printf("  Automatic scan=%u, status=",bc_lastread[i]);
+      if (bc_status[i] & 1) printf("must, ");
+      if (bc_status[i] & 4) printf("invite newu, ");
+      if (bc_status[i] & 8) printf("fido");
+      printf("...\n");
+
+      printf("  Lastread=%u\n",bc_ulastread[i]);
+    }
+
+exit(1);
+
+    printf("bar=%s$\n",bar);
+    int bar2=2, bar5=2+3, buz="buz", buz2=sprintf("%s2",buz), bar7=bar2+bar5;
+    printf("bar2=%u$\n",bar2);
+    printf("bar5=%u$\n",bar5);
+    printf("bar7=%u$\n",bar7);
+    printf("buz=%s$\n",buz);
+    printf("buz2=%s$\n",buz2);
+    printf("paratest=%s$\n",paratest());
+
+exit(1);
+
+    bar="1234K567";
+    f=0;
+    for (i=1; i<=strlen(bar); i++) {
+      foo=copy(bar,i,1);
+      if (foo<0 || foo>9) break;
+      f=f*10+foo;
+    }
+    printf("atoi(%s)=%u\n",bar,f);
+
+exit(1);
+
+    bar="12K4";
+    for (i=0; i<4; i++) {
+      foo=copy(bar,i+1,1);
+      if (foo<"0") printf("<0: %s\n",foo);
+      if (foo>"9") printf(">9: %s\n",foo);
+      if (foo<0) printf("<0# %s\n",foo);
+      if (foo>9) printf(">9# %s\n",foo);
+      if ((foo<"0") || (foo>"9")) printf("!#: %s\n",foo);
+      if ((foo<0) || (foo>9)) printf("!## %s\n",foo);
+      if (foo<"0" || foo>"9") printf("!#& %s\n",foo);
+      if (foo<0 || foo>9) printf("!#& %s\n",foo);
+    }
+
+exit(1);
+
+    for (i=0; ; i++) {
+      if (loaduser(i)) break;
+      printf("%u\n",bu_kbup);
+      freeuser();
+    }
+
+exit(1);
+
+    bar[0]=5;
+    bar[1]=9;
+
+    printf("%u\n",bar--);
+    printf("%u\n",bar++);
+    printf("%u\n",--bar);
+    printf("%u\n",++bar);
+    printf("%u\n",bar[1]--);
+    printf("%u\n",bar[1]++);
+    printf("%u\n",--bar[1]);
+    printf("%u\n",++bar[1]);
+
+exit(1);
+
+    if (bv_tomenu==2) printf("main menu\n");
+    bv_tomenu=3;
+
+exit(1);
+
+    printf("%s\n",copy(bv_vername,6,2));
+    printf("%s v%s\n",bv_vername,bv_ver);
+
+    printf("groups=%s\n",bv_groups);
+
+exit(1);
+
+
+    if (-1<1) printf("ok\n");
+    else printf("error\n");
+    if (-2<-1) printf("ok\n");
+    else printf("error\n");
+    if (1>-1) printf("ok\n");
+    else printf("error\n");
+    if (-1>-2) printf("ok\n");
+    else printf("error\n");
+
+    printf("%u\n",-1);
+    printf("%d\n",-1);
+
+    bar=0;
+    --bar;
+
+    printf("%u\n",bar);
+    printf("%d\n",bar);
+
+exit(1);
+
+    printf("restarting\n");
+    sendnode(bv_nodenumber,8,"HELP",16,bn_nick);
+    printf("Back here\n");
+
+exit(1);
+
+    printf("%s\n","49");
+    printf("%c\n",49);
+    printf("%c\n","a");
+    printf("%d\n",49);
+    printf("%d\n",-1);
+    printf("%d\n","a");
+    printf("%u\n","a");
+
+exit(1);
+
+    for (i=f=0; f!=-1; i++) {
+      f=fopen("c:/config.sys","rt");
+      printf("open #%u returned %d\n",i,f);
+      if (i==5) fclose(2);              // dirty!
+    }
+
+    //fcloseall();
+
+exit(1);
+
+    printf("%d","foo">"bar");
+    printf("%d","foo">="bar");
+    printf("%d","bar">"foo");
+    printf("%d","bar">="foo");
+    printf("%d","foo">="foo");
+    printf("%d",1>2);
+    printf("%d",1>=2);
+    printf("%d",1>=1);
+    printf("%d",2>1);
+    printf("%d",2>=1);
+    printf("%d","foo"<"bar");
+    printf("%d","foo"<="bar");
+    printf("%d","bar"<"foo");
+    printf("%d","bar"<="foo");
+    printf("%d","foo"<="foo");
+    printf("%d",1<2);
+    printf("%d",1<=2);
+    printf("%d",1<=1);
+    printf("%d",2<1);
+    printf("%d",1<=-1);
+    printf("%d",1==-1);
+    printf("%d",1>=-1);
+    printf("%d",1>-1);
+    printf("%d",1<-1);
+
+exit(1);
+
+    for (i=1; i<=bg_max_nodes; i++)
+      printf("%s\n",getnodestatus(i,6));
+
+exit(1);
+
+    for (i=0; i<44; i++) // num_of_akas = 44
+      printf("#%u = %u:%u/%u.%u\n",i,bg_zone[i],bg_net[i],bg_node[i],bg_point[i]);
+
+exit(1);
+
+    printf("Name=%s\n",bu_name);
+    for (i=0; ; i++) {
+      if (loaduser(i)) break;
+      printf("Name=%s\n",bu_name);
+      freeuser();
+    }
+    printf("Name=%s\n",bu_name);
+
+exit(1);
+
+    bar="Testiksi joku merkkijono.  ";
+    foo=sprintf("%s%s",bar,copy(bar,1,10));
+    i=1;
+    while (!kbhit()) {
+      printf("\e[2;2H%s",copy(foo,i,10));
+      i=i+1;
+      if (i>strlen(bar)) i=1;
+      delay(1);
+    }
+
+exit(1);
+
+    printf("yksi=%u, kaksi=%u, kolme=%u\n",1,2,3);
+    testrev(1,2,3);
+
+exit(1);
+
+    printf("My groups=%s\n",bv_groups);
+
+    printf("voted?=%u\n",already_voted(bu_name,"testvote"));
+    add_to_vote(bu_name,"testvote","BCG");
+    printf("vote B=%u\n",summary_votes("testvote","B"));
+    printf("vote C=%u\n",summary_votes("testvote","C"));
+    printf("vote G=%u\n",summary_votes("testvote","G"));
+    printf("vote F=%u\n",summary_votes("testvote","F"));
+
+    foo=3;
+    bar=testit(foo);
+    printf("3+1+1=%u, 3*(3+3)=%u, 3*(5/1)=%u\n",bar,3*(3+3),3*(5/1));
+    printf("\n");
+    printf("This is just a test file for BBBS's scripts.\n");
+    printf("You have nothing to do here...\n");
+    printf("\nPress enter to the next question.\n\n");
+    printf("Your name is %s.\n",bu_name);
+    foo=input("Foo: ",60,0);
+    if (bu_name=="KIM HEINO") bbbs("q compu");
+    if (foo!="") {
+      if (foo=="foo") printf("Foobar!\n");
+      else printf("You entered \"%s\" which is wrong answer!\n",foo);
+      if ((bar=fopen(strcat(bg_menudir,"bull69"),"at"))!=-1) {
+        fprintf(bar,"%s\n",bu_name);
+        fclose(bar);
+      } else printf("Error opening bulletin file!\n");
+    }
+  }
+}
+
+

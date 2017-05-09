@@ -1,0 +1,88 @@
+/******************************************************************************
+
+               Graphics Library routines for BZ language
+
+           Copyright 1990-1999, Kim Heino and Tapani T. Salmi
+
+******************************************************************************/
+
+// Anybody willing to code this again using half-character pixels?
+// It would also correct the aspect ration problem.
+
+int initgraph() {
+// Clear the screen, return false if user have not selected ANSI graphics
+  if (!(bu_utoggles & 256)) {
+    printf("%s\n",bv_txt[351]);
+    return(0);
+  }
+  printf("\e[1;1H\e[2J");
+  return(1);
+}
+
+int setcolor(int i, int f, int b) {
+// Set color to i;f;b (rgb)
+  printf("\e[%u;3%u;4%um",i,f,b);
+}
+
+int plot(int x, int y) {
+// Plot one pixel to screen
+  printf("\e[%u;%uH*",y,x);
+}
+
+int plot2(int x, int y) {
+// Plot one pixel to screen, using aspect ration 2 (very dirty)
+  printf("\e[%u;%uH**",y,x);
+}
+
+int line(int x1, int y1, int x2, int y2) {
+// Draw a line using Bresenham Line algorithm
+  int dx, dy, ya, e;
+
+  if ((dx=x2-x1)<0) {
+    e=x1; x1=x2; x2=e;
+    e=y1; y1=y2; y2=e;
+    dx=-dx;
+  }
+  ya=1;
+  if ((dy=y2-y1)<0) {
+    dy=-dy;
+    ya=-1;
+  }
+  e=(dy<<1)-dx;
+  plot(x1,y1);
+  while (y1!=y2 || x1<x2) {
+    if (e>0) {
+      y1=y1+ya;
+      e=e-(dx<<1);
+    } else {
+      x1=x1+1;
+      e=e+(dy<<1);
+    }
+    plot(x1,y1);
+  }
+}
+
+int circle(int x1, int y1, int r) {
+// Draw a circle using Bresenham Circle algorithm
+// Set aspect ration to 2 (anybody willing to fix that?)
+  int d, x, y;
+
+  d=3-(r<<1);
+  y=r;
+  for (x=0; x<=y; x=x+1) {
+    if (d<0) {
+      d=d+(x<<2)+6;
+    } else {
+      d=d+((x-y)<<2)+10;
+      y=y-1;
+    }
+    plot2(x1+(x<<1),y1-y);
+    plot2(x1+(y<<1),y1-x);
+    plot2(x1+(y<<1),y1+x);
+    plot2(x1+(x<<1),y1+y);
+    plot2(x1-(x<<1),y1+y);
+    plot2(x1-(y<<1),y1+x);
+    plot2(x1-(y<<1),y1-x);
+    plot2(x1-(x<<1),y1-y);
+  }
+}
