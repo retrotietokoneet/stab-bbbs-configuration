@@ -1,0 +1,713 @@
+Anv„ndarnamn                   #      Inloggad  Stad
+==========================================================================
+\n\e[36mDu „r anv„ndare nummer:         \e[0m%lu\n\e[36mAntal g†nger du loggat in:      \e[0m%lu\n\e[36mF”rra g†ngen du loggat in dig:  \e[0m%s\n\e[36mDin tidsbegr„nsing „r:          \e[0m%d\n\e[36mMinuter i tidbanken:            \e[0m%u\n\e[36mAntal meddelanden du skrivit:   \e[0m%lu\n\e[36mAntal meddelanden du l„st:      \e[0m%lu\n\e[36mAntal meddelanden du h„mtat:    \e[0m%lu\n\e[36mFiler uppladdade:               \e[0m%lu  (%s)\n\e[36mFiler nerladdade:               \e[0m%lu  (%s)\n\n
+Select menu level
+Visa omr†dernas tillst†nd vid inloggning %s.\n
+r du s„ker att du vill markera alla som l„sta (Y/N):
+F„rgerna %s.\n
+Visa dina egna meddelanden p† nytt „r nu %s.\n
+?/Address/View/Lines/Password/NAME/Transfer/Xpert/AFormat/LAnguage/Conference/MFilter/GFormat/ALIas/UNALIas/SET/UNSET/TErmtype/BDown/COLors/REView/Setchar/RESume/EDitor/KEYboard/FLash/SYSop/STAtus/KILL/FACCess/LIMits/TLImit/BAnktime/INVite/UNINVite/FIND/WOTU/+/-/QUote/Info/SIlent/RETurn/AASsign/AADd/AChange/AView/AMembers/FUP/BUP/FDown/PALette/CALL/WIDth
+Goodbye/BYE/EXIT/LOGOut/Quit/Read/File/Utility/CHAT/Join/Enter/COMment/MDownload/GRAB/MUpload/Who/TELL/MSG/NOde/NEWUhelp/MAN/Help/TIMe/Bulletins/>#/##/SAY/!/'
+Uppdaterade anslag: /
+V„lkommen
+Tyv„rr har detta system ingen resum‚ information.
+Anv„ndar namn
+Tyv„rr, jag hittar ingen med det namnet.
+\n\e[36mAnv„ndarnamn:         \e[0m%s\n\e[36mStad:                 \e[0m%s\n\e[36mG†nger inloggad hit:  \e[0m%lu\n\e[36mF”rra g†ngen h„r:     \e[0m%s\n
+Vad heter du i F™Rnamn?  /
+Orsak till sm†prat
+Sm†prat utan orsak vidarebefodras inte!
+Huvud Kommando
+(? f”r Meny)
+Du har inga r„ttigheter till det !
+Felaktigt kommando "%s".\n
+r du s„ker p† att du vill logga ut?
+Svara med Y (Ja) eller N (Nej).
+%s, du „r en ny anv„ndare!\n
+Vill du registrera dig
+Ge ett l”senord (punkter visas)
+-
+Fel!
+Vill du l„mna ett meddelande till sysoppen
+Vad heter du i EFTERnamn?  /
+Ge ditt l”senord
+Ta tillbaka vilken variabel
+Original
+Ny
+Felaktigt nummer!
+URL
+Du kan inte g”ra detta †t en grupp\n
+Noden „r %s i %s.\n
+R”sta
+Quit/Add/Vote/List/RESET/DEL/?
+\n  0: Alla fr†gor\n
+Namn> /
+\e[1;1H\e[2J\3cwKursor knapparna: flytta  \3cxS\3cw”k  \3cxJ\3cw:Delta i omr.  s\3cxO\3cwrtera: \e[0m
+V„lj fr†ga
+Tyv„rr, inga fr†gor att v„lja.\n
+\n\3cJAnv„ndarinformation, anv„ndarnummer %lu\n------------------------------------%s\n\3cKAnv„ndarnamn:          \3cL%s\n\3cKGatuadress:            \3cL%s\n\3cKPostnummer och stad:   \3cL%s\n\3cKTelefonnummer:         \3cL%s\n\3cKF”delsedag:            \3cL%s\n
+\3cKTerminaltyp:           \3cL%-17s\3cKAktuella protokollet:  \3cL%s\n\3cKLinjer p† sk„rmen:     \3cL%-17u\3cKterv„nd med enter:    \3cL%s\n
+\3cKTeckenupps„ttning:     \3cL%-17s\3cKAktuella packningen:   \3cL%s\n\3cKEditor f”r med.:       \3cL%-17s\3cKEgna namnet blinkar:   \3cL%s\n\3cKANSI-f„rger:           \3cL%-17s\3cKEgna med. p† nytt:     \3cL%s\n\3cKErfarenhet:            \3cL%-17s\3cKVisa omr. vid inlog.:  \3cL%s\n\3cKSpr†k:                 \3cL%-17s\3cKFilter f”r nodmed.:    \3cL%u\n
+\3cKS„ttet att l„sa med.:  \3cL%-17s\3cKVT100-tangeterna:      \3cL%s\n\3cKGrab formatet:         \3cL%-17s\3cKAutomatisk citering:   \3cL%s\n\3cKSilent mode:           \3cL%-17s\3cKPage width:            \3cL%u\n
+\n\e[32mAdressen      Namn                   SysOp                  Bel„genhet\n===============================================================================\e[0m\n
+Inloggad:   /
+Klockan „r: /
+Tid kvar:   /
+Ge din gatuadress:               /
+Ge ditt postnummer och anstalt:  /
+Ge ditt telefonnummer:           /
+Ge ditt f”delsedatum (dd.mm.yy): /
+Sido l„ngd
+Ditt nya l”senord
+Alla m„rken har nollats.\n\n
+Ditt nya F™Rnamn
+Ditt nya EFTERnamn
+Namnet anv„nds redan.
+Vilken teckenupps„ttning anv„nder du
+Ok„nd teckenupps„ttning.
+Anv„ndar infon uppdaterad.
+Tyv„rr, du kan inte skicka filer till denna anv„ndare.\n
+Du misste r„ttigheterna till grupp %s.\n
+VARNING: Du missar dina r„ttigheter till grupp %s %02u%02u%02u.\n
+Bank:  /
+ON/Yes/Enable/OFf/No/Disable
+Ditt namn blinkar vid eget meddelanden „r %s.\n
+Ta bort alla m„rken fr†n meddelanden med f„rre linjer „n
+Ta bort alla m„rken fr†n meddelanden med fler linjer „n
+Automatisk citering „r nu %s.\n
+Protokoll val
+Arkiverings val
+Inst„llnings Kommando
+M”jlig alias-slinga.\n
+S†ng typ: %s\nL†tens namn:   %-26sFilens storlek:     %lu bittar\nL†tens l„ngd: %-26uModellernas m„ngd: %u\n\nNr. Sample                 L„ngd      Nr. Sample                 L„ngd\n--  <------------------->  <---->      --  <------------------->  <---->\n
+Formatet p† att h„mta meddelanden
+Datum att s”ka enligt MMDD (Enter=%02u%02u%02u)
+Felaktigt datum.\n
+?/Quit/Text/Ppo/Hippo/Omen/W/Bluewave/Rep
+Datum d† meddelandet skall s„ndas (Enter=%02u%02u%02u)
+L”senord
+Du kan inte „ndra formatet p† att h„mta meddelanden nu.\n
+                                @w: %s\n
+Tryck Enter
+S”kord
+VT100 tangentbord %s.\n
+Ge namnet p† omr†det (Enter=Nuvarande)
+Beskrivning:\n\n
+Fil Kommando
+Vill du „ndra p† filens beskrivning
+                                @p: %s\n
+L„s meddelandena dialogvis
+\e[1;37mDet finns en privat fil till dig: %s\e[0m\n
+H†rdskivan full!\n
+\nTotalt %lu filer, %lu %s, %lu nerladdningar, %lu %s.\n
+Kanal
+Inga meddelanden ol„sta i konferensen.
+Meddelandet „r inte tillg„ngligt.
+Du m†ste l„sa ett meddelande f”rst!
+\3ca%s meddelande #%lu fr†n \3cb%s\3ca till \3cb%s%s%s\3ca%s%s.
+Ogiltigt konferens val!
+Meddelandet „r redan i den konferensen!
+Du kan inte flytta till %s.\n
+Meddelandet flyttat.
+Du kan inte flytta detta meddelande!
+Inga meddelanden finns i SD!
+\nDin tid har temporert minskats f”r detta samtal.\n\n
+Beklagar, det verkar vara n†got fel p† arkiveraren.
+SD finns att f† med SEnd kommandot.
+Samlar %s:\n
+<C>onf, <A>lla, <M>eddel., <CLEAR>, <N>y, <Enter>=avsluta
+SamlingsDokumentet raderat.
+Inga fler ol„sta meddelanden. Tryck <Enter> f”r n„sta konferens.\n
+Jag s”ker meddelanden i konferenser d„r du deltar...
+Inga ol„sta meddelanden i konferenserna!
+F”rsta meddelandet!
+Sista meddelandet!
+Meddelandet „r redan raderat.
+Meddelandet „r redan aktivt.
+Du kan inte radera/aktivera detta meddelande!
+Meddelandet finns inte, numret f”r l†gt.
+Meddelandet finns inte, numret f”r h”gt.
+Detta meddelande „r inte ett svar!
+Jag kan inte hitta originalet.
+\n\3cF Totalt Ol„sta   Dina   Namn\n===============================================================================\n
+?/-/+/./</>/=/NExt/--/++/PREply/REply/Kill/RECover/Mark/SHow/View/RESign/SEnd/Search/DUPlicate/Dump/Original/Zap/MODE/AInfo/Info/MV/MOVe/CP/MCopy/Bulletins/USER/FIX/FM/Previous/UNFM/CREply/SAVE/GNUS
+\3cG-------------------------------------------------------------------------------\n\3cH%7lu%7lu%7lu   %lu\n\n
+Medlem
+Ingen tillg†ng
+Det finns inga svar till meddelandet!
+Inga fler svar!
+Fr†n meddel. <%lu-%lu>, <Enter=%lu>
+F”r l†gt! F”rs”k p†nytt.\n
+F”r h”gt! F”rs”k p†nytt.\n
+Till meddel. <%lu-%lu>, <Enter=%lu>
+Konferensen „r obligatorisk!
+r du s„ker p† att du vill g† ur (Enter=N)
+G†r ur
+L„s Kommando
+Filen "%s" hittas inte!\n
+/Your BRoboCop request
+Jag kallar p† SysOppen...
+\3cMAnv„ndare                     Smeknamn   Typ    N„r   Status
+\3cM---------                     --------   ---    ---   ------
+<M>ore, <H>elp, <I>ndex, <C>ontents, <R>etrace, >, <, <Q>uit, number
+\nDu „r inbjuden till:\n
+Endast de %u senaste meddelandena markeras automatiskt.\n
+Markerade
+Kopplade
+Fram†t
+Bak†t
+1 nytt meddelande finns%s.\n
+%lu nya meddelanden finns%s.\n
+, alla „r †t dig
+, 1 av dem „r †t dig
+, %lu av dem „r †t dig
+Skriv konferensens namn du vill g† med i (Enter=Ingen)
+Du kan inte svara p† meddelandet.
+Vilket mod
+Anv„ndarinformationen blev inte „ndrad.
+Jag har gl”mt mitt l”senord!
+Unders”ker anv„nderdatat, totalt %lu anv„ndare.\n
+Bulletin nummer
+Du har inte l„st n†gon bulletin
+Meddelande #%lu har raderats!\n
+Det finns %lu som passar. Tryck TAB/DEL om du verkligen vill se dem:
+Du har inte r„ttigheter till privatmeddelande #%lu!\n
+\3caDenna fr†ga gjordes av \3cb%s\3ca, %s.\n\n\3cd
+\nTotalt %ld r”ster.\n
+V„lj svar
+ (PRIVAT)
+   Skrivet %s, %lu rader.
+tel.
+   Svar p† meddelande # /
+. (Det finns inte fler svar.)
+. (Det finns ytterligare svar.)
+   Det finns svar till detta meddelande.
+\3ccmne: %s
+Till anv„ndaren
+\e[0;32mM†l\e[0m: %s
+===============================================================================
+Meddelande
+Anv„ndaren
+Quit/More/Help/Index/Contents/Retrace/>/<
+Inskrift /
+Ers„tt   /
+ „mne: /
+Ctrl-Z=klar, Ctrl-Q=avbryt, Ctrl-U=hj„lp, anv„nd pilar/WordStar-tangeterna
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+mne
+Avbryt, „r du s„ker? (J/N) /
+Inga rader i meddelandet!
+S„tt in f”re
+Radera rad
+Editera rad
+      <---+----1----+----2----+----3----+----4----+----5----+----6----+----7->
+V„lj
+                Mottagare
+Mottagare (Enter=†t alla)
+Varning! Mottagaren „r inte registrerad! Troligtvis N„t-anv„ndare...
+Kommentar
+    Meddelandets inneh†ll
+Inkludera originalet (Enter=N)
+Du kan „ndra endast dina egna meddelanden.
+Meddelandet tillbakataget.
+Meddelande nummer /
+ sparat!
+™ppnat      Packat    Datum   Tid    Filnamn
+--------    ------    -----   ----   --------
+\nBeklagar, jag kan inte behandla en dylik fil.\n
+Sm†prat
+Filnamn: %s\n%s klart f”r s„ndning. B”rja ”verf”ringnen nu!\n
+Felaktigt nodnumemr. F”rs”k senare p† nytt!\n
+Mottagarens nodnummer
+?/Show/STATistics/OPen/Info/Answer/VErsion/CALendar/BAnk/JArgon/ID/BRowse/LOG/DELLog/HIDE/ULogin/DOS/SHELL/BLOG/EJect/RESET/NOTE/SPY/COMPUter/BSTAT/BSHELL/OUtbound/TELnet/MG/RLogin/FINger/FTP/HUNT/HACK/CALLback/URL/Vote
+?/New/Key/Scan/Info/WDown/LS/DIrectory/List/HDIr/HLs/CD/CHdir/HCD/RM/DELete/RETract/HRM/HDEL/CP/COpy/ADd/HAdd/HCP/HCOpy/TCP/TCOpy/MV/MOve/REName/CAt/Type/HType/HCAt/GEt/Download/SZ/HGEt/PUt/UPload/RZ/PPUT/EXTract/HEXTract/LHarc/HLHarc/ZIP/HZIP/PAck/HPAck/SPlit/FREE/UNFREE/View/DEScribe/INstall/LINstall/TOUch/GREP/MKDir
+H„mtningen slutf”rd!
+H„mtningen avbruten!
+Filnamn: %s\n%s redo f”r att ta emot! B”rja ”verf”ringen nu!\n
+%lu invited and %lu members of total %lu users.
+™verf”ringen slutf”rd!
+™verf”ringen avbruten!
+S”k Kommando
+Text att s”ka efter
+Den som s”ker han letar...
+Inga markerade meddelanden!
+Markerings Kommando
+Alla meddelanden „r nollst„llda.
+Markerar... /
+SysOp „r inte till†ten h„r!
+Markerar meddelanden fr†n/till dig...
+Tyv„rr, inga meddelanden †t dig.
+mnena „r:
+mne
+Tyv„rr, postsession p†g†r. F”rs”k senare p† nytt.\n
+L”senordet „ndrat
+Du har inte ”verf”rt ditt samlingsdokument. Vill du g”ra det nu
+(Enter=Y)
+(Enter=N)
+VARNING: Skivan h†ller p† att bli full! Jag avbryter samlandet...
+%lu meddelanden adderades till samlingsdokumentet%s (%lukB).\n
+Meddelandet m”rdat.
+Meddelandet †teruppv„ckt.
+F”rsta meddelandet har nummer /
+Sista meddelandet har nummer /
+Avs„ndare
+Mottagare
+ †t /
+ „mne: /
+F”ljande filer excisterar redan:\n\n
+Bekalgar, du kan inte svara p† meddelanden i denna konferens.
+Beklagar, du har inte tillr„ckligt med tid kvar.
+Det ser ut som om du somnat.. Sov s† gott...!
+>->->->->->-> SysOp vill tala med dig!
+>->->->->->-> SysOp f”rsvinnner sakta men s„kert!
+(60 minuter kvar, no pain. N„sta varning vid 30 minuter.)
+(30 minuter kvar. N„sta varning vid 15 minuter.)
+(15 minuter kvar. N„sta varning vid 10 minuter.)
+(10 minuter kvar, det b”rjar bli lite nu. N„sta varning vid 5 minuter.)
+(5 minuter kvar. N„sta varning vid 2 minuter.)
+(2 minuter kvar, nu blir det tajt. N„sta varning vid 1 minut.)
+(1 minut kvar, tror du att du hinner med n†t „nnu? Snart †ker du ur...)
+demon
+Din dagliga tid „r slut!
+:a /
+:a /
+:e /
+:e /
+Januari
+Februari
+Mars
+April
+Maj
+Juni
+Juli
+Augusti
+September
+Oktober
+November
+December
+%u%s%s, %u kl %02u:%02u
+Ogiltig parameter
+Tyv„rr, SysOp „r inte tillg„nglig just nu... Leave a COMment.
+kB
+\n\e[32mStatus   R„ttig  Namn\n============================================================================\e[0m\n
+V„lj personen du vill kommentara
+\e[1;37mC\e[0;37:inneh†ll   \e[1;37mI\e[0mndex     \e[1;37mH\e[0mj„lp    \e[1;37mR\e[0mtillbaka   Bl„ddra \e[1;37m<\e[0m   Bl„ddra \e[1;37m>\e[0m   \e[1;37mS\e[0m”k   \e[1;37mQ\e[0m:avbryt
+Tyv„rr, kunde inte hitta anv„ndaren.\n
+Utloggad
+Aktiv
+Inte tillg„nglig
+Skriver ett med.
+Samlar meddelanden
+H„mtar (%02u:%02u)
+Skickar filer
+SysOp finns p† plats f”r sm†prat.
+Skriver till: /
+p†kopplat
+avkopplat
+ (l„st)
+Tyv„rr, meddelandet „r inte tillg„ngligt.
+(Lista, <D> H„mta, Add, W„lkommen, Enter f”r att avsluta)
+  Indrag   /
+  Ej Indrag
+(<S>para, <C>forts„tt, <I>ns„tt, <D> radera, <E>ditera, <A>vbryt, <L>ista)
+#
+Spr†k Val
+lokal
+Inloggad:
+Utloggad:
+\e[0mMed "/?" f†r du hj„lp om gruppsnacket.
+n„t
+MB
+GB
+minuter
+V„lj s„ttet att l„sa
+Talar med SysOp
+Anv„nder d”rr
+Tysta moden „r nu %s.\n
+terv„nd med enter-knappen „r nu %s.\n
+timmar
+V„lj din terminaltyp
+S”mn (%02u:%02u)
+?/Quit/Tty/Ansi/Dummyansi/Vt320/Rip
+V„lj din editor
+Anv„nder OS
+?/Quit/Line/Fse/Mg/Script
+Anv„nder n„tverket
+ meddel. /
+ fr†n /
+ †t /
+\e[0;36mPengar:     \e[0m%ld (%lu timmar %lu minuter)\n
+\n\e[32mNamn                                Pengar  #Anv.    Kredit\e[0m\n\e[32m==========================================================\e[0m\n
+WWW
+Endast „mnen
+Tyv„rr, detta protocol finns inte.\n
+Din dagliga nerladdningsm„ngd har ”verskridits. Forts„tt imorgon.\n
+Kunde inte ”ppna "%s".
+Omr†dernas status
+-----------------
+%lu nya meddelanden%s.\n
+1 nytt meddelande%s.\n
+Totalt /
+Du m†ste v„lja ANSI f”r det!
+Gruppsnack
+Din nerladdingsgr„ns har ”verskridits. Du m†ste ”verf”ra hit n†got f”rst.\n
+FTP
+Postsession
+No/Yes
+?/IBM/SF7/ISO/IBN/US7/GE7/NO7/FR7/IT7/SP7/MAC
+?/Quit/Zmodem/Ymodem/Xmodem/SHydra/Crc/YBatch/SZmodem/Hydra/ZZap/Kermit/Uucode
+?/Quit/Text/Arc/Zip/Lzh/J/O/Hpack/Rar
+?/English/Suomi/SVenska/Norsk/5/6/7/8/9/10/Quit
+No/Yes/Edit
+Group/Header/Marked/Quit/?/NGroup/NHeader/NMarked
+?/Quit/Marked/Reference/Forward/Backward
+Conf/All/Message/CLEAR/Now/.
+Ge en ny fr†ga
+Sysop/Notavail/Avail/Group/Quit/?
+Yes/No/Relogin
+(Yes/No/Relogin)
+Yes/Again/No
+(Ja, Nej, P† nytt, (Enter=Ja))
+Reset/Group/Number/Onlymine/./Firstmine/Date/Zap/Set/Author/GDate/GREset/Personal/Thread/Undo/RECeiver/RESTore/View/Quit/?/Mark/GOnlymine/SAve/OAll/GOAll/CRestore/Lines
+Detta kommando „r inte till f”r lokala anv„ndare. Anv„nd BTERM.\n
+\e[0;32m%s%s:\n\n\e[0;36mSenaste meddelande: \e[0m%lu\n\e[0;36mSenaste du l„st:    \e[0m%lu\n
+?/List/Download/Add/Welcome/Quit
+Save/Continue/Insert/Delete/Edit/Abort/List/Quit
+Ge s”k text f”r anv„ndar listan (Enter=Alla)
+Ge en detaljerad beskrivning
+(Enter=Allm„n fil)
+Tid i banken: /
+Tid kvar:     /
+Tids bank
+Store/Withdraw
+Tid att spara
+Tid att anv„ndas
+dagar
+<Katalog>       /
+Privat fil till
+Skribent
+SD's storlek „r
+bittar..
+Meddelandet kopierat.
+R”r: %s\n
+Filnamn eller anv„ndarnamn att s”ka efter
+Inget liknande hittat.\n
+Den filen beh”vs inte h„r.
+Namnet accepterad.\n
+(Store, Withdraw)
+ <offline>  /
+Du har SigOp r„ttigheter f”r denna konferens.
+Kan inte hitta maskinen.\n
+Can't open socket.\n
+Can't bind socket.\n
+Can't connect socket.\n
+Can't create socket thread.\n
+\nKontakten avst„ngd.\n
+Antal som skall visas
+Maskinens namn
+Du kan avbryta med '^]'.\n
+S„tt pengar till
+Kontunamnet
+\e[1;33;46m %s\e[1;37;46m p† \e[1;33;46m%0.35s\e[1;37;46m   /
+                                     <---+----1----+----2----+--->
+                                     <---+----1----+->
+Mottagare
+Totalt %lu/%lu %s:\n
+minuter
+samtal
+meddelanden
+Tyv„rr, finns inte plats mera.
+WINdow
+NEW/Kill/Listen/Size/Next/Prev/LOG
+(?=help/SPACE=add/V=view/I=info/Q=quit)
+\e[1;33;44m %s\e[1;37;44m p† \e[1;33;44m%0.35s\e[1;37;44m   /
+\e[1;33;46m   %d\e[1;37;46m minuter kvar, \e[1;33;46m%02u:%02u /
+Ja
+Nej
+Me/Who/?/Target/Say/Join/Resign/REPort/MSg/Node/TIme/Quit/List/BAN/UNBan/INVite/KICK/KICKBan/TOpic/CHmod/LAst/%/LEave/Part/IRCQuit/NAmes/CTcp/NIck/IGNore/IRCJoin
+\n%u ”verensst„mmande hittade.\n\n
+Filen %s inneh†ller f”ljande beskrivning:\n\n
+Vill du anv„nda den
+QWK gravt fel: Kan inte packa upp!
+QWK gravt fel: Filen finns inte!
+QWK gravt fel: Felaktig block storlek!
+QWK gravt fel: Felaktigt referns nummer!
+F”rfr†gan ignorerad - BRoboCop anv„nds inte!
+QWK gravt fel: Kan inte g† ur!
+QWK gravt fel: Ingen tillg†ng!
+QWK gravt fel: Felaktigt koferens nummer!
+G”r kontroll-filer.
+\aQWK gravt fel: Ingen tillg†ng, %s!\n
+Hippo gravt fel: Kan inte packa upp!
+Hippo gravt fel: ZMS filen finns inte!
+Ingen tillg†ng:
+Inget svar:
+Ok„nt omr†de:
+Hippo gravt fel: /
+Hippo gravt fel: Kan inte g† med!
+Hippo gravt fel: Kan inte g† ur!
+Hippo gravt fel: Felaktig aktivitets kod!
+\aBlue Wave gravt fel: Kan inte g† med i %s!\n
+Du kan inte anv„nda det kommandot i denna konferens!
+Tar bort markeringar...
+Denna konferens inneh†ller en hel del viktiga kommandon och det „r h”gt
+rekommenderat att du l„ser dem alla.
+Best„mmning kr„vs f”r detta.\n
+G†r med i
+G†r ur
+Tyv„rr, detta namn „r inte till†tet h„r.\n\n
+Best„mmning kan inte anv„ndas h„r.\n
+Tyv„rr, ditt modem „r f”r l†ngsamt. Skaffa ett snabbare och f”rs”k p† nytt.
+(English, Suomi, SVenska, Norsk) /
+Felaktig best„mming.\n
+Kanal %s kan inte hittas eller du „r inte medlem.
+Felaktig k„nsla eller inga r„ttigheter.\n
+ alfabetisk\n\3cwSpace: g† med/g† ut \3cxQ\3cw:avsluta  \3cxR\3cw:g† ur ett omr. \3cxH\3cw:visa: \e[0m
+ej/
+alla /
+medlem /
+icke medlem
+\aBlue Wave gravt fel: Kan inte ”ppna!\n
+\aBlue Wave fatal error: Rubrikfilen kan inte hittas!\n
+\aBlue Wave fatal error: Fel filnamn %s!\n
+OMEN gravt fel: Kan inte packa upp!
+OMEN gravt fel: Ingen r„tt att svara!
+\aOMEN gravt fel: Ingen tillg†ng, %s!\n
+OMEN gravt fel: MSG filen finns inte!
+OMEN gravt fel: Ok„nt omr†de eller kommando!
+OMEN gravt fel: Rubrik filen finns inte!
+\aBlue Wave fatal error: Inga r„ttigheter till %s!\n
+Ja
+Nyb”rjare
+Expert
+Bredd x h”jd:   %u x %u\nAntal f„rger: %lu\n
+Engelska
+Finska
+Svenska
+Norska
+-
+-
+-
+-
+-
+-
+Text
+OldHippo
+Hippo
+OMEN
+QWK
+Teletype
+ANSI
+Dummy-ANSI
+VT320
+RIP
+BRoboCop „r tagen ur bruk!
+G†nger att visa
+Group name
+Uppdaterar: /
+Linjeeditor
+Full sk„rm
+MG
+Blue Wave
+Filer upp
+Kilobitar upp
+Filer ned
+Kilobitar ned
+0=Inga, 1=Nedladding, 2=Uppladding, 3=Ned & Upp
+Script
+Du kan inte spionera p† dig sj„lv!
+Spionmod av.
+Spionmod p†.
+B”rjar %s s„ndningen nu.\n
+%s „r inte medlem i %s.
+B”rjar %s mottagningen nu.\n
+Ge alternativ #%lu
+Junior
+Inbjuden
+%s „r inte medlem i %s.
+Var god v„nta.
+DOS kommando
+Return=
+\n™verf”ringen avbruten.\n
+™verf”r %s (%luk/%luk, %lu cps) \r
+OK, tillbaka till dig igen...\n
+REP (QWK)
+Var god och skriv beskrivning till filen "%s".\n
+G†nger inloggad hit
+™ppna paketet i alla fall
+?/Yes/No/Quit
+Konferns bulletiner „r aktiva.
+Varning! Skribenten „r inte en registrerad anv„ndare! Troligen en n„t anv„ndare
+  <---+----1----+----2----+----3----+----4----+->\n
+> /
+Varning! Mottagaren „r inte medlem i denna konferens.
+Varning! Att svara p† detta omr†de „r f”rbjudet.\n
+Anv„ndarnamn
+Icke-medlem
+, POST
+, ANVNDAR INFO
+, FIL INFO
+, Obligatorsk
+, Alias
+FTP
+IFF 8SVX (8-Bit Sampled Voice)\n
+IFF ILBM (Interleaved Bitmap)\n
+\nNodnummer          Age Flags     Bad Busy Msgs ArcMail Files\n------------------ --- --------- --- ---- ---- ------- -------\n
+\nNummer Age Flags     Typ  Size   Subject\n------ --- --------- ---- ------ ----------------------------------------------\n
+Quit/?/List/CHange/Create/Delete/BAd/Busy/CLear
+Outbound Manager
+Ok„nt komando.\n
+Crash/Direct/Erase/File/Hold/Immediate/Lock/Request/Trunc
+Filen \"%s\" finns inte, f”rst”r meddelande #%lu.\n
+Filterniv† p† meddelanden, <0-50> (Enter=ingen „ndring)
+Vill du inbjuda
+Skicka kopia till en annan anv„ndare
+Skicka kopia till /
+, Privat „r till†tet
+Privat meddelande
+Filen \"%s\" har inget meddelande tillfogat. F”rst”r.\n
+Samplings niv†: %u\n
+Alias tagits bort
+Kunde inte hitta alias
+Utrymmet reserverat p† aliaser „r fullt.
+Alias gjort.
+Variabeln tagits bort.
+Variabeln kunde inte hittas.
+Vilken variabel vill du g”ra
+V„rde p† variabeln
+Variabeln gjord
+\n** Anv„ndaren har inte skrivit en resum‚ om sig sj„lv **\n\n
+Cd/Dir/Names/Get/Quit/?/Site/Type/DELete/Put/GETDEL/CHdir/Ls/DOwnload/CLose/EXit/CAt/RM/UPload/MIRror
+L”senordet f†r inte vara f”r „nkelt och m†ste vara fr†n 3 till 64 m„rken.\n
+Skicka filen och tryck Ctrl-X n„r du „r f„rdig.\n
+\n\3ci Filnamn            Datum   kB  Beskrivning\3cp\n\3ci ---------          ----    --  ----------------\3cp\n
+F”nstret „r f”r litet.
+\n\3ci   Datum  kB  Nedl Filnamn\3cp\n\3ci   ----   --  ---- ---------\3cp\n
+Anv„ndaren „r nu utkastad och d”d!\n
+ M† Ti On To Fr L” S”
+Ange datum (Enter=%04u%02u%02u)
+Kan inte hittas.
+Kan inte hitta Jargon-filen.
+--mera--
+--mera-- (Y/n/c):
+Copyright:     /
+F”rfattare:    /
+Anm„rkning:    /
+Namn:          /
+Ny SysOp-niv†
+Anv„ndaren „r nu aktiv!\n
+Anv„ndaren „r nu utsparkad!\n
+Anv„ndaren „r nu d”dad!\n
+Ny filr„ttighets niv†
+Nytt f”rh†llande
+Ny tidsbegr„nsning
+Ny tid i banken
+                               \3co
+\3cn
+\n       Flest inloggningar sedan %s.\n
+\n       Flest meddelanden skrivet sedan %s.\n
+\n       Flest filer uppladdade sedan %s.\n
+\n       Flest bitar uppladdade sedan %s.\n
+\n       Flest filer nerladdade sedan %s.\n
+\n       Flest bitar nerladdade sedan %s.\n
+\n       Totalt f”r alla anv„ndare: %11lu%s\n       Totalt alla miinus SysOp:  %11lu%s\n\n
+b”rjan av tiden
+Det finns en fil ihopfogat med detta meddelande.\n
+Vill du nerladda det
+Anv„ndaren „r inte registerad! S”ker anv„ndarregistret...
+F”rs”k p† nytt
+Spara meddelandet
+     \n\e[0;36m       Totalt med anv„ndare:        \e[0m%lu\n\e[0;36m       Totalt med inloggningar:     \e[0m%lu\n\e[0;36m       Totalt l„sta meddelanden:    \e[0m%lu\n\e[0;36m       Totalt meddelanden h„mtade:  \e[0m%lu\n\e[0;36m       Totalt skrivna meddelanden:  \e[0m%lu\n\e[0;36m       Totalt uppladdningar:        \e[0m%lu  (%s)\n\e[0;36m       Totalt nerladdningar:        \e[0m%lu  (%s)\n
+Splittrades storlek i kB
+Totalt %u filer, %lu bitar, %lu minuter.\n
+--mera--
+--mera-- (Yes/no/flag/cursor up):
+All
+Fritt med minne:          %lu\n
+Fritt med diskettutrymme: %luMB\nFri diskett (fil):         %luMB\n\n
+Fick du den mottagna filen felfri
+Inga r„ttigheter!\n
+Ok„nd katalog!\n
+Kunde inte hitta hold!\n
+Kunde inte hitta filen.\n
+Link overflow.\n
+CD: /
+\n\3ci Filnamn       Datum   kB  Nerl Beskrivning\3cp\n\3ci ---------     ----    --  ---- ----------------\3cp\n
+\3chKatalog: %s%s\e[0m\n
+Felaktigt filnamn.\n
+Filen \"%s\" finns redan.\n
+Gravt fel: Kan inte kopiera!\n
+Paketets namn: /
+Filen finns redan.\n
+Filnamn: /
+Ditt tangentbord „r f”r snabbt! CPS gr„nsen ”verskred %lu g†nger.\n
+Filen accepterad.\n
+Du kan inte ange katalog h„r!\n
+Kan inte hitta filerna.\n
+Fil: %s%s\n
+\nFilnamn: %s%s\n\n
+Tagits bort: %s%s\n
+Fr†n: /
+Till: /
+M†let m†ste vara en katalog!\n
+Filen kan inte kopieras p† sig sj„lv.\n
+Filen kan inte flyttas p† sig sj„lv.\n
+Filens namn: /
+S”kord: /
+M†let m†ste vara en fil utan „ndelse!\n
+™ppna vad: /
+Hittade: %s\n
+Inkludera originalet (Enter=J)
+Tema: %s
+Meddelande, rubrik
+Meddelande, anv„ndarnamn
+Meddelande, samtals„mne
+Meddelande, normal text
+Meddelande, oparigt l†nad text
+Meddelande, parigt l†nad text
+Meddelande, n„tinformation
+Fil, stiglinje
+Fil, rubrik
+Fil, katalog
+Fil, normal fil
+Fil, fri fil
+Fil, linkad fil
+Fil, beskr, f”rsta linjen
+Fil, beskr, f”ljande linjer
+Fil, talen
+Nodmedd, min text
+Nodmedd, andras text
+Nodmedd, privat nodmeddelande
+Nodmedd, info meddelande
+Nodmedd, f”rstavelse
+Nodmedd, allm„nt medd. till mig
+Omr†den, rubrik
+Omr†den, f”rst„rkta f„rger
+Omr†den, vald
+Omr†den, ickevald
+Omr†den, lokalt omr†de
+Omr†den, n„tverk
+Omr†den, lokalt postomr†de
+Omr†den, post via n„tverk
+Omr†den, beskrivning
+Visa, rubrik
+Visa, slutets separator
+Visa, talen
+Visa, till dig
+Inst„llningar, rubrik
+Inst„llningar, text
+Inst„llningar, talen
+Vem, rubrik
+?/Quit/Novice/Junior/Expert
+Columns in screen
+Vem, typ, aktiv
+Vem, typ
+Vem, status, aktiv
+Vem, status
+Vem, n„r, aktiv
+Vem, n„r
+Vem, smeknamn, aktiv
+Vem, smeknamn
+Vem, anv„ndarnamn, aktiv
+Vem, anv„ndarnamn
+Sk„rm

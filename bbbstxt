@@ -1,0 +1,713 @@
+Username                       User#  Last on   City
+==========================================================================
+\n\e[36mYou are user number:   \e[0m%lu\n\e[36mTimes on this system:  \e[0m%lu\n\e[36mLast time on system:   \e[0m%s\n\e[36mYour timelimit is:     \e[0m%d\n\e[36mMinutes in timebank:   \e[0m%u\n\e[36mMsgs you have written: \e[0m%lu\n\e[36mMsgs you have read:    \e[0m%lu\n\e[36mMsgs you have dumped:  \e[0m%lu\n\e[36mFiles uploaded:        \e[0m%lu  (%s)\n\e[36mFiles downloaded:      \e[0m%lu  (%s)\n\n
+Select menu level
+Conference status at login %s.\n
+Are you sure to mark all as read (Y/N):
+Colors %s.\n
+Reviewing own messages %s.\n
+?/Address/View/Lines/Password/NAME/Transfer/Xpert/AFormat/LAnguage/Conference/MFilter/GFormat/ALIas/UNALIas/SET/UNSET/TErmtype/BDown/COLors/REView/Setchar/RESume/EDitor/KEYboard/FLash/SYSop/STAtus/KILL/FACCess/LIMits/TLImit/BAnktime/INVite/UNINVite/FIND/WOTU/+/-/QUote/Info/SIlent/RETurn/AASsign/AADd/AChange/AView/AMembers/FUP/BUP/FDown/PALette/CALL/WIDth
+Goodbye/BYE/EXIT/LOGOut/Quit/Read/File/Utility/CHAT/Join/Enter/COMment/MDownload/GRAB/MUpload/Who/TELL/MSG/NOde/NEWUhelp/MAN/Help/TIMe/Bulletins/>#/##/SAY/!/'
+Updated bulletins: /
+Welcome
+Sorry, no resume info in this system.
+User name
+Sorry, that name is not registered.
+\n\e[36mUser name:             \e[0m%s\n\e[36mCity:                  \e[0m%s\n\e[36mTimes on this system:  \e[0m%lu\n\e[36mLast time on system:   \e[0m%s\n
+What is your FIRST name? /
+Reason for chat
+Chat requests without a reason will not be processed.
+Main Command
+(? for menu)
+You are not allowed to do that!
+Invalid command "%s".\n
+Sure you want to logout
+Please answer Y (yes) or N (no).
+%s is not registered as a user here.\n
+Do you want to register as a user in this BBS
+Please enter your password (dots will echo)
+-
+Wrong!
+Do you want to leave a message to sysop
+What is your LAST name?  /
+Please enter it again as an extra check
+Unset what
+Orig
+New
+Invalid number.
+URL
+You can't do that for a group.\n
+Node is %s at %s.\n
+Vote Booth
+Quit/Add/Vote/List/RESET/DEL/?
+\n  0: All booths\n
+Name> /
+\e[1;1H\e[2J\3cwCursor keys: move      \3cxF\3cwind     \3cxJ\3cwoin group       s\3cxO\3cwrt: \e[0m
+Select booth
+Sorry, there are no booths to be selected.\n
+\n\3cJCurrent user profile, user number %lu\n----------------------------------%s\n\3cKUser name:             \3cL%s\n\3cKStreet address:        \3cL%s\n\3cKPostal code and state: \3cL%s\n\3cKTelephone number:      \3cL%s\n\3cKDate of birth:         \3cL%s\n
+\3cKTerminal type:         \3cL%-17s\3cKDefault protocol:      \3cL%s\n\3cKLines in screen:       \3cL%-17u\3cKReturn with enter-key: \3cL%s\n
+\3cKCharacter set:         \3cL%-17s\3cKPreferred packing:     \3cL%s\n\3cKMessage editor:        \3cL%-17s\3cKFlash your own name:   \3cL%s\n\3cKColors:                \3cL%-17s\3cKReview your own msgs:  \3cL%s\n\3cKMenu level:            \3cL%-17s\3cKConf. status at login: \3cL%s\n\3cKLanguage:              \3cL%-17s\3cKNodemessage filter:    \3cL%u\n
+\3cKMessage reading mode:  \3cL%-17s\3cKVT100 key emulation:   \3cL%s\n\3cKGrab format:           \3cL%-17s\3cKAutoquote:             \3cL%s\n\3cKSilent mode:           \3cL%-17s\3cKPage width:            \3cL%u\n
+\n\e[32mNodenumber    Name                   SysOp                  Location\n===============================================================================\e[0m\n
+Login: /
+Now:   /
+Left:  /
+Enter your street address:           /
+Enter your postal code and state:    /
+Enter your phone number:             /
+Enter your date of birth (dd.mm.yy): /
+Lines in screen
+Please enter new password (dots will echo)
+All marks have been cleared.\n\n
+Your new FIRST name
+Your new LAST name
+Sorry, that name is already in use.
+Which character set are you using
+Unknown character set.
+User profile updated.
+Sorry, you can not upload files to that user.\n
+Expired from group %s.\n
+WARNING: You will expire from group %s at %02u%02u%02u.\n
+Bank:  /
+ON/Yes/Enable/OFf/No/Disable
+Flashing own name in messages %s.\n
+Remove marks from messages with less than lines
+Remove marks from messages with more than lines
+Autoquote and automatic message including is now %s.\n
+Select protocol
+Select archive format
+Utility Command
+Possible alias loop.\n
+Song class:  %s\nSong name:   %-26sFile length:     %lu bytes\nSong length: %-26uHighest pattern: %u\n\nNr. Sample                 Length      Nr. Sample                 Length\n--  <------------------->  <---->      --  <------------------->  <---->\n
+Grab format
+Date to scan for YYMMDD (Enter=%02u%02u%02u)
+Invalid date.\n
+?/Quit/Text/Ppo/Hippo/Omen/W/Bluewave/Rep
+Date when the message will be sent (Enter=%02u%02u%02u)
+Password
+You can't change grab format now.\n
+                                @w: %s\n
+Press Enter
+Keyword
+VT100 keyboard %s.\n
+Please enter conference name (Enter=Current)
+Description:\n\n
+File Command
+Do you want to modify description
+                                @p: %s\n
+View messages in threads
+\e[1;37mThere is a private file for you: %s\e[0m\n
+Disk full!\n
+\nTotal %lu files, %lu %s, %lu downloads, %lu %s.\n
+Channel
+No messages in conference.
+Message is not available.
+You must read one message first.
+\3ca%s message #%lu from \3cb%s\3ca to \3cb%s%s%s\3ca%s%s.
+Invalid conference selection.
+Message is already in that conference.
+You can't move to %s.\n
+Message moved.
+You can't move this message.
+No messages dumped.
+\nYour timelimit has been temporarily reduced for this call.\n\n
+Sorry, there seems to be some problems with packers.
+Scratchpad still available for SEnd.
+Dumping %s:\n
+<C>onf, <A>ll, <M>essage, <CLEAR>, <N>ow, <Enter>=quit
+Scratchpad emptied.
+No more unread. Press <ENTER> for next conference.\n
+Checking for messages in conferences you are a member of..
+No unread messages in conferences.
+First message.
+Last message.
+Message is already killed.
+Message is already active.
+You can't kill/recover this message.
+Message not found, number too small.
+Message not found, number too big.
+This message is not a reply.
+Original not found.
+\n\3cF  Total Unread ForYou   Name\n===============================================================================\n
+?/-/+/./</>/=/NExt/--/++/PREply/REply/Kill/RECover/Mark/SHow/View/RESign/SEnd/Search/DUPlicate/Dump/Original/Zap/MODE/AInfo/Info/MV/MOVe/CP/MCopy/Bulletins/USER/FIX/FM/Previous/UNFM/CREply/SAVE/GNUS
+\3cG-------------------------------------------------------------------------------\n\3cH%7lu%7lu%7lu   %lu\n\n
+Member
+No access
+No replies to this message.
+No more replies.
+From message <%lu-%lu>, <Enter=%lu>
+Too low. Try again.\n
+Too high. Try again.\n
+  To message <%lu-%lu>, <Enter=%lu>
+You can't resign.
+Are you sure you want to resign (Enter=N)
+Resigning from
+Read Command
+File "%s" not found!\n
+/Your BRoboCop request
+Paging SysOp...
+\3cMCaller                        Nick       Type   When  Status
+\3cM------                        ----       ----   ----  ------
+<M>ore, <H>elp, <I>ndex, <C>ontents, <R>etrace, >, <, <Q>uit, number
+\nYou have been invited to:\n
+Only %u last messages are scanned automatically.\n
+Marked
+Reference
+Forward
+Backward
+1 new message is available%s.\n
+%lu new messages are available%s.\n
+, all for you
+, 1 of them is for you
+, %lu of them are for you
+Enter conference name to join (Enter=None)
+Message is not available for reply.
+Enter mode
+User profile not updated.
+I've lost my password!
+Scanning users file, total %lu users.\n
+Bulletin number
+No default bulletin.
+Message #%lu is killed.\n
+There are %lu matches. Press TAB/DEL again if you really want to see them: /
+You can't access private message #%lu!\n
+\3caCreated by \3cb%s\3ca at %s.\n\n\3cd
+\nTotal %ld votes.\n
+Select answer
+ (PRIVATE)
+   Entered on %s, %lu lines.
+dialup
+   Reply to msg # /
+. (There are no more replies.)
+. (More replies have been made.)
+   There are replies to this message.
+\3ccSubject: %s
+To user
+\e[0;32mTarget\e[0m: %s
+===============================================================================
+Message
+User
+Quit/More/Help/Index/Contents/Retrace/>/<
+Insert   /
+Overwrite
+ re: /
+Ctrl-Z=Save, Ctrl-Q=Abort, Ctrl-U=Help, Move with arrows/WordStar-keys
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+Subject
+Really quit (Y/N)? /
+No lines in message.
+Insert before
+Delete line
+Edit line
+      <---+----1----+----2----+----3----+----4----+----5----+----6----+----7->
+Option
+             Send message to
+Send message to (CR for ALL)
+Warning! Receiver is not a registered user. Probably a net user...
+Comment
+          Subject of message
+Include original message (Enter=N)
+You may only duplicate your own messages.
+Message aborted.
+Message number /
+ saved.
+Unpacked    Packed    Date    Time   Filename
+--------    ------    ----    ----   --------
+\nSorry, can't handle this kind of file.\n
+Chat Command
+Filename: %s\n%s send ready. Start your transfer now.\n
+Invalid nodenumber. Try again.\n
+Receiver nodenumber
+?/Show/STATistics/OPen/Info/Answer/VErsion/CALendar/BAnk/JArgon/ID/BRowse/LOG/DELLog/HIDE/ULogin/DOS/SHELL/BLOG/EJect/RESET/NOTE/SPY/COMPUter/BSTAT/BSHELL/OUtbound/TELnet/MG/RLogin/FINger/FTP/HUNT/HACK/CALLback/URL/Vote
+?/New/Key/Scan/Info/WDown/LS/DIrectory/List/HDIr/HLs/CD/CHdir/HCD/RM/DELete/RETract/HRM/HDEL/CP/COpy/ADd/HAdd/HCP/HCOpy/TCP/TCOpy/MV/MOve/REName/CAt/Type/HTYpe/HCAT/GEt/Download/SZ/HGEt/PUt/UPload/RZ/PPUT/EXTract/HEXTract/LHarc/HLHarc/ZIP/HZIP/PAck/HPAck/SPlit/FREE/UNFREE/View/DEScribe/INstall/LINstall/TOUch/GREP/MKDir
+Download completed.
+Download aborted.
+Filename: %s\n%s receive ready. Start your transfer now.\n
+%lu invited and %lu members of total %lu users.
+Upload completed.
+Upload aborted.
+Search Command
+Text to search for
+Searching...
+No marked messages.
+Mark Command
+All marks have been reset.
+Marking... /
+SysOp is not allowed here.
+Marking messages from/to you...
+Sorry, no messages for you.
+Topics are:
+Topic
+Sorry, mail only event is currently running. Try again later.\n
+Login password changed.
+You have not transferred your scratchpad. Want it now
+(Enter=Y)
+(Enter=N)
+WARNING: Disk is getting full! Aborting grab...
+%lu messages added to scratchpad%s (%lukB).\n
+Message killed.
+Message recovered.
+First message is number /
+Last message is number /
+Message from
+Message to
+ to /
+ re: /
+Following files already exist:\n\n
+Sorry, you can't reply to this area.
+Sorry, you don't have enough time left.
+Looks like you fell asleep.. Sleep well.
+>->->->->->-> SysOp is coming online!
+>->->->->->-> SysOp is going offline!
+(60 minutes left. Next notice when 30 minutes left.)
+(30 minutes left. Next notice when 15 minutes left.)
+(15 minutes left. Next notice when 10 minutes left.)
+(10 minutes left. Next notice when 5 minutes left.)
+(5 minutes left. Next notice when 2 minutes left.)
+(2 minutes left. Next notice when 1 minute left.)
+(1 minute left.)
+daemon
+Your timelimit for this call has expired!
+st /
+nd /
+rd /
+th /
+January
+February
+March
+April
+May
+June
+July
+August
+September
+October
+November
+December
+%u%s%s, %u at %02u:%02u
+Invalid switch
+Sorry, SysOp is not available at the moment... Leave a COMment.
+kB
+\n\e[32mStatus   Access  Name\n============================================================================\e[0m\n
+Select the person you want to comment
+\e[1;37mC\e[0montents   \e[1;37mI\e[0mndex   \e[1;37mH\e[0melp   \e[1;37mR\e[0metrace   Browse \e[1;37m<\e[0m   Browse \e[1;37m>\e[0m   \e[1;37mS\e[0mearch   \e[1;37mQ\e[0muit
+Sorry, that user is not available.
+Logged Off
+Active
+Not Available
+Writing a message
+Grabbing
+Download (%02u:%02u)
+Uploading
+SysOp is available for chat.
+Writing to: /
+enabled
+disabled
+ (read)
+Sorry, message is not available anymore.
+(List, Download, Add, Welcome, Enter for none)
+  Indent   /
+  No Indent
+(Save, Continue, Insert, Delete, Edit, Abort, List)
+#
+Select language
+local
+Login:
+Logout:
+\e[0mWrite "/?" to get help about groupchat.
+net
+MB
+GB
+minutes
+Select read mode
+Chatting with SysOp
+Using door
+Silent mode is now %s.\n
+Return with enter-key is now %s.\n
+hours
+Select terminal type
+Idle (%02u:%02u)
+?/Quit/Tty/Ansi/Dummyansi/Vt320/Rip
+Select editor
+Shelled to OS
+?/Quit/Line/Fse/Mg/Script
+Using net
+ message /
+ from /
+ to /
+\e[0;36mMoney: \e[0m%ld (%lu hours %lu minutes)\n
+\n\e[32mName                                Money  #Users   Credit\e[0m\n\e[32m==========================================================\e[0m\n
+WWW
+Subjects only
+Sorry, that protocol is not available.\n
+Your daily download limit has expired. You can continue tomorrow.\n
+Couldn't open "%s".
+Conference status
+-----------------
+%lu new messages%s.\n
+1 new message%s.\n
+Total /
+You must select ANSI for that.
+Groupchat
+Your download limit has expired. You must upload something first.\n
+FTP
+Mail session
+No/Yes
+?/IBM/SF7/ISO/IBN/US7/GE7/NO7/FR7/IT7/SP7/MAC
+?/Quit/Zmodem/Ymodem/Xmodem/SHydra/Crc/YBatch/SZmodem/Hydra/ZZap/Kermit/Uucode
+?/Quit/Text/Arc/Zip/Lzh/J/O/Hpack/Rar
+?/English/Suomi/SVenska/Norsk/5/6/7/8/9/10/Quit
+No/Yes/Edit
+Group/Header/Marked/Quit/?/NGroup/NHeader/NMarked
+?/Quit/Marked/Reference/Forward/Backward
+Conf/All/Message/CLEAR/Now/.
+Enter new question
+Sysop/Notavail/Avail/Group/Quit/?
+Yes/No/Relogin
+(Yes/No/Relogin)
+Yes/Again/No
+(Yes, No, Again, (Enter=Yes))
+Reset/Group/Number/Onlymine/./Firstmine/Date/Zap/Set/Author/GDate/GREset/Personal/Thread/Undo/RECeiver/RESTore/View/Quit/?/Mark/GOnlymine/SAve/OAll/GOAll/CRestore/Lines
+This command is not for local users. Use BTERM instead.\n
+\e[0;32m%s%s:\n\n\e[0;36mLast message:  \e[0m%lu\n\e[0;36mLast you read: \e[0m%lu\n
+?/List/Download/Add/Welcome/Quit
+Save/Continue/Insert/Delete/Edit/Abort/List/Quit
+Enter search string for user list (Enter=All)
+Enter detailed description
+(Enter=Public file)
+Time in bank: /
+Time left:    /
+Time bank
+Store/Withdraw
+Time to store
+Time to withdraw
+days
+<directory>     /
+Private file to
+Author
+Current scratchpad size is
+bytes.
+Message copied.
+Touch: %s\n
+Filename or username to scan
+No matching found.\n
+That file is not needed here.
+Name accepted.\n
+(Store, Withdraw)
+ <offline>  /
+You have SigOp access to this conference.
+Can't find hostname.\n
+Can't open socket.\n
+Can't bind socket.\n
+Can't connect socket.\n
+Can't create socket thread.\n
+\nConnection closed.\n
+Places to show
+Host name
+Escape character is '^]'.\n
+Money to add
+Account name
+\e[1;33;46m %s\e[1;37;46m on \e[1;33;46m%0.35s\e[1;37;46m   /
+                                     <---+----1----+----2----+--->
+                                     <---+----1----+->
+Receiver
+Total %lu/%lu %s:\n
+minutes
+calls
+messages
+Sorry, no space left.
+WINdow
+NEW/Kill/Listen/Size/Next/Prev/LOG
+(?=help/SPACE=add/V=view/I=info/Q=quit)
+\e[1;33;44m %s\e[1;37;44m on \e[1;33;44m%0.35s\e[1;37;44m   /
+\e[1;33;46m   %d\e[1;37;46m minutes left, \e[1;33;46m%02u:%02u /
+Yes
+No
+Me/Who/?/Target/Say/Join/Resign/REPort/MSg/Node/TIme/Quit/List/BAN/UNBan/INVite/KICK/KICKBan/TOpic/CHmod/LAst/%/LEave/Part/IRCQuit/NAmes/CTcp/NIck/IGNore/IRCJoin
+\n%u matching found.\n\n
+File %s contains following description:\n\n
+Do you want to use it
+QWK fatal error: Can't unpack!
+QWK fatal error: File not found!
+QWK fatal error: Invalid block length!
+QWK fatal error: Invalid reference number!
+Request ignored - SysOp has disabled BRoboCop!
+QWK fatal error: Can't resign!
+QWK fatal error: No access!
+QWK fatal error: Invalid conference number!
+Making control-files and packing.
+\aQWK fatal error: No access to %s!\n
+Hippo fatal error: Can't unpack!
+Hippo fatal error: ZMS file not found!
+No access:
+Noreply:
+Unknown area:
+Hippo fatal error: /
+Hippo fatal error: Can't join!
+Hippo fatal error: Can't resign!
+Hippo fatal error: Invalid action code!
+\aBlue Wave fatal error: Can't join to %s!\n
+You can't use that command in this conference!
+Unmarking...
+This conference contains some very important messages and it's strongly
+suggested to read all of them.
+Focus is required for that.\n
+Joined
+Resigned
+Sorry, that name is not allowed here.\n\n
+Focus can't be used with that.\n
+Sorry, your modem is too slow. Get a faster one and try again.
+(English, Suomi, SVenska, Norsk) /
+Invalid focus.\n
+Channel %s not found or you are not a member.
+Invalid feeling or no access.\n
+ alphabetic\n\3cwSpace: join/resign     \3cxQ\3cwuit     \3cxR\3cwesign group     s\3cxH\3cwow: \e[0m
+ none /
+ all /
+ member /
+ nonmember
+\aBlue Wave fatal error: Can't unpack!\n
+\aBlue Wave fatal error: Header file not found!\n
+\aBlue Wave fatal error: Invalid filename %s!\n
+OMEN fatal error: Can't unpack!
+OMEN fatal error: No reply access!
+\aOMEN fatal error: No access to %s!\n
+OMEN fatal error: MSG file not found!
+OMEN fatal error: Unknown area or command!
+OMEN fatal error: Header file not found!
+\aBlue Wave fatal error: No access to %s!\n
+Yes
+Novice
+Expert
+Width x height:   %u x %u\nNumber of colors: %lu\n
+English
+Finnish
+Swedish
+Norwegian
+-
+-
+-
+-
+-
+-
+Text
+OldHippo
+Hippo
+OMEN
+QWK
+Teletype
+ANSI
+Dummy-ANSI
+VT320
+RIP
+BRoboCop is disabled.
+Times to show
+Group name
+Updating: /
+Line editor
+Full screen
+MG
+Blue Wave
+Files up
+Kilobytes up
+Files down
+Kilobytes down
+0=None, 1=Download, 2=Upload, 3=Down & Up
+Script
+You can't spy yourself.
+Spymode off.
+Spymode on.
+Starting %s send now.\n
+%s is not a member of %s.
+Starting %s receive now.\n
+Enter choice #%lu
+Junior
+Invited
+%s is already a member of %s.
+Please wait...
+DOS command
+Return=
+\nTransfer timed out.\n
+Transfering %.35s (%luk/%luk, %lu cps) \r
+OK, back to you again...\n
+REP (QWK)
+Please enter description for file "%s".\n
+Times on
+Process with packet anyway
+?/Yes/No/Quit
+Conference bulletins are active.
+Warning! Sender is not a registered user! Probably a net user...
+  <---+----1----+----2----+----3----+----4----+->\n
+> /
+Warning! Receiver is not a member of this conference.
+Warning! Replying to this area is not allowed.\n
+Username
+Non-member
+, MAIL
+, USER INFO
+, FILE INFO
+, Obligatory
+, Alias
+FTP
+IFF 8SVX (8-Bit Sampled Voice)\n
+IFF ILBM (Interleaved Bitmap)\n
+\nNodenumber         Age Flags     Bad Busy Msgs ArcMail Files\n------------------ --- --------- --- ---- ---- ------- -------\n
+\nNumber Age Flags     Type Size   Subject\n------ --- --------- ---- ------ ----------------------------------------------\n
+Quit/?/List/CHange/Create/Delete/BAd/Busy/CLear
+Outbound Manager
+Invalid command line.\n
+Crash/Direct/Erase/File/Hold/Immediate/Lock/Request/Trunc
+File \"%s\" does not exist, deleting message #%lu.\n
+Message filter level, <0-50> (Enter=no change)
+Want to invite
+Send carbon copies to other users
+Send copy to /
+, Private allowed
+Private message
+File \"%s\" does not have attach message. Deleting.\n
+Sampling rate: %u\n
+Alias unset.
+Alias not found.
+Out of environment space.
+Alias set.
+Set unset.
+Set not found.
+Set what
+Value
+Set set.
+\n** Resume of a new user, nothing in it so far **\n\n
+Cd/Dir/Names/Get/Quit/?/Site/Type/DELete/Put/GETDEL/CHdir/Ls/DOwnload/CLose/EXit/CAT/RM/UPload/MIRror
+Password may not be too easy to guess and must contain 3 to 64 characters.\n
+Send the file and press Ctrl-X when finished.\n
+\n\3ci File name          Date    kB  File description\3cp\n\3ci ---------          ----    --  ----------------\3cp\n
+Window too small.
+\n\3ci   Date   kB  Dlds File name\3cp\n\3ci   ----   --  ---- ---------\3cp\n
+User is now booted and killed.\n
+ Mo Tu We Th Fr Sa Su
+Enter date (Enter=%04u%02u%02u)
+No entry.
+Jargon-file not found.
+--more--
+--more-- (Y/n/c):
+Copyright:     /
+Author:        /
+Annotations:   /
+Name:          /
+New SysOp level
+User is now active.\n
+User is now booted.\n
+User is now killed.\n
+New file access
+New limit
+New timelimit
+New banktime
+                               \3co
+\3cn
+\n       Most logins since %s.\n
+\n       Most messages left since %s.\n
+\n       Greatest file uploaders since %s.\n
+\n       Greatest byte uploaders since %s.\n
+\n       Greatest file downloaders since %s.\n
+\n       Greatest byte downloaders since %s.\n
+\n       Total for all users:       %11lu%s\n       Total for all minus SysOp: %11lu%s\n\n
+dawn of time
+There is a file attached to this message.\n
+Do you want to download it
+User is not registered. Scanning user register...
+Try again
+Save message
+     \n\e[0;36m       Total users:           \e[0m%lu\n\e[0;36m       Total logins:          \e[0m%lu\n\e[0;36m       Total messages read:   \e[0m%lu\n\e[0;36m       Total messages dumped: \e[0m%lu\n\e[0;36m       Total messages left:   \e[0m%lu\n\e[0;36m       Total uploads:         \e[0m%lu  (%s)\n\e[0;36m       Total downloads:       \e[0m%lu  (%s)\n
+Arcsize in kB
+Total %u files, %lu bytes, %lu minutes.\n
+--more--
+--more-- (Yes/no/flag/cursor up):
+All
+Free memory:      %lu\n
+Free disk (main): %luMB\nFree disk (file): %luMB\n\n
+Did you get the file correctly
+Access denied!\n
+Unknown directory.\n
+Hold not found!\n
+File not found.\n
+Link overflow.\n
+CD: /
+\n\3ci File name     Date    kB  Dlds File description\3cp\n\3ci ---------     ----    --  ---- ----------------\3cp\n
+\3chDirectory: %s%s\e[0m\n
+Invalid filename.\n
+File \"%s\" already exists.\n
+Fatal error: Can't copy!\n
+Archive name: /
+File already exists.\n
+Filename: /
+Your keyboard repeat rate is too fast! CPS limit exceeded %lu times.\n
+File accepted.\n
+You can't specify directory here.\n
+No matching files found.\n
+File: %s%s\n
+\nFilename: %s%s\n\n
+Deleted: %s%s\n
+Source: /
+Destination: /
+Destination must be a directory.\n
+File cannot be copied to itself.\n
+File cannot be moved to itself.\n
+Filespec: /
+Keyword: /
+Destination must be a file without extension.\n
+Extract what: /
+Found: %s\n
+Include original message (Enter=Y)
+Scheme: %s
+Message, header
+Message, user name
+Message, subject
+Message, normal text
+Message, odd-quoted text
+Message, even-quoted text
+Message, net info
+File, path line
+File, header
+File, directory
+File, normal file
+File, free file
+File, link file
+File, desc, first line
+File, desc, next lines
+File, numbers
+Nodemsg, my chat text
+Nodemsg, remote chat text
+Nodemsg, private nodemessage
+Nodemsg, info messages
+Nodemsg, prefix
+Nodemsg, remote chat text, to me
+Join, header
+Join, highlight
+Join, selected
+Join, unselected
+Join, local area
+Join, network area
+Join, local post area
+Join, network post area
+Join, description
+Show, headers
+Show, total separator
+Show, numbers
+Show, for you
+Util, header
+Util, text
+Util, numbers
+Who, header
+?/Quit/Novice/Junior/Expert
+Columns in screen
+Who, type, active
+Who, type
+Who, status, active
+Who, status
+Who, when, active
+Who, when
+Who, nick, active
+Who, nick
+Who, caller name, active
+Who, caller name
+Screen

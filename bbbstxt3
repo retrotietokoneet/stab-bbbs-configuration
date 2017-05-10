@@ -1,0 +1,713 @@
+Brukernavn                   Bruker#  Sist pÜ   By/Sted
+==========================================================================
+\n\e[36mDu er bruker nummer:    \e[0m%lu\n\e[36mAntall pÜlogginger:     \e[0m%lu\n\e[36mSiste gang pÜlogget:    \e[0m%s\n\e[36mDin tidsbegrensning er: \e[0m%d\n\e[36mMinutter i tidsbanken:  \e[0m%u\n\e[36mMeld. du har skrevet:   \e[0m%lu\n\e[36mMeld. du har lest:      \e[0m%lu\n\e[36mMeld. du har dumpet:    \e[0m%lu\n\e[36mFiler sendt:            \e[0m%lu  (%s)\n\e[36mFiler mottatt:          \e[0m%lu  (%s)\n\n
+Select menu level
+Konferansestatus ved login %s.\n
+Are you sure to mark all as read (Y/N):
+Farger %s.\n
+Lese dine egne meldinger %s.\n
+?/Adresse/Vis/LInjer/Passord/NAVN/Overfõring/Xpert/AFormat/SPRÜk/Konferanse/MFilter/GFormat/ALIas/UNALIas/SET/UNSET/TErmtype/BDown/FARger/SEEgne/Tegnsett/RESyme/EDitor/TASTatur/BLink/SYSop/STAtus/SLETT/FAKSess/BEGrens/TBEgrens/BAnktid/INViter/UINviter/FINN/WOTU/+/-/SIter/Info/STille/RETurner/AASsign/AADd/AChange/AView/AMembers/FUP/BUP/FDown/PALette/CALL/WIDth
+HAdet/BYE/EXIT/LOGOut/GÜ/Lese/Filer/Utility/CHAT/Join/SKriv/KOMment/MHent/GRAB/MSend/HVem/TELL/MLD/NOde/NYBrukerhjelp/MAN/Hjelp/TID/Bulletiner/>#/##/SAY/!/'
+Updated bulletins: /
+Velkommen
+Dessverre, ingen brukerinfo her pÜ basen!
+bruker navn
+Dessverre, finner ikke brukeren.
+\n\e[36mBruker Navn:           \e[0m%s\n\e[36mBy/Sted:               \e[0m%s\n\e[36mAntall pÜlogginger:    \e[0m%lu\n\e[36mForrige pÜlogging:     \e[0m%s\n
+What is your FIRST name? /
+Oppgi grunn for Chat
+Chat forespõrsel uten grunn vil ikke bli godtatt!
+Hoved Kommando
+(? for meny)
+Du har ikke tillatelse til dette!
+Ugyldig kommando "%s".\n
+Sikker pÜ at du vil logge av
+Svar med J (Ja) eller N (Nei).
+%s er ikke registrert som bruker her.\n
+ùnsker du Ü registrere deg
+Please enter your password (dots will echo)
+-
+Feil!
+ùnsker du Ü legge igjen en melding til sysop
+Hva er ditt ETTERNAVN?  /
+Skriv det en gang til som en ekstra sjekk
+Makro
+Orig
+Ny
+Ugyldig nummer!
+URL
+Du kan ikke gjõre det for en gruppe!\n
+Node er %s ved %s.\n
+Vote Booth
+Quit/Add/Vote/List/RESET/DEL/?
+\n  0: All booths\n
+Navn> /
+\e[1;1H\e[2J\3cwPiltaster: flytt     \3cxF\3cwinn   \3cxJ\3cwoin gruppe      s\3cxO\3cwrter: \e[0m
+Select booth
+Sorry, there are no booths to be selected.\n
+\n\3cJGjeldende brukerprofil, bruker nummer %lu\n--------------------------------------%s\n\3cKBruker navn:           \3cL%s\n\3cKGate adresse:          \3cL%s\n\3cKPostnr og sted:        \3cL%s\n\3cKTelefon nummer:        \3cL%s\n\3cKGebursdag:             \3cL%s\n
+\3cKTerminal type:         \3cL%-17s\3cKStandard protokoll:    \3cL%s\n\3cKSide lengde:           \3cL%-17u\3cKRetur med enter-tast:  \3cL%s\n
+\3cKTegnsett:              \3cL%-17s\3cKForetrukket pakker:    \3cL%s\n\3cKMeldings editor:       \3cL%-17s\3cKBlink ditt eget navn:  \3cL%s\n\3cKANSI farger:           \3cL%-17s\3cKLese dine egne mld.:   \3cL%s\n\3cKMeny nivÜ:             \3cL%-17s\3cKKonf status ved login: \3cL%s\n\3cKSprÜk:                 \3cL%-17s\3cKNodemeldingsfilter:    \3cL%u\n
+\3cKMeldings lesemodus:    \3cL%-17s\3cKVT100 tast emulering:  \3cL%s\n\3cKGrab format:           \3cL%-17s\3cKAutoSitÇr:             \3cL%s\n\3cKStille modus:          \3cL%-17s\3cKPage width:            \3cL%u\n
+\n\e[32mNodenummer    Navn                   SysOp                  Lokasjon\n===============================================================================\e[0m\n
+Login: /
+NÜ:    /
+Igjen: /
+Skriv inn din gate adresse:          /
+Skriv inn ditt postnr og sted:       /
+Skriv inn ditt telefonnummer:        /
+Skriv inn fõdselsdato (dd.mm.ÜÜ):    /
+Side Lengde
+Ditt nye passord
+Alle merker er gjenopprettet.\n\n
+Ditt nye FORNAVN
+Ditt nye ETTERNAVN
+Dessverre, det navnet er allerede i bruk.
+Hvilket tegnsett bruker du
+Ukjent tegnsett.
+Bruker profil oppdatert.
+Sorry, you can not upload files to that user.\n
+utmeldt fra gruppe %s.\n
+ADVARSEL: Du vil bli utmeldt fra gruppe %s den %02u%02u%02u.\n
+Bank:  /
+Pè/Ja/AKtiver/Av/Nei/Deaktiver
+Blink ditt eget navn i meldinger %s.\n
+Remove marks from messages with less than lines
+Remove marks from messages with more than lines
+AutositÇr og automatisk meldings inkludering er nÜ %s.\n
+Protokoll valg
+Format Valg
+'Utility' Kommando
+Mulig alias slõyfe.\n
+Sang klasse: %s\nSang navn:   %-26sFil lengde:      %lu bytes\nSang lengde: %-26uHõyeste pattern: %u\n\nNr. Sample                 Lengde      Nr. Sample                 Lengde\n--  <------------------->  <---->      --  <------------------->  <---->\n
+Grab format
+Dato for sõking èèMMDD (Enter=%02u%02u%02u)
+Ugyldig dato.\n
+?/Quit/Tekst/Ppo/Hippo/Omen/W/Bluewave/Rep
+Dato som meldingen skal bli sendt (Enter=%02u%02u%02u)
+Passord
+Du kan ikke endre grab format nÜ.\n
+                                @w: %s\n
+Trykk Enter
+sõkeord
+VT100 tastatur %s.\n
+Skriv inn konferanse navn (Enter=Current)
+Beskrivelse:\n\n
+Fil Kommando
+ùnsker du Ü endre beskrivelsen
+                                @p: %s\n
+Se meldinger i trÜder
+\e[1;37mDet er en privat fil til deg: %s\e[0m\n
+Full disk!\n
+\nTotalt %lu filer, %lu %s, %lu downloads, %lu %s.\n
+Channel
+Ingen meldinger i konferansen.
+Meldingen er ikke tilgjengelig.
+Du mÜ lese en melding fõrst!
+\3ca%s melding #%lu fra \3cb%s\3ca til \3cb%s%s%s\3ca%s%s.
+Ugyldig konferanse valg!
+Meldingen er allerede i den konferansen!
+Du kan ikke flytte til %s.\n
+Melding flyttet.
+Du kan ikke flytte denne meldingen!
+Ingen meldinger dumpet
+\nDin tidsbegrensning er redusert for denne oppringningen.\n\n
+Beklager, det ser ut til Ü vëre problemer med pakkeprogrammene.
+Meldingspakke fortsatt tilgjengelig for SEnding.
+Dumper %s:\n
+<K>onf, <A>lt, <M>elding, <SLETT>, <N>Ü <Enter>=Avbryt
+Meldingspakke tõmt.
+Ingen uleste. Trykk <ENTER> for neste konferanse.\n
+Ser etter meldinger i konferanser du er medlem av...
+Ingen uleste meldinger i konferansene!
+Fõrste melding!
+Siste melding!
+Meldingen er allerede slettet.
+Meldingen er allerede aktiv.
+Du kan ikke slette/hente opp denne meldingen!
+Finner ikke meldingen, nummeret er for lite.
+Finner ikke meldingen, nummeret er for stort.
+Denne meldingen er ikke noe svar!
+Originalen finnes ikke.
+\n\3cF  Total Unread ForYou   Name\n===============================================================================\n
+?/-/+/./</>/=/NEste/--/++/PSVar/SVar/SLett/HEnt/Merk/VIS/View/UTMeld/SEnd/Sõke/DUPlisere/Dump/Original/Zap/MODus/OInfo/Info/MV/FLytt/CP/MKopi/Bulletiner/BRUKer/FIKS/FM/Tilbake/OMFM/CSVar/SAVE/GNUS
+\3cG-------------------------------------------------------------------------------\n\3cH%7lu%7lu%7lu   %lu\n\n
+Medlem
+Ingen tilgang
+Ingen svar til denne meldingen!
+Ikke flere svar!
+Fra melding <%lu-%lu>, <Enter=%lu>
+For lavt! Prõv igjen.\n
+For hõyt! Prõv igjen.\n
+Til melding <%lu-%lu>, <Enter=%lu>
+Utmelding er ikke lov!
+Er du sikker pÜ at du vil melde deg ut (Enter=N)
+Utmelding fra
+Lese Kommando
+Fil "%s" finnes ikke!\n
+/Your BRoboCop request
+Ringer pÜ SysOp...
+\3cMPerson                        Nick       Type   NÜr   Status
+\3cM------                        ----       ----   ---   ------
+<M>er, <H>jelp, <I>ndeks, <C> Innhold, <R> tilbake, >, <, <Q> avslutt, nummer
+\nDu har blitt invitert til:\n
+Kun %u siste meldinger blir sõkt automatisk.\n
+Merket
+Referanse
+Forover
+Backward
+1 ny melding er tilgjengelig%s.\n
+%lu nye meldinger er tilgjengelige%s.\n
+, kun til deg
+, 1 av de er til deg
+, %lu av de er til deg
+Skriv konferanse navn for innmelding (Enter=Ingen)
+Meldingen er ikke tilgjengelig for svar.
+Skriv modus
+Bruker profilen ble ikke oppdatert.
+Jeg har mistet passordet mitt!
+Sõker i brukerfilen, totalt %lu brukere.\n
+Bulletin nummer
+Ingen standard bulletin.
+Melding #%lu er slettet!\n
+There are %lu matches. Press TAB/DEL again if you really want to see them: /
+Du har ikke tilgang til privat melding #%lu!\n
+\3caCreated by \3cb%s\3ca at %s.\n\n\3cd
+\nTotal %ld votes.\n
+Select answer
+ (PRIVAT)
+   Skrevet den %s, %lu linjer.
+dialup
+   Svar til mld # /
+. (Det er ikke flere svar.)
+. (Flere svar er skrevet.)
+   Det er skrevet svar til denne meldingen.
+\3ccSubjekt: %s
+To user
+\e[0;32mTarget\e[0m: %s
+===============================================================================
+Melding
+User
+Quit/More/Help/Index/Contents/Retrace/>/<
+Sett inn /
+Overskriv
+ om: /
+Ctrl-Z=Lagre, Ctrl-Q=Avbryt, Ctrl-U=Hjelp, Flytt med piltaster/WordStar-taster
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+Subjekt
+Avbryte (J/N)? /
+Ingen linjer i meldingen!
+Sett inn fõr
+Slett linje
+Editer linje
+      <---+----1----+----2----+----3----+----4----+----5----+----6----+----7->
+Opsjon
+             Send melding til
+Send melding til (CR for ALLE)
+Advarsel! Mottaker er ikke en registert bruker! Sikkert en NET bruker...
+Kommentar
+          Subjekt pÜ meldingen
+Inkluder original melding (Enter=N)
+Du kan kun duplisere dine egne meldinger.
+Melding avbrutt.
+Melding nummer /
+ lagret.
+Upakket     Pakket    Dato    Tid    Filnavn
+-------     ------    ----    ---    -------
+\nDessverre, kan ikke hÜndtere denne type filer.\n
+Chat Kommando
+Filnavn: %s\n%s sending klar. Start din overfõring nÜ!\n
+Ugyldig nodenummer. Forsõk igjen!\n
+Mottakers nodenummer
+?/VIS/STATistikk/OPen/Info/SVar/VErsjon/KALender/BAnk/SJargong/ID/KIkke/LOGG/SLETTLog/GJEM/BRLogin/DOS/SHELL/BLOGG/KAstut/RESET/NOTE/SPIoner/COMPUter/BSTAT/BSHELL/UTgÜende/TELnet/MG/RLogin/FINger/FTP/HUNT/HACK/CALLback/URL/Vote
+?/Nye/EMne/Sõke/Info/HNedlastet/LS/DIrectory/LFiler/HDIr/HLs/CD/CHdir/HCD/RM/SLett/FJern/HRM/HSLett/CP/KOpi/LEgg/HLEgg/HCP/HKOpi/TCP/TKOpi/MV/FLytt/ENDre/CAt/Type/HType/HCAt/HEnt/Download/SZ/HHEnt/SEnd/UPload/RZ/PSEnd/EKstraher/HEKstraher/LHarc/HLHarc/ZIP/HZIP/PAkk/HPAkk/SPlitt/FRI/UFRI/Vis/BESkrive/INstall/LINstall/BERõr/GREP/MKDir
+Nedlasting ferdig!
+Nedlasting avbrutt!
+Filnavn: %s\n%s mottak klart. Start din overfõring nÜ!\n
+%lu invitert og %lu medlemmer av totalt %lu brukere.
+Opplasting ferdig!
+Opplasting avbrutt!
+Sõk Kommando
+Tekst Ü sõke etter
+Sõker...
+Ingen markerte meldinger!
+Merke Kommando
+Alle merker har blitt resatt.
+Merker...  /
+SysOp er ikke lov her!
+Merker meldinger til/fra deg...
+Dessverre, ingen meldinger til deg.
+Emner er:
+Emne
+Beklager, kun post forsendelser er lov akkurat nÜ. Forsõk igjen senere.\n
+Passord endret.
+Du har ikke overfõrt meldingspakke. Vil du ha den nÜ
+(Enter=J)
+(Enter=N)
+ADVARSEL: Disken begynner Ü bli full - avbryter grab...
+%lu meldinger lagt til meldingspakke%s (%lukB).\n
+Meldinger slettet.
+Meldinger gjenopprettet.
+Fõrste melding er nummer /
+Siste melding er nummer  /
+Melding fra
+Melding til
+ Til /
+ Om: /
+Fõlgende filer finnes allerede:\n\n
+Dessverre du kan ikke svare i dette omrÜdet.
+Dessverre, du har ikke nok tid igjen.
+Ser ut som du har sovnet... Sov godt!
+>->->->->->-> SysOp kommer Online!
+>->->->->->-> SysOp gÜr Offline!
+(60 minutter igjen. neste advarsel ved 30 minutter igjen.)
+(30 minutter igjen. neste advarsel ved 15 minutter igjen.)
+(15 minutter igjen. neste advarsel ved 10 minutter igjen.)
+(10 minutter igjen. neste advarsel ved 5 minutter igjen.)
+(5 minutter igjen. neste advarsel ved 2 minutter igjen.)
+(2 minutter igjen. neste advarsel ved 1 minutt ijgen.)
+(1 minutt igjen.)
+daemon
+Din tidsbegrensning for denne oppringningen har utlõpt!
+. /
+. /
+. /
+. /
+Januar
+Februar
+Mars
+April
+Mai
+Juni
+Juli
+August
+September
+Oktober
+November
+Desember
+%u%s%s, %u kl %02u:%02u
+Ugyldig bryter
+Beklager, SysOp er ikke tilgjengelig i õyeblikket... Skriv en KOMmentar.
+kB
+\n\e[32mStatus   Tilgang Navn\n============================================================================\e[0m\n
+Velg personen du vil sende kommentar til
+\e[1;37mC\e[0m innhold  \e[1;37mI\e[0mndeks  \e[1;37mH\e[0mjelp  \e[1;37mR\e[0m tilbake    Bla \e[1;37m<\e[0m   Bla \e[1;37m>\e[0m   \e[1;37mS>\e[0mearch   \e[1;37mQ\e[0m Avslutt
+Sorry, that user is not available.
+Logget av
+Aktiv
+Ikke tilgjengelig
+Skriver en melding
+Grabber
+Mottar fil (%02u:%02u)
+Sender fil
+SysOp er tilgjengelig for chat.
+Skriver til: /
+aktivert
+deaktivert
+ (les)
+Dessverre, denne meldingen er ikke tilgjengelig lengre.
+(Liste, Nedlast, Add, Velkommen, Enter for ingen)
+  Innrykk     /
+  Ikke Innrykk
+(Lagre, Fortsett, Innsett, Slett, Editer, Avbryt, Vis melding)
+#
+SprÜk valg
+Lokal
+Logginn:
+Loggut:
+\e[0mWrite "/?" to get help about groupchat.
+net
+MB
+GB
+minutter
+Select read mode
+Chatter med SysOp
+Bruker dõr
+Stille modus er nÜ %s.\n
+Retur med enter-tast er nÜ %s.\n
+timer
+Velg õnsket terminal type
+Idle (%02u:%02u)
+?/Quit/Tty/Ansi/Dummyansi/Vt320/Rip
+Velg õnsket editor
+Shelled to OS
+?/Quit/Line/Fse/Mg/Script
+Using net
+ melding /
+ fra /
+ til /
+\e[0;36mPenger: \e[0m%ld (%lu timer %lu minutter)\n
+\n\e[32mNavn                                Penger #Brukere Kreditt\e[0m\n\e[32m===========================================================\e[0m\n
+WWW
+Kun subjekter
+Prõv Ü sitÇr mindre neste gang!\n
+Your daily download limit has expired. You can continue tomorrow.\n
+Kunne ikke Üpne "%s".
+Konferanse status
+-----------------
+%lu nye meldinger%s.\n
+1 ny melding%s.\n
+Totalt /
+Du mÜ velge ANSI for det!
+GruppeChat
+Your download limit has expired. You must upload something first.\n
+FTP
+Post sesjon
+Nei/Ja
+?/IBM/SF7/ISO/IBN/US7/GE7/NO7/FR7/IT7/SP7/MAC
+?/Avslutt/Zmodem/Ymodem/Xmodem/SHydra/Crc/YBatch/SZmodem/Hydra/ZZap/Kermit/Uucode
+?/Avslutt/Text/Arc/Zip/Lzh/J/O/Hpack/Rar
+?/English/Suomi/SVenska/Norsk/5/6/7/8/9/10/Avslutt
+No/Yes/Edit
+Gruppe/Hode/Merkede/Avslutt/?/NGruppe/NHode/NMerkede
+?/Avslutt/Merk/Referanse/Forover/Backward
+Konf/Alle/Melding/SLETT/ANtall/.
+Enter new question
+Sysop/Ikketilgjengelig/Tilgjengelig/Gruppe/Avslutt/?
+Ja/Nei/Omigjen
+(Ja/Nei/Omigjen)
+Ja/Omigjen/Nei
+(Ja, Nei, Omigjen, (Enter=Ja))
+Reset/Gruppe/Nummer/Personlige/./Fõrstmine/Dato/U/Sett/FOrf/GDato/GREset/KPersonlig/Tr/SLett/FMottaker/GJenopprett/Vis/Avslutt/?/Merk/GPersonlige/SAve/OAll/GOAll/CRestore/Lines
+This command is not for local users. Use BTERM instead.\n
+\e[0;32m%s%s:\n\n\e[0;36mSiste melding:  \e[0m%lu\n\e[0;36mSiste du leste: \e[0m%lu\n
+?/Liste/Nedlast/Add/Velkomst/Avslutt
+Lagre/Fortsett/Insett/Slett/Editer/Avbryt/Vis/Quit
+Skriv sõkestreng for brukerliste (Enter=Alle)
+Skriv detaljert beskrivelse
+(Enter=Public file)
+Tid i banken: /
+Tid igjen:    /
+Tids bank
+Innskudd/Uttak
+Tid Ü lagre
+Tid Ü ta ut
+dager
+<katalog>       /
+Privat fil til
+Forfatter
+Gjeldende meldingspakke stõrrelse er
+tegn.
+Meldinger kopiert.
+Berõr: %s\n
+Filnavn eller brukernavn for sõking
+Ingen passende funnet.\n
+Den filen trengs ikke her.
+Navn godkjent.\n
+(Innskudd, Uttak)
+<frakoplet> /
+Du har SigOp tilgang til denne konferansen.
+Kan ikke finne vertsnavnet.\n
+Kan ikke Üpne socket.\n
+Kan ikke binde socket.\n
+Kan ikke tilknytte socket.\n
+Kan ikke lage socket thread.\n
+\nForbindelsen er lukket.\n
+Plasser Ü vise
+Verts navn
+Escape tegnet er '^]'.\n
+Penger Ü legge til
+Konto navn
+\e[1;33;46m %s\e[1;37;46m on \e[1;33;46m%0.35s\e[1;37;46m   /
+                                     <---+----1----+----2----+--->
+                                     <---+----1----+->
+Mottaker
+Total %lu/%lu %s:\n
+minutter
+oppringninger
+meldinger
+Sorry, no space left.
+WINdow
+NEW/Kill/Listen/Size/Next/Prev/LOG
+(?=hjelp/SPACE=legg til/V=vis/I=info/Q=avslutt)
+\e[1;33;44m %s\e[1;37;44m on \e[1;33;44m%0.35s\e[1;37;44m   /
+\e[1;33;46m   %d\e[1;37;46m minutes left, \e[1;33;46m%02u:%02u /
+Ja
+Nei
+Me/Who/?/Target/Say/Join/Resign/REPort/MSg/Node/TIme/Quit/List/BAN/UNBan/INVite/KICK/KICKBan/TOpic/CHmod/LAst/%/LEave/Part/IRCQuit/NAmes/CTcp/NIck/IGNore/IRCJoin
+\n%u passende funnet.\n\n
+Filen %s inneholder fõlgende file_id.diz:\n\n
+ùnsker du Ü bruke den
+QWK fatal feil: Kan ikke pakke ut!
+QWK fatal feil: Finner ikke filen!
+QWK fatal feil: Ugyldig Blokklengde!
+QWK fatal feil: Ugyldig referansenummer!
+Forespõrsel ignorert - SysOp har skrudd av BRoboCop!
+QWK fatal feil: utmelding ikke lov!
+QWK fatal feil: Ingen tilgang!
+QWK fatal feil: Ugyldig konferansenummer!
+Lager kontroll-filer.
+\aQWK fatal feil: Ingen tilgang, %s!\n
+Hippo fatal feil: Kan ikke pakke ut!
+Hippo fatal feil: ZMS-fil finnes ikke!
+Ingen tilgang:
+Intet svar:
+Ukjent omrÜde:
+Hippo fatal feil: /
+Hippo fatal feil: Innmelding ikke mulig!
+Hippo fatal feil: Utmelding ikke mulig!
+Hippo fatal feil: Ugyldig aksjonskode!
+\aBlue Wave fatal feil: Kan ikke meldes pÜ %s!\n
+Du kan ikke bruke den kommandoen i denne konferansen!
+Merkefjerning...
+Denne konferansen inneholder noen veldig viktige meldinger og det anbefales
+pÜ det sterkeste Ü lese alle av de.
+Focus is required for that.\n
+Innmeldt
+Utmeldt
+Beklager, det navnet er ikke lov her.\n\n
+Focus can't be used with that.\n
+Beklager, modemet ditt er for tregt. Skaff et raskere og prõv igjen.
+(English, Suomi, SVenska, Norsk) /
+Invalid focus.\n
+Channel %s not found or you are not a member.
+Invalid feeling or no access.\n
+ alfabetisk\n\3cwSpace: join/resign   \3cxQ\3cwuit   \3cxR\3cwesigner gruppe  \3cxH\3cw vise: \e[0m
+ ingen /
+ alle /
+ medlem /
+ ikkemedlem
+\aBlue Wave fatal feil: Kan ikke pakke ut!\n
+\aBlue Wave fatal feil: Headerfil finnes ikke!\n
+\aBlue Wave fatal feil: Invalid filename %s!\n
+OMEN fatal feil: Kan ikke pakke ut!
+OMEN fatal feil: Ingen svaretilgang!
+\aOMEN fatal feil: Ingen tilgang, %s!\n
+OMEN fatal feil: MLD-fil finnes ikke!
+OMEN fatal feil: Ukjent omrÜde eller kommando!
+OMEN fatal feil: Headerfil finnes ikke!
+\aBlue Wave fatal feil: Ingen tilgang til %s!\n
+Ja
+Nybegynner
+Ekspert
+med x hõyde:   %u x %u\nAntall farger: %lu\n
+Engelsk
+Finsk
+Svensk
+Norsk
+-
+-
+-
+-
+-
+-
+Tekst
+OldHippo
+Hippo
+OMEN
+QWK
+Teletype
+ANSI
+Dummy-ANSI
+VT320
+RIP
+BRoboCop er skrudd av!
+Tid Ü vise
+Gruppe navn
+Oppdatering: /
+Linje editor
+Full skjerm
+MG
+Blue Wave
+Opplastede filer
+Opplastede kilobytes
+Nedlastede filer
+Nedlastede kilobytes
+0=Ingen, 1=Hente filer, 2=Sende filer, 3=Hente & Sende
+Script
+Du kan ikke spionere pÜ deg selv!
+Spionering av.
+Spionering pÜ.
+Starter %s sending nÜ.\n
+%s is not a member of %s.
+Starter %s mottak nÜ.\n
+Enter choice #%lu
+Junior
+Invitert
+%s is not a member of %s.
+Vennligst vent...
+DOS kommando
+Retur=
+\nOverfõrsel gikk i timeout.\n
+Overfõrer %s (%luk/%luk, %lu cps) \r
+OK, tilbake til deg igjen...\n
+REP (QWK)
+Skriv inn beskrivelse for filen "%s".\n
+Times on
+Bruke denne pakken allikevel
+?/Ja/Nei/Avbryt
+Konferanse bulletiner er aktive.
+Advarsel! Avsender er ikke en registrert bruker! Sannsynligvis en NET Bruker...
+  <---+----1----+----2----+----3----+----4----+->\n
+> /
+Advarsel! Mottaker er ikke medlem av denne konferansen.
+Advarsel! Svar er ikke tillatt i denne konferansen.\n
+Brukernavn
+Ikke-medlem
+, POST
+, BRUKER INFO
+, FIL INFO
+, Obligatorisk
+, Alias
+FTP
+IFF 8SVX (8-Bit Sampled Voice)\n
+IFF ILBM (Interleaved Bitmap)\n
+\nNodenummer         Ald Flagg     Gal Oppt Mldr ArcMail Filer\n------------------ --- --------- --- ---- ---- ------- -------\n
+\nNummer Ald Flagg     Type Str.   Subjekt\n------ --- --------- ---- ------ ----------------------------------------------\n
+Avslutt/?/Liste/Endre/LAge/Slette/Gal/Opptatt/Blank
+UtgÜende Styrer
+Ugyldig kommandolinje.\n
+Krasj/Direkte/Slette/Fil/Hold/Umiddelbart/LÜs/Anmode/AVkorte
+Fil \"%s\" finnes ikke, sletter melding #%lu.\n
+Meldingsfilter nivÜ, <0-50> (Enter=ingen endring)
+ùnsker du Ü invitere
+Send kopi til andre brukere
+Send kopi til /
+, Privat tillatt
+Privat melding
+Fil \"%s\" har ikke tilknyttet melding. Sletter.\n
+Sampling rate: %u\n
+Alias fjernet.
+Alias finnes ikke.
+Tom for miljõ-plass.
+Alias satt.
+Set fjernet.
+Set finnes ikke.
+Sette hva
+Verdi
+Set satt.
+\n** Resyme for ny bruker, forelõpig tomt **\n\n
+Cd/Dir/Names/Get/Quit/?/Site/Type/DELete/Put/GETDEL/CHdir/Ls/DOwnload/CLose/EXit/CAt/RM/UPload/MIRror
+Passordet mÜ ikke vëre for enkelt Ü gjette, og mÜ inneholde mellom 3 og 64 tegn\n
+Send the file and press Ctrl-X when finished.\n
+\n\3ci Filnavn            Dato    kB  Beskrivelse\3cp\n\3ci ---------          ----    --  ----------\3cp\n
+Vinduet er for lite.
+\n\3ci   Dato   kB  Nedl Filnavn\3cp\n\3ci   ----   --  ---- -------\3cp\n
+User is now booted and killed.\n
+ Ma Ti On To Fr Lõ Sõ
+Oppgi dato (Enter=%04u%02u%02u)
+Ingen tilgjengelig
+Sjargongfil finnes ikke.
+--mer--
+--mer-- (J/n/c):
+Kopirettighet  /
+Forfatter:     /
+Merknader:     /
+Navn:          /
+Nytt SysOp nivÜ
+Bruker er nÜ aktiv!\n
+Bruker er nÜ uõnsket!\n
+Bruker er nÜ drept!\n
+Ny filtilgang
+Ny begrensning
+Ny tidsbegrensning
+Ny banktid
+                               \3co
+\3cn
+\n       Flest logins siden %s.\n
+\n       Flest meldinger skrevet siden %s.\n
+\n       Beste fil-opplaster (antall) siden %s.\n
+\n       Beste fil-opplaster (bytes) siden %s.\n
+\n       Vërste fil-nedlaster (antall) siden %s.\n
+\n       Vërste fil-nedlaster (bytes) siden %s.\n
+\n       Totalt for alle brukere:     %11lu%s\n       Totalt for alle minus SysOp: %11lu%s\n\n
+tidenes morgen
+Det er en fil knyttet til denne meldingen.\n
+ùnsker du Ü hente den
+Bruker er ikke registeret! Sõker i brukerregisteret...
+Prõv igjen
+Lagre melding
+     \n\e[0;36m       Totalt brukere:           \e[0m%lu\n\e[0;36m       Totalt innlogginger:      \e[0m%lu\n\e[0;36m       Totalt meldinger lest:    \e[0m%lu\n\e[0;36m       Totalt meldinger hentet:  \e[0m%lu\n\e[0;36m       Totalt meldinger skrevet: \e[0m%lu\n\e[0;36m       Totalt opplastinger:   \e[0m%lu  (%s)\n\e[0;36m       Totalt nedlastinger:   \e[0m%lu  (%s)\n
+Arkivstõrrelse i kB
+Totalt %u filer, %lu bytes, %lu minutter.\n
+--mer--
+--mer-- (Ja/nei/flagg/pil opp):
+Alle
+Ledig minne:        %lu\n
+Ledig disk (hoved): %luMB\nLedig disk (filer): %luMB\n\n
+Did you get the file correctly
+Ingen tilgang!\n
+Ukjent katalog!\n
+Fant ikke Hold!\n
+Fant ikke filen.\n
+Link overflyt.\n
+CD: /
+\n\3ci Fil navn      Dato    kB  Nedl Fil beskrivelse\3cp\n\3ci --------      ----    --  ---- ---------------\3cp\n
+\3chKatalog: %s%s\e[0m\n
+Ugyldig filnavn.\n
+Filen \"%s\" finnes allerede.\n
+Fatal feil: Kan ikke kopiere!\n
+Arkivnavn: /
+Filen finnes allerede.\n
+Filnavn: /
+Your keyboard repeat rate is too fast! CPS limit exceeded %lu times.\n
+Fil godtatt.\n
+Du kan ikke spesifisere katalog her!\n
+Ingen passende filer funnet.\n
+Fil: %s%s\n
+\nFilnavn: %s%s\n\n
+Slettet: %s%s\n
+Kilde: /
+Mottaker: /
+Mottaker mÜ vëre en katalog!\n
+Filen kan ikke bli kopiert til seg selv.\n
+Filen kan ikke bli flyttet til seg selv.\n
+Filnavn: /
+Sõkeord: /
+Mottaker mÜ vëre en fil uten etternavn!\n
+Ekstrahere hva: /
+Funnet: %s\n
+Inkluder original melding (Enter=J)
+Scheme: %s
+Message, header
+Message, user name
+Message, subject
+Message, normal text
+Message, odd-quoted text
+Message, even-quoted text
+Message, net info
+File, path line
+File, header
+File, directory
+File, normal file
+File, free file
+File, link file
+File, desc, first line
+File, desc, next lines
+File, numbers
+Nodemsg, my chat text
+Nodemsg, remote chat text
+Nodemsg, private nodemessage
+Nodemsg, info messages
+Nodemsg, prefix
+Nodemsg, remote chat text, to me
+Join, header
+Join, highlight
+Join, selected
+Join, unselected
+Join, local area
+Join, network area
+Join, local post area
+Join, network post area
+Join, description
+Show, headers
+Show, total separator
+Show, numbers
+Show, for you
+Util, header
+Util, text
+Util, numbers
+Who, header
+?/Quit/Novice/Junior/Expert
+Columns in screen
+Who, type, active
+Who, type
+Who, status, active
+Who, status
+Who, when, active
+Who, when
+Who, nick, active
+Who, nick
+Who, caller name, active
+Who, caller name
+Screen

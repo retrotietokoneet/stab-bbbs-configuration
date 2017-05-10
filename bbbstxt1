@@ -1,0 +1,713 @@
+K„ytt„j„n nimi                     #  Ed.kerta  Kaupunki
+==========================================================================
+\n\e[36mOlet k„ytt„j„ numero:  \e[0m%lu\n\e[36mK„yntikertojen m„„r„:  \e[0m%lu\n\e[36mEdellinen k„yntisi:    \e[0m%s\n\e[36mAikarajasi on:         \e[0m%d\n\e[36mPankissa aikaa:        \e[0m%u\n\e[36mViestej„ kirjoitettu:  \e[0m%lu\n\e[36mViestej„ luettu:       \e[0m%lu\n\e[36mViestej„ ker„tty:      \e[0m%lu\n\e[36mL„hetetyt tiedostot:   \e[0m%lu  (%s)\n\e[36mImuroidut tiedostot:   \e[0m%lu  (%s)\n\n
+Anna uusi kokemustaso
+Alueiden tilan n„ytt” sis„„ntultaessa kytketty %s.\n
+Oletko varma, ett„ haluat merkit„ kaikki luetuiksi (Y/N):
+V„rit kytketty %s.\n
+Itse kirjoittamiesi viestien n„ytt” kytketty %s.\n
+?/Address/View/Lines/Password/NAME/Transfer/Xpert/AFormat/LAnguage/Conference/MFilter/GFormat/ALIas/UNALIas/SET/UNSET/TErmtype/BDown/COLors/REView/Setchar/RESume/EDitor/KEYboard/FLash/SYSop/STAtus/KILL/FACCess/LIMits/TLImit/BAnktime/INVite/UNINVite/FIND/WOTU/+/-/QUote/Info/SIlent/RETurn/AASsign/AADd/AChange/AView/AMembers/FUP/BUP/FDown/PALette/CALL/WIDth
+Goodbye/BYE/EXIT/LOGOut/Quit/Read/File/Utility/CHAT/Join/Enter/COMment/MDownload/GRAB/MUpload/Who/TELL/MSG/NOde/NEWUhelp/MAN/Help/TIMe/Bulletins/>#/##/SAY/!/'
+P„ivitetyt tiedotteet: /
+Logo
+Valitettavasti resumet eiv„t ole k„yt”ss„ t„ss„ systeemiss„.
+K„ytt„j„n nimi
+Valitettavasti k„ytt„j„„ ei l”ydy
+\n\e[36mK„ytt„j„n nimi:   \e[0m%s\n\e[36mKaupunki:         \e[0m%s\n\e[36mK„yntikertoja:    \e[0m%lu\n\e[36mEdellinen k„ynti: \e[0m%s\n
+Mik„ on ETUnimesi?  /
+Syy keskustelupyynt””n
+Keskustelupyynt” ev„tty.
+P„„valikko
+(?:ll„ valikko)
+Sinulla ei ole oikeuksia tuohon!
+Tuntematon komento "%s".\n
+Haluatko varmasti poistua systeemist„
+Vastaa joko Yes (kyll„) tai No (ei).
+%s ei ole rekister”itynyt k„ytt„j„ t„„ll„.\n
+Haluatko rekister”ity„
+Anna salasanasi (pisteet tulostuvat)
+-
+V„„rin.
+Haluatko j„tt„„ viestin SysOpille
+Mik„ on SUKUnimesi? /
+Kirjoita se uudelleen
+Mik„ muuttuja poistetaan
+Alkuper„inen
+Uusi
+Virheellinen numero.
+URL
+Et voi tehd„ tuota ryhm„lle.\n
+Systeemi on %s, sijaintina %s.\n
+Ž„nestys
+Quit/Add/Vote/List/RESET/DEL/?
+\n  0: Kaikki „„nestykset\n
+Nimi> /
+\e[1;1H\e[2J\3cwKursorit: liikkuminen    \3cxF\3cw:etsi   \3cxJ\3cw:liity   aakk\3cxO\3cwstus: \e[0m
+Valitse „„nestys
+Valitan, yht„„n valittavaa „„nestyst„ ei l”ydy.\n
+\n\3cJK„ytt„j„n asetukset, k„ytt„j„numero %lu\n------------------------------------%s\n\3cKK„ytt„j„n nimi:        \3cL%s\n\3cKKatuosoite:            \3cL%s\n\3cKPostitoimipaikka:      \3cL%s\n\3cKPuhelinnumero(t):      \3cL%s\n\3cKSyntym„aika:           \3cL%s\n
+\3cKTerminaalin tyyppi:    \3cL%-17s\3cKSiirtoprotokolla:      \3cL%s\n\3cKRuudun korkeus:        \3cL%-17u\3cKEnter-n„pp. paluu:     \3cL%s\n
+\3cKMerkist”:              \3cL%-17s\3cKPakkaustyyppi:         \3cL%s\n\3cKViestieditori:         \3cL%-17s\3cKOma nimi vilkkuu:      \3cL%s\n\3cKV„rit:                 \3cL%-17s\3cKOmat viestit uusina:   \3cL%s\n\3cKKokemustaso:           \3cL%-17s\3cKAlueiden tilan n„ytt”: \3cL%s\n\3cKKieli:                 \3cL%-17s\3cKLinjaviestinsuodatin:  \3cL%u\n
+\3cKViestien lukutapa:     \3cL%-17s\3cKVT100-n„pp„imist”:     \3cL%s\n\3cKEt„lukutapa:           \3cL%-17s\3cKAutomaattilainaus:     \3cL%s\n\3cKHiljainen moodi:       \3cL%-17s\3cKRuudun leveys:         \3cL%u\n
+\n\e[32mNodenumero    Nimi                   SysOp                  Paikka\n===============================================================================\e[0m\n
+Sis„„n:   /
+Nyt:      /
+J„ljell„: /
+Anna katuosoitteesi:                /
+Anna postinumerosi ja -toimipaikka: /
+Anna puhelinnumerosi:               /
+Anna syntym„aikasi (pp.kk.vv):      /
+Ruudun korkeus
+Anna uusi salasana (pisteet tulostuvat)
+Merkinn„t on nollattu soiton alkutilaan.\n\n
+Anna uusi ETUnimesi
+Anna uusi SUKUnimesi
+Nimi on jo k„yt”ss„.
+Mit„ merkist”„ k„yt„t
+Tuntematon merkist”.
+K„ytt„j„tiedot p„ivitetty.
+Valitan, et voi l„hett„„ tiedostoa t„lle k„ytt„j„lle.\n
+Oikeutesi ryhm„„n %s loppui.\n
+VAROITUS: Oikeutesi ryhm„„n %s loppuu %02u%02u%02u.\n
+Pankissa: /
+ON/Yes/Enable/OFf/No/Disable
+Oman nimesi vilkkuminen viesteiss„ kytketty %s.\n
+Poista merkit viesteist„, joissa v„hemm„n rivej„ kuin
+Poista merkit viesteist„, joissa enemm„n rivej„ kuin
+Automaattilainaus on nyt kytketty %s.\n
+Valitse protokolla
+Valitse pakkaustapa
+Asetusvalikko
+Mahdollinen alias-silmukka.\n
+Tyyppi: %s\nNimi:   %-26sTiedoston pituus: %lu tavua\nPituus: %-26uPatternien m„„r„: %u\n\nNr. Soitin                 Pituus      Nr. Soitin                 Pituus\n--  <------------------->  <---->      --  <------------------->  <---->\n
+Et„lukutapa
+P„iv„ys hakemiseen VVKKPP (Enter=%02u%02u%02u)
+Tuntematon p„iv„m„„r„.\n
+?/Quit/Text/Ppo/Hippo/Omen/W/Bluewave/Rep
+P„iv„, jolloin viesti l„hetet„„n (Enter=%02u%02u%02u)
+Salasana
+Et voi en„„ vaihtaa et„lukutapaa.\n
+                                @w: %s\n
+Paina Enter
+Etsitt„v„ hakusana
+VT100 n„pp„imist” kytketty %s.\n
+Anna alueen nimi (Enter=Nykyinen)
+Kuvaus:\n\n
+Tiedostovalikko
+Haluatko muuttaa kuvausta
+                                @p: %s\n
+Haluatko viestit ketjuittain
+\e[1;37mT„„ll„ on yksityinen tiedosto sinulle: %s\e[0m\n
+Levy t„ynn„!\n
+\nYhteens„ %lu tiedostoa, %lu %s, %lu imurointia, %lu %s.\n
+Kanava
+Alueilla ei ole viestej„.
+Viesti ei ole saatavilla.
+Sinun t„ytyy lukea viesti ensin.
+\3ca%s viesti #%lu l„h. \3cb%s\3ca vast. \3cb%s%s%s\3ca%s%s.
+Tuntematon alue.
+Viesti on jo sill„ alueella.
+Et voi siirt„„ viesti„ alueelle %s.\n
+Viesti siirretty.
+Et voi siirt„„ t„t„ viesti„.
+Viestej„ ei ole ker„ttyn„.
+\nAikarajaasi on v„liaikaisesti v„hennetty t„m„n soiton ajaksi.\n\n
+Valitan, pakkaajien kanssa n„ytt„„ olevan ongelmia.
+Voit viel„ imuroida viestipaketin komennolla SEnd.
+Ker„„n viestej„ alueelta %s:\n
+C:alue, A:kaikki, M:viesti, CLEAR:tyhj„„, N:n„yt„, <Enter>=pois
+Viestipaketti tuhottu.
+Alueen viestit luettu. Paina <ENTER> siirty„ksesi seuraavalle alueelle.\n
+Etsin viestej„ alueilta, joihin olet liittyneen„...
+Alueilla ei ole lukemattomia viestej„.
+Ensimm„inen viesti.
+Viimeinen viesti.
+Viesti on jo tuhottu.
+Viesti on jo aktiivinen.
+Et pysty tuhoamaan tai palauttamaan t„t„ viesti„.
+Viesti„ ei l”ydy.
+Viesti„ ei l”ydy.
+T„m„ viesti ei ole vastaus.
+Alkuper„ist„ viesti„ ei l”ydy.
+\n\3cF   Yht. Lukem.  Sinun   Nimi\n===============================================================================\n
+?/-/+/./</>/=/NExt/--/++/PREply/REply/Kill/RECover/Mark/SHow/View/RESign/SEnd/Search/DUPlicate/Dump/Original/Zap/MODE/AInfo/Info/MV/MOVe/CP/MCopy/Bulletins/USER/FIX/FM/Previous/UNFM/CREply/SAVE/GNUS
+\3cG-------------------------------------------------------------------------------\n\3cH%7lu%7lu%7lu   %lu\n\n
+J„sen
+Ei oikeutta
+T„h„n viestiin ei ole vastattu.
+Viestiin ei ole enemp„„ vastauksia.
+Viestist„ nro <%lu-%lu>, <Enter=%lu>
+Liian pieni. Yrit„ uudelleen.\n
+Liian korkea. Yrit„ uudelleen.\n
+ Viestiin nro <%lu-%lu>, <Enter=%lu>
+Et voi erota t„lt„ alueelta.
+Oletko varma ett„ haluat erota (Enter=N)
+Eroaminen alueelta
+Lukuvalikko
+Tiedostoa "%s" ei l”ytynyt!\n
+/Your BRoboCop request
+Kutsun SysOppia...
+\3cMSoittaja                      Lempinimi  Yhteys Koska Tila
+\3cM--------                      ---------  ------ ----- ----
+M:lis„„, H:apua, I:indeksi, C:sis„lt”, R:paluu, >, <, Q:pois, numero
+\nSinut on kutsuttu seuraaville alueille:\n
+Vain %u viimeist„ viesti„ selataan automaattisesti.\n
+Merkityt
+Ketjut
+Eteenp„in
+Taaksep„in
+1 uusi viesti on saatavilla%s.\n
+%lu uutta viesti„ on saatavilla%s.\n
+, kaikki sinulle
+, 1 niist„ on sinulle
+, %lu niist„ on sinulle
+Anna viestialueen nimi, johon haluat liitty„ (Enter=pois)
+Viesti ei ole saatavilla.
+Anna moodi
+K„ytt„j„tietoja ei p„ivitetty.
+Olen kadottanut salasanani!
+Selaan k„ytt„j„listaa, yhteens„ %lu k„ytt„j„„.\n
+Tiedotteet
+Et ole lukenut tiedotetta.
+Viesti #%lu on tuhottu.\n
+Vaihtoehtoja on %lu kappaletta. Paina TAB/DEL jos todella haluat n„hd„ ne: /
+Sinulla ei ole oikeutta yksityiseen viestiin #%lu!\n
+\3caKysymyksen teki \3cb%s\3ca, %s.\n\n\3cd
+\nYhteens„ %ld „„nt„.\n
+Valitse vastaus
+ (YKS.)
+   Kirjoitettu %s, %lu rivi„.
+soitto
+   Vastaus viestiin #/
+. (Ei enemp„„ vastauksia.)
+. (Lis„„ vastauksia l”ytyy.)
+   T„h„n viestiin on vastattu.
+\3ccAihe: %s
+K„ytt„j„lle
+\e[0;32mKohde\e[0m: %s
+===============================================================================
+Viesti
+K„ytt„j„
+Quit/More/Help/Index/Contents/Retrace/>/<
+Lis„ys   /
+Korvaus  /
+ aihe: /
+Ctrl-Z=talleta, Ctrl-Q=pois, Ctrl-U=apua, liiku nuolilla/WordStar-n„pp„imill„
+<---+----1----+----2----+----3----+----4----+----5----+----6----+----7->--+--->
+Aihe
+Hylk„„tk” viestin? (Y/N)? /
+Viestiss„ ei ole rivej„.
+Lis„„ ennen
+Tuhoa rivi
+Muokkaa rivi„
+      <---+----1----+----2----+----3----+----4----+----5----+----6----+----7->
+Valitse
+                 Vastaanottaja
+Vastaanottaja (Enter=kaikille)
+HUOM! Vastaanottaja ei ole rekister”itynyt k„ytt„j„! Luultavasti NET-k„ytt„j„..
+Kommentti
+                  Viestin aihe
+Lainaa alkuper„ist„ viesti„ (Enter=N)
+Voit muokata vain omia viestej„si.
+Viesti hyl„tty.
+Viesti numero /
+ tallennettu.
+Pakkaamaton Pakattu   P„iv.   Kello  Tiedosto
+----------- -------   -----   -----  --------
+\nValitan, en osaa k„sitell„ t„llaista tiedostoa.\n
+Keskusteluvalikko
+Tiedosto: %s\n%s l„hetys valmis. Aloita siirtosi nyt.\n
+V„„r„ nodenumero. Yrit„ uudelleen.\n
+  Vastaanottajan nodenumero
+?/Show/STATistics/OPen/Info/Answer/VErsion/CALendar/BAnk/JArgon/ID/BRowse/LOG/DELLog/HIDE/ULogin/DOS/SHELL/BLOG/EJect/RESET/NOTE/SPY/COMPUter/BSTAT/BSHELL/OUtbound/TELnet/MG/RLogin/FINger/FTP/HUNT/HACK/CALLback/URL/Vote
+?/New/Key/Scan/Info/WDown/LS/DIrectory/List/HDIr/HLs/CD/CHdir/HCD/RM/DELete/RETract/HRM/HDEL/CP/COpy/ADd/HAdd/HCP/HCOpy/TCP/TCOpy/MV/MOve/REName/CAt/Type/HType/HCAt/GEt/Download/SZ/HGEt/PUt/UPload/RZ/PPUT/EXTract/HEXTract/LHarc/HLHarc/ZIP/HZIP/PAck/HPAck/SPlit/FREE/UNFREE/View/DEScribe/INstall/LINstall/TOUch/GREP/MKDir
+Imurointi suoritettu.
+Imurointi keskeytetty.
+Tiedosto: %s\n%s vastaanotto valmis. Aloita siirtosi nyt.\n
+%lu kutsuttua ja %lu j„sent„, yhteens„ k„ytt„ji„ %lu.
+L„hetys suoritettu.
+L„hetys keskeytetty.
+Etsint„valikko
+Etsitt„v„ teksti
+Etsin...
+Viestej„ ei ole merkittyn„.
+Viestien merkitseminen
+Kaikki merkinn„t on nollattu.
+Merkitsen... /
+SysOp ei ole sallittu t„h„n.
+Merkitsen viestej„ sinulta/sinulle...
+Valitan, sinulle ei ollut viestej„.
+Aiheet ovat:
+Aihe
+Valitan, ainoastaan meilisoitot ovat t„ll„ hetkell„ sallittuja.\nYrit„ my”hemmin uudestaan.\n
+Salasana vaihdettu.
+Et ole viel„ imuroinut viestipakettiasi. Haluatko sen nyt
+(Enter=Y)
+(Enter=N)
+VAROITUS: Levy on t„yttym„ss„! Viestien ker„ys keskeytetty...
+%lu viesti„ lis„tty viestipakettiin%s (%lukB).\n
+Viesti tuhottu.
+Viesti palautettu.
+Ensimm„inen viesti on numero /
+Viimeinen viesti on numero /
+L„hett„j„
+Vastaanottaja
+ -> /
+ aihe: /
+Seuraavat tiedostot l”ytyv„t jo:\n\n
+Valitan, t„ll„ alueella ei sallita viesteihin vastaamista.
+Valitan, sinulla ei ole tarpeeksi aikaa j„ljell„.
+Taisit nukahtaa... Hyv„„ y”t„.
+>->->->->->-> SysOp on tulossa linjalle!
+>->->->->->-> SysOp l„htee linjalta!
+(60 minuuttia j„ljell„. Seuraava ilmoitus kun 30 minuuttia j„ljell„.)
+(30 minuuttia j„ljell„. Seuraava ilmoitus kun 15 minuuttia j„ljell„.)
+(15 minuuttia j„ljell„. Seuraava ilmoitus kun 10 minuuttia j„ljell„.)
+(10 minuuttia j„ljell„. Seuraava ilmoitus kun 5 minuuttia j„ljell„.)
+(5 minuuttia j„ljell„. Seuraava ilmoitus kun 2 minuuttia j„ljell„.)
+(2 minuuttia j„ljell„. Seuraava ilmoitus kun 1 minuutti j„ljell„.)
+(1 minuutti j„ljell„.)
+demoni
+Aikarajasi t„lle soitolle on t„yttynyt!
+. /
+. /
+. /
+. /
+tammikuuta
+helmikuuta
+maaliskuuta
+huhtikuuta
+toukokuuta
+kes„kuuta
+hein„kuuta
+elokuuta
+syyskuuta
+lokakuuta
+marraskuuta
+joulukuuta
+%u%s%s, %u klo %02u:%02u
+Virheellinen parametri
+Valitan, SysOp ei ole saatavilla juuri nyt... J„t„ viesti COM-komennolla.
+kB
+\n\e[32mTila     Oikeus  Nimi\n============================================================================\e[0m\n
+Kenelle haluat kommentin l„hett„„
+\e[1;37mC\e[0m:sis„lt”   \e[1;37mI\e[0mndeksi   \e[1;37mH\e[0m:apua   \e[1;37mR\e[0m:paluu   Selaa \e[1;37m<\e[0m   Selaa \e[1;37m>\e[0m   \e[1;37mS\e[0m:etsi   \e[1;37mQ\e[0m:pois
+Valitan, k„ytt„j„„ ei l”ydy.
+Poistunut
+Linjalla
+Ei tavattavissa
+Kirjoittaa viesti„
+Ker„„ viestej„
+Imurointi (%02u:%02u)
+L„hett„„ tiedostoa
+SysOp on paikalla keskustelua varten.
+Kirjoitan alueelle: /
+p„„lle
+pois
+ (luettu)
+Valitan, viesti ei ole en„„ saatavilla.
+(L:lista, D:imurointi, A:lis„„, W:alkulogo, Enter=pois)
+  Sisennys /
+  Ei sisen.
+(S:talleta, C:jatka, I:lis„„, D:tuhoa, E:muokkaa, A:pois, L:n„yt„)
+#
+Valitse k„ytett„v„ kieli
+paik.
+Sis„„ntulo:
+Poistuminen:
+\e[0mKirjoita "/?" saadaksesi ohjeita ryhm„keskustelusta.
+netti
+MB
+GB
+minuuttia
+Valitse lukutapa
+Keskustelu
+Avannut oven
+Hiljainen moodi on nyt kytketty %s.\n
+Enter-n„pp„imell„ paluu on nyt kytketty %s.\n
+tuntia
+Valitse terminaalin tyyppi
+Uni (%02u:%02u)
+?/Quit/Tty/Ansi/Dummyansi/Vt320/Rip
+Valitse editorin tyyppi
+K„ytt”j„rjestelm„ss„
+?/Quit/Line/Fse/Mg/Script
+K„ytt„„ verkkoa
+ viesti /
+: /
+ -> /
+\e[0;36mRahaa:    \e[0m%ld (%lu tuntia %lu minuuttia)\n
+\n\e[32mNimi                                Rahaa  #K„ytt„. Luotto\e[0m\n\e[32m==========================================================\e[0m\n
+WWW
+Pelk„st„„n aiheet
+Valitan, tuo siirtoprotokolla ei ole k„yt”ss„.\n
+P„ivitt„inen imurointirajasi on t„yttynyt. Voit jatkaa taas huomenna.\n
+Nodea "%s" ei l”ytynyt.
+Alueiden tila
+-------------
+%lu uutta viesti„%s.\n
+1 uusi viesti%s.\n
+Yhteens„ /
+Sinun t„ytyy valita ANSI ensin.
+Ryhm„keskustelussa
+Imurointirajasi on t„yttynyt. Sinun t„ytyy l„hett„„ tiedostoja ensin.\n
+FTP
+Meilinsiirto
+No/Yes
+?/IBM/SF7/ISO/IBN/US7/GE7/NO7/FR7/IT7/SP7/MAC
+?/Quit/Zmodem/Ymodem/Xmodem/SHydra/Crc/YBatch/SZmodem/Hydra/ZZap/Kermit/Uucode
+?/Quit/Text/Arc/Zip/Lzh/J/O/Hpack/Rar
+?/English/Suomi/SVenska/Norsk/5/6/7/8/9/10/Quit
+No/Yes/Edit
+Group/Header/Marked/Quit/?/NGroup/NHeader/NMarked
+?/Quit/Marked/Reference/Forward/Backward
+Conf/All/Message/CLEAR/Now/.
+Anna uusi kysymys
+Sysop/Notavail/Avail/Group/Quit/?
+Yes/No/Relogin
+(Yes/No/Relogin)
+Yes/Again/No
+(Y:kyll„, N:ei, A:uusiksi, (Enter=Y))
+Reset/Group/Number/Onlymine/./Firstmine/Date/Zap/Set/Author/GDate/GREset/Personal/Thread/Undo/RECeiver/RESTore/View/Quit/?/Mark/GOnlymine/SAve/OAll/GOAll/CRestore/Lines
+T„m„ komento ei ole tarkoitettu paikalliselle k„ytt„j„lle. K„yt„ BTERMi„.\n
+\e[0;32m%s%s:\n\n\e[0;36mViimeinen viesti:   \e[0m%lu\n\e[0;36mViimeinen lukemasi: \e[0m%lu\n
+?/List/Download/Add/Welcome/Quit
+Save/Continue/Insert/Delete/Edit/Abort/List/Quit
+Anna etsitt„v„ hakusana (Enter=kaikki)
+Annatko lis„infoa
+(Enter=Julkinen tiedosto)
+Aikaa pankissa: /
+Aikaa j„ljell„: /
+Aikapankki
+Store/Withdraw
+Pankkiin lis„tt„v„ aika
+Pankista nostettava aika
+p„iv„„
+<hakemisto>     /
+Yksityinen k„ytt„j„lle
+Kirjoittaja
+Viestipaketin koko on nyt
+tavua.
+Viesti kopioitu.
+P„ivitin: %s\n
+Etsitt„v„n tiedoston tai k„ytt„j„n nimi
+Tiedostoa tai k„ytt„j„„ ei l”ytynyt.\n
+Tuota tiedostoa ei tarvita t„„ll„.
+Nimi hyv„ksytty.\n
+(S:pano, W:otto)
+ <offline>  /
+Sinulla on SigOp-oikeus t„lle alueelle.
+En l”yd„ koneen nime„.\n
+Can't open socket.\n
+Can't bind socket.\n
+Can't connect socket.\n
+Can't create socket thread.\n
+\nYhteys suljettu.\n
+Montako n„ytet„„n
+Koneen nimi
+Poistu painamalla '^]'.\n
+Lis„tt„v„ raham„„r„
+Tilin nimi
+\e[1;33;46m %s\e[1;37;46m kanavalla \e[1;33;46m%0.25s\e[1;37;46m   /
+                                    <---+----1----+----2----+--->
+                                    <---+----1----+->
+Vastaanottaja
+Yhteens„ %lu/%lu %s:\n
+minuuttia
+k„ynti„
+viesti„
+Valitan, ei tilaa j„ljell„.
+WINdow
+NEW/Kill/Listen/Size/Next/Prev/LOG
+(?=apua/SPACE=lis„„/V=n„yt„/I=infoa/Q=lopeta)
+\e[1;33;44m %s\e[1;37;44m kanavalla \e[1;33;44m%0.25s\e[1;37;44m   /
+\e[1;33;46m   %d\e[1;37;46m minuuttia j„ljell„, \e[1;33;46m%02u:%02u /
+Kyll„
+Ei
+Me/Who/?/Target/Say/Join/Resign/REPort/MSg/Node/TIme/Quit/List/BAN/UNBan/INVite/KICK/KICKBan/TOpic/CHmod/LAst/%/LEave/Part/IRCQuit/NAmes/CTcp/NIck/IGNore/IRCJoin
+\n%u l”ytyi.\n\n
+Tiedostolla %s on seuraava kuvaus:\n\n
+Haluatko k„ytt„„ sit„
+QWK-virhe: Tiedoston purkaminen ei onnistu!
+QWK-virhe: Tiedostoa ei l”ytynyt!
+QWK-virhe: Virheellinen lohkon pituus!
+QWK-virhe: Virheellinen vastauksen numero!
+Valitan, BRoboCop ei ole k„yt”ss„!
+QWK-virhe: Et voi erota kyseiselt„ alueelta!
+QWK-virhe: Ei oikeuksia kyseiselle alueelle!
+QWK-virhe: Virheellinen alueen numero!
+Teen kontrollitiedostoja ja pakkaan.
+\aQWK-virhe: Ei oikeuksia alueelle %s!\n
+Hippo-virhe: Tiedoston purkaminen ei onnistu!
+Hippo-virhe: ZMS-tiedostoa ei l”ytynyt!
+Ei oikeuksia:
+Viestiin vastaaminen ei mahdollista:
+Tuntematon alue:
+Hippo-virhe: /
+Hippo-virhe: Et voi liitty„ kyseiselle alueelle!
+Hippo-virhe: Et voi erota kyseiselt„ alueelta!
+Hippo-virhe: Virheellinen koodi!
+\aBlue Wave-virhe: Et voi liitty„ alueelle %s!\n
+Tuota komentoa ei voi k„ytt„„ t„ll„ alueella.
+Poistan merkkej„...
+T„m„ alue sis„lt„„ eritt„in t„rkeit„ viestej„
+ja ne ovat tarkoitettu luettaviksi.
+Tuo tunne tarvitsee kohteen.\n
+Liittyminen alueelle
+Eronnut
+Sorry, that name is not allowed here.\n\n
+Kohdetta ei voi k„ytt„„ tuon kanssa.\n
+Valitan, modeemisi on liian hidas. Hanki nopeampi ja yrit„ uudelleen.
+(English, Suomi, SVenska, Norsk) /
+Tuntematon kohde.\n
+Kanavaa %s ei l”ydy, tai et ole sen j„sen.
+Tuntematon tunne tai ei oikeuksia.\n
+ aakkosj„rjestys\n\3cwV„lily”nti: liity/eroa   \3cxQ\3cw:pois   \3cxR\3cw:eroa      \3cxH\3cw:n„yt„: \e[0m
+ ei /
+ kaikki /
+ j„sen /
+ ei-j„sen
+\aBlue Wave-virhe: Tiedoston purkaminen ei onnistu!\n
+\aBlue Wave-virhe: Header-tiedostoa ei l”ytynyt!\n
+\aBlue Wave-virhe: Virheellinen tiedoston nimi %s!\n
+OMEN-virhe: Tiedoston purkaminen ei onnistu!
+OMEN-virhe: Viestiin vastaaminen ei ole sallittua kyseisell„ alueella!
+\aOMEN-virhe: Ei oikeuksia alueelle %s!\n
+OMEN-virhe: MSG-tiedostoa ei l”ytynyt!
+OMEN-virhe: Tuntematon alue tai komento!
+OMEN-virhe: Header-tiedostoa ei l”ytynyt!
+\aBlue Wave-virhe: Ei oikeuksia alueelle %s!\n
+Yes
+Aloittelija
+Expertti
+Leveys x korkeus: %u x %u\nV„rien m„„r„:     %lu\n
+Englanti
+Suomi
+Ruotsi
+Norja
+-
+-
+-
+-
+-
+-
+Teksti
+OldHippo
+Hippo
+OMEN
+QWK
+Teletype
+ANSI
+Dummy-ANSI
+VT320
+RIP
+BRoboCop on kadoksissa.
+Montako kertaa viesti tulostetaan
+Ryhm„n nimi
+P„ivit„n: /
+Rivieditori
+Kokoruutu
+MG
+Blue Wave
+Tiedostoja l„hetetty
+Kilotavuja l„hetetty
+Tiedostoja imuroitu
+Kilotavuja imuroitu
+0=Ei mit„„n, 1=Imurointi, 2=L„hetys, 3=Imurointi & L„hetys
+Skripti
+Et voi vakoilla itse„si.
+Vakoilumoodi pois.
+Vakoilumoodi p„„ll„.
+Aloitan %s siirron nyt.\n
+%s ei ole kanavan %s j„sen.
+Aloitan %s vastaanoton nyt.\n
+Anna vaihtoehto #%lu
+Juniori
+Kutsuttu
+%s on jo kanavan %s j„sen.
+Odota hetki...
+DOS-komento
+Return=
+\nSiirto keskeytynyt.\n
+Siirr„n %s (%luk/%luk, %lu) \r
+Selv„, voit jatkaa taas...\n
+REP (QWK)
+Anna selitys tiedostolle "%s".\n
+K„yntikertojen m„„r„
+K„sittele paketti kuitenkin
+?/Yes/No/Quit
+T„m„ alue sis„lt„„ omat tiedotteensa.
+HUOM! L„hett„j„ ei ole rekister”itynyt t„„ll„, luultavasti NET-k„ytt„j„..
+  <---+----1----+----2----+----3----+----4----+->\n
+> /
+Varoitus! Vastaanottaja ei ole t„m„n alueen j„sen.
+Varoitus! T„lle alueelle vastaaminen on kielletty„.\n
+K„ytt„j„nimi
+Ei j„sen
+, POSTI
+, K„ytt„j„info
+, Fileinfo
+, Pakollinen
+, Alias
+FTP
+IFF 8SVX (8-Bit Sampled Voice)\n
+IFF ILBM (Interleaved Bitmap)\n
+\nNodenumber         Age Flags     Bad Busy Msgs ArcMail Files\n------------------ --- --------- --- ---- ---- ------- -------\n
+\nNumber Age Flags     Type Size   Subject\n------ --- --------- ---- ------ ----------------------------------------------\n
+Quit/?/List/CHange/Create/Delete/BAd/Busy/CLear
+Outbound Manager
+Invalid command line.\n
+Crash/Direct/Erase/File/Hold/Immediate/Lock/Request/Trunc
+File \"%s\" does not exists, deleting message #%lu.\n
+Viestien suodatustaso, <0-50> (Enter=ei muutosta)
+Kutsutaanko k„ytt„j„ alueelle
+L„hetet„„nk” kopioita toisille k„ytt„jille
+L„het„ kopio k„ytt„j„lle
+, Yksityiset sallittuja
+Yksityinen viesti
+File \"%s\" does not have attach message. Deleting.\n
+Digitointitaajuus: %u\n
+Alias poistettu.
+Aliasta ei l”ytynyt.
+Muuttujille varattu tila t„ynn„.
+Alias luotu.
+Muuttuja poistettu.
+Muuttujaa ei l”ytynyt.
+Mink„ muuttujan haluat luoda
+Arvo muuttujalle
+Muuttuja luotu.
+\n** K„ytt„j„ ei ole kirjoittanut itsest„„n mit„„n **\n\n
+Cd/Dir/Names/Get/Quit/?/Site/Type/DELete/Put/GETDEL/CHdir/Ls/DOwnload/CLose/EXit/CAt/RM/UPload/MIRror
+Salasana ei saa olla liian helppo arvattavaksi ja sen pit„„ olla 3-64 merkki„.\n
+L„het„ tiedosto ja paina Ctrl-X kun olet valmis.\n
+\n\3ci Tiedosto           Aika    kB  Selitys\3cp\n\3ci --------           ----    --  -------\3cp\n
+Ikkuna on liian pieni.
+\n\3ci   Aika   kB  Imut Tiedosto\3cp\n\3ci   ----   --  ---- --------\3cp\n
+K„ytt„j„ on nyt potkittu ulos ja tapettu.\n
+ Ma Ti Ke To Pe La Su
+Anna p„iv„ys (Enter=%04u%02u%02u)
+Ei l”ytynyt.
+Jargon-tiedostoa ei l”ytynyt.
+--lis„„--
+--lis„„-- (Y/n/c):
+Copyright:     /
+Tekij„:        /
+Tiedotus:      /
+Nimi:          /
+Uusi SysOp-taso
+K„ytt„j„ on nyt aktiivinen.\n
+K„ytt„j„ on nyt potkittu ulos.\n
+K„ytt„j„ on nyt tapettu.\n
+Uusi tiedosto-oikeus
+Uusi suhdeluku
+Uusi aikaraja
+Uusi pankkiaika
+                               \3co
+\3cn
+\n       Eniten k„yntikertoja l„htien %s.\n
+\n       Eniten kirjoitettuja viestej„ l„htien %s.\n
+\n       Eniten l„hetettyj„ tiedostoja l„htien %s.\n
+\n       Eniten l„hetettyj„ tavuja l„htien %s.\n
+\n       Eniten imuroituja tiedostoja l„htien %s.\n
+\n       Eniten imuroituja tavuja l„htien %s.\n
+\n       Kaikki k„ytt„j„t:          %11lu%s\n       Kaikki paitsi SysOp:       %11lu%s\n\n
+aikojen alusta
+T„h„n viestiin on liitetty tiedosto.\n
+Haluatko imuroida sen
+K„ytt„j„„ ei l”ytynyt. Selaan k„ytt„j„listaa...
+Yrit„ uudelleen
+Talletanko viestin
+     \n\e[0;36m       K„ytt„ji„ yhteens„:    \e[0m%lu\n\e[0;36m       K„yntikertoja:         \e[0m%lu\n\e[0;36m       Viestej„ luettu:       \e[0m%lu\n\e[0;36m       Viestej„ ker„tty:      \e[0m%lu\n\e[0;36m       Viestej„ kirjoitettu:  \e[0m%lu\n\e[0;36m       Tiedostoja l„hetetty:  \e[0m%lu  (%s)\n\e[0;36m       Tiedostoja imuroitu:   \e[0m%lu  (%s)\n
+Pilkotun koko kB:ss„
+Yhteens„ %u tiedostoa, %lu tavua, %lu minuuttia.\n
+--lis„„--
+--lis„„-- (Yes/no/flag/kursori yl”s):
+All
+Vapaa muisti:      %lu\n
+Vapaa levy (main): %luMB\nVapaa levy (file): %luMB\n\n
+Saitko tiedoston virheitt„
+Sinulla ei ole oikeuksia.\n
+Hakemistoa ei l”ydy.\n
+Holdia ei l”ydy!\n
+Tiedostoa ei l”ydy.\n
+Link overflow.\n
+CD: /
+\n\3ci Tiedosto      Aika    kB  Imut Selitys\3cp\n\3ci --------      ----    --  ---- -------\3cp\n
+\3chHakemisto: %s%s\e[0m\n
+V„„r„n tyyppinen tiedoston nimi.\n
+Tiedosto \"%s\" l”ytyy jo.\n
+Fatal error: Can't copy!\n
+Paketin nimi: /
+Tiedosto l”ytyy jo.\n
+Tiedoston nimi: /
+N„pp„imist”si toisto on liian nopea! CPS-raja ylittyi %lu kertaa.\n
+Tiedosto hyv„ksytty.\n
+Et voi antaa hakemiston nime„ t„h„n.\n
+Tiedostoja ei l”ytynyt.\n
+Tiedosto: %s%s\n
+\nTiedosto: %s%s\n\n
+Poistettu: %s%s\n
+L„hde: /
+Kohde: /
+Kohteen t„ytyy olla hakemisto.\n
+Tiedostoa ei voida kopioida itsens„ p„„lle.\n
+Tiedostoa ei voida siirt„„ itsens„ p„„lle.\n
+Tiedoston nimi: /
+Hakusana: /
+Kohteen t„ytyy olla tiedosto ilman p„„tett„.\n
+Mit„ puretaan: /
+L”ytyi: %s\n
+Lainaa alkuper„ist„ viesti„ (Enter=Y)
+Teema: %s
+Viesti, otsikko
+Viesti, k„ytt„j„n nimi
+Viesti, aihe
+Viesti, normaali teksti
+Viesti, parittomasti lainattu rivi
+Viesti, parillisesti lainattu rivi
+Viesti, verkkotieto
+Tiedosto, polkurivi
+Tiedosto, otsikko
+Tiedosto, hakemisto
+Tiedosto, normaali tiedosto
+Tiedosto, vapaa tiedosto
+Tiedosto, linkkitiedosto
+Tiedosto, kuvaus, ensimm„inen rivi
+Tiedosto, kuvaus, loput rivit
+Tiedosto, numerot
+Linjaviesti, itse kirjoittamat
+Linjaviesti, muiden julkiset
+Linjaviesti, yksityiset viestit
+Linjaviesti, tiedotusviesti
+Linjaviesti, etuliite
+Linjaviesti, julkinen, minulle
+Liity/eroa, otsikko
+Liity/eroa, korostettu
+Liity/eroa, valittu
+Liity/eroa, valitsematon
+Liity/eroa, paikallinen alue
+Liity/eroa, verkkoalue
+Liity/eroa, paikallinen posti
+Liity/eroa, verkkoposti
+Liity/eroa, selitys
+Alueiden tila, otsikko
+Alueiden tila, lopun erotin
+Alueiden tila, numerot
+Alueiden tila, sinulle
+Asetusvalikko, otsikko
+Asetusvalikko, teksti
+Asetusvalikko, numerot
+Kuka, otsikko
+?/Quit/Noviisi/Juniori/Expertti
+Ruudun leveys
+Kuka, yhteys, linjalla
+Kuka, yhteys
+Kuka, tila, linjalla
+Kuka, tila
+Kuka, koska, linjalla
+Kuka, koska
+Kuka, lempinimi, linjalla
+Kuka, lempinimi
+Kuka, soittaja, linjalla
+Kuka, soittaja
+Ruutu
